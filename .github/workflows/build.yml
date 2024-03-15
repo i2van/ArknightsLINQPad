@@ -1,0 +1,41 @@
+﻿name: build
+
+on: [push, pull_request]
+
+env:
+  LPRunUrl: https://www.linqpad.net/GetFile.aspx?preview+LINQPad8-Beta.zip
+  LPRun: LPRun8-x64.exe
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+
+      # Set up LPRun
+
+      - name: Set up LPRun
+        uses: Alex079/setup-custom-tool@v2.0.0
+        with:
+          archiveUrl: ${{env.LPRunUrl}}
+
+      # Check out
+
+      - name: Check out
+        uses: actions/checkout@v4.1.1
+
+      # Execute LPRun scripts
+
+      - name: Execute EventStatus.linq
+        run:  ${{env.LPRun}} EventStatus.linq
+
+      - name: Execute EventStockParser.linq
+        run: |
+          ${{env.LPRun}} EventStockParser.linq
+          pwsh.exe -NoLogo -NoProfile -NonInteractive -Command Get-Clipboard
+
+      - name: Execute OperatorModules.linq
+        run:  ${{env.LPRun}} OperatorModules.linq
+
+      - name: Execute OriginitePrimePacks.linq
+        run:  ${{env.LPRun}} OriginitePrimePacks.linq
