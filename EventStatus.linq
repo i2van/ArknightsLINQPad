@@ -20,7 +20,7 @@
   <Namespace>System.Globalization</Namespace>
 </Query>
 
-//#define DUMP_MISSING_IMAGES
+#define DUMP_MISSING_IMAGES
 
 /*
 #define DUMP_CONFIG
@@ -723,72 +723,45 @@ static class DB
 {
 	public static readonly ReadOnlyDictionary<string, LazyImage> Images = new(new ItemImage[]
 	{
-		new SkinImage("Disguise", "2/2b", "Utage_Skin_2"),
-		new SkinImage("Holiday HD29", "6/65", "Ambriel_Skin_1"),
 		new SkinImage("Major Field", "4/46", "Earthspirit_Skin_1"),
-		new SkinImage("Melodic Portrayal", "b/bf", "Deepcolor_Skin_1"),
-		new SkinImage("Traceless Walker", "6/69", "Adnachiel_Skin_1"),
 		new("'Audible Redemption'", "9/9d"),
 		new("'Cohesion'", "f/fe"),
 		new("'Collection'", "c/c1", "Collection_(furniture)"),
 		new("'Concealed Edge'", "4/4a"),
-		new("'Contemplation'", "f/ff"),
 		new("'Cultivating Hope'", "9/9f"),
-		new("'Dark Clouds'", "3/33"),
 		new("'Duel With Oneself'", "9/9a"),
 		new("'Elevations'", "4/41"),
-		new("'Ensemble'", "d/da"),
-		new("'Feeding Station'", "a/a3"),
 		new("'Fowlbeast Accommodations'", "4/4f"),
 		new("'Implantation'", "2/22"),
 		new("'Indications'", "0/02"),
 		new("'Nostalgic Habitations'", "b/b1"),
 		new("'Purge of Flaws'", "4/49"),
 		new("'Record of Suffering'", "d/d0"),
-		new("'Role Model's' Sofa", "2/26"),
 		new("'Simplicity'", "e/ec"),
-		new("'Starry Sky'", "8/89"),
 		new("'Treading Sand'", "f/fd"),
-		new("'Tree of Life'", "1/1c"),
 		new("'Treeshade Lineations'", "7/79"),
 		new("'Truck Passage'", "e/e7"),
 		new("'Witness of Friendship'", "f/fa"),
 		new("Aketon", "d/d3"),
-		new("Artificial Beach", "6/61"),
-		new("Astgenne's Token", "f/fe"),
-		new("Banner-Style Displays", "f/fc"),
 		new("Bipolar Nanoflake", "b/b6"),
-		new("Broadcast Room Matte-Finish Tiles", "9/9a"),
-		new("Broadcast Room Special Ceiling Light", "4/4b"),
-		new("Broadcast Room Wallpaper", "9/9c"),
 		new("Bryophyta's Token", "e/eb"),
 		new("Caster Chip", "9/94"),
-		new("Ceiling Light Filter", "5/5d"),
 		new("Chip Catalyst", "3/32"),
 		new("Coagulating Gel", "b/bd"),
 		new("Coldshot's Token", "9/9a"),
 		new("Compound Cutting Fluid", "2/2c"),
-		new("Cordial Sojourner's Invitation", "2/26"),
 		new("Cozy Plaid Rug", "e/eb"),
 		new("Crystalline Circuit", "4/46"),
 		new("Crystalline Component", "2/20"),
 		new("Crystalline Electronic Unit", "d/d0"),
 		new("Cured Fiberboard", "6/67"),
 		new("Cutting Fluid Solution", "9/93"),
-		new("Cylindrical Chandelier", "a/a9"),
-		new("Czerny's Token", "6/6c"),
 		new("D32 Steel", "6/68"),
 		new("Data Supplement Instrument", "6/6d"),
 		new("Data Supplement Stick", "f/f8"),
 		new("Defender Chip", "2/24"),
-		new("Delicately Woven Drapery", "3/39"),
 		new("Device", "a/a4"),
-		new("Diamond Cross Chandelier", "3/3a"),
 		new("Dizzy Spinning Chair", "6/63"),
-		new("Drunkard Surf Boards", "9/95"),
-		new("Effervescent Potted Plant", "1/1a"),
-		new("Enforcer's Token", "a/a2"),
-		new("Flag Decorations", "2/2e"),
 		new("Frontline Battle Record", "f/f7"),
 		new("Furniture Part", "0/0d"),
 		new("Fuze's Token", "b/ba"),
@@ -797,7 +770,6 @@ static class DB
 		new("Guard Chip", "6/63"),
 		new("Harold's Token", "8/8b"),
 		new("Headhunting Permit", "0/0b"),
-		new("Huangli Wooden Square Stool", "8/80"),
 		new("Incandescent Alloy Block", "a/a3"),
 		new("Incandescent Alloy", "f/f4"),
 		new("Information Fragment", "1/1d"),
@@ -805,25 +777,14 @@ static class DB
 		new("Integrated Device", "f/fb"),
 		new("Jieyun's Token", "0/03"),
 		new("Keton Colloid", "a/ae"),
-		new("Kjera's Token", "3/3e"),
-		new("Kjerag Leather Snow Boots", "0/00"),
-		new("Kroos the Keen Glint's Token", "1/13"),
 		new("LMD", "e/e7"),
-		new("Low Moquette Chair", "4/4d"),
 		new("Loxic Kohl", "4/4a"),
-		new("Lumen's Token", "4/42"),
-		new("Luo Xiaohei", "1/15", "Luo_Xiaohei_icon"),
 		new("Manganese Ore", "6/6a"),
 		new("Manganese Trihydrate", "c/cd"),
 		new("Medic Chip", "e/eb"),
-		new("Medical Trolley", "f/f8"),
-		new("Minimalist's Token", "4/48"),
 		new("Mischievously Spliced Table", "9/9a"),
 		new("Module Data Block", "6/66"),
-		new("Non-Slip Rug", "3/34"),
-		new("Non-Slip Stair Rug", "0/0c"),
 		new("Nucleic Crystal Sinter", "7/7e"),
-		new("Open Bamboo Blinds", "8/8d"),
 		new("Optimized Device", "f/fd"),
 		new("Orirock Cluster", "4/4d"),
 		new("Orirock Concentration", "d/d4"),
@@ -831,63 +792,40 @@ static class DB
 		new("Oriron Block", "5/52"),
 		new("Oriron Cluster", "8/87"),
 		new("Oriron", "4/44"),
-		new("Panoramic Display (Snowy Mountains)", "6/60"),
 		new("Patching Planks", "8/8c"),
 		new("Polyester Pack", "f/f3"),
 		new("Polyester", "3/3a"),
 		new("Polyketon", "9/96"),
 		new("Polymerization Preparation", "9/9c"),
 		new("Polymerized Gel", "6/66"),
-		new("Practical Photo Frame", "0/0d"),
 		new("Public Bookshelf", "5/54"),
 		new("Pure Gold", "0/0e"),
 		new("Pure White Stone-Tiled Table", "1/10"),
 		new("Puzzle's Token", "6/68"),
 		new("Rattan Pendant Lamp", "7/74"),
-		new("Reading Desk", "2/2a"),
 		new("Recruitment Permit", "3/3b"),
-		new("Red and White Interview Chair (Right)", "a/a9"),
-		new("Red and White Interview Chair Set", "c/cd"),
 		new("Refined Solvent", "9/9f"),
 		new("RMA70-12", "1/10"),
 		new("RMA70-24", "f/f1"),
-		new("Sand Castle", "c/c5"),
-		new("Seaside-style High Chair", "7/71"),
 		new("Semi-Synthetic Solvent", "5/58"),
-		new("Shell-shaped Lounge Chair", "7/78"),
-		new("Side Hall Curtain", "d/d0"),
 		new("Silence the Paradigmatic's Token", "2/20"),
 		new("Skill Summary - 2", "b/b0", "Skill_Summary_Volume_2"),
 		new("Skill Summary - 3", "a/a7", "Skill_Summary_Volume_3"),
 		new("Sniper Chip", "c/cd"),
-		new("Solid Wood Nightstand", "1/18"),
 		new("Specialist Chip", "e/e2"),
-		new("Stage Floor", "8/81"),
 		new("Strategic Battle Record", "5/55"),
-		new("Stultifera Navis Reception Room Flooring", "6/6b"),
-		new("Stultifera Navis Reception Room Wallpaper", "3/34"),
 		new("Stumpy Little Fridge", "f/f1"),
 		new("Sugar Pack", "2/23"),
 		new("Sugar", "a/a9"),
 		new("Supporter Chip", "d/d7"),
-		new("Swim Tube Rack", "d/d9"),
 		new("Tactical Battle Record", "a/a7"),
-		new("Tequila's Token", "6/6b"),
 		new("Toasty Shop Lamp", "6/6c"),
 		new("Transmuted Salt Agglomerate", "b/bd"),
 		new("Transmuted Salt", "b/bd"),
-		new("Treasures Showcase", "c/cf"),
 		new("Used Folding Chair", "c/c1"),
 		new("Vanguard Chip", "d/df"),
-		new("Vertical Translucent Partition", "5/50"),
-		new("Wall-Mounted Lights", "d/d8"),
 		new("Wanqing's Token", "f/fc"),
-		new("Warm Ceiling Light", "c/cd"),
-		new("White Ceiling Light", "6/60"),
 		new("White Horse Kohl", "4/4a"),
-		new("Wild Mane's Token", "b/b6"),
-		new("Windchime Light", "2/29"),
-		new("Wood Pattern Wallpaper", "1/1b"),
 		new("Wooden Coat Hanger", "7/7e"),
 		new("Yellowy Gauze Curtain", "9/9d")
 	}.ToDictionary(static v => v.Name, static v => v.Image));
@@ -908,99 +846,18 @@ static class DB
 	public static readonly ReadOnlyDictionary<string, string> ImageUriMap = new(new Dictionary<string, string>
 	{
 		// Furniture.
-		["'Collection'"]      = "Collection_(furniture)",
+		["'Collection'"] = "Collection_(furniture)",
 		// Skins.
-		["Disguise"]          = "Utage/Gallery#Disguise",
-		["Holiday HD29"]      = "Ambriel/Gallery#Holiday_HD29",
-		["Melodic Portrayal"] = "Deepcolor/Gallery#Melodic_Portrayal",
-		["Traceless Walker"]  = "Adnachiel/Gallery#Traceless_Walker",
-		["Major Field"]       = "Earthspirit/Gallery#Major_Field",
+		["Major Field"]  = "Earthspirit/Gallery#Major_Field",
 		// 6-star tokens.
-		["Lumen's Token"]                    = "Operator_Token/6-star#Lumen",
 		["Silence the Paradigmatic's Token"] = "Operator_Token/6-star#Silence_the_Paradigmatic"
 	});
 
 	public static readonly ReadOnlyDictionary<WikiHyperlinq, Items> Events = new(new Dictionary<WikiHyperlinq, Items>
 	{
 		// One or two whitespace/tab(s) separated number(s) per line in any order: Price and/or Count and optional item name.
-		// ArknightsEventStockParser.linq parses event stock.
+		// EventStockParser.linq script parses event stock.
 		// Key is (EventURI#EventStock, EventName, EventCurrency)
-		[new("A_Death_in_Chunfen#Yishan_Temple", "A Death in Chunfen", "Wellbeing_Charm")] = new("""
-		// A Death in Chunfen
-		350		Melodic Portrayal
-		10	6	Information Fragment
-		100		Module Data Block
-		30	8	Data Supplement Instrument
-		10	40	Data Supplement Stick
-		200		Bipolar Nanoflake
-		65		Chip Catalyst
-		60	2	Transmuted Salt Agglomerate
-		20	4	Aketon
-		20	4	Semi-Synthetic Solvent
-		5	10	LMD
-		5	5	Strategic Battle Record
-		5	5	Tactical Battle Record
-		5	6	Skill Summary - 3
-		5	6	Skill Summary - 2
-		4	5	Pure Gold
-		8	5	Device
-		30	5	Recruitment Permit
-		4	10	Furniture Part
-		"""),
-
-		[new("An_Obscure_Wanderer#Silver_Salt_Supermarket_Chain", "An Obscure Wanderer", "Standard-Issue_Component")] = new("""
-		// An Obscure Wanderer
-		350		Disguise
-		10	7	Information Fragment
-		100	2	Module Data Block
-		30	8	Data Supplement Instrument
-		10	40	Data Supplement Stick
-		200		Polymerization Preparation
-		65		Chip Catalyst
-		60	2	Cutting Fluid Solution
-		20	4	Aketon
-		20	4	Semi-Synthetic Solvent
-		5	10	LMD
-		5	5	Strategic Battle Record
-		5	5	Tactical Battle Record
-		6	5	Skill Summary - 3
-		6	5	Skill Summary - 2
-		4	5	Pure Gold
-		4	5	Sugar
-		30	5	Recruitment Permit
-		4	10	Furniture Part
-		"""),
-
-		[new("Break_the_Ice/Rerun#Turicum_Trade_Zone", "Break the Ice Rerun", "Stone_of_Kjeragandr")] = new("""
-		// Break the Ice Rerun
-		200		Kjera's Token
-		240		Kjera's Token
-		280		Kjera's Token
-		320		Kjera's Token
-		360		Kjera's Token
-		150	3	Headhunting Permit
-		100		Crystalline Electronic Unit
-		50	3	Optimized Device
-		35	3	Manganese Trihydrate
-		35	3	Cutting Fluid Solution
-		60		'Feeding Station'
-		60		Kjerag Leather Snow Boots
-		75		Solid Wood Nightstand
-		90		Panoramic Display (Snowy Mountains)
-		10	5	Aketon
-		12	5	Grindstone
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		3	8	Sugar
-		3	8	Polyester
-		3	8	Polyketon
-		6	5	Caster Chip
-		"""),
-
 		[new("Come_Catastrophes_or_Wakes_of_Vultures#Shack_by_the_Tower", "Come Catastrophes or Wakes of Vultures", "Shoddy_Fuel")] = new("""
 		// Come Catastrophes or Wakes of Vultures
 		200		Coldshot's Token
@@ -1036,133 +893,6 @@ static class DB
 		2	200	Furniture Part
 		"""),
 
-		[new("Dorothy's_Vision#Laboratory_Recycling_Depot", "Dorothy's Vision", "Mysterious_Reagent")] = new("""
-		// Dorothy's Vision
-		200		Astgenne's Token
-		240		Astgenne's Token
-		280		Astgenne's Token
-		320		Astgenne's Token
-		360		Astgenne's Token
-		150	3	Headhunting Permit
-		75	2	Module Data Block
-		100	5	D32 Steel
-		30	10	White Horse Kohl
-		30	10	Polymerized Gel
-		35	10	Refined Solvent
-		100		Ceiling Light Filter
-		85		'Tree of Life'
-		80		Medical Trolley
-		40		'Contemplation'
-		15	10	Data Supplement Instrument
-		5	60	Data Supplement Stick
-		10	15	Manganese Ore
-		12	10	Compound Cutting Fluid
-		7	100	LMD
-		5	25	Strategic Battle Record
-		3	50	Tactical Battle Record
-		1	120	Frontline Battle Record
-		4	25	Skill Summary - 3
-		2	50	Skill Summary - 2
-		3	25	Sugar
-		3	25	Polyester
-		3	25	Polyketon
-		6	5	Caster Chip
-		2	200	Furniture Part
-		"""),
-
-		[new("Dorothy's_Vision/Rerun#Laboratory_Recycling_Depot", "Dorothy's Vision Rerun", "Mysterious_Reagent")] = new("""
-		// Dorothy's Vision Rerun
-		200		Astgenne's Token
-		240		Astgenne's Token
-		280		Astgenne's Token
-		320		Astgenne's Token
-		360		Astgenne's Token
-		150	3	Headhunting Permit
-		100		Nucleic Crystal Sinter
-		40	3	Oriron Block
-		35	3	Cutting Fluid Solution
-		30	3	Polymerized Gel
-		100		Ceiling Light Filter
-		85		'Tree of Life'
-		80		Medical Trolley
-		40		'Contemplation'
-		10	5	Aketon
-		10	5	Crystalline Component
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		2	8	Orirock Cube
-		3	8	Oriron
-		4	8	Device
-		6	5	Caster Chip
-		"""),
-
-		[new("Dossoles_Holiday/Rerun#Mama_John's", "Dossoles Holiday Rerun", "Mama_John's_Voucher")] = new("""
-		// Dossoles Holiday Rerun
-		250		Tequila's Token
-		300		Tequila's Token
-		350		Tequila's Token
-		400		Tequila's Token
-		500		Tequila's Token
-		420	3	Headhunting Permit
-		300		Polymerization Preparation
-		120	3	Incandescent Alloy
-		120	3	Manganese Trihydrate
-		120	3	Crystalline Circuit
-		100		Treasures Showcase
-		80		Seaside-style High Chair
-		90		Effervescent Potted Plant
-		90		Low Moquette Chair
-		70	2	Delicately Woven Drapery
-		20	4	Warm Ceiling Light
-		25	10	Manganese Ore
-		25	10	Oriron Cluster
-		18	10	Orirock Cluster
-		20	20	LMD
-		15	5	Strategic Battle Record
-		7	10	Tactical Battle Record
-		3	20	Frontline Battle Record
-		10	10	Skill Summary - 3
-		5	20	Skill Summary - 2
-		9	8	Polyketon
-		12	8	Device
-		9	8	Oriron
-		18	4	Guard Chip
-		"""),
-
-		[new("Guide_Ahead/Rerun#Lateranian_Desserts", "Guide Ahead Rerun", "Etched_Bullet_Casing")] = new("""
-		// Guide Ahead Rerun
-		200		Enforcer's Token
-		240		Enforcer's Token
-		280		Enforcer's Token
-		320		Enforcer's Token
-		360		Enforcer's Token
-		150	3	Headhunting Permit
-		100		Crystalline Electronic Unit
-		35	3	Keton Colloid
-		35	3	RMA70-24
-		30	3	White Horse Kohl
-		35		Practical Photo Frame
-		40		Reading Desk
-		40		'Role Model's' Sofa
-		18	2	Diamond Cross Chandelier
-		15	5	Integrated Device
-		10	5	Manganese Ore
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		4	8	Device
-		3	8	Oriron
-		3	8	Polyester
-		6	5	Specialist Chip
-		"""),
-
 		[new("Here_a_People_Sows#Shennong_Market", "Here a People Sows", "Tianzhuang")] = new("""
 		// Here a People Sows
 		200		Wanqing's Token
@@ -1177,10 +907,10 @@ static class DB
 		35	10	RMA70-24
 		35	10	Cutting Fluid Solution
 		25	10	Orirock Concentration
-		100		"藏经阁"
-		90		"优秀作品"
-		70		感应式立灯
-		35		小型斗拱灯
+		//100		"藏经阁"
+		//90		"优秀作品"
+		//70		感应式立灯
+		//35		小型斗拱灯
 		15	10	Data Supplement Instrument
 		5	60	Data Supplement Stick
 		12	15	Coagulating Gel
@@ -1238,235 +968,33 @@ static class DB
 		2	200	Furniture Part
 		"""),
 
-		[new("Ideal_City#Leaping_Gloompincer_Market", "Ideal City: Endless Carnival", @"Photocopies_of_""Stranger_Things""")] = new("""
-		// Ideal City: Endless Carnival
-		200		Minimalist's Token
-		240		Minimalist's Token
-		280		Minimalist's Token
-		320		Minimalist's Token
-		360		Minimalist's Token
+		[new("Il_Siracusano/Rerun#Dipartimento_di_Sicurezza_Alimentare", "Il Siracusano Rerun", "Permesso_di_Importazione")] = new("""
+		// Il Siracusano Rerun
 		150	3	Headhunting Permit
-		75	3	Module Data Block
-		100	5	Crystalline Electronic Unit
-		40	10	Oriron Block
-		35	10	Keton Colloid
-		35	10	Grindstone Pentahydrate
-		30	10	Polymerized Gel
-		110		Drunkard Surf Boards
-		90		Artificial Beach
-		90		Flag Decorations
-		85		Sand Castle
-		30		Windchime Light
-		25	4	White Ceiling Light
-		15	10	Data Supplement Instrument
-		5	60	Data Supplement Stick
-		15	15	Integrated Device
-		8	15	Crystalline Component
-		10	15	Sugar Pack
-		8	15	Loxic Kohl
-		7	120	LMD
-		5	30	Strategic Battle Record
-		3	50	Tactical Battle Record
-		1	150	Frontline Battle Record
-		4	25	Skill Summary - 3
-		2	50	Skill Summary - 2
-		2	40	Device
-		3	30	Sugar
-		3	30	Polyester
-		3	25	Oriron
-		3	25	Polyketon
-		4	20	Orirock Cube
-		6	5	Caster Chip
-		2	200	Furniture Part
-		"""),
-
-		[new("Ideal_City/Rerun#Leaping_Gloompincer_Market", "Ideal City: Endless Carnival Rerun", @"Photocopies_of_""Stranger_Things""")] = new("""
-		// Ideal City: Endless Carnival Rerun
-		200		Minimalist's Token
-		240		Minimalist's Token
-		280		Minimalist's Token
-		320		Minimalist's Token
-		360		Minimalist's Token
-		150	3	Headhunting Permit
-		100		Polymerization Preparation
+		100		Bipolar Nanoflake
+		100		Crystalline Electronic Unit
 		35	3	Keton Colloid
-		35	3	RMA70-24
+		35	3	Orirock Concentration
+		35	3	Manganese Trihydrate
+		35	3	Incandescent Alloy Block
+		35	3	Polymerized Gel
 		35	3	Refined Solvent
-		110		Swim Tube Rack
-		90		Artificial Beach
-		90		Flag Decorations
-		85		Sand Castle
-		30		Windchime Light
-		25	4	White Ceiling Light
-		12	5	Grindstone
-		7	5	Orirock Cluster
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		3	8	Sugar
-		3	8	Polyester
-		3	8	Polyketon
-		6	5	Caster Chip
-		"""),
-
-		[new("Il_Siracusano#Dipartimento_di_Sicurezza_Alimentare", "Il Siracusano", "Permesso_di_Importazione")] = new("""
-		// Il Siracusano
-		150	3	Headhunting Permit
-		75	3	Module Data Block
-		100	5	D32 Steel
-		100	5	Bipolar Nanoflake
-		50	10	Optimized Device
-		40	10	Crystalline Circuit
-		40	10	Oriron Block
-		35	10	RMA70-24
-		35	10	Grindstone Pentahydrate
-		35	10	Refined Solvent
 		110		'Truck Passage'
 		90		Patching Planks
 		90		Wooden Coat Hanger
 		85		Public Bookshelf
-		15	10	Data Supplement Instrument
-		5	60	Data Supplement Stick
-		15	15	Integrated Device
-		12	15	Grindstone
-		12	15	Semi-Synthetic Solvent
-		8	15	Sugar Pack
-		7	120	LMD
-		5	30	Strategic Battle Record
-		3	50	Tactical Battle Record
-		1	150	Frontline Battle Record
-		4	25	Skill Summary - 3
-		2	50	Skill Summary - 2
-		2	40	Orirock Cube
-		3	30	Sugar
-		3	30	Polyester
-		3	25	Oriron
-		3	25	Polyketon
-		4	20	Device
-		6	5	Vanguard Chip
-		2	200	Furniture Part
-		"""),
-
-		[new("Invitation_to_Wine/Rerun#Xingyu_Inn", "Invitation to Wine Rerun", "Canned_Tea")] = new("""
-		// Invitation to Wine Rerun
-		200		Kroos the Keen Glint's Token
-		240		Kroos the Keen Glint's Token
-		280		Kroos the Keen Glint's Token
-		320		Kroos the Keen Glint's Token
-		360		Kroos the Keen Glint's Token
-		150	3	Headhunting Permit
-		100		Crystalline Electronic Unit
-		40	3	Oriron Block
-		30	3	White Horse Kohl
-		40	3	Crystalline Circuit
-		35	4	Huangli Wooden Square Stool
-		25	2	Open Bamboo Blinds
-		18	2	Cordial Sojourner's Invitation
-		18	4	Wall-Mounted Lights
 		15	5	RMA70-12
-		12	5	Compound Cutting Fluid
+		8	5	Sugar Pack
 		7	20	LMD
 		5	5	Strategic Battle Record
 		3	10	Tactical Battle Record
 		1	20	Frontline Battle Record
 		4	10	Skill Summary - 3
 		2	20	Skill Summary - 2
-		3	8	Polyester
 		3	8	Oriron
 		3	8	Polyketon
-		6	5	Sniper Chip
-		"""),
-
-		[new("It's_Been_A_While#Stray_Animal_Shelter", "It's Been a While", "Nutritional_Pet_Food_Tin")] = new("""
-		// It's Been a While
-		100		Luo Xiaohei
-		10	6	Information Fragment
-		100	2	Module Data Block
-		30	8	Data Supplement Instrument
-		10	40	Data Supplement Stick
-		200		Bipolar Nanoflake
-		65		Chip Catalyst
-		50	2	White Horse Kohl
-		25	4	RMA70-12
-		15	4	Orirock Cluster
-		5	10	LMD
-		5	5	Strategic Battle Record
-		5	5	Tactical Battle Record
-		6	5	Skill Summary - 3
-		6	5	Skill Summary - 2
-		4	5	Pure Gold
-		4	5	Polyester
-		30	5	Recruitment Permit
-		4	10	Furniture Part
-		"""),
-
-		[new("Lingering_Echoes#Composer's_Mailbox", "Lingering Echoes", "Sheet_Music")] = new("""
-		// Lingering Echoes
-		200		Czerny's Token
-		240		Czerny's Token
-		280		Czerny's Token
-		320		Czerny's Token
-		360		Czerny's Token
-		150	3	Headhunting Permit
-		75	2	Module Data Block
-		100	5	Polymerization Preparation
-		50	10	Optimized Device
-		40	10	Crystalline Circuit
-		30	10	Manganese Trihydrate
-		50		Stage Floor
-		50		Wood Pattern Wallpaper
-		40		'Ensemble'
-		25	4	'Dark Clouds'
-		15	5	'Starry Sky'
-		15	10	Data Supplement Instrument
-		5	60	Data Supplement Stick
-		12	15	Coagulating Gel
-		8	10	Polyester Pack
-		7	100	LMD
-		5	25	Strategic Battle Record
-		3	50	Tactical Battle Record
-		1	120	Frontline Battle Record
-		4	25	Skill Summary - 3
-		2	50	Skill Summary - 2
-		4	25	Device
-		3	25	Oriron
-		2	25	Orirock Cube
-		6	4	Defender Chip
-		2	200	Furniture Part
-		"""),
-
-		[new("Lingering_Echoes/Rerun#Composer's_Mailbox", "Lingering Echoes Rerun", "Sheet_Music")] = new("""
-		// Lingering Echoes Rerun
-		200		Czerny's Token
-		240		Czerny's Token
-		280		Czerny's Token
-		320		Czerny's Token
-		360		Czerny's Token
-		150	3	Headhunting Permit
-		100		Polymerization Preparation
-		35	3	Keton Colloid
-		35	3	Incandescent Alloy Block
-		35	3	Refined Solvent
-		50		Stage Floor
-		50		Wood Pattern Wallpaper
-		40		'Ensemble'
-		25	4	'Dark Clouds'
-		15	5	'Starry Sky'
-		10	5	Oriron Cluster
-		10	5	Incandescent Alloy Block
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		4	8	Device
-		3	8	Polyester
-		3	8	Sugar
-		6	5	Defender Chip
+		2	8	Orirock Cube
+		6	5	Vanguard Chip
 		"""),
 
 		[new("Lone_Trail#Special_Case_Contact,_C.U.D.O.D.", "Lone Trail", "Flight_Data_Recorder_Chip")] = new("""
@@ -1512,39 +1040,6 @@ static class DB
 		2	200	Furniture Part
 		"""),
 
-		[new("Near_Light/Rerun#Trade_Exhibition", "Near Light Rerun", "G.K.T._Commemorative_Model")] = new("""
-		// Near Light Rerun
-		200		Wild Mane's Token
-		240		Wild Mane's Token
-		280		Wild Mane's Token
-		320		Wild Mane's Token
-		360		Wild Mane's Token
-		150	3	Headhunting Permit
-		100		Crystalline Electronic Unit
-		35	3	Incandescent Alloy Block
-		35	3	Manganese Trihydrate
-		25	3	Orirock Concentration
-		75		Broadcast Room Special Ceiling Light
-		75		Red and White Interview Chair (Right)
-		90		Red and White Interview Chair Set
-		160		Vertical Translucent Partition
-		85		Broadcast Room Wallpaper
-		85		Broadcast Room Matte-Finish Tiles
-		100		Banner-Style Displays
-		10	5	Oriron Cluster
-		10	5	Incandescent Alloy
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		3	8	Polyketon
-		3	8	Oriron
-		2	8	Orirock Cube
-		6	5	Vanguard Chip
-		"""),
-
 		[new("Operation_Lucent_Arrowhead#Galeria_Souvenir_Shop", "Operation Lucent Arrowhead", "Galeria_Stamp_Card")] = new("""
 		// Operation Lucent Arrowhead
 		200		Fuze's Token
@@ -1559,14 +1054,14 @@ static class DB
 		40	10	Cured Fiberboard
 		35	10	RMA70-24
 		30	10	White Horse Kohl
-		100		艺术馆吊灯
-		100		艺术馆盆栽
-		50		"脱轨"
-		50		"请自由使用"
-		40		隐藏展品"禁止触摸"
-		40		"光和热"
-		30		艺术馆照明系统
-		30		"颁奖典礼"
+		//100		艺术馆吊灯
+		//100		艺术馆盆栽
+		//50		"脱轨"
+		//50		"请自由使用"
+		//40		隐藏展品"禁止触摸"
+		//40		"光和热"
+		//30		艺术馆照明系统
+		//30		"颁奖典礼"
 		15	10	Data Supplement Instrument
 		5	60	Data Supplement Stick
 		10	15	Crystalline Component
@@ -1582,29 +1077,6 @@ static class DB
 		2	25	Orirock Cube
 		6	5	Guard Chip
 		2	200	Furniture Part
-		"""),
-
-		[new("The_Black_Forest_Wills_A_Dream#Treehollow_Stores", "The Black Forest Wills A Dream", "Guiding_Figurine")] = new("""
-		// The Black Forest Wills A Dream
-		350		Holiday HD29
-		10	7	Information Fragment
-		100	2	Module Data Block
-		30	8	Data Supplement Instrument
-		10	40	Data Supplement Stick
-		200		D32 Steel
-		65		Chip Catalyst
-		60	2	Grindstone Pentahydrate
-		20	4	Manganese Ore
-		25	4	RMA70-12
-		5	10	LMD
-		5	5	Strategic Battle Record
-		5	5	Tactical Battle Record
-		6	5	Skill Summary - 3
-		6	5	Skill Summary - 2
-		4	5	Pure Gold
-		8	5	Device
-		30	5	Recruitment Permit
-		4	10	Furniture Part
 		"""),
 
 		[new(@"So_Long,_Adele#""White_Volcano""", "So Long, Adele", "Fluffy_Critter_Wool")] = new("""
@@ -1648,39 +1120,6 @@ static class DB
 		2	200	Furniture Part
 		"""),
 
-		[new("Stultifera_Navis/Rerun#Bitterscale_Tavern", "Stultifera Navis Rerun", "Rusted_Compass")] = new("""
-		// Stultifera Navis Rerun
-		250		Lumen's Token
-		300		Lumen's Token
-		350		Lumen's Token
-		400		Lumen's Token
-		450		Lumen's Token
-		150	3	Headhunting Permit
-		100		Polymerization Preparation
-		35	3	Manganese Trihydrate
-		40	3	Oriron Block
-		70	3	Orirock Concentration
-		70		Stultifera Navis Reception Room Wallpaper
-		70		Stultifera Navis Reception Room Flooring
-		60		Shell-shaped Lounge Chair
-		50		Non-Slip Rug
-		20		Non-Slip Stair Rug
-		40	2	Side Hall Curtain
-		30	2	Cylindrical Chandelier
-		12	5	Grindstone
-		12	5	Oriron Cluster
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		2	8	Orirock Cube
-		3	8	Sugar
-		3	8	Polyketon
-		6	5	Medic Chip
-		"""),
-
 		[new("The_Rides_to_Lake_Silberneherze#Onboard_Services", "The Rides to Lake Silberneherze", "Burdenbeast_Blind_Box")] = new("""
 		// The Rides to Lake Silberneherze
 		200		Harold's Token
@@ -1694,11 +1133,11 @@ static class DB
 		35	10	Keton Colloid
 		35	10	Manganese Trihydrate
 		35	10	RMA70-24
-		90		小邮局地板
-		60		小邮筒
-		60		"耶拉冈德之骨"
-		45		寄件柜台
-		30		"雪山之窗"
+		//90		小邮局地板
+		//60		小邮筒
+		//60		"耶拉冈德之骨"
+		//45		寄件柜台
+		//30		"雪山之窗"
 		15	10	Data Supplement Instrument
 		5	60	Data Supplement Stick
 		12	10	Transmuted Salt
@@ -1714,29 +1153,6 @@ static class DB
 		3	25	Polyketon
 		6	5	Medic Chip
 		2	200	Furniture Part
-		"""),
-
-		[new("To_Be_Continued#Library", "To Be Continued", "Library_Card")] = new("""
-		// To Be Continued
-		350		Traceless Walker
-		10	6	Information Fragment
-		100	2	Module Data Block
-		30	8	Data Supplement Instrument
-		10	40	Data Supplement Stick
-		200		Bipolar Nanoflake
-		65		Chip Catalyst
-		65	2	RMA70-24
-		15	4	Semi-Synthetic Solvent
-		20	4	Sugar Pack
-		5	10	LMD
-		5	5	Strategic Battle Record
-		5	5	Tactical Battle Record
-		6	5	Skill Summary - 3
-		6	5	Skill Summary - 2
-		4	5	Pure Gold
-		8	5	Device
-		30	5	Recruitment Permit
-		4	10	Furniture Part
 		"""),
 
 		[new("To_the_Grinning_Valley#EVENT_STOCK", "To the Grinning Valley", "Spicy_Bottletree_Sap")] = new("""
@@ -1760,40 +1176,6 @@ static class DB
 		6	5	Oriron
 		30	5	Recruitment Permit
 		4	10	Furniture Part
-		"""),
-
-		[new("What_the_Firelight_Casts#River_Valley_Caravan", "What the Firelight Casts", "Manuscripts_of_Ballads")] = new("""
-		// What the Firelight Casts
-		200		Puzzle's Token
-		240		Puzzle's Token
-		280		Puzzle's Token
-		320		Puzzle's Token
-		360		Puzzle's Token
-		150	3	Headhunting Permit
-		75	2	Module Data Block
-		100	5	Bipolar Nanoflake
-		35	10	Keton Colloid
-		30	10	Polymerized Gel
-		35	10	Incandescent Alloy Block
-		60		Rattan Pendant Lamp
-		25	4	Used Folding Chair
-		100		Pure White Stone-Tiled Table
-		150		Cozy Plaid Rug
-		15	10	Data Supplement Instrument
-		5	60	Data Supplement Stick
-		8	15	Polyester Pack
-		10	10	Manganese Ore
-		7	100	LMD
-		5	25	Strategic Battle Record
-		3	50	Tactical Battle Record
-		1	120	Frontline Battle Record
-		4	25	Skill Summary - 3
-		2	50	Skill Summary - 2
-		2	25	Orirock Cube
-		3	25	Sugar
-		4	25	Device
-		6	5	Vanguard Chip
-		2	200	Furniture Part
 		"""),
 
 		[new("What_the_Firelight_Casts/Rerun#River_Valley_Caravan", "What the Firelight Casts Rerun", "Manuscripts_of_Ballads")] = new("""
@@ -1873,10 +1255,10 @@ static class DB
 		30	10	Polymerized Gel
 		30	10	Transmuted Salt Agglomerate
 		25	10	Orirock Concentration
-		110		管风琴书卷台
-		90		图书馆阶梯
-		90		"知识之景"
-		90		求知厅堂地板
+		//110		管风琴书卷台
+		//90		图书馆阶梯
+		//90		"知识之景"
+		//90		求知厅堂地板
 		15	10	Data Supplement Instrument
 		5	60	Data Supplement Stick
 		12	15	Coagulating Gel
