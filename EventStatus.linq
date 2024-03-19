@@ -55,27 +55,27 @@ void Main()
 			150	3	Headhunting Permit
 			75	2	Module Data Block
 			100	5	Bipolar Nanoflake
+			25	10	Orirock Concentration
 			40	10	Oriron Block
 			35	10	Grindstone Pentahydrate
-			25	10	Orirock Concentration
-			50		"提前补丁"
-			50		装配工作台
-			30		抗震支柱
-			25		加固工作凳
-			25		防爆荧光灯
+			25		Reinforced Work Chair
+			25		Explosion-proof Fluorescent Lamp
+			30		Shock-proof Pillar
+			50		'Advance Patchwork'
+			50		Assembly Workbench
 			15	10	Data Supplement Instrument
 			5	60	Data Supplement Stick
-			12	10	Semi-Synthetic Solvent
 			8	15	Loxic Kohl
+			12	10	Semi-Synthetic Solvent
 			7	100	LMD
 			5	25	Strategic Battle Record
 			3	50	Tactical Battle Record
-			1	150	Frontline Battle Record
+			1	120	Frontline Battle Record
 			4	25	Skill Summary - 3
 			2	50	Skill Summary - 2
-			4	25	Device
-			3	25	Oriron
 			2	25	Orirock Cube
+			3	25	Oriron
+			4	25	Device
 			6	5	Sniper Chip
 			2	200	Furniture Part
 			""")
@@ -724,6 +724,7 @@ static class DB
 	public static readonly ReadOnlyDictionary<string, LazyImage> Images = new(new ItemImage[]
 	{
 		new SkinImage("Major Field", "4/46", "Earthspirit_Skin_1"),
+		new("'Advance Patchwork'", "d/d1"),
 		new("'Audible Redemption'", "9/9d"),
 		new("'Cohesion'", "f/fe"),
 		new("'Collection'", "c/c1", "Collection_(furniture)"),
@@ -743,6 +744,7 @@ static class DB
 		new("'Truck Passage'", "e/e7"),
 		new("'Witness of Friendship'", "f/fa"),
 		new("Aketon", "d/d3"),
+		new("Assembly Workbench", "2/2e"),
 		new("Bipolar Nanoflake", "b/b6"),
 		new("Bryophyta's Token", "e/eb"),
 		new("Caster Chip", "9/94"),
@@ -762,6 +764,7 @@ static class DB
 		new("Defender Chip", "2/24"),
 		new("Device", "a/a4"),
 		new("Dizzy Spinning Chair", "6/63"),
+		new("Explosion-proof Fluorescent Lamp", "e/e0"),
 		new("Frontline Battle Record", "f/f7"),
 		new("Furniture Part", "0/0d"),
 		new("Fuze's Token", "b/ba"),
@@ -805,9 +808,11 @@ static class DB
 		new("Rattan Pendant Lamp", "7/74"),
 		new("Recruitment Permit", "3/3b"),
 		new("Refined Solvent", "9/9f"),
+		new("Reinforced Work Chair", "a/ae"),
 		new("RMA70-12", "1/10"),
 		new("RMA70-24", "f/f1"),
 		new("Semi-Synthetic Solvent", "5/58"),
+		new("Shock-proof Pillar", "2/22"),
 		new("Silence the Paradigmatic's Token", "2/20"),
 		new("Skill Summary - 2", "b/b0", "Skill_Summary_Volume_2"),
 		new("Skill Summary - 3", "a/a7", "Skill_Summary_Volume_3"),
@@ -868,27 +873,27 @@ static class DB
 		150	3	Headhunting Permit
 		75	2	Module Data Block
 		100	5	Bipolar Nanoflake
+		25	10	Orirock Concentration
 		40	10	Oriron Block
 		35	10	Grindstone Pentahydrate
-		25	10	Orirock Concentration
-		50		"提前补丁"
-		50		装配工作台
-		30		抗震支柱
-		25		加固工作凳
-		25		防爆荧光灯
+		25		Reinforced Work Chair
+		25		Explosion-proof Fluorescent Lamp
+		30		Shock-proof Pillar
+		50		'Advance Patchwork'
+		50		Assembly Workbench
 		15	10	Data Supplement Instrument
 		5	60	Data Supplement Stick
-		12	10	Semi-Synthetic Solvent
 		8	15	Loxic Kohl
+		12	10	Semi-Synthetic Solvent
 		7	100	LMD
 		5	25	Strategic Battle Record
 		3	50	Tactical Battle Record
-		1	150	Frontline Battle Record
+		1	120	Frontline Battle Record
 		4	25	Skill Summary - 3
 		2	50	Skill Summary - 2
-		4	25	Device
-		3	25	Oriron
 		2	25	Orirock Cube
+		3	25	Oriron
+		4	25	Device
 		6	5	Sniper Chip
 		2	200	Furniture Part
 		"""),

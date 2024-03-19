@@ -42,11 +42,11 @@ Grindstone Pentahydrate
 Orirock Concentration
 1
 25 Shoddy Fuel.png	10
-“提前补丁”	50 Shoddy Fuel.png	1
-装配工作台	50 Shoddy Fuel.png	1
-抗震支柱	30 Shoddy Fuel.png	1
-加固工作凳	25 Shoddy Fuel.png	1
-防爆荧光灯	25 Shoddy Fuel.png	1
+Advance Patchwork.png	50 Shoddy Fuel.png	1
+Assembly Workbench.png	50 Shoddy Fuel.png	1
+Shock-proof Pillar.png	30 Shoddy Fuel.png	1
+Explosion-proof Fluorescent Lamp.png	25 Shoddy Fuel.png	1
+Reinforced Work Chair.png	25 Shoddy Fuel.png	1
 Data Supplement Instrument
 1
 15 Shoddy Fuel.png	10
