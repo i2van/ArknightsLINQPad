@@ -1,15 +1,21 @@
 ﻿# Arknights LINQPad scripts
 
-Collection of the [Arknights](https://arknights.wiki.gg) [LINQPad](https://www.linqpad.net) scripts.
+[![Latest build](https://github.com/i2van/ArknightsLINQPad/workflows/build/badge.svg)](https://github.com/i2van/ArknightsLINQPad/actions)
+[![License](https://img.shields.io/badge/license-MIT-yellow)](https://opensource.org/licenses/MIT)
+[![Arknights](https://img.shields.io/badge/arknights-wiki-black)](https://arknights.wiki.gg)
+[![Requires LINQPad](https://img.shields.io/badge/requires-linqpad%208-teal)](https://www.linqpad.net/Download.aspx)
+[![Requires LINQPad Latest Beta](https://img.shields.io/badge/requires-linqpad%208%20beta-blue)](https://www.linqpad.net/LINQPad8.aspx#beta)
+
+Collection of the [Arknights](https://arknights.wiki.gg) [LINQPad 8](https://www.linqpad.net) ([Windows only](https://forum.linqpad.net/discussion/1983/roadmap-for-cross-platform-ubuntu-linux)) scripts.
 
 ## Requirements
 
-[LINQPad](https://www.linqpad.net/Download.aspx) with the [latest](https://dotnet.microsoft.com/en-us/download/dotnet/latest) [.NET](https://dotnet.microsoft.com/en-us/download/dotnet) installed.
+[LINQPad 8](https://www.linqpad.net/Download.aspx) or [LINQPad 8 Latest Beta](https://www.linqpad.net/LINQPad8.aspx#beta) (recommended) with the [latest](https://dotnet.microsoft.com/en-us/download/dotnet/latest) [.NET](https://dotnet.microsoft.com/en-us/download/dotnet) installed.
 
 ## How to use
 
-1. Open [script](#scripts) in the [LINQPad](https://www.linqpad.net/Download.aspx) or [LINQPad Latest Beta](https://www.linqpad.net/LINQPad8.aspx#beta) (recommended).
-2. Look for `TODO:` and edit as necessary.
+1. Open [script](#scripts) in the [LINQPad 8](https://www.linqpad.net/Download.aspx).
+2. Search (`Ctrl+F`) for all the `TODO:`s and edit as necessary.
 3. Execute.
 
 ## Scripts
