@@ -19,6 +19,12 @@ void Main()
 	var items = new Items("""
 		//	operator	stage	stars (1-6)
 		//	Schwarz		2-1		6 // Y
+			Ch'en		5-9		6
+			Saga		WR-3	6
+			Silence the Paradigmatic	6-3	6
+			Mr. Nothing	3-7		5
+			Tsukinogi	S3-6	5
+			Purestream	3-7		4
 		""")
 		.OrderBy(static v => v.Operator)
 		.GroupBy(static v => v.Stage)
@@ -40,7 +46,8 @@ void Main()
 			Stage     = new WikiHyperlinq(v.Stage, "Information"),
 			Operators = VerticalRun(v.Operators.Select(static v => new WikiHyperlinq(v.Operator, "Modules"))),
 			v.Stars,
-			v.Total
+			v.Total,
+			Paradox = VerticalRun(v.Operators.Select(static v => new Hyperlinq($"https://www.youtube.com/results?search_query={v.Operator}+paradox+simulation", "YouTube")))
 		}))
 		.ToArray();
 
