@@ -449,10 +449,12 @@ record Sanity(string Uri, int Left, int Spent, int SanityPerPrime, IReadOnlyColl
 	{
 		get
 		{
-			var percent = Floor(100.0 * Left / (Left + Spent));
+			var percent = Floor(100.0 * Left / Total);
 			return percent == 0 ? 1 : (int)percent;
 		}
 	}
+
+	public int Total { get; } = Left + Spent;
 
 	public int PercentSpent =>
 		100 - PercentLeft;
@@ -580,7 +582,7 @@ class SanityHyperlink : Hyperlink
 		: base(sanity.Left.ToString(DumpContext.CultureInfo), sanity.Uri) =>
 		HtmlElement["title"] = $"{(
 			sanity.Spent > 0
-				? $"{sanity.Spent} {DumpContext.Glyphs.Circle} {sanity.PercentSpent}% sanity spent"
+				? $"{sanity.Spent} / {sanity.Total} {DumpContext.Glyphs.Circle} {sanity.PercentSpent}% sanity spent"
 				: "No sanity spent yet"
 			)}. Sanity per prime: {sanity.SanityPerPrime}";
 }
@@ -721,6 +723,9 @@ class DumpContext
 
 static class DB
 {
+	// REGEX:
+	// ^.+/([a-z0-9]/[a-z0-9]{2})/(.+?)\.png.*$
+	// new\("$2", "$1"\),
 	public static readonly ReadOnlyDictionary<string, LazyImage> Images = new(new ItemImage[]
 	{
 		new SkinImage("Major Field", "4/46", "Earthspirit_Skin_1"),
@@ -764,6 +769,8 @@ static class DB
 		new("Defender Chip", "2/24"),
 		new("Device", "a/a4"),
 		new("Dizzy Spinning Chair", "6/63"),
+		new("Exhibition Room Ceiling Light (Bright)", "d/de"),
+		new("Exhibition Room Ceiling Light (Dim)", "0/0b"),
 		new("Explosion-proof Fluorescent Lamp", "e/e0"),
 		new("Frontline Battle Record", "f/f7"),
 		new("Furniture Part", "0/0d"),
@@ -801,6 +808,7 @@ static class DB
 		new("Polyketon", "9/96"),
 		new("Polymerization Preparation", "9/9c"),
 		new("Polymerized Gel", "6/66"),
+		new("Projectile Interception System", "a/a0"),
 		new("Public Bookshelf", "5/54"),
 		new("Pure Gold", "0/0e"),
 		new("Pure White Stone-Tiled Table", "1/10"),
@@ -809,10 +817,12 @@ static class DB
 		new("Recruitment Permit", "3/3b"),
 		new("Refined Solvent", "9/9f"),
 		new("Reinforced Work Chair", "a/ae"),
+		new("Reinforcement Debris", "7/7e"),
 		new("RMA70-12", "1/10"),
 		new("RMA70-24", "f/f1"),
 		new("Semi-Synthetic Solvent", "5/58"),
 		new("Shock-proof Pillar", "2/22"),
+		new("Signal Disruptor", "3/33"),
 		new("Silence the Paradigmatic's Token", "2/20"),
 		new("Skill Summary - 2", "b/b0", "Skill_Summary_Volume_2"),
 		new("Skill Summary - 3", "a/a7", "Skill_Summary_Volume_3"),
@@ -823,12 +833,16 @@ static class DB
 		new("Sugar Pack", "2/23"),
 		new("Sugar", "a/a9"),
 		new("Supporter Chip", "d/d7"),
+		new("Surveillance Camera", "6/65"),
+		new("Tachanka's Token", "a/a9"),
 		new("Tactical Battle Record", "a/a7"),
+		new("Throwable Discharge Device", "7/7a"),
 		new("Toasty Shop Lamp", "6/6c"),
 		new("Transmuted Salt Agglomerate", "b/bd"),
 		new("Transmuted Salt", "b/bd"),
 		new("Used Folding Chair", "c/c1"),
 		new("Vanguard Chip", "d/df"),
+		new("Wall-mounted Newspaper Rack", "9/91"),
 		new("Wanqing's Token", "f/fc"),
 		new("White Horse Kohl", "4/4a"),
 		new("Wooden Coat Hanger", "7/7e"),
@@ -1084,6 +1098,40 @@ static class DB
 		2	200	Furniture Part
 		"""),
 
+		[new("Operation_Originium_Dust/Rerun#Commissary", "Operation Originium Dust Rerun", "Rhodes_Island_Resource_Allocation_Certificate")] = new("""
+		// Operation Originium Dust Rerun
+		200		Tachanka's Token
+		240		Tachanka's Token
+		280		Tachanka's Token
+		320		Tachanka's Token
+		360		Tachanka's Token
+		150	3	Headhunting Permit
+		100		D32 Steel
+		45	3	Oriron Block
+		40	3	Grindstone Pentahydrate
+		35	3	White Horse Kohl
+		55		Signal Disruptor
+		45		Reinforcement Debris
+		45		Projectile Interception System
+		45		Wall-mounted Newspaper Rack
+		30		Surveillance Camera
+		30		Throwable Discharge Device
+		25	2	Exhibition Room Ceiling Light (Bright)
+		25	2	Exhibition Room Ceiling Light (Dim)
+		15	5	RMA70-12
+		12	5	Coagulating Gel
+		7	20	LMD
+		5	5	Strategic Battle Record
+		3	10	Tactical Battle Record
+		1	20	Frontline Battle Record
+		4	10	Skill Summary - 3
+		2	20	Skill Summary - 2
+		4	8	Device
+		3	8	Oriron
+		2	8	Orirock Cube
+		6	5	Guard Chip
+		"""),
+
 		[new(@"So_Long,_Adele#""White_Volcano""", "So Long, Adele", "Fluffy_Critter_Wool")] = new("""
 		// So Long, Adele
 		200		Bryophyta's Token
@@ -1160,7 +1208,7 @@ static class DB
 		2	200	Furniture Part
 		"""),
 
-		[new("To_the_Grinning_Valley#EVENT_STOCK", "To the Grinning Valley", "Spicy_Bottletree_Sap")] = new("""
+		[new("To_the_Grinning_Valley#Sandbeast's_Cave", "To the Grinning Valley", "Spicy_Bottletree_Sap")] = new("""
 		// To the Grinning Valley
 		350		Major Field
 		10	7	Information Fragment
