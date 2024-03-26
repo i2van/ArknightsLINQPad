@@ -22,9 +22,11 @@ void Main()
 			Ch'en		5-9		6
 			Saga		WR-3	6
 			Silence the Paradigmatic	6-3	6
+			Grani		GT-6	5
 			Mr. Nothing	3-7		5
 			Tsukinogi	S3-6	5
 			Purestream	3-7		4
+			Vermeil		3-1		4
 		""")
 		.OrderBy(static v => v.Operator)
 		.GroupBy(static v => v.Stage)
@@ -47,7 +49,7 @@ void Main()
 			Operators = VerticalRun(v.Operators.Select(static v => new WikiHyperlinq(v.Operator, "Modules"))),
 			v.Stars,
 			v.Total,
-			Paradox = VerticalRun(v.Operators.Select(static v => new Hyperlinq($"https://www.youtube.com/results?search_query={v.Operator}+paradox+simulation", "YouTube")))
+			Paradox   = VerticalRun(v.Operators.Select(static v => new Hyperlinq($"https://www.youtube.com/results?search_query={v.Operator}+paradox+simulation", "YouTube")))
 		}))
 		.ToArray();
 
