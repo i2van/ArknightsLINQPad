@@ -158,7 +158,7 @@ void Main()
 	.Distinct()
 	.Count() == 1
 		? Empty
-		: "float:right";
+		: DumpContext.Document.Styles.FloatRight;
 
 	var sanity = new Sanity(resourceUri, price, totalPrice - price, config.SanityPerPrime, DB.Colors);
 
@@ -235,8 +235,8 @@ static double CalcPrimesToRecover(double value, double sanityPerPrime = default)
 static bool NoTimeLeft(TimeSpan timeSpan) =>
 	timeSpan.Ticks <= 0;
 
-static string Format(TimeSpan timeSpan) =>
-	timeSpan.ToString((timeSpan.Days != 0 ? "d'd '" : Empty) + "hh':'mm':'ss", DumpContext.CultureInfo);
+static string Format(TimeSpan timeSpan, bool withSeconds = true) =>
+	timeSpan.ToString((timeSpan.Days != 0 ? "d'd '" : Empty) + "hh':'mm" + (withSeconds ? "':'ss" : Empty), DumpContext.CultureInfo);
 
 static object Format(object value, Color color = default, params string[] styles) =>
 	WithStyle(
@@ -299,7 +299,8 @@ static object ToDump(object input) =>
 				item.Price,
 				item.Count,
 				Name = IsNullOrEmpty(item.Name) ? (object)Empty : GetImageHyperlink(item.Name),
-				item.Total
+				item.Total,
+				Time = Format(Format(FromDays(CalcPrimesToRecover(item.Total)), false), styles: DumpContext.Document.Styles.FloatRight)
 			},
 		_ => input
 	};
@@ -706,6 +707,11 @@ class DumpContext
 	public static class Document
 	{
 		public const string MarginBottom = "6.5rem";
+
+		public static class Styles
+		{
+			public const string FloatRight = "float: right";
+		}
 	}
 
 	public static class Glyphs
