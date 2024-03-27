@@ -300,7 +300,7 @@ static object ToDump(object input) =>
 				item.Count,
 				Name = IsNullOrEmpty(item.Name) ? (object)Empty : GetImageHyperlink(item.Name),
 				item.Total,
-				Time = Format(Format(FromDays(CalcPrimesToRecover(item.Total)), false), styles: DumpContext.Document.Styles.FloatRight)
+				Required = Format(Format(FromDays(CalcPrimesToRecover(item.Total)), false), styles: DumpContext.Document.Styles.FloatRight)
 			},
 		_ => input
 	};
