@@ -165,10 +165,13 @@ void Main()
 	var okColor = DB.Colors.First();
 	var warningColor = DB.Colors.Last();
 
+	var timeRequiredSpan = new Span(timeRequiredFormatted);
+	timeRequiredSpan.HtmlElement["title"] = $"Event ends {ToDump(eventEndTimeLocal)}";
+
 	var report = new
 	{
 		SanityLeft      = sanity,
-		TimeRequired    = Format(timeRequiredFormatted, styles: dateStyle),
+		TimeRequired    = Format(timeRequiredSpan, styles: dateStyle),
 		TimeLeft        = Format(timeLeftFormatted, noRecoverNeeded ? okColor : warningColor, dateStyle),
 		TimeSaved       = Format(timeToRecoverFormatted, okColor, dateStyle),
 		PrimesSaved     = Format(primesToRecover, okColor),
@@ -277,9 +280,9 @@ static object ToDump(object input) =>
 		DateOnly dateOnly =>
 			dateOnly.ToString("D", DumpContext.CultureInfo),
 		TimeOnly timeOnly =>
-			timeOnly.ToString(@"hh\:mm", DumpContext.CultureInfo),
+			timeOnly.ToString("t", DumpContext.CultureInfo),
 		DateTime dateTime =>
-			$"{ToDump(DateOnly.FromDateTime(dateTime))} {ToDump(TimeOnly.FromDateTime(dateTime))}",
+			dateTime.ToString("f", DumpContext.CultureInfo),
 		Color color =>
 			WithStyle($"{DumpContext.Glyphs.Circle} {ToHtml(color):x}", $"color:{ToHtml(color)}"),
 		Sanity sanity =>
