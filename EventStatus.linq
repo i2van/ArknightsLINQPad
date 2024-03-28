@@ -18,6 +18,7 @@
   <Namespace>System.Diagnostics.CodeAnalysis</Namespace>
   <Namespace>System.Drawing</Namespace>
   <Namespace>System.Globalization</Namespace>
+  <Namespace>System.Runtime.CompilerServices</Namespace>
 </Query>
 
 #define DUMP_MISSING_IMAGES
@@ -160,18 +161,15 @@ void Main()
 		? Empty
 		: DumpContext.Document.Styles.FloatRight;
 
-	var sanity = new Sanity(resourceUri, price, totalPrice - price, config.SanityPerPrime, DB.Colors);
+	var sanity = new Sanity(resourceUri, price, totalPrice - price, config.SanityPerPrime, DB.Colors, $"Event ends {ToDump(eventEndTimeLocal)}");
 
 	var okColor = DB.Colors.First();
 	var warningColor = DB.Colors.Last();
 
-	var timeRequiredSpan = new Span(timeRequiredFormatted);
-	timeRequiredSpan.HtmlElement["title"] = $"Event ends {ToDump(eventEndTimeLocal)}";
-
 	var report = new
 	{
 		SanityLeft      = sanity,
-		TimeRequired    = Format(timeRequiredSpan, styles: dateStyle),
+		TimeRequired    = Format(timeRequiredFormatted, styles: dateStyle),
 		TimeLeft        = Format(timeLeftFormatted, noRecoverNeeded ? okColor : warningColor, dateStyle),
 		TimeSaved       = Format(timeToRecoverFormatted, okColor, dateStyle),
 		PrimesSaved     = Format(primesToRecover, okColor),
@@ -289,7 +287,7 @@ static object ToDump(object input) =>
 			HorizontalRun(
 				new SanityHyperlink(sanity),
 				new DumpContainer($" {DumpContext.Glyphs.Circle} ") { Style = $"color: {ToHtml(sanity.Color)}" },
-				$"{sanity.PercentLeft.ToString(DumpContext.CultureInfo)}%"),
+				new Span($"{sanity.PercentLeft.ToString(DumpContext.CultureInfo)}%").SetTitle(sanity.Title)),
 		KeyValuePair<string, LazyImage> itemImage =>
 			new
 			{
@@ -447,7 +445,7 @@ class Minute : TimePart<Minute>
 		new(minute);
 }
 
-record Sanity(string Uri, int Left, int Spent, int SanityPerPrime, IReadOnlyCollection<Color> Colors)
+record Sanity(string Uri, int Left, int Spent, int SanityPerPrime, IReadOnlyCollection<Color> Colors, string Title)
 {
 	public int PercentLeft
 	{
@@ -584,11 +582,11 @@ class SanityHyperlink : Hyperlink
 {
 	public SanityHyperlink(Sanity sanity)
 		: base(sanity.Left.ToString(DumpContext.CultureInfo), sanity.Uri) =>
-		HtmlElement["title"] = $"{(
+		this.SetTitle($"{(
 			sanity.Spent > 0
 				? $"{sanity.Spent} / {sanity.Total} {DumpContext.Glyphs.Circle} {sanity.PercentSpent}% sanity spent"
 				: "No sanity spent yet"
-			)}. Sanity per prime: {sanity.SanityPerPrime}";
+			)}. Sanity per prime: {sanity.SanityPerPrime}");
 }
 
 class ItemImage
@@ -658,6 +656,19 @@ static class Extensions
 		timeSpan < Zero
 			? timeSpan
 			: timeSpan + AlmostSecond;
+}
+
+static class ControlsExtensions
+{
+	private static T SetAttribute<T>(this T control, string attribute, [CallerArgumentExpression(nameof(attribute))] string attributeName = "")
+		where T : Control
+	{
+		control.HtmlElement[attributeName] = attribute;
+		return control;
+	}
+
+	public static T SetTitle<T>(this T control, string title) where T : Control =>
+		control.SetAttribute(title);
 }
 
 static class HtmlExtensions
