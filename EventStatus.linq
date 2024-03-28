@@ -18,6 +18,7 @@
   <Namespace>System.Diagnostics.CodeAnalysis</Namespace>
   <Namespace>System.Drawing</Namespace>
   <Namespace>System.Globalization</Namespace>
+  <Namespace>System.Runtime.CompilerServices</Namespace>
 </Query>
 
 #define DUMP_MISSING_IMAGES
@@ -165,17 +166,16 @@ void Main()
 	var okColor = DB.Colors.First();
 	var warningColor = DB.Colors.Last();
 
-	var timeRequiredSpan = new Span(timeRequiredFormatted);
-	timeRequiredSpan.HtmlElement["title"] = $"Event ends {ToDump(eventEndTimeLocal)}";
+	var eventEndTitle = $"Event ends {ToDump(eventEndTimeLocal)}";
 
 	var report = new
 	{
 		SanityLeft      = sanity,
-		TimeRequired    = Format(timeRequiredSpan, styles: dateStyle),
-		TimeLeft        = Format(timeLeftFormatted, noRecoverNeeded ? okColor : warningColor, dateStyle),
-		TimeSaved       = Format(timeToRecoverFormatted, okColor, dateStyle),
+		TimeRequired    = Format(timeRequiredFormatted, title: eventEndTitle, styles: dateStyle),
+		TimeLeft        = Format(timeLeftFormatted, noRecoverNeeded ? okColor : warningColor, eventEndTitle, dateStyle),
+		TimeSaved       = Format(timeToRecoverFormatted, okColor, title: eventEndTitle, styles: dateStyle),
 		PrimesSaved     = Format(primesToRecover, okColor),
-		TimeToRecover   = Format(timeToRecoverFormatted, warningColor, dateStyle),
+		TimeToRecover   = Format(timeToRecoverFormatted, warningColor, title: eventEndTitle, styles: dateStyle),
 		PrimesToRecover = Format(primesToRecover, warningColor),
 		SanityPerPrime  = Format(config.SanityPerPrime.ToString(DumpContext.CultureInfo))
 	};
@@ -241,9 +241,9 @@ static bool NoTimeLeft(TimeSpan timeSpan) =>
 static string Format(TimeSpan timeSpan, bool withSeconds = true) =>
 	timeSpan.ToString((timeSpan.Days != 0 ? "d'd '" : Empty) + "hh':'mm" + (withSeconds ? "':'ss" : Empty), DumpContext.CultureInfo);
 
-static object Format(object value, Color color = default, params string[] styles) =>
+static object Format(object value, Color color = default, string title = "", params string[] styles) =>
 	WithStyle(
-		value,
+		IsNullOrWhiteSpace(title) ? value : new Span((string)value).SetTitle(title),
 		Join(";", styles.Append($"color:{(color == default ? "inherit" : ToHtml(color))}")));
 
 static object HorizontalRun(params object[] objs) =>
@@ -584,11 +584,11 @@ class SanityHyperlink : Hyperlink
 {
 	public SanityHyperlink(Sanity sanity)
 		: base(sanity.Left.ToString(DumpContext.CultureInfo), sanity.Uri) =>
-		HtmlElement["title"] = $"{(
+		this.SetTitle($"{(
 			sanity.Spent > 0
 				? $"{sanity.Spent} / {sanity.Total} {DumpContext.Glyphs.Circle} {sanity.PercentSpent}% sanity spent"
 				: "No sanity spent yet"
-			)}. Sanity per prime: {sanity.SanityPerPrime}";
+			)}. Sanity per prime: {sanity.SanityPerPrime}");
 }
 
 class ItemImage
@@ -658,6 +658,19 @@ static class Extensions
 		timeSpan < Zero
 			? timeSpan
 			: timeSpan + AlmostSecond;
+}
+
+static class ControlsExtensions
+{
+	private static T SetAttribute<T>(this T control, string attribute, [CallerArgumentExpression(nameof(attribute))] string attributeName = "")
+		where T : Control
+	{
+		control.HtmlElement[attributeName] = attribute;
+		return control;
+	}
+
+	public static T SetTitle<T>(this T control, string title) where T : Control =>
+		control.SetAttribute(title);
 }
 
 static class HtmlExtensions
