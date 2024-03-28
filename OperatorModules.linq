@@ -49,7 +49,7 @@ void Main()
 			Operators = VerticalRun(v.Operators.Select(static v => new WikiHyperlinq(v.Operator, "Modules"))),
 			v.Stars,
 			v.Total,
-			Paradox   = VerticalRun(v.Operators.Select(static v => new Hyperlinq($"https://www.youtube.com/results?search_query={v.Operator}+paradox+simulation", "YouTube")))
+			Paradox   = VerticalRun(v.Operators.Select(static v => new Hyperlinq($"https://www.youtube.com/results?search_query={Uri.EscapeDataString(v.Operator)}+paradox+simulation", "YouTube")))
 		}))
 		.ToArray();
 
