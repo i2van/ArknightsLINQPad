@@ -247,31 +247,6 @@ static object Format(object value, Color color = default, params string[] styles
 static object HorizontalRun(params object[] objs) =>
 	Util.HorizontalRun(false, objs);
 
-static Color InterpolateColor(double ratio, Color fromColor, Color toColor)
-{
-	var alt = 1.0 - ratio;
-
-	var (xFrom, yFrom, zFrom) = (fromColor.R, fromColor.G, fromColor.B);
-	var (xTo, yTo, zTo) = (toColor.R, toColor.G, toColor.B);
-
-	var (magnitudeFrom, magnitudeTo) = (CalcMagnitude(xFrom, yFrom, zFrom), CalcMagnitude(xTo, yTo, zTo));
-	var (x, y, z) = (CalcActual(xFrom, xTo), CalcActual(yFrom, yTo), CalcActual(zFrom, zTo));
-
-	var magnitude = CalcActual(magnitudeFrom, magnitudeTo);
-	var scale = magnitude / CalcMagnitude(x, y, z);
-
-	return Color.FromArgb(ToColor(x), ToColor(y), ToColor(z));
-
-	static Double CalcMagnitude(double x, double y, double z) =>
-		Sqrt(x * x + y * y + z * z);
-
-	double CalcActual(double from, double to) =>
-		ratio * from + alt * to;
-
-	int ToColor(double value) =>
-		Max(0, Min(0xFF, (int)Round(value * scale)));
-}
-
 static object ToDump(object input) =>
 	input switch
 	{
@@ -462,7 +437,7 @@ record Sanity(string Uri, int Left, int Spent, int SanityPerPrime, IReadOnlyColl
 		100 - PercentLeft;
 
 	public Color Color =>
-		InterpolateColor(PercentLeft / 100, Colors.Last(), Colors.First());
+		Colors.Last().InterpolateTo(PercentLeft / 100, Colors.First());
 }
 
 record Item(int Price, int Count, string Name)
@@ -584,7 +559,7 @@ class SanityHyperlink : Hyperlink
 		: base(sanity.Left.ToString(DumpContext.CultureInfo), sanity.Uri) =>
 		this.SetTitle($"{(
 			sanity.Spent > 0
-				? $"{sanity.Spent} / {sanity.Total} {DumpContext.Glyphs.Circle} {sanity.PercentSpent}% sanity spent"
+				? $"{sanity.Spent} 🡒 {sanity.Total} {DumpContext.Glyphs.Circle} {sanity.PercentSpent}% sanity spent"
 				: "No sanity spent yet"
 			)}. Sanity per prime: {sanity.SanityPerPrime}");
 }
@@ -656,6 +631,31 @@ static class Extensions
 		timeSpan < Zero
 			? timeSpan
 			: timeSpan + AlmostSecond;
+
+	public static Color InterpolateTo(this Color fromColor, double ratio, Color toColor)
+	{
+		var alt = 1.0 - ratio;
+
+		var (xFrom, yFrom, zFrom) = (fromColor.R, fromColor.G, fromColor.B);
+		var (xTo, yTo, zTo) = (toColor.R, toColor.G, toColor.B);
+
+		var (magnitudeFrom, magnitudeTo) = (CalcMagnitude(xFrom, yFrom, zFrom), CalcMagnitude(xTo, yTo, zTo));
+		var (x, y, z) = (CalcActual(xFrom, xTo), CalcActual(yFrom, yTo), CalcActual(zFrom, zTo));
+
+		var magnitude = CalcActual(magnitudeFrom, magnitudeTo);
+		var scale = magnitude / CalcMagnitude(x, y, z);
+
+		return Color.FromArgb(ToColor(x), ToColor(y), ToColor(z));
+
+		static Double CalcMagnitude(double x, double y, double z) =>
+			Sqrt(x * x + y * y + z * z);
+
+		double CalcActual(double from, double to) =>
+			ratio * from + alt * to;
+
+		int ToColor(double value) =>
+			Max(0, Min(0xFF, (int)Round(value * scale)));
+	}
 }
 
 static class ControlsExtensions
@@ -877,7 +877,7 @@ static class DB
 	.Select(Color.FromArgb)
 #if CONFIG_INTERPOLATE_COLORS
 	.Aggregate(new[] { new List<Color>() }, static (r, c) => { r.First().Add(c); return r; })
-	.Select(static c => Enumerable.Range(0, 101).Select(p => InterpolateColor(p / 100.0, c.Last(), c.First())))
+	.Select(static c => Enumerable.Range(0, 101).Select(p => c.Last().InterpolateTo(p / 100.0, c.First())))
 	.SelectMany(static r => r)
 #endif
 	.ToList());
