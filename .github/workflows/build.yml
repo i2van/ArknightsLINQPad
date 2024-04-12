@@ -5,6 +5,7 @@ on: [push, pull_request]
 env:
   LPRunUrl: https://www.linqpad.net/GetFile.aspx?preview+LINQPad8-Beta.zip
   LPRun: LPRun8-x64.exe
+  ExecGetClipboard: pwsh.exe -NoLogo -NoProfile -NonInteractive -Command Get-Clipboard
 
 jobs:
   build:
@@ -32,10 +33,15 @@ jobs:
       - name: Execute EventStockParser.linq
         run: |
           ${{env.LPRun}} EventStockParser.linq
-          pwsh.exe -NoLogo -NoProfile -NonInteractive -Command Get-Clipboard
+          ${{env.ExecGetClipboard}}
 
       - name: Execute OperatorModules.linq
         run:  ${{env.LPRun}} OperatorModules.linq
+
+      - name: Execute OperatorModulesParser.linq
+        run: |
+          ${{env.LPRun}} OperatorModulesParser.linq
+          ${{env.ExecGetClipboard}}
 
       - name: Execute OriginitePrimePacks.linq
         run:  ${{env.LPRun}} OriginitePrimePacks.linq
