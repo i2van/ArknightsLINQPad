@@ -4,16 +4,18 @@
   <Namespace>System.Windows.Forms</Namespace>
 </Query>
 
-// Arknights operator modules parser.
+// Arknights operators modules parser.
 
-const StringSplitOptions stringSplitOptions = StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries;
+const StringSplitOptions StringSplitOptions = StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries;
 
 using var httpClient = new HttpClient();
 
 var wikiModules = await httpClient.GetStringAsync(GetUrl("Operator_Module"));
 
-const string Endl  = "\n";
-const string Comma = ",";
+const char Endl  = '\n';
+const char Comma = ',';
+
+var regexTimeout = TimeSpan.FromMilliseconds(100);
 
 const string XOperator = "|x operator =";
 
@@ -23,7 +25,7 @@ var operatorModules =
 			.Split(Endl)
 			.Where( static s => s.StartsWith(XOperator))
 			.Select(static s => s.Replace(XOperator, string.Empty))
-			.SelectMany(static s => s.Split(Comma, stringSplitOptions))
+			.SelectMany(static s => s.Split(Comma, StringSplitOptions))
 			.Distinct()
 			.OrderBy(static _ => _)
 			.Select(GetOperator)
@@ -32,7 +34,7 @@ var operatorModules =
 
 await STATask.Run(() => Clipboard.SetText(string.Join(Environment.NewLine, operatorModules)));
 
-"Operator modules has been copied to clipboard.".Dump();
+"Operator modules have been copied to clipboard.".Dump();
 
 Uri GetUrl(string uri) =>
 	new($"https://arknights.wiki.gg/wiki/{uri}?action=raw");
@@ -43,21 +45,21 @@ async Task<Operator> GetOperator(string name)
 
 	var wiki = await httpClient.GetStringAsync(GetUrl(name.Replace(' ', '_')));
 
-	var wikiModules = wiki.Split("==Modules==", stringSplitOptions).Last().Split("==").First();
+	var wikiModules = wiki.Split("==Modules==", StringSplitOptions).Last().Split("==").First();
 
-	var titles = wikiModules.Split(Endl, stringSplitOptions)
+	var titles = wikiModules.Split(Endl, StringSplitOptions)
 		.Where( static s => s.StartsWith(XTitle))
 		.Skip(1) // Original
 		.Select(static s => s.Replace(XTitle, string.Empty).Trim());
 
-	var missions = wikiModules.Split(Endl, stringSplitOptions)
+	var missions = wikiModules.Split(Endl, StringSplitOptions)
 		.Where( static s => s.StartsWith("|mission2"))
-		.Select(static s => Regex.Match(s, @"\[\[([^]]+-[^]]+)\]\]").Groups[1].Value.Split('|').Last());
+		.Select(s => Regex.Match(s, @"\[\[([^]]+-[^]]+)\]\]", RegexOptions.None, regexTimeout).Groups[1].Value.Split('|').Last());
 
 	return new(
 		name,
-		Regex.Match(wiki, @"\|rarity\s*=\s*(\d+)").Groups[1].Value,
-		Regex.Match(wiki, @"\|simulation").Success,
+		Regex.Match(wiki, @"\|rarity\s*=\s*(\d+)", RegexOptions.None, regexTimeout).Groups[1].Value,
+		Regex.Match(wiki, @"\|simulation", RegexOptions.None, regexTimeout).Success,
 		Enumerable.Zip(titles, missions, static (t, m) => new Module(t, m)).ToArray()
 	);
 }

@@ -10,7 +10,7 @@
   <Namespace>System.Diagnostics.CodeAnalysis</Namespace>
 </Query>
 
-// Arknights operator modules missions.
+// Arknights operators modules missions.
 
 #nullable enable
 
@@ -21,19 +21,19 @@
 
 void Main()
 {
+	// TODO: Add operator(s) with (optionally) X or Y modules.
+	var operators = new Operators("""
+		// name <tab> type (X or Y or empty for both)
+	""");
+
 	const string title = "Joined Operators Modules";
 
 	var joinedOperatorsModules = new DumpContainer();
 	joinedOperatorsModules.Dump(title);
 
-	// TODO: Add operators.
-	var operators = new Operators("""
-		// name <tab> type (X or Y or empty for both)
-	""")
 #if DUMP_OPERATORS
-	.Dump("Operators")
+	operators.Dump("Operators");
 #endif
-	;
 
 	// TODO: Run OperatorModulesParser.linq and paste below.
 	var operatorModules = new OperatorModules("""

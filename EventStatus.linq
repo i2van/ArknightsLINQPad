@@ -455,7 +455,7 @@ class Items : IEnumerable<Item>
 	private const string Count = nameof(Count);
 	private const string Name  = nameof(Name);
 
-	private static readonly Regex ItemRegex = new($@"^(?<{Price}>[+-]?\d+)(\s+(?<{Count}>[+]?\d+))?(\s+(?<{Name}>.+))?$", ExplicitCapture, FromSeconds(1));
+	private static readonly Regex ItemRegex = new($@"^(?<{Price}>[+-]?\d+)(\s+(?<{Count}>[+]?\d+))?(\s+(?<{Name}>.+))?$", ExplicitCapture, FromMilliseconds(100));
 
 	private readonly Lazy<Item[]> _items;
 

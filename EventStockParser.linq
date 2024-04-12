@@ -9,32 +9,34 @@
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = "Come_Catastrophes_or_Wakes_of_Vultures".Split('#').First();
 
-const StringSplitOptions stringSplitOptions = StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries;
+const StringSplitOptions StringSplitOptions = StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries;
 
 using var httpClient = new HttpClient();
 
 var wiki = await httpClient.GetStringAsync($"https://arknights.wiki.gg/wiki/{eventUri}?action=raw");
 
-const string Endl  = "\n";
-const string Comma = ",";
+const char Endl  = '\n';
+const char Comma = ',';
 
 const string EventStoreCell = "{{Event store cell|";
 
-var eventName  = Regex.Match(wiki, @"\|name\s*=\s*(.+?)\n").Groups[1].Value.Trim();
-var eventStock = Regex.Match(wiki, @"=+?([^=]+)=+?[^=]+\{\{Event\s+store\s+head").Groups[1].Value.Trim();
+var regexTimeout = TimeSpan.FromMilliseconds(100);
+
+var eventName  = Regex.Match(wiki, @"\|name\s*=\s*(.+?)\n", RegexOptions.None, regexTimeout).Groups[1].Value.Trim();
+var eventStock = Regex.Match(wiki, @"=+?([^=]+)=+?[^=]+\{\{Event\s+store\s+head", RegexOptions.None, regexTimeout).Groups[1].Value.Trim();
 
 string? eventCurrency = null;
 
 var stockItems = wiki.Split(Endl)
 	.Where( static s => s.StartsWith(EventStoreCell))
 	.Select(static s => s.Replace(EventStoreCell, string.Empty))
-	.Select(static s => s.Split(Comma, stringSplitOptions))
+	.Select(static s => s.Split(Comma, StringSplitOptions))
 	.Select(GetStockItem)
-	.Where(static s => !string.IsNullOrEmpty(s))
+	.Where( static s => !string.IsNullOrEmpty(s))
 	.ToArray();
 
 await STATask.Run(() => Clipboard.SetText(
-	$@"[new(""{eventUri}#{Escape(eventStock)}"", ""{eventName}"", ""{Escape(eventCurrency ?? "EVENT_CURRENCY")}"")] = new(""""""{Environment.NewLine}// {eventName}{Environment.NewLine}" +
+	$@"[new(""{eventUri}#{(string.IsNullOrWhiteSpace(eventStock) ? "EVENT_STOCK" : Escape(eventStock))}"", ""{eventName}"", ""{Escape(eventCurrency ?? "EVENT_CURRENCY")}"")] = new(""""""{Environment.NewLine}// {eventName}{Environment.NewLine}" +
 	string.Join(Environment.NewLine, stockItems) +
 	$@"{Environment.NewLine}"""""")"));
 
@@ -42,7 +44,7 @@ await STATask.Run(() => Clipboard.SetText(
 
 string GetStockItem(IEnumerable<string> stockItems)
 {
-	const string Or = "|";
+	const char Or = '|';
 
 	var name = stockItems.First();
 

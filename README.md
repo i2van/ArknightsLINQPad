@@ -30,11 +30,11 @@ Ongoing [Arknights](https://arknights.wiki.gg) [event](https://arknights.wiki.gg
 
 ### [OperatorModules.linq](https://github.com/i2van/ArknightsLINQPad/blob/main/OperatorModules.linq)
 
-[Arknights](https://arknights.wiki.gg) [operator](https://arknights.wiki.gg/wiki/Operator)'s [modules](https://arknights.wiki.gg/wiki/Operator_Module) missions.
+[Arknights](https://arknights.wiki.gg) [operators](https://arknights.wiki.gg/wiki/Operator)'s [modules](https://arknights.wiki.gg/wiki/Operator_Module) missions.
 
 ### [OperatorModulesParser.linq](https://github.com/i2van/ArknightsLINQPad/blob/main/OperatorModulesParser.linq)
 
-[Arknights](https://arknights.wiki.gg) [operator](https://arknights.wiki.gg/wiki/Operator)'s [modules](https://arknights.wiki.gg/wiki/Operator_Module) parser.
+[Arknights](https://arknights.wiki.gg) [operators](https://arknights.wiki.gg/wiki/Operator)'s [modules](https://arknights.wiki.gg/wiki/Operator_Module) parser.
 
 ### [OriginitePrimePacks.linq](https://github.com/i2van/ArknightsLINQPad/blob/main/OriginitePrimePacks.linq)
 
