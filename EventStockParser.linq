@@ -1,140 +1,93 @@
 <Query Kind="Statements">
+  <Namespace>System.Net.Http</Namespace>
+  <Namespace>System.Threading.Tasks</Namespace>
   <Namespace>System.Windows.Forms</Namespace>
 </Query>
 
 // Arknights event stock parser.
 
-#nullable enable
+// TODO: Specify the event URI including /Rerun if present.
+var eventUri = "Come_Catastrophes_or_Wakes_of_Vultures".Split('#').First();
 
-// Get browser extension at https://merribithouse.net/copytables/
-// TODO: Go to Arknights event stock table at https://arknights.wiki.gg/wiki/Event
-// TODO: Table... > Copy... > As is
-const string stock = """
-Ware	Price	Stock
-Coldshot's Token
-1
-200 Shoddy Fuel.png	1
-Coldshot's Token
-1
-240 Shoddy Fuel.png	1
-Coldshot's Token
-1
-280 Shoddy Fuel.png	1
-Coldshot's Token
-1
-320 Shoddy Fuel.png	1
-Coldshot's Token
-1
-360 Shoddy Fuel.png	1
-Headhunting Permit
-1
-150 Shoddy Fuel.png	3
-Module Data Block
-2
-75 Shoddy Fuel.png	2
-Bipolar Nanoflake
-1
-100 Shoddy Fuel.png	5
-Oriron Block
-1
-40 Shoddy Fuel.png	10
-Grindstone Pentahydrate
-1
-35 Shoddy Fuel.png	10
-Orirock Concentration
-1
-25 Shoddy Fuel.png	10
-Advance Patchwork.png	50 Shoddy Fuel.png	1
-Assembly Workbench.png	50 Shoddy Fuel.png	1
-Shock-proof Pillar.png	30 Shoddy Fuel.png	1
-Explosion-proof Fluorescent Lamp.png	25 Shoddy Fuel.png	1
-Reinforced Work Chair.png	25 Shoddy Fuel.png	1
-Data Supplement Instrument
-1
-15 Shoddy Fuel.png	10
-Data Supplement Stick
-1
-5 Shoddy Fuel.png	60
-Semi-Synthetic Solvent
-1
-12 Shoddy Fuel.png	10
-Loxic Kohl
-1
-8 Shoddy Fuel.png	15
-LMD
-5K
-7 Shoddy Fuel.png	100
-Strategic Battle Record
-2
-5 Shoddy Fuel.png	25
-Tactical Battle Record
-2
-3 Shoddy Fuel.png	50
-Frontline Battle Record
-2
-1 Shoddy Fuel.png	150
-Skill Summary - 3
-1
-4 Shoddy Fuel.png	25
-Skill Summary - 2
-1
-2 Shoddy Fuel.png	50
-Device
-1
-4 Shoddy Fuel.png	25
-Oriron
-1
-3 Shoddy Fuel.png	25
-Orirock Cube
-1
-2 Shoddy Fuel.png	25
-Sniper Chip
-1
-6 Shoddy Fuel.png	5
-Furniture Part
-10
-2 Shoddy Fuel.png	200
-LMD
-20
-1 Shoddy Fuel.png	Unlimited
-""";
+const StringSplitOptions stringSplitOptions = StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries;
 
-Clipboard.SetText(
-	$@"[new(""EVENT_URI#EVENT_STOCK"", ""EVENT_NAME"", ""EVENT_CURRENCY"")] = new(""""""{Environment.NewLine}// EVENT_NAME{Environment.NewLine}" +
-	string.Join(Environment.NewLine,
-		GetResources()
-			.Select(static r => Regex.Replace( r, @"^(.+)\t(.+)\t(.+)$", "$2\t$3\t$1"))
-			.Select(static r => Regex.Replace( r, @"\t1\t", "\t\t"))
-	) +
-	$@"{Environment.NewLine}"""""")");
+using var httpClient = new HttpClient();
+
+var wiki = await httpClient.GetStringAsync($"https://arknights.wiki.gg/wiki/{eventUri}?action=raw");
+
+const string Endl  = "\n";
+const string Comma = ",";
+
+const string EventStoreCell = "{{Event store cell|";
+
+var eventName  = Regex.Match(wiki, @"\|name\s*=\s*(.+?)\n").Groups[1].Value.Trim();
+var eventStock = Regex.Match(wiki, @"=+?([^=]+)=+?[^=]+\{\{Event\s+store\s+head").Groups[1].Value.Trim();
+
+string? eventCurrency = null;
+
+var stockItems = wiki.Split(Endl)
+	.Where( static s => s.StartsWith(EventStoreCell))
+	.Select(static s => s.Replace(EventStoreCell, string.Empty))
+	.Select(static s => s.Split(Comma, stringSplitOptions))
+	.Select(GetStockItem)
+	.Where(static s => !string.IsNullOrEmpty(s))
+	.ToArray();
+
+await STATask.Run(() => Clipboard.SetText(
+	$@"[new(""{eventUri}#{Escape(eventStock)}"", ""{eventName}"", ""{Escape(eventCurrency ?? "EVENT_CURRENCY")}"")] = new(""""""{Environment.NewLine}// {eventName}{Environment.NewLine}" +
+	string.Join(Environment.NewLine, stockItems) +
+	$@"{Environment.NewLine}"""""")"));
 
 "Event stock has been copied to clipboard.".Dump();
 
-IEnumerable<string> GetResources()
+string GetStockItem(IEnumerable<string> stockItems)
 {
-	var resources = stock
-		.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
-		.Skip(1) // Table header.
-		.Where( static r => !Regex.IsMatch(r, @"\s+Unlimited"))
-		.Where( static r => !Regex.IsMatch(r, @"^\d+K?$"))
-		.Select(static r => Regex.Replace( r, @"\.png\s+Automatically\s+exchanged\s+for\s+Intelligence\s+Certificate\s*$", string.Empty))
-		.Select(static r => Regex.Replace( r, @"(\d)\s+[^\d]+\.png\s+(\d)", "$1\t$2"))
-		.Select(static r => Regex.Replace( r, @"\.png", string.Empty))
-		.Select(static r => Regex.Replace( r, @"[”“]", @""""))
-		.Select(static r => r.Trim())
-		.ToArray();
+	const string Or = "|";
 
-	var digits = resources
-		.Where(StartsWithDigit)
-		.ToArray();
+	var name = stockItems.First();
 
-	var i = 0;
+	if(name.StartsWith("ware="))
+	{
+		name = name.Split(Or).Skip(1).First();
+	}
+	else
+	{
+		eventCurrency ??= stockItems.Skip(1).First().Split(Or).Last();
+	}
 
-	return resources
-			.Where(static r => !StartsWithDigit(r))
-			.TakeWhile(_ => i < digits.Length)
-			.Select(r => Regex.IsMatch(r, @"^.+\s+\d+\s+\d+$") ? r : $"{r}\t{digits[i++]}");
+	var priceCount = stockItems.Last().Split(Or).ToArray();
+	var count = priceCount.Last().Trim('}');
 
-	static bool StartsWithDigit(string r) =>
-		r[0] is >= '0' and <= '9';
+	return count == "-1"
+			? string.Empty
+			: $"{priceCount.First()}\t{(count == "1" ? string.Empty : count)}\t{name.Replace("“", @"""").Replace("”", @"""")}";
+}
+
+static string Escape(string s) =>
+	s.Replace(" ", "_");
+
+public static class STATask
+{
+    public static Task Run(Action action)
+    {
+        var tcs = new TaskCompletionSource();
+
+        var thread = new Thread(() =>
+        {
+            try
+            {
+                action();
+                tcs.SetResult();
+            }
+            catch (Exception ex)
+            {
+                tcs.SetException(ex);
+            }
+        });
+
+        thread.SetApartmentState(ApartmentState.STA);
+        thread.Start();
+
+        return tcs.Task;
+    }
 }
