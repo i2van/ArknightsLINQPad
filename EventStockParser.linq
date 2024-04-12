@@ -2,6 +2,8 @@
   <Namespace>System.Windows.Forms</Namespace>
 </Query>
 
+// Arknights event stock parser.
+
 #nullable enable
 
 // Get browser extension at https://merribithouse.net/copytables/
@@ -104,8 +106,7 @@ Clipboard.SetText(
 			.Select(static r => Regex.Replace( r, @"^(.+)\t(.+)\t(.+)$", "$2\t$3\t$1"))
 			.Select(static r => Regex.Replace( r, @"\t1\t", "\t\t"))
 	) +
-	$@"{Environment.NewLine}"""""")",
-	TextDataFormat.UnicodeText);
+	$@"{Environment.NewLine}"""""")");
 
 "Event stock has been copied to clipboard.".Dump();
 

@@ -21,6 +21,8 @@
   <Namespace>System.Runtime.CompilerServices</Namespace>
 </Query>
 
+// Ongoing Arknights event status tracker.
+
 #define DUMP_MISSING_IMAGES
 
 /*
