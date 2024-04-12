@@ -10,7 +10,7 @@
   <Namespace>System.Diagnostics.CodeAnalysis</Namespace>
 </Query>
 
-// Operator modules missions.
+// Arknights operator modules missions.
 
 #nullable enable
 

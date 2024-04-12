@@ -4,7 +4,7 @@
   <Namespace>static System.String</Namespace>
 </Query>
 
-// Packs store Originite Prime price calculator.
+// Arknights packs store Originite Prime price calculator.
 
 /*
 #define DUMP_ORIGINITE_PRIME_ORIGINAL_PACKS

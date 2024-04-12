@@ -30,12 +30,12 @@ Ongoing [Arknights](https://arknights.wiki.gg) [event](https://arknights.wiki.gg
 
 ### [OperatorModules.linq](https://github.com/i2van/ArknightsLINQPad/blob/main/OperatorModules.linq)
 
-[Operator](https://arknights.wiki.gg/wiki/Operator)'s [modules](https://arknights.wiki.gg/wiki/Operator_Module) missions.
+[Arknights](https://arknights.wiki.gg) [operator](https://arknights.wiki.gg/wiki/Operator)'s [modules](https://arknights.wiki.gg/wiki/Operator_Module) missions.
 
 ### [OperatorModulesParser.linq](https://github.com/i2van/ArknightsLINQPad/blob/main/OperatorModulesParser.linq)
 
-[Operator](https://arknights.wiki.gg/wiki/Operator)'s [modules](https://arknights.wiki.gg/wiki/Operator_Module) parser.
+[Arknights](https://arknights.wiki.gg) [operator](https://arknights.wiki.gg/wiki/Operator)'s [modules](https://arknights.wiki.gg/wiki/Operator_Module) parser.
 
 ### [OriginitePrimePacks.linq](https://github.com/i2van/ArknightsLINQPad/blob/main/OriginitePrimePacks.linq)
 
-[Packs store](https://arknights.wiki.gg/wiki/Packs_Store) [Originite Prime](https://arknights.wiki.gg/wiki/Originite_Prime) price calculator.
+[Arknights](https://arknights.wiki.gg) [packs store](https://arknights.wiki.gg/wiki/Packs_Store) [Originite Prime](https://arknights.wiki.gg/wiki/Originite_Prime) price calculator.

@@ -4,7 +4,7 @@
   <Namespace>System.Windows.Forms</Namespace>
 </Query>
 
-// Operator modules parser.
+// Arknights operator modules parser.
 
 const StringSplitOptions stringSplitOptions = StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries;
 
