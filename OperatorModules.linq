@@ -24,16 +24,11 @@ void Main()
 	// TODO: Add operator(s) with (optionally) X or Y modules.
 	var operators = new Operators("""
 		// name <tab> type (X or Y or empty for both)
-	""");
-
-	const string title = "Joined Operators Modules";
-
-	var joinedOperatorsModules = new DumpContainer();
-	joinedOperatorsModules.Dump(title);
-
+	""")
 #if DUMP_OPERATORS
-	operators.Dump("Operators");
+	.Dump("Operators")
 #endif
+	;
 
 	// TODO: Run OperatorModulesParser.linq and paste below.
 	var operatorModules = new OperatorModules("""
@@ -283,7 +278,9 @@ void Main()
 		}))
 		.ToArray();
 
-	joinedOperatorsModules.Content = (operatorModules.Any() ? (object)operatorModules : "No operators modules found.");
+	const string title = "Joined Operators Modules";
+
+	(operatorModules.Any() ? (object)operatorModules : "No operators modules found.").Dump(title);
 
 	title.AsHyperlink(new WikiHyperlinq("Operator_Module", "List").Uri);
 
