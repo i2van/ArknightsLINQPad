@@ -23,7 +23,7 @@ void Main()
 {
 	// TODO: Add operator(s) with (optionally) X or Y modules.
 	var operators = new Operators("""
-		// name <tab> type (X or Y or empty for both)
+		// name <tab> type (X, Y, D or empty for all)
 	""")
 #if DUMP_OPERATORS
 	.Dump("Operators")
@@ -364,16 +364,21 @@ static class Extensions
 		var stringComparer   = StringComparer.OrdinalIgnoreCase;
 		var stringComparison = StringComparison.OrdinalIgnoreCase;
 
-		var operatorsToModuleType = operators.ToDictionary(static v => v.Name, static v => v.ModuleType, stringComparer);
+		var operatorsModuleTypes = operators
+			.ToLookup(static op => op.Name, static op => op.ModuleType, stringComparer)
+			.ToDictionary(static g => g.Key, static g => g, stringComparer);
 
-		return operatorModules.Where(v => operatorsToModuleType.TryGetValue(v.Operator, out var moduleType) && HasModule(moduleType, v.Module));
+		return operatorModules.Where(operatorModule =>
+				operatorsModuleTypes.TryGetValue(operatorModule.Operator, out var moduleTypes) &&
+				moduleTypes.Any(moduleType => HasModule(moduleType, operatorModule.Module)));
 
 		bool HasModule(ModuleType moduleType, string module) =>
 			moduleType switch
 			{
+				ModuleType.All or ModuleType.Unknown => true,
 				ModuleType.X when module.EndsWith("X", stringComparison) => true,
 				ModuleType.Y when module.EndsWith("Y", stringComparison) => true,
-				ModuleType.Both or ModuleType.Unknown => true,
+				ModuleType.D when module.EndsWith("Δ", stringComparison) => true,
 				_ => false
 			};
 	}
@@ -424,7 +429,7 @@ abstract class Parsable<T> : IEnumerable<T>
 			.ToArray();
 
 	protected static string GetString(Match match, string key) =>
-		match.Groups[key].Value;
+		match.Groups[key].Value.Trim();
 
 	protected static int GetNumber(Match match, string key, int fallbackValue = default) =>
 		int.TryParse(GetString(match, key), Integer, InvariantCulture, out var value)
@@ -468,9 +473,10 @@ class OperatorModules : Parsable<OperatorModule>
 internal enum ModuleType
 {
 	Unknown,
-	Both,
+	All,
 	X,
-	Y
+	Y,
+	D
 }
 
 internal record Operator(string Name, ModuleType ModuleType);
@@ -483,7 +489,7 @@ class Operators : Parsable<Operator>
 	private const string Module   = nameof(Module);
 
 	protected override string Regex { get; } = $@"^(?<{Operator}>[^\t]+)(\t+(?<{Module}>[^\t]+))?$";
-	protected override string ErrorMessage { get; } = "Format: name <tab> type (X or Y or empty for both)";
+	protected override string ErrorMessage { get; } = "Format: name <tab> type (X, Y, D or empty for all)";
 
 	protected override Operator Create(Match match)
 	{
@@ -491,7 +497,8 @@ class Operators : Parsable<Operator>
 		{
 			"x" => ModuleType.X,
 			"y" => ModuleType.Y,
-			""  => ModuleType.Both,
+			"d" => ModuleType.D,
+			""  => ModuleType.All,
 			_   => ModuleType.Unknown
 		};
 
