@@ -31,17 +31,13 @@ jobs:
         run:  ${{env.LPRun}} EventStatus.linq
 
       - name: Execute EventStockParser.linq
-        run: |
-          ${{env.LPRun}} EventStockParser.linq
-          ${{env.ExecGetClipboard}}
+        run:  ${{env.LPRun}} EventStockParser.linq && ${{env.ExecGetClipboard}}
 
       - name: Execute OperatorModules.linq
         run:  ${{env.LPRun}} OperatorModules.linq
 
       - name: Execute OperatorModulesParser.linq
-        run: |
-          ${{env.LPRun}} OperatorModulesParser.linq
-          ${{env.ExecGetClipboard}}
+        run:  ${{env.LPRun}} OperatorModulesParser.linq && ${{env.ExecGetClipboard}}
 
       - name: Execute OriginitePrimePacks.linq
         run:  ${{env.LPRun}} OriginitePrimePacks.linq
