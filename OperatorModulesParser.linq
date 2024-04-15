@@ -42,16 +42,16 @@ Uri GetUrl(string uri) =>
 
 async Task<Operator> GetOperator(string name)
 {
-	const string XTitle = "|title =";
+	const string Title = "|title =";
 
 	var wiki = await httpClient.GetStringAsync(GetUrl(name.Replace(' ', '_')));
 
-	var wikiModules = wiki.Split("==Modules==", StringSplitOptions).Last().Split("==").First();
+	var wikiModules = wiki.Split("==Operator Modules==", StringSplitOptions).Last().Split("==").First();
 
 	var titles = wikiModules.Split(Endl, StringSplitOptions)
-		.Where( static s => s.StartsWith(XTitle))
+		.Where( static s => s.StartsWith(Title))
 		.Skip(1) // Original
-		.Select(static s => s.Replace(XTitle, string.Empty).Trim());
+		.Select(static s => s.Replace(Title, string.Empty).Trim());
 
 	var missions = wikiModules.Split(Endl, StringSplitOptions)
 		.Where( static s => s.StartsWith("|mission2"))
