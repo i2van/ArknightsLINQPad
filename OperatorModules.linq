@@ -36,7 +36,7 @@ void Main()
 		Absinthe	5	CCR-X	3-4
 		Aciddrop	4	ARC-X	2-8	Paradox
 		Akafuyu	5	MUS-X	3-8	Paradox
-		Almond	5	HOK-X	BI-2
+		Almond	5	HOK-X	BI-2	Paradox
 		Ambriel	4	DEA-X	4-7
 		Amiya	5	CCR-Y	3-8
 		Andreana	5	DEA-X	3-2
@@ -242,7 +242,7 @@ void Main()
 		Qanipalaat	5	CCR-Y	2-3	Paradox
 		Quercus	5	BLS-X	9-2	Paradox
 		Rathalos S Noir Corne	5	MUS-X	3-8
-		Reed	5	CHG-Y	9-5
+		Reed	5	CHG-Y	9-5	Paradox
 		Reed the Flame Shadow	6	INC-X	11-6
 		Roberta	4	CRA-X	3-8	Paradox
 		Robin	5	TRP-Y	BI-EX-2
