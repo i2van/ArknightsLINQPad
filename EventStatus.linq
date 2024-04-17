@@ -41,45 +41,48 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Apr, Day.OfMonth(2)),
+		EventEndDate   = new DateOnly(Year.Now, Month.May, Day.OfMonth(21)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from DB.Events below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Come_Catastrophes_or_Wakes_of_Vultures#Shack_by_the_Tower", "Come Catastrophes or Wakes of Vultures", "Shoddy_Fuel")] = new("""
-			// Come Catastrophes or Wakes of Vultures
-			200		Coldshot's Token
-			240		Coldshot's Token
-			280		Coldshot's Token
-			320		Coldshot's Token
-			360		Coldshot's Token
+			[new("Zwillingstürme_im_Herbst#Herbstmondeskonzert", "Zwillingstürme im Herbst", "Tune_Memories")] = new("""
+			// Zwillingstürme im Herbst
 			150	3	Headhunting Permit
-			75	2	Module Data Block
-			100	5	Bipolar Nanoflake
-			25	10	Orirock Concentration
+			75	3	Module Data Block
+			100	5	Polymerization Preparation
+			100	5	Nucleic Crystal Sinter
 			40	10	Oriron Block
 			35	10	Grindstone Pentahydrate
-			25		Reinforced Work Chair
-			25		Explosion-proof Fluorescent Lamp
-			30		Shock-proof Pillar
-			50		'Advance Patchwork'
-			50		Assembly Workbench
+			35	10	Cutting Fluid Solution
+			30	10	Polymerized Gel
+			30	10	Transmuted Salt Agglomerate
+			25	10	Orirock Concentration
+			//110		管风琴书卷台
+			//90		图书馆阶梯
+			//90		"知识之景"
+			//90		求知厅堂地板
 			15	10	Data Supplement Instrument
 			5	60	Data Supplement Stick
-			8	15	Loxic Kohl
-			12	10	Semi-Synthetic Solvent
-			7	100	LMD
-			5	25	Strategic Battle Record
+			12	15	Coagulating Gel
+			10	15	Manganese Ore
+			10	15	Crystalline Component
+			8	15	Polyester Pack
+			7	120	LMD
+			5	30	Strategic Battle Record
 			3	50	Tactical Battle Record
-			1	120	Frontline Battle Record
+			1	150	Frontline Battle Record
 			4	25	Skill Summary - 3
 			2	50	Skill Summary - 2
-			2	25	Orirock Cube
+			4	20	Device
 			3	25	Oriron
-			4	25	Device
-			6	5	Sniper Chip
+			3	30	Polyester
+			3	25	Polyketon
+			3	30	Sugar
+			2	40	Orirock Cube
+			6	5	Guard Chip
 			2	200	Furniture Part
 			""")
 		}
