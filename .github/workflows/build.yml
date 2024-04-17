@@ -5,7 +5,12 @@ on: [push, pull_request]
 env:
   LPRunUrl: https://www.linqpad.net/GetFile.aspx?preview+LINQPad8-Beta.zip
   LPRun: LPRun8-x64.exe
-  ExecGetClipboard: 'pwsh.exe -NoLogo -NoProfile -NonInteractive -Command Get-Clipboard; if(-not $(Get-Clipboard -Raw).Trim()){ throw "Clipboard is empty" }'
+  ExecAssertClipboard: |
+    Get-Clipboard
+    if(-not $(Get-Clipboard -Raw).Trim()){ throw "Clipboard is empty" }
+  ExecAssertModules: |
+    (Get-Content -Raw OperatorModules.linq) -match 'OperatorModules\("""([^"]+)' | Out-Null
+    if($Matches[1].Split("`n", [StringSplitOptions]::RemoveEmptyEntries -bor [StringSplitOptions]::TrimEntries) -join "`n" -ne ($(Get-Clipboard) -join "`n")){ throw "Modules have been updated" }
 
 jobs:
   build:
@@ -31,19 +36,18 @@ jobs:
         run:  ${{env.LPRun}} EventStatus.linq
 
       - name: Execute EventStockParser.linq
-        run: >
+        run: |
           ${{env.LPRun}} EventStockParser.linq
-          &&
-          ${{env.ExecGetClipboard}}
+          ${{env.ExecAssertClipboard}}
 
       - name: Execute OperatorModules.linq
         run:  ${{env.LPRun}} OperatorModules.linq
 
       - name: Execute OperatorModulesParser.linq
-        run:  >
+        run: |
           ${{env.LPRun}} OperatorModulesParser.linq
-          &&
-          ${{env.ExecGetClipboard}}
+          ${{env.ExecAssertClipboard}}
+          ${{env.ExecAssertModules}}
 
       - name: Execute OriginitePrimePacks.linq
         run:  ${{env.LPRun}} OriginitePrimePacks.linq

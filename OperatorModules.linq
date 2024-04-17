@@ -315,7 +315,7 @@ void Main()
 		Windflit	5	CRA-X	11-9	Paradox
 		Zima	5	SOL-X	1-5	Paradox
 		Zuo Le	6	MUS-X	WB-5
-		""")
+	""")
 #if !DUMP_ALL_OPERATOR_MODULES
 		.OnlyFor(operators)
 #endif
