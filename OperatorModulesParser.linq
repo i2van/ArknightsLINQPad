@@ -46,6 +46,11 @@ async Task<Operator> GetOperator(string name)
 
 	var wiki = await httpClient.GetStringAsync(GetUrl(name.Replace(' ', '_')));
 
+	var e2Materials = string.Join("｜", Regex.Matches(wiki, @"\|e2\s+m[2-9]\s*=\s*([^\r\n}]+)", RegexOptions.None, regexTimeout)
+		.Select(static match => match.Groups)
+		.Select(static group => string.Join("❂", group[1].Value.Split(',', StringSplitOptions).Reverse()))
+	);
+
 	var wikiModules = wiki.Split("==Operator Modules==", StringSplitOptions).Last().Split("==").First();
 
 	var titles = wikiModules.Split(Endl, StringSplitOptions)
@@ -60,15 +65,16 @@ async Task<Operator> GetOperator(string name)
 	return new(
 		name,
 		Regex.Match(wiki, @"\|rarity\s*=\s*(\d+)", RegexOptions.None, regexTimeout).Groups[1].Value,
+		e2Materials,
 		Regex.Match(wiki, @"\|simulation", RegexOptions.None, regexTimeout).Success,
 		Enumerable.Zip(titles, missions, static (t, m) => new Module(t, m)).ToArray()
 	);
 }
 
-sealed record Operator(string Name, string Stars, bool Paradox, IEnumerable<Module> Modules)
+sealed record Operator(string Name, string Stars, string E2Materials, bool Paradox, IEnumerable<Module> Modules)
 {
 	public override string ToString() =>
-		string.Join(Environment.NewLine, Modules.Select(m => $"{Name}\t{Stars}\t{m.Name}\t{m.Mission}{(Paradox ? $"\t{nameof(Paradox)}" : string.Empty)}"));
+		string.Join(Environment.NewLine, Modules.Select(m => $"{Name}\t{Stars}\t{m.Name}\t{m.Mission}\t{E2Materials}{(Paradox ? $"\t{nameof(Paradox)}" : string.Empty)}"));
 }
 
 sealed record Module(string Name, string Mission);
