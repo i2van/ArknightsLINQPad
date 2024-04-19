@@ -296,7 +296,7 @@ static (string Uri, string? Fragment) SplitUri(string uri)
 	);
 }
 
-static object GetImageHyperlink(string name)
+static Hyperlink GetImageHyperlink(string name)
 {
 	var itemHyperlinq = GetItemHyperlinq(name);
 
@@ -773,6 +773,7 @@ static class DB
 		new("'Treeshade Lineations'", "7/79"),
 		new("'Truck Passage'", "e/e7"),
 		new("'Witness of Friendship'", "f/fa"),
+		new("Aggregate Cyclicene", "2/2f"),
 		new("Aketon", "d/d3"),
 		new("Assembly Workbench", "2/2e"),
 		new("Bipolar Nanoflake", "b/b6"),
@@ -788,6 +789,7 @@ static class DB
 		new("Crystalline Electronic Unit", "d/d0"),
 		new("Cured Fiberboard", "6/67"),
 		new("Cutting Fluid Solution", "9/93"),
+		new("Cyclicene Prefab", "e/ea"),
 		new("D32 Steel", "6/68"),
 		new("Data Supplement Instrument", "6/6d"),
 		new("Data Supplement Stick", "f/f8"),
@@ -829,6 +831,7 @@ static class DB
 		new("Oriron Cluster", "8/87"),
 		new("Oriron", "4/44"),
 		new("Patching Planks", "8/8c"),
+		new("Polyester Lump", "e/ed"),
 		new("Polyester Pack", "f/f3"),
 		new("Polyester", "3/3a"),
 		new("Polyketon", "9/96"),
@@ -857,6 +860,7 @@ static class DB
 		new("Specialist Chip", "e/e2"),
 		new("Strategic Battle Record", "5/55"),
 		new("Stumpy Little Fridge", "f/f1"),
+		new("Sugar Lump", "d/d2"),
 		new("Sugar Pack", "2/23"),
 		new("Sugar", "a/a9"),
 		new("Supporter Chip", "d/d7"),

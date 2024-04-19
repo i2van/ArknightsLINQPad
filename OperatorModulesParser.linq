@@ -48,7 +48,7 @@ async Task<Operator> GetOperator(string name)
 
 	var e2Materials = string.Join("｜", Regex.Matches(wiki, @"\|e2\s+m[2-9]\s*=\s*([^\r\n}]+)", RegexOptions.None, regexTimeout)
 		.Select(static match => match.Groups)
-		.Select(static group => string.Join("❂", group[1].Value.Split(',', StringSplitOptions).Reverse()))
+		.Select(static group => string.Join("❂", group[1].Value.Split(',', StringSplitOptions)))
 	);
 
 	var wikiModules = wiki.Split("==Operator Modules==", StringSplitOptions).Last().Split("==").First();

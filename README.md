@@ -66,17 +66,16 @@ Ongoing [Arknights](https://arknights.wiki.gg) [event](https://arknights.wiki.gg
 [Arknights](https://arknights.wiki.gg) [operators](https://arknights.wiki.gg/wiki/Operator)'s [modules](https://arknights.wiki.gg/wiki/Operator_Module) parser.
 
 ```text
-Aak	6	GEE-X	2-8	Paradox
-Absinthe	5	CCR-X	3-4
-Aciddrop	4	ARC-X	2-8	Paradox
-Akafuyu	5	MUS-X	3-8	Paradox
-Almond	5	HOK-X	BI-2
-Ambriel	4	DEA-X	4-7
-Andreana	5	DEA-X	3-2
-Angelina	6	DEC-X	2-7	Paradox
-Angelina	6	DEC-Y	4-4	Paradox
-Archetto	6	MAR-X	SV-4	Paradox
-Archetto	6	MAR-Y	2-9	Paradox
+Aak	6	GEE-X	2-8	4❂D32 Steel｜7❂Polymerized Gel	Paradox
+Absinthe	5	CCR-X	3-4	10❂Orirock Concentration｜10❂Incandescent Alloy
+Aciddrop	4	ARC-X	2-8	10❂RMA70-12｜8❂Integrated Device	Paradox
+Akafuyu	5	MUS-X	3-8	8❂Polymerized Gel｜15❂Aketon	Paradox
+Almond	5	HOK-X	BI-2	6❂Oriron Block｜13❂Manganese Ore	Paradox
+Ambriel	4	DEA-X	4-7	16❂Oriron Cluster｜6❂RMA70-12
+Amiya	5	CCR-Y	3-8	10❂Orirock Concentration｜10❂Loxic Kohl
+Andreana	5	DEA-X	3-2	8❂Grindstone Pentahydrate｜8❂RMA70-12
+Angelina	6	DEC-X	2-7	4❂Bipolar Nanoflake｜5❂Sugar Lump	Paradox
+Angelina	6	DEC-Y	4-4	4❂Bipolar Nanoflake｜5❂Sugar Lump	Paradox
 ...
 ```
 

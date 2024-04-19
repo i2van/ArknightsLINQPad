@@ -14,7 +14,7 @@ env:
     Get-Clipboard
     if(-not $(Get-Clipboard -Raw).Trim()){ throw "Clipboard is empty" }
   PSAssertModules: |
-    (Get-Content -Raw OperatorModules.linq) -match 'OperatorModules\("""([^"]+)' | Out-Null
+    (Get-Content -Raw OperatorModules.linq) -match 'OperatorModules\s*=\s*new\s*\("""([^"]+)' | Out-Null
     if($Matches[1].Split("`n", [StringSplitOptions]::RemoveEmptyEntries -bor [StringSplitOptions]::TrimEntries) -join "`n" -ne ($(Get-Clipboard) -join "`n")){ throw "Modules have been updated" }
 
 jobs:
