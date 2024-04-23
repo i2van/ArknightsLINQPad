@@ -66,16 +66,16 @@ Ongoing [Arknights](https://arknights.wiki.gg) [event](https://arknights.wiki.gg
 [Arknights](https://arknights.wiki.gg) [operators](https://arknights.wiki.gg/wiki/Operator)'s [modules](https://arknights.wiki.gg/wiki/Operator_Module) parser.
 
 ```text
-Aak	6	GEE-X	2-8	4❂D32 Steel｜7❂Polymerized Gel	Paradox
-Absinthe	5	CCR-X	3-4	10❂Orirock Concentration｜10❂Incandescent Alloy
-Aciddrop	4	ARC-X	2-8	10❂RMA70-12｜8❂Integrated Device	Paradox
-Akafuyu	5	MUS-X	3-8	8❂Polymerized Gel｜15❂Aketon	Paradox
-Almond	5	HOK-X	BI-2	6❂Oriron Block｜13❂Manganese Ore	Paradox
-Ambriel	4	DEA-X	4-7	16❂Oriron Cluster｜6❂RMA70-12
-Amiya	5	CCR-Y	3-8	10❂Orirock Concentration｜10❂Loxic Kohl
-Andreana	5	DEA-X	3-2	8❂Grindstone Pentahydrate｜8❂RMA70-12
-Angelina	6	DEC-X	2-7	4❂Bipolar Nanoflake｜5❂Sugar Lump	Paradox
-Angelina	6	DEC-Y	4-4	4❂Bipolar Nanoflake｜5❂Sugar Lump	Paradox
+Aak	Specialist	6	GEE-X	2-8	D32 Steel❂4｜Polymerized Gel❂7	Paradox
+Absinthe	Caster	5	CCR-X	3-4	Orirock Concentration❂10｜Incandescent Alloy❂10
+Aciddrop	Sniper	4	ARC-X	2-8	RMA70-12❂10｜Integrated Device❂8	Paradox
+Akafuyu	Guard	5	MUS-X	3-8	Polymerized Gel❂8｜Aketon❂15	Paradox
+Almond	Specialist	5	HOK-X	BI-2	Oriron Block❂6｜Manganese Ore❂13	Paradox
+Ambriel	Sniper	4	DEA-X	4-7	Oriron Cluster❂16｜RMA70-12❂6
+Amiya	Caster	5	CCR-Y	3-8	Orirock Concentration❂10｜Loxic Kohl❂10
+Andreana	Sniper	5	DEA-X	3-2	Grindstone Pentahydrate❂8｜RMA70-12❂8
+Angelina	Supporter	6	DEC-X	2-7	Bipolar Nanoflake❂4｜Sugar Lump❂5	Paradox
+Angelina	Supporter	6	DEC-Y	4-4	Bipolar Nanoflake❂4｜Sugar Lump❂5	Paradox
 ...
 ```
 

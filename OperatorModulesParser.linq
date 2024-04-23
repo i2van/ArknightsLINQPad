@@ -64,6 +64,7 @@ async Task<Operator> GetOperator(string name)
 
 	return new(
 		name,
+		Regex.Match(wiki, @"\|class\s*=\s*([^\r\n]+)", RegexOptions.None, regexTimeout).Groups[1].Value,
 		Regex.Match(wiki, @"\|rarity\s*=\s*(\d+)", RegexOptions.None, regexTimeout).Groups[1].Value,
 		e2Materials,
 		Regex.Match(wiki, @"\|simulation", RegexOptions.None, regexTimeout).Success,
@@ -71,10 +72,10 @@ async Task<Operator> GetOperator(string name)
 	);
 }
 
-sealed record Operator(string Name, string Stars, string E2Materials, bool Paradox, IEnumerable<Module> Modules)
+sealed record Operator(string Name, string Class, string Stars, string E2Materials, bool Paradox, IEnumerable<Module> Modules)
 {
 	public override string ToString() =>
-		string.Join(Environment.NewLine, Modules.Select(m => $"{Name}\t{Stars}\t{m.Name}\t{m.Mission}\t{E2Materials}{(Paradox ? $"\t{nameof(Paradox)}" : string.Empty)}"));
+		string.Join(Environment.NewLine, Modules.Select(m => $"{Name}\t{Class}\t{Stars}\t{m.Name}\t{m.Mission}\t{E2Materials}{(Paradox ? $"\t{nameof(Paradox)}" : string.Empty)}"));
 }
 
 sealed record Module(string Name, string Mission);
