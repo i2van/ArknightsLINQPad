@@ -1,10 +1,14 @@
 <Query Kind="Statements">
   <Namespace>System.Net.Http</Namespace>
-  <Namespace>System.Threading.Tasks</Namespace>
-  <Namespace>System.Windows.Forms</Namespace>
 </Query>
 
 // Arknights operators modules parser.
+
+#nullable enable
+
+#load "./lib/Parsable.linq"
+#load "./lib/Operators.linq"
+#load "./lib/Clipboard.linq"
 
 const StringSplitOptions StringSplitOptions = StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries;
 
@@ -33,22 +37,22 @@ var operatorModules =
 		)
 	).Select(static op => op.ToString());
 
-await STATask.Run(() => Clipboard.SetText(string.Join(Environment.NewLine, operatorModules)));
+await operatorModules.SetClipboard();
 
 "Operator modules have been copied to clipboard.".Dump();
 
 Uri GetUrl(string uri) =>
 	new($"https://arknights.wiki.gg/wiki/{uri}?action=raw");
 
-async Task<Operator> GetOperator(string name)
+async Task<OperatorWithModules> GetOperator(string name)
 {
 	const string Title = "|title =";
 
 	var wiki = await httpClient.GetStringAsync(GetUrl(name.Replace(' ', '_')));
 
-	var e2Materials = string.Join("｜", Regex.Matches(wiki, @"\|e2\s+m[2-9]\s*=\s*([^\r\n}]+)", RegexOptions.None, regexTimeout)
+	var e2Materials = string.Join(OperatorData.MaterialSeparator, Regex.Matches(wiki, @"\|e2\s+m[2-9]\s*=\s*([^\r\n}]+)", RegexOptions.None, regexTimeout)
 		.Select(static match => match.Groups)
-		.Select(static group => string.Join("❂", group[1].Value.Split(',', StringSplitOptions)))
+		.Select(static group => string.Join(OperatorData.CountSeparator, group[1].Value.Split(',', StringSplitOptions)))
 	);
 
 	var wikiModules = wiki.Split("==Operator Modules==", StringSplitOptions).Last().Split("==").First();
@@ -72,36 +76,10 @@ async Task<Operator> GetOperator(string name)
 	);
 }
 
-sealed record Operator(string Name, string Class, string Stars, string E2Materials, bool Paradox, IEnumerable<Module> Modules)
+sealed record OperatorWithModules(string Name, string Class, string Stars, string E2Materials, bool Paradox, IEnumerable<Module> Modules)
 {
 	public override string ToString() =>
 		string.Join(Environment.NewLine, Modules.Select(m => $"{Name}\t{Class}\t{Stars}\t{m.Name}\t{m.Mission}\t{E2Materials}{(Paradox ? $"\t{nameof(Paradox)}" : string.Empty)}"));
 }
 
 sealed record Module(string Name, string Mission);
-
-public static class STATask
-{
-    public static Task Run(Action action)
-    {
-        var tcs = new TaskCompletionSource();
-
-        var thread = new Thread(() =>
-        {
-            try
-            {
-                action();
-                tcs.SetResult();
-            }
-            catch (Exception ex)
-            {
-                tcs.SetException(ex);
-            }
-        });
-
-        thread.SetApartmentState(ApartmentState.STA);
-        thread.Start();
-
-        return tcs.Task;
-    }
-}

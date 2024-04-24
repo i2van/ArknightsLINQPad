@@ -1,16 +1,14 @@
-<Query Kind="Program">
-  <Namespace>static LINQPad.Util</Namespace>
-  <Namespace>static System.Math</Namespace>
-  <Namespace>static System.String</Namespace>
-</Query>
+<Query Kind="Program"/>
 
 // Arknights packs store Originite Prime price calculator.
+
+#nullable enable
+
+#load "./lib/Extensions.linq"
 
 /*
 #define DUMP_ORIGINITE_PRIME_ORIGINAL_PACKS
 //*/
-
-#nullable enable
 
 void Main()
 {
@@ -133,22 +131,4 @@ class WikiHyperlinq : Hyperlinq
 
 	private static string GetFragment(string? fragment) =>
 		$"{(IsNullOrWhiteSpace(fragment) ? Empty : "#")}{fragment}";
-}
-
-static class HtmlExtensions
-{
-	private const string H1ToA = $"{nameof(HtmlExtensions)}_{nameof(H1ToA)}";
-
-	static HtmlExtensions() =>
-		HtmlHead.AddScript($$"""
-			function {{H1ToA}}(text, uri){
-				const elem = [].find.call(document.getElementsByTagName('h1'), elem => elem.innerHTML === text);
-				if(elem){
-					elem.innerHTML = `<a href="${uri}" class="headingpresenter reference">${elem.innerHTML}</a>`;
-				}
-			}
-			""");
-
-	public static void AsHyperlink(this string text, string uri) =>
-		InvokeScript(false, H1ToA, text, uri);
 }

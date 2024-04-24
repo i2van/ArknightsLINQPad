@@ -1,10 +1,13 @@
 <Query Kind="Statements">
   <Namespace>System.Net.Http</Namespace>
-  <Namespace>System.Threading.Tasks</Namespace>
-  <Namespace>System.Windows.Forms</Namespace>
 </Query>
 
 // Arknights event stock parser.
+
+#nullable enable
+
+#load "./lib/Extensions.linq"
+#load "./lib/Clipboard.linq"
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = "Come_Catastrophes_or_Wakes_of_Vultures".Split('#').First();
@@ -35,10 +38,11 @@ var stockItems = wiki.Split(Endl)
 	.Where( static s => !string.IsNullOrEmpty(s))
 	.ToArray();
 
-await STATask.Run(() => Clipboard.SetText(
-	$@"[new(""{eventUri}#{(string.IsNullOrWhiteSpace(eventStock) ? "EVENT_STOCK" : Escape(eventStock))}"", ""{eventName}"", ""{Escape(eventCurrency ?? "EVENT_CURRENCY")}"")] = new(""""""{Environment.NewLine}// {eventName}{Environment.NewLine}" +
-	string.Join(Environment.NewLine, stockItems) +
-	$@"{Environment.NewLine}"""""")"));
+await new string[]{
+	$@"[new(""{eventUri}#{(string.IsNullOrWhiteSpace(eventStock) ? "EVENT_STOCK" : eventStock.UnderscoreSpaces())}"", ""{eventName}"", ""{(eventCurrency ?? "EVENT_CURRENCY").UnderscoreSpaces()}"")] = new(""""""{Environment.NewLine}// {eventName}",
+	string.Join(Environment.NewLine, stockItems),
+	$@""""""")"
+}.SetClipboard();
 
 "Event stock has been copied to clipboard.".Dump();
 
@@ -63,33 +67,4 @@ string GetStockItem(IEnumerable<string> stockItems)
 	return count == "-1"
 			? string.Empty
 			: $"{priceCount.First()}\t{(count == "1" ? string.Empty : count)}\t{name.Replace("“", @"""").Replace("”", @"""")}";
-}
-
-static string Escape(string s) =>
-	s.Replace(" ", "_");
-
-public static class STATask
-{
-    public static Task Run(Action action)
-    {
-        var tcs = new TaskCompletionSource();
-
-        var thread = new Thread(() =>
-        {
-            try
-            {
-                action();
-                tcs.SetResult();
-            }
-            catch (Exception ex)
-            {
-                tcs.SetException(ex);
-            }
-        });
-
-        thread.SetApartmentState(ApartmentState.STA);
-        thread.Start();
-
-        return tcs.Task;
-    }
 }
