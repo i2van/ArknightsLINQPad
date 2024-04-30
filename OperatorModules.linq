@@ -63,7 +63,11 @@ void Main()
 #if DUMP_UNKNOWN_OPERATORS
 	var unknownOperators = operators.Select(static op => op.Name)
 		.Except(OperatorData.Value.Select(static om => om.Name), StringComparer.OrdinalIgnoreCase)
-		.Select(static name => new WikiHyperlinq(name))
+		.Select(static (name, i) => new
+		{
+			ID   = i + 1,
+			Name = new WikiHyperlinq(name)
+		})
 		.ToArray();
 
 	if(unknownOperators.Any())
