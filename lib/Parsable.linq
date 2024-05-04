@@ -62,6 +62,11 @@ abstract class Parsable<T> : IEnumerable<T>
 			? value
 			: fallbackValue;
 
+	protected static int GetNumber(Match match, string key, Func<int> fallbackValue) =>
+		int.TryParse(GetString(match, key), Integer, InvariantCulture, out var value)
+			? value
+			: fallbackValue();
+
 	[DoesNotReturn]
 	protected static void Throw(string str, string message) =>
 		throw new($"Invalid data: '{str}'. {message}");

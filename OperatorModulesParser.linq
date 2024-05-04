@@ -9,6 +9,7 @@
 #load "./lib/Parsable.linq"
 #load "./lib/Operators.linq"
 #load "./lib/Clipboard.linq"
+#load "./lib/Extensions.linq"
 
 const StringSplitOptions StringSplitOptions = StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries;
 

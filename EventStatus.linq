@@ -33,7 +33,7 @@ void Main()
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
-		// TODO: Copy and paste current event data from DB.Events below. Remove item(s) when done.
+		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
 			[new("Zwillingstürme_im_Herbst#Herbstmondeskonzert", "Zwillingstürme im Herbst", "Die_Klänge_von_den_Erinnerungen")] = new("""
@@ -414,23 +414,13 @@ class Items : Parsable<Item>
 		}
 	}
 
-	protected override Item Create(Match match)
-	{
-		return new
+	protected override Item Create(Match match) =>
+		new
 		(
-			GetNumber(Price, FallbackAction<int>(Throw)),
-			GetNumber(Count, FallbackValue(1)),
-			GetString(Name)
+			GetNumber(match, Price, FallbackAction<int>(Throw)),
+			GetNumber(match, Count, 1),
+			GetString(match, Name)
 		);
-
-		string GetString(string key) =>
-			match.Groups[key].Value;
-
-		int GetNumber(string key, Func<int> fallbackValue) =>
-			int.TryParse(GetString(key), Integer, DumpContext.CultureInfo, out var value)
-				? value
-				: fallbackValue();
-	}
 }
 
 struct Event

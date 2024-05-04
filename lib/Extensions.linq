@@ -88,6 +88,12 @@ static partial class ControlsExtensions
 		control.SetAttribute(title);
 }
 
+static partial class DataExtensions
+{
+	public static string Load(this string fileName) =>
+		File.ReadAllText(Path.Join(Path.GetDirectoryName(Util.CurrentQueryPath), "data", fileName));
+}
+
 static partial class HtmlExtensions
 {
 	private const string H1ToA = $"{nameof(HtmlExtensions)}_{nameof(H1ToA)}";
