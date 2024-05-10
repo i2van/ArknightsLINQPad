@@ -55,18 +55,23 @@ class ItemImage
 		var hyperlink = new Hyperlink(itemHyperlinq.Text, itemHyperlinq.Uri);
 		var htmlElement = hyperlink.HtmlElement;
 
-		htmlElement.AddEventListener("mouseenter", ShowImageOnMouseEnterHandler);
-		htmlElement.AddEventListener("mouseout",   static delegate { Context.Containers.Image.ClearContent(); });
+		htmlElement.AddEventListener("mouseenter", ShowImageEventHandler);
+		htmlElement.AddEventListener("mouseout",   HideImageEventHandler);
+		htmlElement.AddEventListener("focusin",    ShowImageEventHandler);
+		htmlElement.AddEventListener("focusout",   HideImageEventHandler);
 
 		return hyperlink;
 
-		void ShowImageOnMouseEnterHandler(object? elem, EventArgs e)
+		void ShowImageEventHandler(object? elem, EventArgs e)
 		{
 			var top = htmlElement.InvokeScript(true, "eval", "targetElement.getBoundingClientRect().top - document.body.getBoundingClientRect().top");
 
 			Context.Containers.Image.Style   = $"position: absolute; top: {top}px; z-index: 2";
 			Context.Containers.Image.Content = imageData;
 		}
+
+		static void HideImageEventHandler(object? elem, EventArgs e) =>
+			Context.Containers.Image.ClearContent();
 
 		static Hyperlinq GetItemHyperlinq(string itemName)
 		{
