@@ -29,49 +29,40 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.May, Day.OfMonth(21)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Jun, Day.OfMonth(2)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Zwillingstürme_im_Herbst#Herbstmondeskonzert", "Zwillingstürme im Herbst", "Die_Klänge_von_den_Erinnerungen")] = new("""
-			// Zwillingstürme im Herbst
+			[new("Il_Siracusano/Rerun#Dipartimento_di_Sicurezza_Alimentare", "Il Siracusano Rerun", "Permesso_di_Importazione")] = new("""
+			// Il Siracusano Rerun
 			150	3	Headhunting Permit
-			75	3	Module Data Block
-			100	5	Polymerization Preparation
-			100	5	Nucleic Crystal Sinter
-			25	10	Orirock Concentration
-			40	10	Oriron Block
-			35	10	Grindstone Pentahydrate
-			30	10	Polymerized Gel
-			35	10	Cutting Fluid Solution
-			30	10	Transmuted Salt Agglomerate
-			110		Pipe Organ Literature Stand
-			90		Library Stairs
-			90		'Scenery of Knowledge'
-			90		Knowledge-Seeking Hall Flooring
-			15	10	Data Supplement Instrument
-			5	60	Data Supplement Stick
-			8	15	Polyester Pack
-			10	15	Manganese Ore
-			12	15	Coagulating Gel
-			10	15	Crystalline Component
-			7	120	LMD
-			5	30	Strategic Battle Record
-			3	50	Tactical Battle Record
-			1	150	Frontline Battle Record
-			4	25	Skill Summary - 3
-			2	50	Skill Summary - 2
-			2	40	Orirock Cube
-			3	30	Sugar
-			3	30	Polyester
-			3	25	Oriron
-			3	25	Polyketon
-			4	20	Device
-			6	5	Guard Chip
-			2	200	Furniture Part
+			100		Bipolar Nanoflake
+			100		Crystalline Electronic Unit
+			35	3	Refined Solvent
+			35	3	Incandescent Alloy Block
+			35	3	Keton Colloid
+			35	3	Manganese Trihydrate
+			30	3	Polymerized Gel		
+			25	3	Orirock Concentration
+			110		'Truck Passage'
+			90		Patching Planks
+			90		Wooden Coat Hanger
+			85		Public Bookshelf
+			8	5	Sugar Pack
+			15	5	RMA70-12
+			7	20	LMD
+			5	5	Strategic Battle Record
+			3	10	Tactical Battle Record
+			1	20	Frontline Battle Record
+			4	10	Skill Summary - 3
+			2	20	Skill Summary - 2
+			2	8	Orirock Cube
+			3	8	Oriron
+			3	8	Polyketon
+			6	5	Vanguard Chip
 			""")
 		}
 	};
@@ -584,27 +575,27 @@ static class EventData
 		150	3	Headhunting Permit
 		100		Bipolar Nanoflake
 		100		Crystalline Electronic Unit
-		35	3	Keton Colloid
-		35	3	Orirock Concentration
-		35	3	Manganese Trihydrate
-		35	3	Incandescent Alloy Block
-		35	3	Polymerized Gel
 		35	3	Refined Solvent
+		35	3	Incandescent Alloy Block
+		35	3	Keton Colloid
+		35	3	Manganese Trihydrate
+		30	3	Polymerized Gel		
+		25	3	Orirock Concentration
 		110		'Truck Passage'
 		90		Patching Planks
 		90		Wooden Coat Hanger
 		85		Public Bookshelf
-		15	5	RMA70-12
 		8	5	Sugar Pack
+		15	5	RMA70-12
 		7	20	LMD
 		5	5	Strategic Battle Record
 		3	10	Tactical Battle Record
 		1	20	Frontline Battle Record
 		4	10	Skill Summary - 3
 		2	20	Skill Summary - 2
+		2	8	Orirock Cube
 		3	8	Oriron
 		3	8	Polyketon
-		2	8	Orirock Cube
 		6	5	Vanguard Chip
 		"""),
 
