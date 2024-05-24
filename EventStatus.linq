@@ -29,40 +29,51 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Jun, Day.OfMonth(2)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Jul, Day.OfMonth(16)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Il_Siracusano/Rerun#Dipartimento_di_Sicurezza_Alimentare", "Il Siracusano Rerun", "Permesso_di_Importazione")] = new("""
-			// Il Siracusano Rerun
+			[new("Here_a_People_Sows#Shennong_Market", "Here a People Sows", "Tianzhuang")] = new("""
+			// Here a People Sows
+			200		Wanqing's Token
+			240		Wanqing's Token
+			280		Wanqing's Token
+			320		Wanqing's Token
+			360		Wanqing's Token
 			150	3	Headhunting Permit
-			100		Bipolar Nanoflake
-			100		Crystalline Electronic Unit
-			35	3	Refined Solvent
-			35	3	Incandescent Alloy Block
-			35	3	Keton Colloid
-			35	3	Manganese Trihydrate
-			30	3	Polymerized Gel		
-			25	3	Orirock Concentration
-			110		'Truck Passage'
-			90		Patching Planks
-			90		Wooden Coat Hanger
-			85		Public Bookshelf
-			8	5	Sugar Pack
-			15	5	RMA70-12
-			7	20	LMD
-			5	5	Strategic Battle Record
-			3	10	Tactical Battle Record
-			1	20	Frontline Battle Record
-			4	10	Skill Summary - 3
-			2	20	Skill Summary - 2
-			2	8	Orirock Cube
-			3	8	Oriron
-			3	8	Polyketon
+			75	2	Module Data Block
+			100	5	Polymerization Preparation
+			35	10	Manganese Trihydrate
+			35	10	RMA70-24
+			35	10	Cutting Fluid Solution
+			25	10	Orirock Concentration
+			//100		"藏经阁"
+			//90		"优秀作品"
+			//70		感应式立灯
+			//35		小型斗拱灯
+			15	10	Data Supplement Instrument
+			5	60	Data Supplement Stick
+			12	15	Coagulating Gel
+			10	15	Manganese Ore
+			10	15	Incandescent Alloy
+			8	15	Polyester Pack
+			7	120	LMD
+			5	30	Strategic Battle Record
+			3	50	Tactical Battle Record
+			1	120	Frontline Battle Record
+			4	25	Skill Summary - 3
+			2	50	Skill Summary - 2
+			4	20	Device
+			3	25	Oriron
+			3	25	Polyketon
+			3	30	Polyester
+			3	30	Sugar
+			2	40	Orirock Cube
 			6	5	Vanguard Chip
+			2	200	Furniture Part
 			""")
 		}
 	};
@@ -570,35 +581,6 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("Il_Siracusano/Rerun#Dipartimento_di_Sicurezza_Alimentare", "Il Siracusano Rerun", "Permesso_di_Importazione")] = new("""
-		// Il Siracusano Rerun
-		150	3	Headhunting Permit
-		100		Bipolar Nanoflake
-		100		Crystalline Electronic Unit
-		35	3	Refined Solvent
-		35	3	Incandescent Alloy Block
-		35	3	Keton Colloid
-		35	3	Manganese Trihydrate
-		30	3	Polymerized Gel		
-		25	3	Orirock Concentration
-		110		'Truck Passage'
-		90		Patching Planks
-		90		Wooden Coat Hanger
-		85		Public Bookshelf
-		8	5	Sugar Pack
-		15	5	RMA70-12
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		2	8	Orirock Cube
-		3	8	Oriron
-		3	8	Polyketon
-		6	5	Vanguard Chip
-		"""),
-
 		[new("Lone_Trail#Special_Case_Contact,_C.U.D.O.D.", "Lone Trail", "Flight_Data_Recorder_Chip")] = new("""
 		// Lone Trail
 		250		Silence the Paradigmatic's Token
@@ -653,7 +635,7 @@ static class EventData
 		75	2	Module Data Block
 		100	5	Bipolar Nanoflake
 		35	10	Manganese Trihydrate
-		40	10	Cured Fiberboard
+		40	10	Solidified Fiber Board
 		35	10	RMA70-24
 		30	10	White Horse Kohl
 		//100		艺术馆吊灯

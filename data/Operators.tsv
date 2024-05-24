@@ -85,7 +85,6 @@ Fartooth	Sniper	6	DEA-X	S2-2	D32 Steel❂4｜Cutting Fluid Solution❂7
 Fartooth	Sniper	6	DEA-Y	2-5	D32 Steel❂4｜Cutting Fluid Solution❂7
 FEater	Specialist	5	PUS-Y	WR-7	Grindstone Pentahydrate❂8｜Polyester Pack❂15	Paradox
 Fiammetta	Sniper	6	ART-X	GA-4	Crystalline Electronic Unit❂3｜Grindstone Pentahydrate❂6	Paradox
-Fiammetta	Sniper	6	ART-Y	S5-9	Crystalline Electronic Unit❂3｜Grindstone Pentahydrate❂6	Paradox
 Firewatch	Sniper	5	DEA-Y	2-10	Polyester Lump❂7｜Loxic Kohl❂15	Paradox
 Firewhistle	Defender	5	FOR-X	S4-6	Grindstone Pentahydrate❂7｜Coagulating Gel❂13	Paradox
 Flamebringer	Guard	5	DRE-Y	S4-3	White Horse Kohl❂9｜Manganese Ore❂13
@@ -101,6 +100,7 @@ Gavial	Medic	4	PHY-Y	S4-5	Integrated Device❂13｜Oriron Cluster❂6
 Gavial the Invincible	Guard	6	CEN-X	9-2	Bipolar Nanoflake❂4｜Polymerized Gel❂6	Paradox
 Gitano	Caster	4	SPC-X	1-10	Sugar Pack❂17｜Orirock Cluster❂14	Paradox
 Gladiia	Specialist	6	HOK-X	SV-EX-5	Crystalline Electronic Unit❂4｜Polymerized Gel❂6	Paradox
+Gladiia	Specialist	6	HOK-Y	SN-EX-3	Crystalline Electronic Unit❂4｜Polymerized Gel❂6	Paradox
 Glaucus	Supporter	5	DEC-X	5-7	Keton Colloid❂7｜Integrated Device❂10	Paradox
 Gnosis	Supporter	6	UMD-X	BI-7	Crystalline Electronic Unit❂3｜Incandescent Alloy Block❂7
 Goldenglow	Caster	6	FUN-X	R8-8	Bipolar Nanoflake❂4｜Manganese Trihydrate❂5
@@ -127,6 +127,7 @@ Humus	Guard	4	REA-X	7-8	RMA70-12❂11｜Sugar Pack❂12	Paradox
 Hung	Defender	5	GUA-Y	S2-4	Incandescent Alloy Block❂7｜Aketon❂15	Paradox
 Iana	Specialist	5	PUM-X	3-7	Transmuted Salt Agglomerate❂7｜Aggregate Cyclicene❂12
 Ifrit	Caster	6	BLA-X	1-5	D32 Steel❂4｜Polyester Lump❂7	Paradox
+Ifrit	Caster	6	BLA-Δ	CW-3	D32 Steel❂4｜Polyester Lump❂7	Paradox
 Indigo	Caster	4	MSC-X	SV-5	Oriron Cluster❂14｜RMA70-12❂7	Paradox
 Indra	Guard	5	FGT-Y	11-5	Keton Colloid❂7｜Polyester Pack❂16	Paradox
 Insider	Sniper	5	MAR-X	3-4	Polymerized Gel❂9｜Sugar Pack❂15
@@ -198,6 +199,7 @@ Pallas	Guard	6	INS-Y	4-3	Crystalline Electronic Unit❂4｜White Horse Kohl❂6
 Passenger	Caster	6	CHA-X	2-2	Bipolar Nanoflake❂4｜Oriron Block❂5
 Passenger	Caster	6	CHA-Y	5-10	Bipolar Nanoflake❂4｜Oriron Block❂5
 Penance	Defender	6	UNY-X	CB-4	D32 Steel❂4｜White Horse Kohl❂8
+Penance	Defender	6	UNY-Y	IS-7	D32 Steel❂4｜White Horse Kohl❂8
 Perfumer	Medic	4	RIN-Y	3-4	Loxic Kohl❂19｜Aketon❂8	Paradox
 Phantom	Specialist	6	EXE-X	3-6	Polymerization Preparation❂4｜Polymerized Gel❂9	Paradox
 Phantom	Specialist	6	EXE-Y	DM-5	Polymerization Preparation❂4｜Polymerized Gel❂9	Paradox
