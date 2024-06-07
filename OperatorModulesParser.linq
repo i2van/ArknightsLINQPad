@@ -47,14 +47,30 @@ Uri GetUrl(string uri) =>
 
 async Task<OperatorWithModules> GetOperator(string name)
 {
+	string GetOperatorUri(string operatorTag)
+	{
+		var index = name.IndexOf(operatorTag);
+		return index < 0
+			? name
+			: $"{name.Substring(0, index)}/{operatorTag.Trim(" ()".ToCharArray())}";
+	}
+
+	var url = GetUrl(GetOperatorUri(" (Medic)").Replace(' ', '_'));
+
 	const string Title = "|title =";
 
-	var wiki = await httpClient.GetStringAsync(GetUrl(name.Replace(' ', '_')));
+	var wiki = await httpClient.GetStringAsync(url);
 
 	var e2Materials = string.Join(OperatorData.MaterialSeparator, Regex.Matches(wiki, @"\|e2\s+m[2-9]\s*=\s*([^\r\n}]+)", RegexOptions.None, regexTimeout)
 		.Select(static match => match.Groups)
 		.Select(static group => string.Join(OperatorData.CountSeparator, group[1].Value.Split(',', StringSplitOptions)))
 	);
+
+	if(string.IsNullOrEmpty(e2Materials))
+	{
+		var noMaterial = $"Missing promotion material{OperatorData.CountSeparator}1";
+		e2Materials = $"{noMaterial}{OperatorData.MaterialSeparator}{noMaterial}";
+	}
 
 	var wikiModules = wiki.Split("==Operator Modules==", StringSplitOptions).Last().Split("==").First();
 

@@ -5,6 +5,7 @@ Akafuyu	Guard	5	MUS-X	3-8	Polymerized Gel❂8｜Aketon❂15	Paradox
 Almond	Specialist	5	HOK-X	BI-2	Oriron Block❂6｜Manganese Ore❂13	Paradox
 Ambriel	Sniper	4	DEA-X	4-7	Oriron Cluster❂16｜RMA70-12❂6
 Amiya	Caster	5	CCR-Y	3-8	Orirock Concentration❂10｜Loxic Kohl❂10
+Amiya (Medic)	Medic	5	INC-X	3-8	Missing promotion material❂1｜Missing promotion material❂1
 Andreana	Sniper	5	DEA-X	3-2	Grindstone Pentahydrate❂8｜RMA70-12❂8
 Angelina	Supporter	6	DEC-X	2-7	Bipolar Nanoflake❂4｜Sugar Lump❂5	Paradox
 Angelina	Supporter	6	DEC-Y	4-4	Bipolar Nanoflake❂4｜Sugar Lump❂5	Paradox
@@ -51,6 +52,7 @@ Chiave	Vanguard	5	SOL-Y	1-1	Manganese Trihydrate❂7｜Grindstone❂13	Paradox
 Chongyue	Guard	6	FGT-X	WB-7	Polymerization Preparation❂4｜Incandescent Alloy❂5
 Click	Caster	4	FUN-Y	11-7	Manganese Ore❂15｜Oriron Cluster❂9	Paradox
 Cliffheart	Specialist	5	HOK-X	MN-5	Oriron Block❂6｜Manganese Ore❂13	Paradox
+Coldshot	Sniper	5	HUN-X	S3-3	RMA70-24❂8｜Oriron Cluster❂10
 Conviction	Guard	4	DRE-X	2-4	Integrated Device❂11｜Coagulating Gel❂9
 Corroserum	Caster	5	BLA-X	BI-6	Optimized Device❂5｜RMA70-12❂10	Paradox
 Courier	Vanguard	4	SOL-X	S2-2	Integrated Device❂11｜Aketon❂10
@@ -85,6 +87,7 @@ Fartooth	Sniper	6	DEA-X	S2-2	D32 Steel❂4｜Cutting Fluid Solution❂7
 Fartooth	Sniper	6	DEA-Y	2-5	D32 Steel❂4｜Cutting Fluid Solution❂7
 FEater	Specialist	5	PUS-Y	WR-7	Grindstone Pentahydrate❂8｜Polyester Pack❂15	Paradox
 Fiammetta	Sniper	6	ART-X	GA-4	Crystalline Electronic Unit❂3｜Grindstone Pentahydrate❂6	Paradox
+Fiammetta	Sniper	6	ART-Y	S5-9	Crystalline Electronic Unit❂3｜Grindstone Pentahydrate❂6	Paradox
 Firewatch	Sniper	5	DEA-Y	2-10	Polyester Lump❂7｜Loxic Kohl❂15	Paradox
 Firewhistle	Defender	5	FOR-X	S4-6	Grindstone Pentahydrate❂7｜Coagulating Gel❂13	Paradox
 Flamebringer	Guard	5	DRE-Y	S4-3	White Horse Kohl❂9｜Manganese Ore❂13
@@ -159,6 +162,7 @@ Leto	Guard	5	LOR-Y	4-3	Oriron Block❂7｜Incandescent Alloy❂10
 Lin	Caster	6	PLX-X	11-6	D32 Steel❂4｜Cutting Fluid Solution❂8
 Ling	Supporter	6	SUM-Y	3-4	D32 Steel❂4｜Crystalline Circuit❂5	Paradox
 Liskarm	Defender	5	SPT-X	4-6	Grindstone Pentahydrate❂7｜Aketon❂15	Paradox
+Lucilla	Supporter	5	UMD-X	SV-4	RMA70-24❂6｜Manganese Ore❂16
 Lumen	Medic	6	WAH-X	6-9	Crystalline Electronic Unit❂4｜Optimized Device❂5	Paradox
 Lumen	Medic	6	WAH-Y	OF-5	Crystalline Electronic Unit❂4｜Optimized Device❂5	Paradox
 Lunacub	Sniper	5	DEA-Y	2-5	Refined Solvent❂8｜Aketon❂13
@@ -218,6 +222,7 @@ Qanipalaat	Caster	5	CCR-Y	2-3	Oriron Block❂7｜Manganese Ore❂12	Paradox
 Qiubai	Guard	6	LOR-X	WB-7	Crystalline Electronic Unit❂3｜Manganese Trihydrate❂6
 Quercus	Supporter	5	BLS-X	9-2	Oriron Block❂6｜Manganese Ore❂13	Paradox
 Rathalos S Noir Corne	Guard	5	MUS-X	3-8	Transmuted Salt Agglomerate❂8｜Crystalline Component❂11
+Ray	Sniper	6	HUN-X	S9-1	Bipolar Nanoflake❂4｜Orirock Concentration❂8
 Reed	Vanguard	5	CHG-Y	9-5	Orirock Concentration❂9｜Manganese Ore❂12	Paradox
 Reed the Flame Shadow	Medic	6	INC-X	11-6	Nucleic Crystal Sinter❂3｜Orirock Concentration❂9
 Roberta	Supporter	4	CRA-X	3-8	Semi-Synthetic Solvent❂14｜Integrated Device❂7	Paradox
@@ -273,6 +278,7 @@ Totter	Sniper	4	SIE-X	S3-5	Orirock Cluster❂24｜Coagulating Gel❂6	Paradox
 Tsukinogi	Supporter	5	BLS-X	S3-6	White Horse Kohl❂8｜Grindstone❂12	Paradox
 Tuye	Medic	5	PHY-X	4-6	Keton Colloid❂7｜Loxic Kohl❂15	Paradox
 Typhon	Sniper	6	SIE-X	S2-1	Polymerization Preparation❂4｜Refined Solvent❂7
+Underflow	Defender	5	SPT-X	SN-5	Incandescent Alloy Block❂8｜Fuscous Fiber❂9
 Utage	Guard	4	MUS-X	1-12	Aketon❂14｜Orirock Cluster❂14	Paradox
 Vendela	Medic	5	INC-X	IC-2	Keton Colloid❂5｜Grindstone❂13
 Verdant	Specialist	4	PUM-Y	9-3	Oriron Cluster❂15｜Fuscous Fiber❂9

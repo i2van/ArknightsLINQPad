@@ -5,7 +5,10 @@
 #load "./Parsable.linq"
 #load "./Extensions.linq"
 
-record Operator(string Name, string Class, int Stars, string Module, string Stage, string E2Materials, bool Paradox);
+record Operator(string Name, string Class, int Stars, string Module, string Stage, string E2Materials, bool Paradox)
+{
+	public string Uri { get; } = Name.Replace(" (", "/").Replace(")", string.Empty);
+}
 
 class Operators : Parsable<Operator>
 {
