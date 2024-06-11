@@ -87,9 +87,9 @@ void Main()
 		Context.Containers.Image
 	).Dump(title);
 
-	title.AsHyperlink(new WikiHyperlinq("Operator_Module", "List").Uri);
-
 	new DumpContainer(){ Style = $"height: {DumpContext.Document.MarginBottom}" }.Dump();
+
+	title.AsHyperlink(new WikiHyperlinq("Operator_Module", "List").Uri);
 
 	static T Pass<T>(T t) => t;
 }
