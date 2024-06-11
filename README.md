@@ -14,9 +14,10 @@ Collection of the [Arknights](https://arknights.wiki.gg) [LINQPad 8](https://www
 
 ## How to use
 
-1. Open [script](#scripts) in the [LINQPad 8](https://www.linqpad.net/Download.aspx).
-2. Search (`Ctrl+F`) for all the `TODO:`s and edit as necessary.
-3. Execute.
+1. [Download ZIP](https://github.com/i2van/ArknightsLINQPad/archive/refs/heads/main.zip) or `git clone` repository.
+2. Open [script](#scripts) in the [LINQPad 8](https://www.linqpad.net/Download.aspx).
+3. Search (`Ctrl+F`) for all the `TODO:`s and edit as necessary.
+4. Execute.
 
 ## Scripts
 
