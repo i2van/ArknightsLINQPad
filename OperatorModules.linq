@@ -55,7 +55,7 @@ void Main()
 			v.Stars,
 			Module      = VerticalRun(v.Operators.Select(static v => new WikiHyperlinq($"{v.Uri}#{v.Module}", v.Module))),
 			v.Total,
-			Paradox     = VerticalRun(v.Operators.Select(static v => v.Paradox ? new Hyperlinq($"https://www.youtube.com/results?search_query={Uri.EscapeDataString(v.Name)}+paradox+simulation", "YouTube") : (object)Empty)),
+			Paradox     = VerticalRun(v.Operators.Select(static v => v.Paradox ? GetParadoxHyperlinq(v.Name) : Empty)),
 			E2Materials = VerticalRun(v.Operators.Select(static v => GetMaterials(v.Uri, v.E2Materials)))
 		}))
 		.ToArray();
@@ -65,8 +65,9 @@ void Main()
 		.Except(OperatorData.Value.Select(static om => om.Name), StringComparer.OrdinalIgnoreCase)
 		.Select(static (name, i) => new
 		{
-			ID   = i + 1,
-			Name = new WikiHyperlinq(name)
+			ID      = i + 1,
+			Name    = new WikiHyperlinq(name),
+			Paradox = GetParadoxHyperlinq(name)
 		})
 		.ToArray();
 
@@ -93,6 +94,9 @@ void Main()
 
 	static T Pass<T>(T t) => t;
 }
+
+static object GetParadoxHyperlinq(string name) =>
+	new Hyperlinq($"https://www.youtube.com/results?search_query={Uri.EscapeDataString(name)}+paradox+simulation", "YouTube");
 
 static object GetMaterials(string op, string materials)
 {
