@@ -10,18 +10,16 @@
 #load "./lib/Clipboard.linq"
 
 // TODO: Specify the event URI including /Rerun if present.
-var eventUri = "Come_Catastrophes_or_Wakes_of_Vultures".Split('#').First();
+var eventUri = """
+The Rides to Lake Silberneherze
+"""
+.Trim().Replace(" ", "_").Split('#').First();
 
 const StringSplitOptions StringSplitOptions = StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries;
 
 using var httpClient = new HttpClient();
 
 var wiki = await httpClient.GetStringAsync($"https://arknights.wiki.gg/wiki/{eventUri}?action=raw");
-
-const char Endl  = '\n';
-const char Comma = ',';
-
-const string EventStoreCell = "{{Event store cell|";
 
 var regexTimeout = TimeSpan.FromMilliseconds(100);
 
@@ -30,12 +28,11 @@ var eventStock = Regex.Match(wiki, @"=+?([^=]+)=+?[^=]+\{\{Event\s+store\s+head"
 
 string? eventCurrency = null;
 
-var stockItems = wiki.Split(Endl)
-	.Where( static s => s.StartsWith(EventStoreCell))
-	.Select(static s => s.Replace(EventStoreCell, string.Empty))
-	.Select(static s => s.Split(Comma, StringSplitOptions))
+var stockItems = wiki
+	.Replace("\n", string.Empty)
+	.Split("}}", StringSplitOptions)
 	.Select(GetStockItem)
-	.Where( static s => !string.IsNullOrEmpty(s))
+	.Where(static s => !string.IsNullOrEmpty(s))
 	.ToArray();
 
 await new string[]{
@@ -46,25 +43,33 @@ await new string[]{
 
 "Event stock has been copied to clipboard.".Dump();
 
-string GetStockItem(IEnumerable<string> stockItems)
+string GetStockItem(string stockItem)
 {
-	const char Or = '|';
+	const string EventStoreCell = "{{Event store cell|";
 
-	var name = stockItems.First();
+	const string Name     = nameof(Name);
+	const string Currency = nameof(Currency);
+	const string Price    = nameof(Price);
+	const string Stock    = nameof(Stock);
 
-	if(name.StartsWith("ware="))
+	var regex = new Regex(@$"^\s*{Regex.Escape(EventStoreCell)}\s*[a-z]+\s*=\s*(?<{Name}>[^,\|]+).*\|[a-z]+\s*=\s*(?<{Currency}>[^,]+).+?(?<{Price}>[0-9]+)\|[a-z]+\s*=\s*(?<{Stock}>[0-9]+)\s*$", RegexOptions.ExplicitCapture, regexTimeout);
+
+	var match = regex.Match(stockItem);
+	if(!match.Success)
 	{
-		name = name.Split(Or).Skip(1).First();
+		return string.Empty;
 	}
-	else
+
+	eventCurrency ??= getValue(Currency);
+
+	var stock = getValue(Stock);
+	if(stock == "1")
 	{
-		eventCurrency ??= stockItems.Skip(1).First().Split(Or).Last();
+		stock = string.Empty;
 	}
 
-	var priceCount = stockItems.Last().Split(Or).ToArray();
-	var count = priceCount.Last().Trim('}');
+	return $"{getValue(Price)}\t{stock}\t{getValue(Name).Replace("“", @"""").Replace("”", @"""")}";
 
-	return count == "-1"
-			? string.Empty
-			: $"{priceCount.First()}\t{(count == "1" ? string.Empty : count)}\t{name.Replace("“", @"""").Replace("”", @"""")}";
+	string getValue(string name) =>
+		match.Groups[name].Value.Trim();
 }

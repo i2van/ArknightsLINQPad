@@ -13,6 +13,9 @@ env:
   PSAssertClipboard: |
     Get-Clipboard
     if(-not $(Get-Clipboard -Raw).Trim()){ throw "Clipboard is empty" }
+  PSAssertClipboardEventStock: |
+    Get-Clipboard
+    if($(Get-Clipboard).Length -le (4 + 8)){ throw "Event stock parsing failed" }
   PSAssertModules: |
     if((Get-Content -Raw ./data/Operators.tsv).Split("`n", [StringSplitOptions]::RemoveEmptyEntries -bor [StringSplitOptions]::TrimEntries) -join "`n" -ne ($(Get-Clipboard) -join "`n")){ throw "Modules have been updated" }
 
@@ -44,7 +47,7 @@ jobs:
           ${{env.PSHeader}}
           ${{env.PSClearClipboard}}
           ${{env.LPRun}} EventStockParser.linq
-          ${{env.PSAssertClipboard}}
+          ${{env.PSAssertClipboardEventStock}}
 
       - name: Execute OperatorModules.linq
         run:  ${{env.LPRun}} OperatorModules.linq
