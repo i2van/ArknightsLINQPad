@@ -49,24 +49,24 @@ void Main()
 			35	10	Keton Colloid
 			35	10	Manganese Trihydrate
 			35	10	RMA70-24
-			//90		小邮局地板
-			//60		小邮筒
-			//60		"耶拉冈德之骨"
-			//45		寄件柜台
-			//30		"雪山之窗"
+			30		Window to the Snowy Mountains
+			45		Shipping Counter
+			60		Small Mailbox
+			60		'Kjeragandr's Bones'
+			90		Small Post Office Floor
 			15	10	Data Supplement Instrument
 			5	60	Data Supplement Stick
-			12	10	Transmuted Salt
 			10	15	Aketon
+			12	10	Transmuted Salt
 			7	100	LMD
 			5	25	Strategic Battle Record
 			3	50	Tactical Battle Record
 			1	120	Frontline Battle Record
 			4	25	Skill Summary - 3
 			2	50	Skill Summary - 2
-			4	25	Device
-			3	25	Orirock Cube
+			3	25	Oriron
 			3	25	Polyketon
+			4	25	Device
 			6	5	Medic Chip
 			2	200	Furniture Part
 			""")
@@ -746,24 +746,24 @@ static class EventData
 		35	10	Keton Colloid
 		35	10	Manganese Trihydrate
 		35	10	RMA70-24
-		//90		小邮局地板
-		//60		小邮筒
-		//60		"耶拉冈德之骨"
-		//45		寄件柜台
-		//30		"雪山之窗"
+		30		Window to the Snowy Mountains
+		45		Shipping Counter
+		60		Small Mailbox
+		60		'Kjeragandr's Bones'
+		90		Small Post Office Floor
 		15	10	Data Supplement Instrument
 		5	60	Data Supplement Stick
-		12	10	Transmuted Salt
 		10	15	Aketon
+		12	10	Transmuted Salt
 		7	100	LMD
 		5	25	Strategic Battle Record
 		3	50	Tactical Battle Record
 		1	120	Frontline Battle Record
 		4	25	Skill Summary - 3
 		2	50	Skill Summary - 2
-		4	25	Device
-		3	25	Orirock Cube
+		3	25	Oriron
 		3	25	Polyketon
+		4	25	Device
 		6	5	Medic Chip
 		2	200	Furniture Part
 		"""),
