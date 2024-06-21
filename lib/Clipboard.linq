@@ -6,8 +6,36 @@
 
 static class Clipboard
 {
-	public static Task SetClipboard(this IEnumerable<string> text) =>
-		STATask.Run(() => System.Windows.Forms.Clipboard.SetText(string.Join(Environment.NewLine, text)));
+	public static Task SetClipboard(this IEnumerable<string> text)
+	{
+		return STATask.Run(() => Try(() => System.Windows.Forms.Clipboard.SetText(string.Join(Environment.NewLine, text))));
+
+		static void Try(Action action)
+		{
+			const int MaxTries = 3;
+
+			var tryNumber = 0;
+
+			while(tryNumber++ < MaxTries)
+			{
+				try
+				{
+					action();
+					return;
+				}
+				catch
+				{
+					if(tryNumber >= MaxTries)
+					{
+						throw;
+					}
+
+					Thread.Sleep(TimeSpan.FromSeconds(tryNumber));
+					continue;
+				}
+			}
+		}
+	}
 }
 
 static class STATask
