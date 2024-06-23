@@ -12,7 +12,7 @@ static class Clipboard
 
 		static void Try(Action action)
 		{
-			const int MaxTries = 3;
+			const int MaxTries = 4;
 
 			var tryNumber = 0;
 
