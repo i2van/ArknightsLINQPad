@@ -13,7 +13,11 @@
 var eventUri = """
 The Rides to Lake Silberneherze
 """
-.Trim().Replace(" ", "_").Split('#').First();
+	.Trim()
+	.Replace(" Rerun", "/Rerun")
+	.Replace(" ", "_")
+	.Split('#')
+	.First();
 
 const StringSplitOptions StringSplitOptions = StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries;
 
@@ -34,6 +38,11 @@ var stockItems = wiki
 	.Select(GetStockItem)
 	.Where(static s => !string.IsNullOrEmpty(s))
 	.ToArray();
+
+if(!stockItems.Any())
+{
+	throw new("No event stock items found");
+}
 
 await new string[]{
 	$@"[new(""{eventUri}#{(string.IsNullOrWhiteSpace(eventStock) ? "EVENT_STOCK" : eventStock.UnderscoreSpaces())}"", ""{eventName}"", ""{(eventCurrency ?? "EVENT_CURRENCY").UnderscoreSpaces()}"")] = new(""""""{Environment.NewLine}// {eventName}",
