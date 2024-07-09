@@ -39,8 +39,8 @@ void Main()
 			[new("To_the_Grinning_Valley#Sandbeast_Cave", "To the Grinning Valley", "Spicy_Bottletree_Sap")] = new("""
 			// To the Grinning Valley
 			350		Major Field
-			10	7	Information Fragment
-			100		Module Data Block
+			10	6	Information Fragment
+			100	2	Module Data Block
 			30	8	Data Supplement Instrument
 			10	40	Data Supplement Stick
 			200		Crystalline Electronic Unit
@@ -51,8 +51,8 @@ void Main()
 			5	10	LMD
 			5	5	Strategic Battle Record
 			5	5	Tactical Battle Record
-			5	5	Skill Summary - 3
-			5	5	Skill Summary - 2
+			6	5	Skill Summary - 3
+			6	5	Skill Summary - 2
 			4	5	Pure Gold
 			6	5	Oriron
 			30	5	Recruitment Permit
@@ -759,8 +759,8 @@ static class EventData
 		[new("To_the_Grinning_Valley#Sandbeast_Cave", "To the Grinning Valley", "Spicy_Bottletree_Sap")] = new("""
 		// To the Grinning Valley
 		350		Major Field
-		10	7	Information Fragment
-		100		Module Data Block
+		10	6	Information Fragment
+		100	2	Module Data Block
 		30	8	Data Supplement Instrument
 		10	40	Data Supplement Stick
 		200		Crystalline Electronic Unit
@@ -771,8 +771,8 @@ static class EventData
 		5	10	LMD
 		5	5	Strategic Battle Record
 		5	5	Tactical Battle Record
-		5	5	Skill Summary - 3
-		5	5	Skill Summary - 2
+		6	5	Skill Summary - 3
+		6	5	Skill Summary - 2
 		4	5	Pure Gold
 		6	5	Oriron
 		30	5	Recruitment Permit
