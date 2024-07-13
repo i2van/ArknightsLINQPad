@@ -9,6 +9,7 @@ Amiya (Medic)	Medic	5	INC-X	3-8	Missing promotion material❂1｜Missing promoti
 Andreana	Sniper	5	DEA-X	3-2	Grindstone Pentahydrate❂8｜RMA70-12❂8
 Angelina	Supporter	6	DEC-X	2-7	Bipolar Nanoflake❂4｜Sugar Lump❂5	Paradox
 Angelina	Supporter	6	DEC-Y	4-4	Bipolar Nanoflake❂4｜Sugar Lump❂5	Paradox
+Aosta	Sniper	5	RPR-X	6-8	Oriron Block❂7｜Incandescent Alloy❂10	Paradox
 April	Sniper	5	MAR-Y	5-3	Polymerized Gel❂9｜RMA70-12❂9	Paradox
 Archetto	Sniper	6	MAR-X	SV-4	Polymerization Preparation❂4｜Orirock Concentration❂8	Paradox
 Archetto	Sniper	6	MAR-Y	2-9	Polymerization Preparation❂4｜Orirock Concentration❂8	Paradox
@@ -48,6 +49,7 @@ Ceobe	Caster	6	CCR-Y	11-7	Bipolar Nanoflake❂4｜Incandescent Alloy Block❂5	P
 Ceylon	Medic	5	WAH-X	OF-3	Oriron Block❂7｜Aketon❂10	Paradox
 Ch'en	Guard	6	SWO-X	5-8	Polymerization Preparation❂4｜White Horse Kohl❂6	Paradox
 Ch'en	Guard	6	SWO-Y	5-9	Polymerization Preparation❂4｜White Horse Kohl❂6	Paradox
+Ch'en the Holungday	Sniper	6	RPR-X	9-13	Bipolar Nanoflake❂4｜Incandescent Alloy Block❂6	Paradox
 Chiave	Vanguard	5	SOL-Y	1-1	Manganese Trihydrate❂7｜Grindstone❂13	Paradox
 Chongyue	Guard	6	FGT-X	WB-7	Polymerization Preparation❂4｜Incandescent Alloy❂5
 Click	Caster	4	FUN-Y	11-7	Manganese Ore❂15｜Oriron Cluster❂9	Paradox
@@ -79,6 +81,7 @@ Estelle	Guard	4	CEN-Y	7-4	RMA70-12❂12｜Grindstone❂8	Paradox
 Ethan	Specialist	4	AMB-X	TW-3	Sugar Pack❂17｜Orirock Cluster❂14	Paradox
 Eunectes	Defender	6	HES-X	RI-EX-4	Bipolar Nanoflake❂4｜Polymerized Gel❂7
 Eunectes	Defender	6	HES-Y	RI-7	Bipolar Nanoflake❂4｜Polymerized Gel❂7
+Executor	Sniper	5	RPR-X	IW-8	Manganese Trihydrate❂8｜Grindstone❂9	Paradox
 Executor the Ex Foedere	Guard	6	REA-X	7-14	Nucleic Crystal Sinter❂3｜Polymerized Gel❂7	Paradox
 Exusiai	Sniper	6	MAR-X	4-10	Polymerization Preparation❂4｜Sugar Lump❂5	Paradox
 Eyjafjalla	Caster	6	CCR-X	OF-5	Polymerization Preparation❂4｜Optimized Device❂5	Paradox
@@ -180,6 +183,7 @@ Meteor	Sniper	4	MAR-X	2-7	Oriron Cluster❂14｜Polyester Pack❂12	Paradox
 Meteorite	Sniper	5	ART-Y	2-4	RMA70-24❂7｜Manganese Ore❂14	Paradox
 Minimalist	Caster	5	FUN-Y	IC-8	Crystalline Circuit❂6｜Oriron Cluster❂12	Paradox
 Mint	Caster	5	PLX-X	BI-2	Incandescent Alloy Block❂9｜Orirock Cluster❂14	Paradox
+Mitm	Vanguard	5	TAC-Y	3-1	Crystalline Circuit❂6｜Oriron Cluster❂12
 Mizuki	Specialist	6	AMB-X	4-3	Polymerization Preparation❂4｜Crystalline Circuit❂6	Paradox
 Mizuki	Specialist	6	AMB-Y	4-5	Polymerization Preparation❂4｜Crystalline Circuit❂6	Paradox
 Morgan	Guard	5	DRE-X	4-5	Cutting Fluid Solution❂8｜Transmuted Salt❂11	Paradox
@@ -208,6 +212,7 @@ Penance	Defender	6	UNY-Y	IS-7	D32 Steel❂4｜White Horse Kohl❂8
 Perfumer	Medic	4	RIN-Y	3-4	Loxic Kohl❂19｜Aketon❂8	Paradox
 Phantom	Specialist	6	EXE-X	3-6	Polymerization Preparation❂4｜Polymerized Gel❂9	Paradox
 Phantom	Specialist	6	EXE-Y	DM-5	Polymerization Preparation❂4｜Polymerized Gel❂9	Paradox
+Pinecone	Sniper	4	RPR-X	3-6	Incandescent Alloy❂16｜Grindstone❂8	Paradox
 Platinum	Sniper	5	MAR-X	5-7	Grindstone Pentahydrate❂8｜Loxic Kohl❂15	Paradox
 Podenco	Supporter	4	DEC-X	4-6	Incandescent Alloy❂15｜Grindstone❂5	Paradox
 Poncirus	Vanguard	5	SOL-X	OF-5	Incandescent Alloy Block❂8｜Orirock Cluster❂18	Paradox
