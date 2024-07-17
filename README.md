@@ -23,7 +23,7 @@ Collection of the [Arknights](https://arknights.wiki.gg) [LINQPad 8](https://www
 
 ### [EventStatus.linq](https://github.com/i2van/ArknightsLINQPad/blob/main/EventStatus.linq)
 
-Ongoing [Arknights](https://arknights.wiki.gg) [event](https://arknights.wiki.gg/wiki/Event) status tracker.
+Ongoing [Arknights](https://arknights.wiki.gg) [Global](https://arknights.wiki.gg/wiki/Arknights#Global) [event](https://arknights.wiki.gg/wiki/Event) status tracker.
 
 ![EventStatus.linq](img/EventStatus.png)
 
