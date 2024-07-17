@@ -10,6 +10,16 @@
 
 #nullable enable
 
+static class Parsable
+{
+	private const string MultilineCommentPattern = @"/\*[^*]*\*+(?:[^/*][^*]*\*+)*/";
+
+	internal static readonly TimeSpan RegexTimeout = FromMilliseconds(100);
+
+	public static string RemoveMultilineComments(this string values) =>
+		Regex.Replace(values, MultilineCommentPattern, Empty, RegexOptions.None, RegexTimeout);
+}
+
 abstract class Parsable<T> : IEnumerable<T>
 {
 	private const string Comment = "//";
@@ -32,7 +42,7 @@ abstract class Parsable<T> : IEnumerable<T>
 
 	private T ParseAndCreate(string str)
 	{
-		var regex = new Regex(Regex, ExplicitCapture, FromMilliseconds(100));
+		var regex = new Regex(Regex, ExplicitCapture, Parsable.RegexTimeout);
 
 		var match = regex.Match(str);
 		if(match.Success)
@@ -46,6 +56,7 @@ abstract class Parsable<T> : IEnumerable<T>
 
 	private T[] Parse(string values) =>
 		values
+			.RemoveMultilineComments()
 			.Replace(Comment, NewLine + Comment)
 			.Split(NewLine.ToCharArray())
 			.Select(static v => v.Trim())
