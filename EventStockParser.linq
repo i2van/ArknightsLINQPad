@@ -11,7 +11,7 @@
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-To the Grinning Valley
+Where Vernal Winds Will Never Blow Rerun
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")
@@ -35,6 +35,8 @@ string? eventCurrency = null;
 var stockItems = wiki
 	.Replace("\n", string.Empty)
 	.Split("}}", StringSplitOptions)
+	.SkipWhile(static s => !s.Contains("{{Event store head"))
+	.TakeWhile(static s => !s.Contains("{{Table end"))
 	.Select(GetStockItem)
 	.Where(static s => !string.IsNullOrEmpty(s))
 	.ToArray();

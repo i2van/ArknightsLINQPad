@@ -5,7 +5,7 @@
   <Namespace>System.Collections.ObjectModel</Namespace>
 </Query>
 
-// Ongoing Arknights event status tracker.
+// Ongoing Arknights Global event status tracker.
 
 #nullable enable
 
@@ -29,34 +29,42 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Jul, Day.OfMonth(16)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Jul, Day.OfMonth(28)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("To_the_Grinning_Valley#Sandbeast_Cave", "To the Grinning Valley", "Spicy_Bottletree_Sap")] = new("""
-			// To the Grinning Valley
-			350		Major Field
-			10	6	Information Fragment
-			100	2	Module Data Block
-			30	8	Data Supplement Instrument
-			10	40	Data Supplement Stick
-			200		Crystalline Electronic Unit
-			65		Chip Catalyst
-			50	2	Polymerized Gel
-			20	4	Aketon
-			20	4	Semi-Synthetic Solvent
-			5	10	LMD
+			[new("Where_Vernal_Winds_Will_Never_Blow/Rerun#The_Swordsmith", "Where Vernal Winds Will Never Blow Rerun", "Freshly-Brewed_Liedaozi")] = new("""
+			// Where Vernal Winds Will Never Blow Rerun
+			200		Jieyun's Token
+			240		Jieyun's Token
+			280		Jieyun's Token
+			320		Jieyun's Token
+			360		Jieyun's Token
+			150	3	Headhunting Permit
+			100		D32 Steel
+			25	3	Orirock Concentration
+			35	3	Grindstone Pentahydrate
+			50	3	Optimized Device
+			150		'Concealed Edge'
+			100		'Duel With Oneself'
+			80		'Treading Sand'
+			60		'Cohesion'
+			40		'Simplicity'
+			15	5	RMA70-12
+			10	5	Oriron Cluster
+			7	20	LMD
 			5	5	Strategic Battle Record
-			5	5	Tactical Battle Record
-			6	5	Skill Summary - 3
-			6	5	Skill Summary - 2
-			4	5	Pure Gold
-			6	5	Oriron
-			30	5	Recruitment Permit
-			4	10	Furniture Part
+			3	10	Tactical Battle Record
+			1	20	Frontline Battle Record
+			4	10	Skill Summary - 3
+			2	20	Skill Summary - 2
+			2	8	Orirock Cube
+			3	8	Sugar
+			3	8	Polyketon
+			6	5	Sniper Chip
 			""")
 		}
 	};
@@ -756,29 +764,6 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("To_the_Grinning_Valley#Sandbeast_Cave", "To the Grinning Valley", "Spicy_Bottletree_Sap")] = new("""
-		// To the Grinning Valley
-		350		Major Field
-		10	6	Information Fragment
-		100	2	Module Data Block
-		30	8	Data Supplement Instrument
-		10	40	Data Supplement Stick
-		200		Crystalline Electronic Unit
-		65		Chip Catalyst
-		50	2	Polymerized Gel
-		20	4	Aketon
-		20	4	Semi-Synthetic Solvent
-		5	10	LMD
-		5	5	Strategic Battle Record
-		5	5	Tactical Battle Record
-		6	5	Skill Summary - 3
-		6	5	Skill Summary - 2
-		4	5	Pure Gold
-		6	5	Oriron
-		30	5	Recruitment Permit
-		4	10	Furniture Part
-		"""),
-
 		[new("What_the_Firelight_Casts/Rerun#River_Valley_Caravan", "What the Firelight Casts Rerun", "Manuscripts_of_Ballads")] = new("""
 		// What the Firelight Casts Rerun
 		200		Puzzle's Token
@@ -809,39 +794,35 @@ static class EventData
 		6	5	Vanguard Chip
 		"""),
 
-		[new("Where_Vernal_Winds_Will_Never_Blow#The_Swordsmith", "Where Vernal Winds Will Never Blow", "Freshly-Brewed_Liedaozi")] = new("""
-		// Where Vernal Winds Will Never Blow
+		[new("Where_Vernal_Winds_Will_Never_Blow/Rerun#The_Swordsmith", "Where Vernal Winds Will Never Blow Rerun", "Freshly-Brewed_Liedaozi")] = new("""
+		// Where Vernal Winds Will Never Blow Rerun
 		200		Jieyun's Token
 		240		Jieyun's Token
 		280		Jieyun's Token
 		320		Jieyun's Token
 		360		Jieyun's Token
 		150	3	Headhunting Permit
-		75	2	Module Data Block
-		100	5	D32 Steel
-		25	10	Orirock Concentration
-		35	10	Grindstone Pentahydrate
-		50	10	Optimized Device
+		100		D32 Steel
+		25	3	Orirock Concentration
+		35	3	Grindstone Pentahydrate
+		50	3	Optimized Device
 		150		'Concealed Edge'
 		100		'Duel With Oneself'
 		80		'Treading Sand'
 		60		'Cohesion'
 		40		'Simplicity'
-		15	10	Data Supplement Instrument
-		5	60	Data Supplement Stick
-		15	15	RMA70-12
-		10	10	Oriron Cluster
-		7	100	LMD
-		5	25	Strategic Battle Record
-		3	50	Tactical Battle Record
-		1	120	Frontline Battle Record
-		4	25	Skill Summary - 3
-		2	50	Skill Summary - 2
-		2	25	Orirock Cube
-		3	25	Sugar
-		3	25	Polyketon
+		15	5	RMA70-12
+		10	5	Oriron Cluster
+		7	20	LMD
+		5	5	Strategic Battle Record
+		3	10	Tactical Battle Record
+		1	20	Frontline Battle Record
+		4	10	Skill Summary - 3
+		2	20	Skill Summary - 2
+		2	8	Orirock Cube
+		3	8	Sugar
+		3	8	Polyketon
 		6	5	Sniper Chip
-		2	200	Furniture Part
 		"""),
 
 		[new("Zwillingstürme_im_Herbst#Herbstmondeskonzert", "Zwillingstürme im Herbst", "Die_Klänge_von_den_Erinnerungen")] = new("""
