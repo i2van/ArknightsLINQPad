@@ -40,11 +40,11 @@ jobs:
       # Execute LPRun scripts
 
       - name: Execute EventStatus.linq
-        if: success() || failure()
+        if: ${{success() || failure()}}
         run:  ${{env.LPRun}} EventStatus.linq
 
       - name: Execute EventStockParser.linq
-        if: success() || failure()
+        if: ${{success() || failure()}}
         run: |
           ${{env.PSHeader}}
           ${{env.PSClearClipboard}}
@@ -52,11 +52,11 @@ jobs:
           ${{env.PSAssertClipboardEventStock}}
 
       - name: Execute OperatorModules.linq
-        if: success() || failure()
+        if: ${{success() || failure()}}
         run:  ${{env.LPRun}} OperatorModules.linq
 
       - name: Execute OperatorModulesParser.linq
-        if: success() || failure()
+        if: ${{success() || failure()}}
         run: |
           ${{env.PSHeader}}
           ${{env.PSClearClipboard}}
@@ -65,5 +65,5 @@ jobs:
           ${{env.PSAssertModules}}
 
       - name: Execute OriginitePrimePacks.linq
-        if: success() || failure()
+        if: ${{success() || failure()}}
         run:  ${{env.LPRun}} OriginitePrimePacks.linq
