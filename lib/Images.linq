@@ -2,38 +2,14 @@
   <Namespace>ImageControl = LINQPad.Controls.Image</Namespace>
   <Namespace>LINQPad.Controls</Namespace>
   <Namespace>System.Collections.ObjectModel</Namespace>
-  <Namespace>System.Globalization</Namespace>
 </Query>
 
 #nullable enable
 
+#load "./Context.linq"
 #load "./Extensions.linq"
 #load "./Parsable.linq"
-
-static DumpContext Context = null!;
-
-void Main()
-{
-}
-
-class WikiHyperlinq : Hyperlinq
-{
-	private const string WikiUri = $"{DumpContext.Url.Wiki}/wiki/";
-
-	private readonly string? _metadata;
-
-	public WikiHyperlinq(string uri, string text, string? metadata = null)
-		: base(WikiUri + uri.UnderscoreSpaces(), text) =>
-		_metadata = metadata;
-
-	public WikiHyperlinq(string text)
-		: this(text, text)
-	{
-	}
-
-	public string? ProcessMetadata(Func<string, string> process) =>
-		_metadata is null ? null : process(_metadata!);
-}
+#load "./WikiHyperlinq.linq"
 
 class ItemImage
 {
@@ -191,45 +167,6 @@ ref struct DisposableAction
 		_action?.Invoke();
 }
 
-class DumpContext
-{
-	public static readonly CultureInfo CultureInfo = CultureInfo.InvariantCulture;
-
-	public static class Url
-	{
-		public const string Wiki = "https://arknights.wiki.gg";
-	}
-
-	public static class ImageHeight
-	{
-		public const int Item         = -96; // <= 0 for as is size.
-		public const int Skin         = 480;
-		public const int NotAvailable = Skin / 2;
-	}
-
-	public static class Document
-	{
-		public const string MarginBottom = "6.5rem";
-
-		public static class Styles
-		{
-			public const string FloatRight = "float: right";
-		}
-	}
-
-	public static class Glyphs
-	{
-		public const char Circle = '⬤';
-	}
-
-	public class DumpContainers
-	{
-		public readonly DumpContainer Image = new();
-	}
-
-	public readonly DumpContainers Containers = new();
-}
-
 static class ImageData
 {
 	public static readonly ReadOnlyDictionary<string, LazyImage> Value = new(
@@ -242,4 +179,8 @@ static class ImageUriMapData
 	public static readonly ReadOnlyDictionary<string, string> Value = new(
 		new ImageUriMaps("ImageUriMap.tsv".Load()).ToDictionary(static v => v.Name, static v => v.Map)
 	);
+}
+
+void Main()
+{
 }

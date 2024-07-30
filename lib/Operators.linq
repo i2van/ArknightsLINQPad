@@ -2,8 +2,8 @@
 
 #nullable enable
 
-#load "./Parsable.linq"
 #load "./Extensions.linq"
+#load "./Parsable.linq"
 
 record Operator(string Name, string Class, int Stars, string Module, string Stage, string E2Materials, bool Paradox)
 {

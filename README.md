@@ -56,6 +56,13 @@ Ongoing [Arknights](https://arknights.wiki.gg) [Global](https://arknights.wiki.g
 """)
 ```
 
+### [OperationStrategies.linq](https://github.com/i2van/ArknightsLINQPad/blob/main/OperationStrategies.linq)
+
+[Arknights](https://arknights.wiki.gg) [operation](https://arknights.wiki.gg/wiki/Operation)'s strategies.
+
+![OperationStrategies.linq](img/OperationStrategies.png)
+
+
 ### [OperatorModules.linq](https://github.com/i2van/ArknightsLINQPad/blob/main/OperatorModules.linq)
 
 [Arknights](https://arknights.wiki.gg) [operators](https://arknights.wiki.gg/wiki/Operator)'s [modules](https://arknights.wiki.gg/wiki/Operator_Module) missions.

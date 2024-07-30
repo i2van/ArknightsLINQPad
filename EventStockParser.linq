@@ -6,12 +6,12 @@
 
 #nullable enable
 
-#load "./lib/Extensions.linq"
 #load "./lib/Clipboard.linq"
+#load "./lib/Extensions.linq"
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-Where Vernal Winds Will Never Blow Rerun
+Here A People Sows
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")
@@ -36,7 +36,7 @@ var stockItems = wiki
 	.Replace("\n", string.Empty)
 	.Split("}}", StringSplitOptions)
 	.SkipWhile(static s => !s.Contains("{{Event store head"))
-	.TakeWhile(static s => !s.Contains("{{Table end"))
+	.TakeWhile(static s => !s.StartsWith("{{Table end"))
 	.Select(GetStockItem)
 	.Where(static s => !string.IsNullOrEmpty(s))
 	.ToArray();

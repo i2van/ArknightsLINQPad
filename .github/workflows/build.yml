@@ -51,6 +51,10 @@ jobs:
           ${{env.LPRun}} EventStockParser.linq
           ${{env.PSAssertClipboardEventStock}}
 
+      - name: Execute OperationStrategies.linq
+        if: ${{success() || failure()}}
+        run:  ${{env.LPRun}} OperationStrategies.linq
+
       - name: Execute OperatorModules.linq
         if: ${{success() || failure()}}
         run:  ${{env.LPRun}} OperatorModules.linq

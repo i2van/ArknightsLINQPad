@@ -4,10 +4,12 @@
 
 #nullable enable
 
+#load "./lib/Context.linq"
 #load "./lib/Extensions.linq"
-#load "./lib/Parsable.linq"
-#load "./lib/Operators.linq"
 #load "./lib/Images.linq"
+#load "./lib/Operators.linq"
+#load "./lib/Parsable.linq"
+#load "./lib/WikiHyperlinq.linq"
 
 #define DUMP_UNKNOWN_OPERATORS
 

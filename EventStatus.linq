@@ -9,9 +9,11 @@
 
 #nullable enable
 
+#load "./lib/Context.linq"
 #load "./lib/Extensions.linq"
-#load "./lib/Parsable.linq"
 #load "./lib/Images.linq"
+#load "./lib/Parsable.linq"
+#load "./lib/WikiHyperlinq.linq"
 
 #define DUMP_MISSING_IMAGES
 
@@ -29,42 +31,51 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Jul, Day.OfMonth(28)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Aug, Day.OfMonth(21)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Where_Vernal_Winds_Will_Never_Blow/Rerun#The_Swordsmith", "Where Vernal Winds Will Never Blow Rerun", "Freshly-Brewed_Liedaozi")] = new("""
-			// Where Vernal Winds Will Never Blow Rerun
-			200		Jieyun's Token
-			240		Jieyun's Token
-			280		Jieyun's Token
-			320		Jieyun's Token
-			360		Jieyun's Token
+			[new("Here_A_People_Sows#Shennong_Market", "Here A People Sows", "Sky_Pole")] = new("""
+			// Here A People Sows
+			200		Wanqing's Token
+			240		Wanqing's Token
+			280		Wanqing's Token
+			320		Wanqing's Token
+			360		Wanqing's Token
 			150	3	Headhunting Permit
-			100		D32 Steel
-			25	3	Orirock Concentration
-			35	3	Grindstone Pentahydrate
-			50	3	Optimized Device
-			150		'Concealed Edge'
-			100		'Duel With Oneself'
-			80		'Treading Sand'
-			60		'Cohesion'
-			40		'Simplicity'
-			15	5	RMA70-12
-			10	5	Oriron Cluster
-			7	20	LMD
-			5	5	Strategic Battle Record
-			3	10	Tactical Battle Record
-			1	20	Frontline Battle Record
-			4	10	Skill Summary - 3
-			2	20	Skill Summary - 2
-			2	8	Orirock Cube
-			3	8	Sugar
-			3	8	Polyketon
-			6	5	Sniper Chip
+			75	2	Module Data Block
+			100	5	Polymerization Preparation
+			35	10	Manganese Trihydrate
+			35	10	RMA70-24
+			35	10	Cutting Fluid Solution
+			25	10	Orirock Concentration
+			//100		"藏经阁"
+			//90		"优秀作品"
+			//70		感应式立灯
+			//35		小型斗拱灯
+			15	10	Data Supplement Instrument
+			5	60	Data Supplement Stick
+			12	15	Coagulating Gel
+			10	15	Manganese Ore
+			10	15	Incandescent Alloy
+			8	15	Polyester Pack
+			7	120	LMD
+			5	30	Strategic Battle Record
+			3	50	Tactical Battle Record
+			1	120	Frontline Battle Record
+			4	25	Skill Summary - 3
+			2	50	Skill Summary - 2
+			4	20	Device
+			3	25	Oriron
+			3	25	Polyketon
+			3	30	Polyester
+			3	30	Sugar
+			2	40	Orirock Cube
+			6	5	Vanguard Chip
+			2	200	Furniture Part
 			""")
 		}
 	};
@@ -363,6 +374,11 @@ record Sanity(string Uri, int Left, int Spent, int SanityPerPrime, IReadOnlyColl
 	{
 		get
 		{
+			if(Left > Total)
+			{
+				throw new($"Data inconsistency detected: sanity left is greater than total sanity. Original event can be found in the {nameof(EventData)} below.");
+			}
+
 			var percent = Floor(100.0 * Left / Total);
 			return percent == 0 ? 1 : (int)percent;
 		}
@@ -497,8 +513,8 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("Here_a_People_Sows#Shennong_Market", "Here a People Sows", "Tianzhuang")] = new("""
-		// Here a People Sows
+		[new("Here_A_People_Sows#Shennong_Market", "Here A People Sows", "Sky_Pole")] = new("""
+		// Here A People Sows
 		200		Wanqing's Token
 		240		Wanqing's Token
 		280		Wanqing's Token
@@ -792,37 +808,6 @@ static class EventData
 		3	8	Sugar
 		2	8	Orirock Cube
 		6	5	Vanguard Chip
-		"""),
-
-		[new("Where_Vernal_Winds_Will_Never_Blow/Rerun#The_Swordsmith", "Where Vernal Winds Will Never Blow Rerun", "Freshly-Brewed_Liedaozi")] = new("""
-		// Where Vernal Winds Will Never Blow Rerun
-		200		Jieyun's Token
-		240		Jieyun's Token
-		280		Jieyun's Token
-		320		Jieyun's Token
-		360		Jieyun's Token
-		150	3	Headhunting Permit
-		100		D32 Steel
-		25	3	Orirock Concentration
-		35	3	Grindstone Pentahydrate
-		50	3	Optimized Device
-		150		'Concealed Edge'
-		100		'Duel With Oneself'
-		80		'Treading Sand'
-		60		'Cohesion'
-		40		'Simplicity'
-		15	5	RMA70-12
-		10	5	Oriron Cluster
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		2	8	Orirock Cube
-		3	8	Sugar
-		3	8	Polyketon
-		6	5	Sniper Chip
 		"""),
 
 		[new("Zwillingstürme_im_Herbst#Herbstmondeskonzert", "Zwillingstürme im Herbst", "Die_Klänge_von_den_Erinnerungen")] = new("""

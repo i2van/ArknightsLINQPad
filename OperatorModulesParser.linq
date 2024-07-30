@@ -6,10 +6,10 @@
 
 #nullable enable
 
-#load "./lib/Parsable.linq"
-#load "./lib/Operators.linq"
 #load "./lib/Clipboard.linq"
 #load "./lib/Extensions.linq"
+#load "./lib/Operators.linq"
+#load "./lib/Parsable.linq"
 
 const StringSplitOptions StringSplitOptions = StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries;
 
