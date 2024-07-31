@@ -45,35 +45,37 @@ void Main()
 			280		Wanqing's Token
 			320		Wanqing's Token
 			360		Wanqing's Token
+			70		Bibeak's Token
+			500		Night Watcher
 			150	3	Headhunting Permit
 			75	2	Module Data Block
 			100	5	Polymerization Preparation
+			25	10	Orirock Concentration
 			35	10	Manganese Trihydrate
 			35	10	RMA70-24
 			35	10	Cutting Fluid Solution
-			25	10	Orirock Concentration
-			//100		"藏经阁"
-			//90		"优秀作品"
-			//70		感应式立灯
-			//35		小型斗拱灯
+			100		'The Archives'
+			90		'Prize for Excellence'
+			70		Responsive Floorlamp
+			35		Small Dougong Lamp
 			15	10	Data Supplement Instrument
 			5	60	Data Supplement Stick
-			12	15	Coagulating Gel
-			10	15	Manganese Ore
-			10	15	Incandescent Alloy
 			8	15	Polyester Pack
+			10	15	Manganese Ore
+			12	15	Coagulating Gel
+			10	15	Incandescent Alloy
 			7	120	LMD
 			5	30	Strategic Battle Record
 			3	50	Tactical Battle Record
-			1	120	Frontline Battle Record
+			1	150	Frontline Battle Record
 			4	25	Skill Summary - 3
 			2	50	Skill Summary - 2
-			4	20	Device
+			2	40	Orirock Cube
+			3	30	Sugar
+			3	30	Polyester
 			3	25	Oriron
 			3	25	Polyketon
-			3	30	Polyester
-			3	30	Sugar
-			2	40	Orirock Cube
+			4	20	Device
 			6	5	Vanguard Chip
 			2	200	Furniture Part
 			""")
@@ -520,35 +522,37 @@ static class EventData
 		280		Wanqing's Token
 		320		Wanqing's Token
 		360		Wanqing's Token
+		70		Bibeak's Token
+		500		Night Watcher
 		150	3	Headhunting Permit
 		75	2	Module Data Block
 		100	5	Polymerization Preparation
+		25	10	Orirock Concentration
 		35	10	Manganese Trihydrate
 		35	10	RMA70-24
 		35	10	Cutting Fluid Solution
-		25	10	Orirock Concentration
-		//100		"藏经阁"
-		//90		"优秀作品"
-		//70		感应式立灯
-		//35		小型斗拱灯
+		100		'The Archives'
+		90		'Prize for Excellence'
+		70		Responsive Floorlamp
+		35		Small Dougong Lamp
 		15	10	Data Supplement Instrument
 		5	60	Data Supplement Stick
-		12	15	Coagulating Gel
-		10	15	Manganese Ore
-		10	15	Incandescent Alloy
 		8	15	Polyester Pack
+		10	15	Manganese Ore
+		12	15	Coagulating Gel
+		10	15	Incandescent Alloy
 		7	120	LMD
 		5	30	Strategic Battle Record
 		3	50	Tactical Battle Record
-		1	120	Frontline Battle Record
+		1	150	Frontline Battle Record
 		4	25	Skill Summary - 3
 		2	50	Skill Summary - 2
-		4	20	Device
+		2	40	Orirock Cube
+		3	30	Sugar
+		3	30	Polyester
 		3	25	Oriron
 		3	25	Polyketon
-		3	30	Polyester
-		3	30	Sugar
-		2	40	Orirock Cube
+		4	20	Device
 		6	5	Vanguard Chip
 		2	200	Furniture Part
 		"""),
