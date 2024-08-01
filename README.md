@@ -8,26 +8,38 @@
 
 Collection of the [Arknights](https://arknights.wiki.gg) [LINQPad 8](https://www.linqpad.net) ([Windows only](https://forum.linqpad.net/discussion/1983/roadmap-for-cross-platform-ubuntu-linux)) scripts.
 
+## Table of Contents ##
+
+* [Requirements](#requirements)
+* [How to use](#how-to-use)
+* [Scripts](#scripts)
+  * [Ongoing Arknights Global event status tracker](#eventstatuslinq) [`EventStatus.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/EventStatus.linq)
+  * [Arknights event stock parser](#eventstockparserlinq) [`EventStockParser.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/EventStockParser.linq)
+  * [Arknights operation's strategies](#operationstrategieslinq) [`OperationStrategies.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/OperationStrategies.linq)
+  * [Arknights operators's modules missions](#operatormoduleslinq) [`OperatorModules.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/OperatorModules.linq)
+  * [Arknights operators's modules parser](#operatormodulesparserlinq) [`OperatorModulesParser.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/OperatorModulesParser.linq)
+  * [Arknights packs store Originite Prime price calculator](#originiteprimepackslinq) [`OriginitePrimePacks.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/OriginitePrimePacks.linq)
+
 ## Requirements
 
 [LINQPad 8](https://www.linqpad.net/Download.aspx) or [LINQPad 8 Latest Beta](https://www.linqpad.net/LINQPad8.aspx#beta) (recommended) with the [latest](https://dotnet.microsoft.com/en-us/download/dotnet/latest) [.NET](https://dotnet.microsoft.com/en-us/download/dotnet) installed.
 
 ## How to use
 
-1. [Download ZIP](https://github.com/i2van/ArknightsLINQPad/archive/refs/heads/main.zip) or `git clone` repository.
+1. Download from [releases](https://github.com/i2van/ArknightsLINQPad/releases) or download [`main` branch ZIP](https://github.com/i2van/ArknightsLINQPad/archive/refs/heads/main.zip) or `git clone` repository.
 2. Open [script](#scripts) in the [LINQPad 8](https://www.linqpad.net/Download.aspx).
 3. Search (`Ctrl+F`) for all the `TODO:`s and edit as necessary.
 4. Execute.
 
 ## Scripts
 
-### [EventStatus.linq](https://github.com/i2van/ArknightsLINQPad/blob/main/EventStatus.linq)
+### [`EventStatus.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/EventStatus.linq)
 
 Ongoing [Arknights](https://arknights.wiki.gg) [Global](https://arknights.wiki.gg/wiki/Arknights#Global) [event](https://arknights.wiki.gg/wiki/Event) status tracker.
 
 ![EventStatus.linq](img/EventStatus.png)
 
-### [EventStockParser.linq](https://github.com/i2van/ArknightsLINQPad/blob/main/EventStockParser.linq)
+### [`EventStockParser.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/EventStockParser.linq)
 
 [Arknights](https://arknights.wiki.gg) [event](https://arknights.wiki.gg/wiki/Event) stock parser.
 
@@ -56,20 +68,20 @@ Ongoing [Arknights](https://arknights.wiki.gg) [Global](https://arknights.wiki.g
 """)
 ```
 
-### [OperationStrategies.linq](https://github.com/i2van/ArknightsLINQPad/blob/main/OperationStrategies.linq)
+### [`OperationStrategies.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/OperationStrategies.linq)
 
 [Arknights](https://arknights.wiki.gg) [operation](https://arknights.wiki.gg/wiki/Operation)'s strategies.
 
 ![OperationStrategies.linq](img/OperationStrategies.png)
 
 
-### [OperatorModules.linq](https://github.com/i2van/ArknightsLINQPad/blob/main/OperatorModules.linq)
+### [`OperatorModules.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/OperatorModules.linq)
 
 [Arknights](https://arknights.wiki.gg) [operators](https://arknights.wiki.gg/wiki/Operator)'s [modules](https://arknights.wiki.gg/wiki/Operator_Module) missions.
 
 ![OperatorModules.linq](img/OperatorModules.png)
 
-### [OperatorModulesParser.linq](https://github.com/i2van/ArknightsLINQPad/blob/main/OperatorModulesParser.linq)
+### [`OperatorModulesParser.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/OperatorModulesParser.linq)
 
 [Arknights](https://arknights.wiki.gg) [operators](https://arknights.wiki.gg/wiki/Operator)'s [modules](https://arknights.wiki.gg/wiki/Operator_Module) parser.
 
@@ -87,7 +99,7 @@ Angelina	Supporter	6	DEC-Y	4-4	Bipolar Nanoflake❂4｜Sugar Lump❂5	Paradox
 ...
 ```
 
-### [OriginitePrimePacks.linq](https://github.com/i2van/ArknightsLINQPad/blob/main/OriginitePrimePacks.linq)
+### [`OriginitePrimePacks.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/OriginitePrimePacks.linq)
 
 [Arknights](https://arknights.wiki.gg) [packs store](https://arknights.wiki.gg/wiki/Packs_Store) [Originite Prime](https://arknights.wiki.gg/wiki/Originite_Prime) price calculator.
 
