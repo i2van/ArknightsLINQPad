@@ -1,7 +1,8 @@
 ﻿# Arknights LINQPad scripts
 
 [![Latest build](https://github.com/i2van/ArknightsLINQPad/workflows/build/badge.svg)](https://github.com/i2van/ArknightsLINQPad/actions)
-[![License](https://img.shields.io/badge/license-MIT-yellow)](https://opensource.org/licenses/MIT)
+[![Latest release](https://img.shields.io/github/downloads/i2van/ArknightsLINQPad/total.svg)](https://github.com/i2van/ArknightsLINQPad/releases/latest)
+[![License](https://img.shields.io/badge/license-MIT-orange)](https://opensource.org/licenses/MIT)
 [![Arknights](https://img.shields.io/badge/arknights-wiki-black)](https://arknights.wiki.gg)
 [![Requires LINQPad](https://img.shields.io/badge/requires-linqpad%208-teal)](https://www.linqpad.net/Download.aspx)
 [![Requires LINQPad Latest Beta](https://img.shields.io/badge/recommended-linqpad%208%20beta-blue)](https://www.linqpad.net/LINQPad8.aspx#beta)
@@ -15,6 +16,7 @@ Collection of the [Arknights](https://arknights.wiki.gg) [LINQPad 8](https://www
 * [Scripts](#scripts)
   * [Ongoing Arknights Global event status tracker](#eventstatuslinq) [`EventStatus.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/EventStatus.linq)
   * [Arknights event stock parser](#eventstockparserlinq) [`EventStockParser.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/EventStockParser.linq)
+  * [Launch Arknights countdown timers using Hourglass](#hourglasslinq) [`Hourglass.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/Hourglass.linq)
   * [Arknights operation's strategies](#operationstrategieslinq) [`OperationStrategies.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/OperationStrategies.linq)
   * [Arknights operators's modules missions](#operatormoduleslinq) [`OperatorModules.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/OperatorModules.linq)
   * [Arknights operators's modules parser](#operatormodulesparserlinq) [`OperatorModulesParser.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/OperatorModulesParser.linq)
@@ -68,12 +70,20 @@ Ongoing [Arknights](https://arknights.wiki.gg) [Global](https://arknights.wiki.g
 """)
 ```
 
+### [`Hourglass.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/Hourglass.linq)
+
+Launch [Arknights](https://arknights.wiki.gg) countdown timers using [Hourglass](https://github.com/i2van/hourglass).
+
+* [Hourglass FAQ](https://chris.dziemborowicz.com/apps/hourglass/#faq)
+* [Hourglass command-line reference](https://github.com/i2van/hourglass/blob/develop/Hourglass/Resources/Usage.txt)
+
+![Hourglass.linq](img/Hourglass.png)
+
 ### [`OperationStrategies.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/OperationStrategies.linq)
 
 [Arknights](https://arknights.wiki.gg) [operation](https://arknights.wiki.gg/wiki/Operation)'s strategies.
 
 ![OperationStrategies.linq](img/OperationStrategies.png)
-
 
 ### [`OperatorModules.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/OperatorModules.linq)
 
