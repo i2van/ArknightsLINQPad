@@ -5,6 +5,7 @@ on: [push, pull_request]
 env:
   LPRunUrl: https://www.linqpad.net/GetFile.aspx?preview+LINQPad8-Beta.zip
   LPRun: LPRun8-x64.exe
+  CompileOnly: -compileonly
   PSHeader: |
     $ErrorActionPreference = 'Stop'
     $Verbose = $VerbosePreference -ne 'SilentlyContinue'
@@ -41,7 +42,7 @@ jobs:
 
       - name: Execute EventStatus.linq
         if: ${{success() || failure()}}
-        run:  ${{env.LPRun}} EventStatus.linq
+        run: ${{env.LPRun}} EventStatus.linq
 
       - name: Execute EventStockParser.linq
         if: ${{success() || failure()}}
@@ -51,13 +52,17 @@ jobs:
           ${{env.LPRun}} EventStockParser.linq
           ${{env.PSAssertClipboardEventStock}}
 
+      - name: Compile Hourglass.linq
+        if: ${{success() || failure()}}
+        run: ${{env.LPRun}} ${{env.CompileOnly}} Hourglass.linq
+
       - name: Execute OperationStrategies.linq
         if: ${{success() || failure()}}
-        run:  ${{env.LPRun}} OperationStrategies.linq
+        run: ${{env.LPRun}} OperationStrategies.linq
 
       - name: Execute OperatorModules.linq
         if: ${{success() || failure()}}
-        run:  ${{env.LPRun}} OperatorModules.linq
+        run: ${{env.LPRun}} OperatorModules.linq
 
       - name: Execute OperatorModulesParser.linq
         if: ${{success() || failure()}}
@@ -70,4 +75,4 @@ jobs:
 
       - name: Execute OriginitePrimePacks.linq
         if: ${{success() || failure()}}
-        run:  ${{env.LPRun}} OriginitePrimePacks.linq
+        run: ${{env.LPRun}} OriginitePrimePacks.linq
