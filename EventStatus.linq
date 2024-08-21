@@ -31,53 +31,41 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Aug, Day.OfMonth(21)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Aug, Day.OfMonth(31)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Here_A_People_Sows#Shennong_Market", "Here A People Sows", "Sky_Pole")] = new("""
-			// Here A People Sows
-			200		Wanqing's Token
-			240		Wanqing's Token
-			280		Wanqing's Token
-			320		Wanqing's Token
-			360		Wanqing's Token
-			70		Bibeak's Token
-			500		Night Watcher
+			[new("What_the_Firelight_Casts/Rerun#River_Valley_Caravan", "What the Firelight Casts Rerun", "Manuscripts_of_Ballads")] = new("""
+			// What the Firelight Casts Rerun
+			200		Puzzle's Token
+			240		Puzzle's Token
+			280		Puzzle's Token
+			320		Puzzle's Token
+			360		Puzzle's Token
 			150	3	Headhunting Permit
-			75	2	Module Data Block
-			100	5	Polymerization Preparation
-			25	10	Orirock Concentration
-			35	10	Manganese Trihydrate
-			35	10	RMA70-24
-			35	10	Cutting Fluid Solution
-			100		'The Archives'
-			90		'Prize for Excellence'
-			70		Responsive Floorlamp
-			35		Small Dougong Lamp
-			15	10	Data Supplement Instrument
-			5	60	Data Supplement Stick
-			8	15	Polyester Pack
-			10	15	Manganese Ore
-			12	15	Coagulating Gel
-			10	15	Incandescent Alloy
-			7	120	LMD
-			5	30	Strategic Battle Record
-			3	50	Tactical Battle Record
-			1	150	Frontline Battle Record
-			4	25	Skill Summary - 3
-			2	50	Skill Summary - 2
-			2	40	Orirock Cube
-			3	30	Sugar
-			3	30	Polyester
-			3	25	Oriron
-			3	25	Polyketon
-			4	20	Device
+			100		Bipolar Nanoflake
+			35	3	Keton Colloid
+			30	3	Polymerized Gel
+			35	3	Incandescent Alloy Block
+			60		Rattan Pendant Lamp
+			25	4	Used Folding Chair
+			100		Pure White Stone-Tiled Table
+			150		Cozy Plaid Rug
+			8	5	Polyester Pack
+			10	5	Manganese Ore
+			7	20	LMD
+			5	5	Strategic Battle Record
+			3	10	Tactical Battle Record
+			1	20	Frontline Battle Record
+			4	10	Skill Summary - 3
+			2	20	Skill Summary - 2
+			2	8	Orirock Cube
+			3	8	Sugar
+			4	8	Device
 			6	5	Vanguard Chip
-			2	200	Furniture Part
 			""")
 		}
 	};
@@ -470,7 +458,7 @@ static class ColorData
 	.Select(static c => Enumerable.Range(0, 101).Select(p => c.Last().InterpolateTo(p / 100.0, c.First())))
 	.SelectMany(static r => r)
 #endif
-	.ToList());
+	.ToArray());
 }
 
 static class EventData
@@ -794,12 +782,12 @@ static class EventData
 		150	3	Headhunting Permit
 		100		Bipolar Nanoflake
 		35	3	Keton Colloid
-		35	3	Incandescent Alloy Block
 		30	3	Polymerized Gel
-		150		Cozy Plaid Rug
-		100		Pure White Stone-Tiled Table
+		35	3	Incandescent Alloy Block
 		60		Rattan Pendant Lamp
 		25	4	Used Folding Chair
+		100		Pure White Stone-Tiled Table
+		150		Cozy Plaid Rug
 		8	5	Polyester Pack
 		10	5	Manganese Ore
 		7	20	LMD
@@ -808,9 +796,9 @@ static class EventData
 		1	20	Frontline Battle Record
 		4	10	Skill Summary - 3
 		2	20	Skill Summary - 2
-		4	8	Device
-		3	8	Sugar
 		2	8	Orirock Cube
+		3	8	Sugar
+		4	8	Device
 		6	5	Vanguard Chip
 		"""),
 
