@@ -40,20 +40,9 @@ void Main()
 		{
 			[new("What_the_Firelight_Casts/Rerun#River_Valley_Caravan", "What the Firelight Casts Rerun", "Manuscripts_of_Ballads")] = new("""
 			// What the Firelight Casts Rerun
-			200		Puzzle's Token
-			240		Puzzle's Token
-			280		Puzzle's Token
-			320		Puzzle's Token
-			360		Puzzle's Token
-			150	3	Headhunting Permit
 			100		Bipolar Nanoflake
-			35	3	Keton Colloid
-			30	3	Polymerized Gel
+			30	2	Polymerized Gel
 			35	3	Incandescent Alloy Block
-			60		Rattan Pendant Lamp
-			25	4	Used Folding Chair
-			100		Pure White Stone-Tiled Table
-			150		Cozy Plaid Rug
 			8	5	Polyester Pack
 			10	5	Manganese Ore
 			7	20	LMD
@@ -774,20 +763,11 @@ static class EventData
 
 		[new("What_the_Firelight_Casts/Rerun#River_Valley_Caravan", "What the Firelight Casts Rerun", "Manuscripts_of_Ballads")] = new("""
 		// What the Firelight Casts Rerun
-		200		Puzzle's Token
-		240		Puzzle's Token
-		280		Puzzle's Token
-		320		Puzzle's Token
-		360		Puzzle's Token
 		150	3	Headhunting Permit
 		100		Bipolar Nanoflake
 		35	3	Keton Colloid
 		30	3	Polymerized Gel
 		35	3	Incandescent Alloy Block
-		60		Rattan Pendant Lamp
-		25	4	Used Folding Chair
-		100		Pure White Stone-Tiled Table
-		150		Cozy Plaid Rug
 		8	5	Polyester Pack
 		10	5	Manganese Ore
 		7	20	LMD
