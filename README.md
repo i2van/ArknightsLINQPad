@@ -74,7 +74,8 @@ Ongoing [Arknights](https://arknights.wiki.gg) [Global](https://arknights.wiki.g
 
 Launch [Arknights](https://arknights.wiki.gg) countdown timers using [Hourglass](https://github.com/i2van/hourglass).
 
-* [Hourglass FAQ](https://chris.dziemborowicz.com/apps/hourglass/#faq)
+* [About Hourglass](https://github.com/i2van/hourglass/blob/develop/README.md)
+* [Hourglass FAQ](https://github.com/i2van/hourglass/blob/develop/FAQ.md)
 * [Hourglass command-line reference](https://github.com/i2van/hourglass/blob/develop/Hourglass/Resources/Usage.txt)
 
 ![Hourglass.linq](img/Hourglass.png)
