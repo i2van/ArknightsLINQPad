@@ -11,7 +11,7 @@
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-What the Firelight Casts Rerun
+Operation Lucent Arrowhead
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")
