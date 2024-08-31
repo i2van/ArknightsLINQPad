@@ -22,15 +22,15 @@ const char Comma = ',';
 
 var regexTimeout = TimeSpan.FromMilliseconds(100);
 
-const string XOperator = "|x operator =";
-const string YOperator = "|y operator =";
+const string XOperator = "x operator";
+const string YOperator = "y operator";
 
 var operatorModules =
 	(await Task.WhenAll(
 		wikiModules
-			.Split(Endl)
+			.Split("|")
 			.Where( static s => s.StartsWith(XOperator) || s.StartsWith(YOperator))
-			.Select(static s => s.Replace(XOperator, string.Empty).Replace(YOperator, string.Empty))
+			.Select(static s => s.Replace(XOperator, string.Empty).Replace(YOperator, string.Empty).TrimStart().TrimStart('='))
 			.SelectMany(static s => s.Split(Comma, StringSplitOptions))
 			.Distinct()
 			.OrderBy(static _ => _)
@@ -47,14 +47,6 @@ Uri GetUrl(string uri) =>
 
 async Task<OperatorWithModules> GetOperator(string name)
 {
-	string GetOperatorUri(string operatorTag)
-	{
-		var index = name.IndexOf(operatorTag);
-		return index < 0
-			? name
-			: $"{name.Substring(0, index)}/{operatorTag.Trim(" ()".ToCharArray())}";
-	}
-
 	var url = GetUrl(GetOperatorUri(" (Medic)").Replace(' ', '_'));
 
 	const string Title = "|title =";
@@ -91,6 +83,14 @@ async Task<OperatorWithModules> GetOperator(string name)
 		Regex.Match(wiki, @"\|simulation", RegexOptions.None, regexTimeout).Success,
 		Enumerable.Zip(titles, missions, static (t, m) => new Module(t, m)).ToArray()
 	);
+
+	string GetOperatorUri(string operatorTag)
+	{
+		var index = name.IndexOf(operatorTag);
+		return index < 0
+			? name
+			: $"{name.Substring(0, index)}/{operatorTag.Trim(" ()".ToCharArray())}";
+	}
 }
 
 sealed record OperatorWithModules(string Name, string Class, string Stars, string E2Materials, bool Paradox, IEnumerable<Module> Modules)
