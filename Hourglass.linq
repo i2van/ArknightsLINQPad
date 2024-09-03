@@ -121,6 +121,11 @@ void Main()
 		Header = $"Launch {Hourglass}"
 	};
 
+	var aboutMenuItem = new MenuItem
+	{
+		Header = ExternalLinkHeader("About")
+	};
+
 	var aboutHourglassMenuItem = new MenuItem
 	{
 		Header = ExternalLinkHeader($"About {Hourglass}")
@@ -193,6 +198,8 @@ void Main()
 		new Separator(),
 		launchHourglassMenuItem,
 		new Separator(),
+		aboutMenuItem,
+		new Separator(),
 		aboutHourglassMenuItem,
 		hourglassFAQMenuItem,
 		hourglassCommandLineMenuItem
@@ -250,19 +257,24 @@ void Main()
 		RunHourglass();
 	};
 
+	aboutMenuItem.Click += async delegate
+	{
+		await NavigateLaunchAsync("https://github.com/i2van/ArknightsLINQPad/blob/main/README.md#hourglasslinq");
+	};
+
 	aboutHourglassMenuItem.Click += async delegate
 	{
-		await NavigateBlobAsync("README.md");
+		await NavigateHourglassBlobAsync("README.md");
 	};
 
 	hourglassFAQMenuItem.Click += async delegate
 	{
-		await NavigateBlobAsync("FAQ.md");
+		await NavigateHourglassBlobAsync("FAQ.md");
 	};
 
 	hourglassCommandLineMenuItem.Click += async delegate
 	{
-		await NavigateBlobAsync("Hourglass/Resources/Usage.txt");
+		await NavigateHourglassBlobAsync("Hourglass/Resources/Usage.txt");
 	};
 
 	tabControl.SelectionChanged += delegate
@@ -272,7 +284,7 @@ void Main()
 
 	downloadHourglassButton.Click += async delegate
 	{
-		await NavigateAsync(downloadHourglassButton, "releases/latest");
+		await NavigateHourglassAsync(downloadHourglassButton, "releases/latest");
 	};
 
 	void FlyoutClosed(object? sender, EventArgs e) =>
@@ -395,13 +407,16 @@ void Main()
 		}
 	}
 
-	async Task NavigateAsync<T>(T button, string uri) where T : Control
+	async Task NavigateHourglassAsync<T>(T button, string uri) where T : Control
 	{
 		try
 		{
 			button.IsEnabled = false;
 
-			await TopLevel.GetTopLevel(button)!.Launcher.LaunchUriAsync(new Uri($"https://github.com/i2van/hourglass/{uri}"));
+			await TopLevel.GetTopLevel(button)!.Launcher.LaunchUriAsync(
+				uri.StartsWith("http")
+					? new Uri(uri)
+					: new Uri($"https://github.com/i2van/hourglass/{uri}"));
 		}
 		finally
 		{
@@ -411,8 +426,11 @@ void Main()
 		}
 	}
 
-	Task NavigateBlobAsync(string uri) =>
-		NavigateAsync(launchTimersSplitButton, $"blob/develop/{uri}");
+	Task NavigateHourglassBlobAsync(string uri) =>
+		NavigateLaunchAsync($"blob/develop/{uri}");
+
+	Task NavigateLaunchAsync(string uri) =>
+		NavigateHourglassAsync(launchTimersSplitButton, uri);
 
 	static string ExternalLinkHeader(string name) =>
 		"🔗 " + name;

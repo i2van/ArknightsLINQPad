@@ -72,7 +72,7 @@ Ongoing [Arknights](https://arknights.wiki.gg) [Global](https://arknights.wiki.g
 
 ### [`Hourglass.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/Hourglass.linq)
 
-Launch [Arknights](https://arknights.wiki.gg) countdown timers using [Hourglass](https://github.com/i2van/hourglass).
+Launch [Arknights](https://arknights.wiki.gg) countdown timers using the [Hourglass](https://github.com/i2van/hourglass).
 
 * [About Hourglass](https://github.com/i2van/hourglass/blob/develop/README.md)
 * [Hourglass FAQ](https://github.com/i2van/hourglass/blob/develop/FAQ.md)
