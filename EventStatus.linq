@@ -15,7 +15,7 @@
 #load "./lib/Parsable.linq"
 #load "./lib/WikiHyperlinq.linq"
 
-#define DUMP_MISSING_IMAGES
+//#define DUMP_MISSING_IMAGES
 
 /*
 #define DUMP_CONFIG
@@ -38,7 +38,7 @@ void Main()
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Operation_Lucent_Arrowhead#Galeria_Souvenir_Shop", "Operation Lucent Arrowhead", "Galeria_Stamp_Card")] = new("""
+			[new("Operation_Lucent_Arrowhead#Galería_Boutique", "Operation Lucent Arrowhead", "Galería_Stamp_Card")] = new("""
 			// Operation Lucent Arrowhead
 			200		Fuze's Token
 			240		Fuze's Token
@@ -48,31 +48,31 @@ void Main()
 			150	3	Headhunting Permit
 			75	2	Module Data Block
 			100	5	Bipolar Nanoflake
-			35	10	Manganese Trihydrate
-			40	10	Solidified Fiber Board
-			35	10	RMA70-24
 			30	10	White Horse Kohl
-			//100		艺术馆吊灯
-			//100		艺术馆盆栽
-			//50		"脱轨"
-			//50		"请自由使用"
-			//40		隐藏展品"禁止触摸"
-			//40		"光和热"
-			//30		艺术馆照明系统
-			//30		"颁奖典礼"
+			35	10	RMA70-24
+			40	10	Solidified Fiber Board
+			30		Galería Lightning
+			30 		'Awards Ceremony'
+			40		Secret Exibit 'Do Not Touch'
+			40		'Light and Heat'
+			50		Galería Carpet
+			50		'Off the Rails'
+			50		'Help Yourself'
+			100		Galería Lamp
+			100		Galería Plant
 			15	10	Data Supplement Instrument
 			5	60	Data Supplement Stick
-			10	15	Crystalline Component
 			7	15	Orirock Cluster
+			10	10	Crystalline Component
 			7	100	LMD
 			5	25	Strategic Battle Record
 			3	50	Tactical Battle Record
 			1	100	Frontline Battle Record
 			4	25	Skill Summary - 3
 			2	50	Skill Summary - 2
-			3	25	Oriron
-			3	25	Sugar
 			2	25	Orirock Cube
+			3	25	Sugar
+			3	25	Oriron
 			6	5	Guard Chip
 			2	200	Furniture Part
 			""")
@@ -632,7 +632,7 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("Operation_Lucent_Arrowhead#Galeria_Souvenir_Shop", "Operation Lucent Arrowhead", "Galeria_Stamp_Card")] = new("""
+		[new("Operation_Lucent_Arrowhead#Galería_Boutique", "Operation Lucent Arrowhead", "Galería_Stamp_Card")] = new("""
 		// Operation Lucent Arrowhead
 		200		Fuze's Token
 		240		Fuze's Token
@@ -642,31 +642,31 @@ static class EventData
 		150	3	Headhunting Permit
 		75	2	Module Data Block
 		100	5	Bipolar Nanoflake
-		35	10	Manganese Trihydrate
-		40	10	Solidified Fiber Board
-		35	10	RMA70-24
 		30	10	White Horse Kohl
-		//100		艺术馆吊灯
-		//100		艺术馆盆栽
-		//50		"脱轨"
-		//50		"请自由使用"
-		//40		隐藏展品"禁止触摸"
-		//40		"光和热"
-		//30		艺术馆照明系统
-		//30		"颁奖典礼"
+		35	10	RMA70-24
+		40	10	Solidified Fiber Board
+		30		Galería Lightning
+		30 		'Awards Ceremony'
+		40		Secret Exibit 'Do Not Touch'
+		40		'Light and Heat'
+		50		Galería Carpet
+		50		'Off the Rails'
+		50		'Help Yourself'
+		100		Galería Lamp
+		100		Galería Plant
 		15	10	Data Supplement Instrument
 		5	60	Data Supplement Stick
-		10	15	Crystalline Component
 		7	15	Orirock Cluster
+		10	10	Crystalline Component
 		7	100	LMD
 		5	25	Strategic Battle Record
 		3	50	Tactical Battle Record
 		1	100	Frontline Battle Record
 		4	25	Skill Summary - 3
 		2	50	Skill Summary - 2
-		3	25	Oriron
-		3	25	Sugar
 		2	25	Orirock Cube
+		3	25	Sugar
+		3	25	Oriron
 		6	5	Guard Chip
 		2	200	Furniture Part
 		"""),
