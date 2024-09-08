@@ -15,7 +15,7 @@
 #load "./lib/Parsable.linq"
 #load "./lib/WikiHyperlinq.linq"
 
-//#define DUMP_MISSING_IMAGES
+#define DUMP_MISSING_IMAGES
 
 /*
 #define DUMP_CONFIG
@@ -51,9 +51,9 @@ void Main()
 			30	10	White Horse Kohl
 			35	10	RMA70-24
 			40	10	Solidified Fiber Board
-			30		Galería Lightning
+			30		Galería Lighting
 			30 		'Awards Ceremony'
-			40		Secret Exibit 'Do Not Touch'
+			40		Secret Exhibit 'Do Not Touch'
 			40		'Light and Heat'
 			50		Galería Carpet
 			50		'Off the Rails'
@@ -645,9 +645,9 @@ static class EventData
 		30	10	White Horse Kohl
 		35	10	RMA70-24
 		40	10	Solidified Fiber Board
-		30		Galería Lightning
+		30		Galería Lighting
 		30 		'Awards Ceremony'
-		40		Secret Exibit 'Do Not Touch'
+		40		Secret Exhibit 'Do Not Touch'
 		40		'Light and Heat'
 		50		Galería Carpet
 		50		'Off the Rails'

@@ -1,13 +1,17 @@
 'Advance Patchwork'	d/d1
 'Audible Redemption'	9/9d
+'Awards Ceremony'	8/89
 'Collection'	c/c1	Collection_(furniture)
 'Cultivating Hope'	9/9f
 'Elevations'	4/41
 'Fowlbeast Accommodations'	4/4f
+'Help Yourself'	a/a9
 'Implantation'	2/22
 'Indications'	0/02
 'Kjeragandr's Bones'	1/13
+'Light and Heat'	d/d1
 'Nostalgic Habitations'	b/b1
+'Off the Rails'	f/f3
 'Prize for Excellence'	3/3b
 'Purge of Flaws'	4/49
 'Record of Suffering'	d/d0
@@ -45,6 +49,10 @@ Frontline Battle Record	f/f7
 Furniture Part	0/0d
 Fuscous Fiber	d/d6
 Fuze's Token	b/ba
+Galería Carpet	f/f1
+Galería Lamp	3/33
+Galería Lighting	4/43
+Galería Plant	4/42
 Grindstone	6/69
 Grindstone Pentahydrate	a/a5
 Guard Chip	6/63
@@ -90,6 +98,7 @@ Reinforcement Debris	7/7e
 Responsive Floorlamp	2/22
 RMA70-12	1/10
 RMA70-24	f/f1
+Secret Exhibit 'Do Not Touch'	2/28
 Semi-Synthetic Solvent	5/58
 Shipping Counter	1/12
 Shock-proof Pillar	2/22

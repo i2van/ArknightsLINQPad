@@ -18,7 +18,7 @@ static partial class Extensions
 	private static readonly TimeSpan AlmostSecond = TimeSpan.FromMicroseconds(999_999);
 
 	public static string UnderscoreSpaces(this string str) =>
-		str.Trim(Quotes).Replace("\" ", " ").Replace("\' ", " ").Replace(' ', '_');
+		str.Trim(Quotes).Replace("\" ", " ").Replace("\' ", " ").Replace(" \'", " ").Replace(' ', '_');
 
 	public static string SpaceUnderscores(this string str) =>
 		str.Replace('_', ' ');
