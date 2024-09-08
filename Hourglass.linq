@@ -121,6 +121,11 @@ void Main()
 		Header = $"Launch {Hourglass}"
 	};
 
+	var launchCustomTitleMenuItem = new MenuItem
+	{
+		Header = new TimerPreset("Custom", "Title")
+	};
+
 	var aboutMenuItem = new MenuItem
 	{
 		Header = ExternalLinkHeader("About")
@@ -195,6 +200,7 @@ void Main()
 
 	launchTimersMenuFlyout.AddItems
 	(
+		launchCustomTitleMenuItem,
 		new Separator(),
 		launchHourglassMenuItem,
 		new Separator(),
@@ -251,6 +257,11 @@ void Main()
 	};
 
 	clearTimersSplitButton.Flyout.Closed += FlyoutClosed;
+
+	launchCustomTitleMenuItem.Click += delegate
+	{
+		timersTextBox.Text = @"-t """;
+	};
 
 	launchHourglassMenuItem.Click += delegate
 	{
