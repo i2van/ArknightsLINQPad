@@ -22,15 +22,14 @@ const char Comma = ',';
 
 var regexTimeout = TimeSpan.FromMilliseconds(100);
 
-const string XOperator = "x operator";
-const string YOperator = "y operator";
+var operators = "xyd".ToCharArray().Select(static m => $"{m} operator").ToArray();
 
 var operatorModules =
 	(await Task.WhenAll(
 		wikiModules
 			.Split("|")
-			.Where( static s => s.StartsWith(XOperator) || s.StartsWith(YOperator))
-			.Select(static s => s.Replace(XOperator, string.Empty).Replace(YOperator, string.Empty).TrimStart().TrimStart('='))
+			.Where( s => operators.Any(o => s.StartsWith(o)))
+			.Select(s => operators.Aggregate(s, static (s, o) => s.Replace(o, string.Empty)).TrimStart().TrimStart('='))
 			.SelectMany(static s => s.Split(Comma, StringSplitOptions))
 			.Distinct()
 			.OrderBy(static _ => _)
