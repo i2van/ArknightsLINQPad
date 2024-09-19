@@ -31,50 +31,45 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Sep, Day.OfMonth(19)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Sep, Day.OfMonth(29)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Operation_Lucent_Arrowhead#Galería_Boutique", "Operation Lucent Arrowhead", "Galería_Stamp_Card")] = new("""
-			// Operation Lucent Arrowhead
-			200		Fuze's Token
-			240		Fuze's Token
-			280		Fuze's Token
-			320		Fuze's Token
-			360		Fuze's Token
+			[new("Operation_Originium_Dust/Rerun#Commissary", "Operation Originium Dust Rerun", "Rhodes_Island_Resource_Allocation_Certificate")] = new("""
+			// Operation Originium Dust Rerun
+			200		Tachanka's Token
+			240		Tachanka's Token
+			280		Tachanka's Token
+			320		Tachanka's Token
+			360		Tachanka's Token
 			150	3	Headhunting Permit
-			75	2	Module Data Block
-			100	5	Bipolar Nanoflake
-			30	10	White Horse Kohl
-			35	10	RMA70-24
-			40	10	Solidified Fiber Board
-			30		Galería Lighting
-			30 		'Awards Ceremony'
-			40		Secret Exhibit 'Do Not Touch'
-			40		'Light and Heat'
-			50		Galería Carpet
-			50		'Off the Rails'
-			50		'Help Yourself'
-			100		Galería Lamp
-			100		Galería Plant
-			15	10	Data Supplement Instrument
-			5	60	Data Supplement Stick
-			7	15	Orirock Cluster
-			10	10	Crystalline Component
-			7	100	LMD
-			5	25	Strategic Battle Record
-			3	50	Tactical Battle Record
-			1	100	Frontline Battle Record
-			4	25	Skill Summary - 3
-			2	50	Skill Summary - 2
-			2	25	Orirock Cube
-			3	25	Sugar
-			3	25	Oriron
+			100		D32 Steel
+			45	3	Oriron Block
+			40	3	Grindstone Pentahydrate
+			35	3	White Horse Kohl
+			25	2	Exhibition Room Ceiling Light (Bright)
+			25	2	Exhibition Room Ceiling Light (Dim)
+			45		Wall-mounted Newspaper Rack
+			45		Projectile Interception System
+			30		Surveillance Camera
+			30		Throwable Discharge Device
+			45		Reinforcement Debris
+			55		Signal Disruptor
+			15	5	RMA70-12
+			12	5	Coagulating Gel
+			7	20	LMD
+			5	5	Strategic Battle Record
+			3	10	Tactical Battle Record
+			1	20	Frontline Battle Record
+			4	10	Skill Summary - 3
+			2	20	Skill Summary - 2
+			4	8	Device
+			2	8	Orirock Cube
+			3	8	Oriron
 			6	5	Guard Chip
-			2	200	Furniture Part
 			""")
 		}
 	};
@@ -683,14 +678,14 @@ static class EventData
 		45	3	Oriron Block
 		40	3	Grindstone Pentahydrate
 		35	3	White Horse Kohl
-		55		Signal Disruptor
-		45		Reinforcement Debris
-		45		Projectile Interception System
-		45		Wall-mounted Newspaper Rack
-		30		Surveillance Camera
-		30		Throwable Discharge Device
 		25	2	Exhibition Room Ceiling Light (Bright)
 		25	2	Exhibition Room Ceiling Light (Dim)
+		45		Wall-mounted Newspaper Rack
+		45		Projectile Interception System
+		30		Surveillance Camera
+		30		Throwable Discharge Device
+		45		Reinforcement Debris
+		55		Signal Disruptor
 		15	5	RMA70-12
 		12	5	Coagulating Gel
 		7	20	LMD
@@ -700,8 +695,8 @@ static class EventData
 		4	10	Skill Summary - 3
 		2	20	Skill Summary - 2
 		4	8	Device
-		3	8	Oriron
 		2	8	Orirock Cube
+		3	8	Oriron
 		6	5	Guard Chip
 		"""),
 
