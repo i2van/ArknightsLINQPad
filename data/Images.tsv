@@ -42,8 +42,6 @@ Data Supplement Stick	f/f8
 Defender Chip	2/24
 Device	a/a4
 Dizzy Spinning Chair	6/63
-Exhibition Room Ceiling Light (Bright)	d/de
-Exhibition Room Ceiling Light (Dim)	0/0b
 Explosion-proof Fluorescent Lamp	e/e0
 Frontline Battle Record	f/f7
 Furniture Part	0/0d
@@ -58,6 +56,7 @@ Grindstone Pentahydrate	a/a5
 Guard Chip	6/63
 Harold's Token	8/8b
 Headhunting Permit	0/0b
+Ice-Cold Patchwork Wallpaper	6/67
 Incandescent Alloy	f/f4
 Incandescent Alloy Block	a/a3
 Information Fragment	1/1d
@@ -67,14 +66,19 @@ Keton Colloid	a/ae
 Knowledge-Seeking Hall Flooring	b/b6
 Library Stairs	6/62
 LMD	e/e7
+Load-bearing Pillar	2/29
 Loxic Kohl	4/4a
 Manganese Ore	6/6a
 Manganese Trihydrate	c/cd
 Medic Chip	e/eb
 Mischievously Spliced Table	9/9a
 Module Data Block	6/66
+Never Even Flooring	5/57
+Newsgirl	1/14	Amiya_Skin_1
 Night Watcher	0/02	Hibiscus_Skin_1
 Nucleic Crystal Sinter	7/7e
+Odda's Token	3/33
+Oddities Showcase	c/c1
 Optimized Device	f/fd
 Orirock Cluster	4/4d
 Orirock Concentration	d/d4
@@ -89,12 +93,10 @@ Polyester Pack	f/f3
 Polyketon	9/96
 Polymerization Preparation	9/9c
 Polymerized Gel	6/66
-Projectile Interception System	a/a0
 Pure Gold	0/0e
 Recruitment Permit	3/3b
 Refined Solvent	9/9f
 Reinforced Work Chair	a/ae
-Reinforcement Debris	7/7e
 Responsive Floorlamp	2/22
 RMA70-12	1/10
 RMA70-24	f/f1
@@ -102,7 +104,6 @@ Secret Exhibit 'Do Not Touch'	2/28
 Semi-Synthetic Solvent	5/58
 Shipping Counter	1/12
 Shock-proof Pillar	2/22
-Signal Disruptor	3/33
 Silence the Paradigmatic's Token	2/20
 Skill Summary - 2	b/b0	Skill_Summary_Volume_2
 Skill Summary - 3	a/a7	Skill_Summary_Volume_3
@@ -118,16 +119,14 @@ Sugar	a/a9
 Sugar Lump	d/d2
 Sugar Pack	2/23
 Supporter Chip	d/d7
-Surveillance Camera	6/65
-Tachanka's Token	a/a9
 Tactical Battle Record	a/a7
-Throwable Discharge Device	7/7a
 Toasty Shop Lamp	6/6c
 Transmuted Salt	b/bd
 Transmuted Salt Agglomerate	b/bd
 Vanguard Chip	d/df
-Wall-mounted Newspaper Rack	9/91
 Wanqing's Token	f/fc
+Welded Storage Box	e/e8
 White Horse Kohl	4/4a
 Window to the Snowy Mountains	f/ff
+Witchcraft Workbench	a/aa
 Yellowy Gauze Curtain	9/9d
