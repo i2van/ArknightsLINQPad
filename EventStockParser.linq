@@ -11,7 +11,7 @@
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-Operation Originium Dust Rerun
+Babel_(event)
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")
