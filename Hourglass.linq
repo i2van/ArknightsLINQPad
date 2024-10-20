@@ -56,6 +56,7 @@ void Main()
 		// TODO: Specify your timers presets.
 		TimerPresets = new TimerPreset[]
 		{
+			new("Clue",    "7h59"),
 			new("Recruit", "8h59"),
 			new("Clues",   "23h59")
 		},
