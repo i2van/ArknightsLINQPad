@@ -291,7 +291,11 @@ void Main()
 
 	tabControl.SelectionChanged += delegate
 	{
-		timersTextBox.Watermark = (string)((TabItem)tabControl.SelectedItem!).Header!;
+		timersTextBox.Watermark = $"{((TabItem)tabControl.SelectedItem!).Header!} · {(
+			config.Options.Contains("-mt on")
+				? @"Specify multiple timers separated by spaces and press Enter. Use double quotation marks for the timers containing spaces, e.g., ""10 Oct 2024"""
+				:  "Specify timer and press Enter"
+			)}";
 	};
 
 	downloadHourglassButton.Click += async delegate
