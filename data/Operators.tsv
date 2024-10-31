@@ -14,8 +14,8 @@ April	Sniper	5	MAR-Y	5-3	Polymerized Gel❂9｜RMA70-12❂9	Paradox
 Archetto	Sniper	6	MAR-X	SV-4	Polymerization Preparation❂4｜Orirock Concentration❂8	Paradox
 Archetto	Sniper	6	MAR-Y	2-9	Polymerization Preparation❂4｜Orirock Concentration❂8	Paradox
 Arene	Guard	4	LOR-Y	2-8	Orirock Cluster❂21｜Integrated Device❂7
-Aroma	Caster	5	BLA-X	GT-HX-3	RMA70-24❂7｜Loxic Kohl❂21
-Ascalon	Specialist	6	AMB-X	11-6	D32 Steel❂4｜Keton Colloid❂6
+Aroma	Caster	5	BLA-X	GT-HX-3	RMA70-24❂7｜Loxic Kohl❂21	Paradox
+Ascalon	Specialist	6	AMB-X	11-6	D32 Steel❂4｜Keton Colloid❂6	Paradox
 Ash	Sniper	6	MAR-X	SV-8	D32 Steel❂4｜Polymerized Gel❂6
 Ash	Sniper	6	MAR-Y	1-12	D32 Steel❂4｜Polymerized Gel❂6
 Ashlock	Defender	5	FOR-X	7-9	Polymerized Gel❂8｜Compound Cutting Fluid❂13
@@ -119,7 +119,7 @@ Goldenglow	Caster	6	FUN-X	R8-8	Bipolar Nanoflake❂4｜Manganese Trihydrate❂5
 Grain Buds	Supporter	5	DEC-X	9-11	Crystalline Circuit❂7｜Compound Cutting Fluid❂11
 Grani	Vanguard	5	CHG-X	GT-6	RMA70-24❂7｜Oriron Cluster❂13	Paradox
 Gravel	Specialist	4	EXE-X	4-8	Polyester Pack❂18｜Orirock Cluster❂13	Paradox
-GreyThroat	Sniper	5	MAR-Y	2-10	Oriron Block❂7｜Integrated Device❂9
+GreyThroat	Sniper	5	MAR-Y	2-10	Oriron Block❂7｜Integrated Device❂9	Paradox
 Greyy	Caster	4	SPC-Y	2-3	Manganese Ore❂15｜Aketon❂9	Paradox
 Greyy the Lightningbearer	Sniper	5	BOM-X	1-3	Grindstone Pentahydrate❂7｜Incandescent Alloy❂16	Paradox
 Gummy	Defender	4	GUA-X	4-2	RMA70-12❂13｜Manganese Ore❂7	Paradox
@@ -272,12 +272,12 @@ Senshi	Defender	5	GUA-Y	1-12	Cyclicene Prefab❂7｜Polyester Pack❂14
 Sesa	Sniper	5	ART-X	S3-6	Grindstone Pentahydrate❂8｜Orirock Cluster❂18	Paradox
 Shamare	Supporter	5	UMD-X	6-5	Orirock Concentration❂8｜Incandescent Alloy❂17	Paradox
 Shaw	Specialist	4	PUS-Y	2-8	Integrated Device❂12｜Polyester Pack❂11	Paradox
-Shining	Medic	6	PHY-X	NL-5	Bipolar Nanoflake❂4｜Oriron Block❂5
-Shining	Medic	6	PHY-Y	5-8	Bipolar Nanoflake❂4｜Oriron Block❂5
+Shining	Medic	6	PHY-X	NL-5	Bipolar Nanoflake❂4｜Oriron Block❂5	Paradox
+Shining	Medic	6	PHY-Y	5-8	Bipolar Nanoflake❂4｜Oriron Block❂5	Paradox
 Shirayuki	Sniper	4	ART-Y	S2-11	Aketon❂15｜Oriron Cluster❂9	Paradox
 Shu	Defender	6	GUA-X	11-11	Crystalline Electronic Unit❂3｜Cutting Fluid Solution❂6
-Siege	Vanguard	6	SOL-X	1-7	Bipolar Nanoflake❂4｜Orirock Concentration❂6
-Siege	Vanguard	6	SOL-Y	11-2	Bipolar Nanoflake❂4｜Orirock Concentration❂6
+Siege	Vanguard	6	SOL-X	1-7	Bipolar Nanoflake❂4｜Orirock Concentration❂6	Paradox
+Siege	Vanguard	6	SOL-Y	11-2	Bipolar Nanoflake❂4｜Orirock Concentration❂6	Paradox
 Silence	Medic	5	PHY-Y	4-8	Keton Colloid❂7｜Orirock Cluster❂18	Paradox
 Silence the Paradigmatic	Supporter	6	BLS-X	6-3	Crystalline Electronic Unit❂3｜RMA70-24❂6
 SilverAsh	Guard	6	LOR-X	BI-7	D32 Steel❂4｜White Horse Kohl❂6	Paradox
@@ -288,8 +288,8 @@ Skyfire	Caster	5	SPC-Y	S3-5	Polyester Lump❂7｜Grindstone❂13	Paradox
 Snowsant	Specialist	5	HOK-X	4-6	Polymerized Gel❂8｜Oriron Cluster❂15	Paradox
 Sora	Supporter	5	BAR-X	CB-7	White Horse Kohl❂9｜Orirock Cluster❂17	Paradox
 Specter	Guard	5	CEN-X	SN-EX-1	White Horse Kohl❂8｜Aketon❂15	Paradox
-Specter the Unchained	Specialist	6	PUM-X	SV-EX-1	Polymerization Preparation❂4｜Keton Colloid❂6
-Specter the Unchained	Specialist	6	PUM-Y	S4-1	Polymerization Preparation❂4｜Keton Colloid❂6
+Specter the Unchained	Specialist	6	PUM-X	SV-EX-1	Polymerization Preparation❂4｜Keton Colloid❂6	Paradox
+Specter the Unchained	Specialist	6	PUM-Y	S4-1	Polymerization Preparation❂4｜Keton Colloid❂6	Paradox
 Spuria	Specialist	5	GEE-X	DM-2	Crystalline Circuit❂7｜Compound Cutting Fluid❂9	Paradox
 Stainless	Supporter	6	CRA-X	11-6	Polymerization Preparation❂4｜Refined Solvent❂6
 Stainless	Supporter	6	CRA-Y	9-6	Polymerization Preparation❂4｜Refined Solvent❂6

@@ -11,7 +11,7 @@
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-Babel_(event)
+Episode 14: Absolved Will Be the Seekers
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")

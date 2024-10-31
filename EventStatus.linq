@@ -31,53 +31,50 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Nov, Day.OfMonth(1)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Nov, Day.OfMonth(14)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Babel_(event)#Motorized_Logistical_Camp", "Babel", "Raw_Sugar_Lumps")] = new("""
-			// Babel
-			200		Odda's Token
-			240		Odda's Token
-			280		Odda's Token
-			320		Odda's Token
-			360		Odda's Token
-			500		Newsgirl
+			[new("Episode_14:_Absolved_Will_Be_the_Seekers#Strategic_Arsenal", "Episode 14: Absolved Will Be the Seekers", "Emergency_Inhibitor")] = new("""
+			// Episode 14: Absolved Will Be the Seekers
+			30		Scene's Token
+			40		Scene's Token
+			50		Scene's Token
+			60		Scene's Token
+			70		Scene's Token
+			500		Legacy
 			150	3	Headhunting Permit
-			75	3	Module Data Block
-			100	5	D32 Steel
-			35	10	Keton Colloid
-			35	10	RMA70-24
-			40	10	Crystalline Circuit
-			45	10	Cyclicene Prefab
-			60		Witchcraft Workbench
-			60		Welded Storage Box
-			80		Oddities Showcase
-			80		Load-bearing Pillar
-			90		Ice-Cold Patchwork Wallpaper
-			90		Never Even Flooring
+			75	2	Module Data Block
+			100	5	Polymerization Preparation
+			25	10	Orirock Concentration
+			30	10	Polymerized Gel
+			50	10	Optimized Device
+			15		'Projection of Souls'
+			65		Steel Low Table
+			75		Steel Bed Partition
+			75		Solid Steel Partition
+			85		Panoramic Display
+			85		Standard Issue Metal-Flooring
+			90		'Light Within Shadows'
+			130		Equipment Control Panel
+			155		Steel Bunkbed
 			15	10	Data Supplement Instrument
 			5	60	Data Supplement Stick
-			8	15	Sugar Pack
-			10	15	Manganese Ore
-			10	15	Incandescent Alloy
-			12	15	Transmuted Salt
-			7	120	LMD
-			5	30	Strategic Battle Record
+			7	15	Orirock Cluster
+			12	10	Coagulating Gel
+			7	100	LMD
+			5	25	Strategic Battle Record
 			3	50	Tactical Battle Record
-			1	150	Frontline Battle Record
+			1	120	Frontline Battle Record
 			4	25	Skill Summary - 3
 			2	50	Skill Summary - 2
-			2	40	Orirock Cube
-			3	30	Sugar
 			3	30	Polyester
 			3	25	Oriron
-			3	25	Polyketon
-			4	20	Device
-			6	5	Guard Chip
+			4	25	Device
+			6	5	Supporter Chip
 			2	200	Furniture Part
 			""")
 		}
@@ -636,20 +633,18 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("Lone_Trail#Special_Case_Contact,_C.U.D.O.D.", "Lone Trail", "Flight_Data_Recorder_Chip")] = new("""
-		// Lone Trail
+		[new("Lone_Trail/Rerun#Special_Case_Contact,_C.U.D.O.D.", "Lone Trail Rerun", "Flight_Data_Recorder_Chip")] = new("""
+		// Lone Trail Rerun
 		250		Silence the Paradigmatic's Token
 		300		Silence the Paradigmatic's Token
 		350		Silence the Paradigmatic's Token
 		400		Silence the Paradigmatic's Token
 		450		Silence the Paradigmatic's Token
 		150	3	Headhunting Permit
-		75	3	Module Data Block
-		100	5	Bipolar Nanoflake
-		35	10	Keton Colloid
-		30	10	White Horse Kohl
-		35	10	Refined Solvent
-		30	10	Transmuted Salt Agglomerate
+		100		Bipolar Nanoflake
+		40	3	Oriron Block
+		35	3	Cutting Fluid Solution
+		30	3	White Horse Kohl
 		60		'Collection'
 		60		'Indications'
 		80		'Implantation'
@@ -657,26 +652,19 @@ static class EventData
 		100		'Treeshade Lineations'
 		150		'Elevations'
 		200		'Nostalgic Habitations'
-		15	10	Data Supplement Instrument
-		5	60	Data Supplement Stick
-		7	15	Orirock Cluster
+		10	5	Crystalline Component
+		10	5	Orirock Cluster
 		15	15	Integrated Device
-		10	15	RMA70-12
-		12	15	Compound Cutting Fluid
-		7	120	LMD
-		5	30	Strategic Battle Record
-		3	50	Tactical Battle Record
-		1	150	Frontline Battle Record
-		4	25	Skill Summary - 3
-		2	50	Skill Summary - 2
-		2	40	Orirock Cube
-		3	30	Sugar
-		3	30	Polyester
-		3	25	Oriron
+		7	20	LMD
+		5	5	Strategic Battle Record
+		3	10	Tactical Battle Record
+		1	20	Frontline Battle Record
+		4	10	Skill Summary - 3
+		2	20	Skill Summary - 2
+		3	8	Sugar
+		3	8	Polyester
 		3	25	Polyketon
-		4	20	Device
 		6	5	Supporter Chip
-		2	200	Furniture Part
 		"""),
 
 		[new("Operation_Lucent_Arrowhead#Galería_Boutique", "Operation Lucent Arrowhead", "Galería_Stamp_Card")] = new("""
@@ -850,6 +838,46 @@ static class EventData
 		3	25	Polyketon
 		4	20	Device
 		6	5	Guard Chip
+		2	200	Furniture Part
+		"""),
+
+		[new("Episode_14:_Absolved_Will_Be_the_Seekers#Strategic_Arsenal", "Episode 14: Absolved Will Be the Seekers", "Emergency_Inhibitor")] = new("""
+		// Episode 14: Absolved Will Be the Seekers
+		30		Scene's Token
+		40		Scene's Token
+		50		Scene's Token
+		60		Scene's Token
+		70		Scene's Token
+		500		Legacy
+		150	3	Headhunting Permit
+		75	2	Module Data Block
+		100	5	Polymerization Preparation
+		25	10	Orirock Concentration
+		30	10	Polymerized Gel
+		50	10	Optimized Device
+		15		'Projection of Souls'
+		65		Steel Low Table
+		75		Steel Bed Partition
+		75		Solid Steel Partition
+		85		Panoramic Display
+		85		Standard Issue Metal-Flooring
+		90		'Light Within Shadows'
+		130		Equipment Control Panel
+		155		Steel Bunkbed
+		15	10	Data Supplement Instrument
+		5	60	Data Supplement Stick
+		7	15	Orirock Cluster
+		12	10	Coagulating Gel
+		7	100	LMD
+		5	25	Strategic Battle Record
+		3	50	Tactical Battle Record
+		1	120	Frontline Battle Record
+		4	25	Skill Summary - 3
+		2	50	Skill Summary - 2
+		3	30	Polyester
+		3	25	Oriron
+		4	25	Device
+		6	5	Supporter Chip
 		2	200	Furniture Part
 		""")
 	});

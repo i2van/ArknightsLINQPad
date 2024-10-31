@@ -169,10 +169,9 @@ void Main()
 
 	clearTimersSplitButton.Flyout = clearTimersMenuFlyout;
 
-	var downloadHourglassButton = new Button
+	var downloadHourglassButton = new HyperlinkButton
 	{
-		Content = $"Download {Hourglass}",
-		Margin  = horizontalThickness
+		Content = $"Download {Hourglass}"
 	}
 	.SetWidth(buttonWidth);
 
