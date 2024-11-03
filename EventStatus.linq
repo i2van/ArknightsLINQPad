@@ -57,7 +57,7 @@ void Main()
 			75		Steel Bed Partition
 			75		Solid Steel Partition
 			85		Panoramic Display
-			85		Standard Issue Metal-Flooring
+			85		Standard-Issue Metal Flooring
 			90		'Light Within Shadows'
 			130		Equipment Control Panel
 			155		Steel Bunkbed
@@ -89,9 +89,9 @@ void Main()
 	{
 		HashSet<string> existingImagesKeys = new(ImageData.Value.Keys);
 		var missingImages = EventData.Value.Keys
-			.SelectMany(static v => EventData.Value[v].Select(static k => k))
+			.SelectMany(static v => EventData.Value[v])
 			.Concat(config.Event.Items)
-			.Where(static v => !string.IsNullOrWhiteSpace(v.Name))
+			.WhereNot(static v => string.IsNullOrWhiteSpace(v.Name))
 			.Where(v => existingImagesKeys.Add(v.Name))
 			.OrderBy(static v => v.Name)
 			.ToArray();
@@ -411,10 +411,10 @@ class Items : Parsable<Item>
 		base(items)
 	{
 		var duplicates = this
-			.GroupBy(static v => v)
-			.Where(  static g => g.Count() > 1)
-			.Select( static g => (Item: g.Key, Times: g.Count()))
-			.Where(  static v => !IsNullOrEmpty(v.Item.Name))
+			.GroupBy()
+			.Where(   static g => g.Count() > 1)
+			.Select(  static g => (Item: g.Key, Times: g.Count()))
+			.WhereNot(static v => IsNullOrEmpty(v.Item.Name))
 			.ToArray();
 
 		if(duplicates.Any())
@@ -466,7 +466,7 @@ static class ColorData
 #if CONFIG_INTERPOLATE_COLORS
 	.Aggregate(new[] { new List<Color>() }, static (r, c) => { r.First().Add(c); return r; })
 	.Select(static c => Enumerable.Range(0, 101).Select(p => c.Last().InterpolateTo(p / 100.0, c.First())))
-	.SelectMany(static r => r)
+	.SelectMany()
 #endif
 	.ToArray());
 }
@@ -860,7 +860,7 @@ static class EventData
 		75		Steel Bed Partition
 		75		Solid Steel Partition
 		85		Panoramic Display
-		85		Standard Issue Metal-Flooring
+		85		Standard-Issue Metal Flooring
 		90		'Light Within Shadows'
 		130		Equipment Control Panel
 		155		Steel Bunkbed

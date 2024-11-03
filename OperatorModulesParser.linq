@@ -32,7 +32,7 @@ var operatorModules =
 			.Select(s => operators.Aggregate(s, static (s, o) => s.Replace(o, string.Empty)).TrimStart().TrimStart('='))
 			.SelectMany(static s => s.Split(Comma, StringSplitOptions))
 			.Distinct()
-			.OrderBy(static _ => _)
+			.OrderBy()
 			.Select(GetOperator)
 		)
 	).Select(static op => op.ToString());

@@ -111,3 +111,21 @@ static partial class HtmlExtensions
 	public static void AsHyperlink(this string text, string uri) =>
 		InvokeScript(false, H1ToA, text, uri);
 }
+
+static partial class LINQExtensions
+{
+	public static IEnumerable<T> WhereNot<T>(this IEnumerable<T> enumerable, Predicate<T> predicate) =>
+		enumerable.Where(e => !predicate(e));
+
+	public static IEnumerable<T> Select<T>(this IEnumerable<T> enumerable) =>
+		enumerable.Select(static e => e);
+
+	public static IEnumerable<T> SelectMany<T>(this IEnumerable<IEnumerable<T>> enumerable) =>
+		enumerable.SelectMany(static e => e);
+
+	public static IEnumerable<T> OrderBy<T>(this IEnumerable<T> enumerable) =>
+		enumerable.OrderBy(static e => e);
+
+	public static IEnumerable<IGrouping<T, T>> GroupBy<T>(this IEnumerable<T> enumerable) =>
+		enumerable.GroupBy(static e => e);
+}

@@ -59,9 +59,9 @@ abstract class Parsable<T> : IEnumerable<T>
 			.RemoveMultilineComments()
 			.Replace(Comment, NewLine + Comment)
 			.Split(NewLine.ToCharArray())
-			.Select(static v => v.Trim())
-			.Where( static v => !IsNullOrEmpty(v))
-			.Where( static v => !v.StartsWith(Comment))
+			.Select(  static v => v.Trim())
+			.WhereNot(string.IsNullOrEmpty)
+			.WhereNot(static v => v.StartsWith(Comment))
 			.Select(ParseAndCreate)
 			.ToArray();
 

@@ -38,7 +38,7 @@ var stockItems = wiki
 	.SkipWhile(static s => !s.Contains("{{Event store head"))
 	.TakeWhile(static s => !s.StartsWith("{{Table end"))
 	.Select(GetStockItem)
-	.Where(static s => !string.IsNullOrEmpty(s))
+	.WhereNot(string.IsNullOrEmpty)
 	.ToArray();
 
 if(!stockItems.Any())
