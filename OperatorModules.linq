@@ -98,7 +98,7 @@ void Main()
 }
 
 static object GetParadoxHyperlinq(string name) =>
-	new Hyperlinq($"https://www.youtube.com/results?search_query={Uri.EscapeDataString(name)}+paradox+simulation", "YouTube");
+	VideoHostings.YouTube.GetSearchHyperlinqs(name, "paradox", "simulation");
 
 static object GetMaterials(string op, string materials)
 {

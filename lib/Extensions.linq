@@ -129,3 +129,32 @@ static partial class LINQExtensions
 	public static IEnumerable<IGrouping<T, T>> GroupBy<T>(this IEnumerable<T> enumerable) =>
 		enumerable.GroupBy(static e => e);
 }
+
+enum VideoHostings
+{
+	All     = int.MaxValue,
+	YouTube = 1
+}
+
+static partial class LINQPadExtensions
+{
+	private record VideoHosting(string Name, string? Uri);
+	private sealed record Separator() : VideoHosting("｜", null);
+
+	public static object GetSearchHyperlinqs(this VideoHostings videoHostings, params string[] search)
+	{
+		return Util.HorizontalRun(false, GetVideoHostings().Take((int)videoHostings).Select(ToHyperlinq));
+
+		static IEnumerable<VideoHosting> GetVideoHostings()
+		{
+			yield return new("YouTube",  "https://www.youtube.com/results?search_query");
+			yield return new Separator();
+			yield return new("bilibili", "https://search.bilibili.com/all?keyword");
+		}
+
+		object ToHyperlinq(VideoHosting videoHosting) =>
+			videoHosting is Separator
+				? (object)videoHosting.Name
+				: new Hyperlinq($"{videoHosting.Uri}={string.Join("+", search.Select(Uri.EscapeDataString))}", videoHosting.Name);
+	}
+}

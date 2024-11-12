@@ -27,7 +27,7 @@ void Main()
 		{
 			ID        = i + 1,
 			Operation = new WikiHyperlinq(o),
-			Strategy  = new Hyperlinq($"https://www.youtube.com/results?search_query={Uri.EscapeDataString(o)}+Arknights", "YouTube")
+			Strategy  = VideoHostings.All.GetSearchHyperlinqs(o, "Arknights")
 		})
 		.ToArray();
 
