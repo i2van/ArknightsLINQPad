@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 env:
   LPRunUrl: https://www.linqpad.net/GetFile.aspx?preview+LINQPad8-Beta.zip
-  LPRun: LPRun8-x64.exe
+  LPRun: LPRun8-x64.exe --% -fx=9.0
   CompileOnly: -compileonly
   PSHeader: |
     $ErrorActionPreference = 'Stop'
@@ -26,6 +26,14 @@ jobs:
 
     steps:
 
+      # Set up
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4.1.0
+        with:
+          dotnet-version: |
+            9.0.x
+
       # Set up LPRun
 
       - name: Set up LPRun
@@ -36,7 +44,7 @@ jobs:
       # Check out
 
       - name: Check out
-        uses: actions/checkout@v4.2.1
+        uses: actions/checkout@v4.2.2
 
       # Execute LPRun scripts
 
