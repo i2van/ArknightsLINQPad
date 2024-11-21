@@ -53,7 +53,7 @@ jobs:
         run: ${{env.LPRun}} EventStatus.linq
 
       - name: Execute EventStockParser.linq
-        if: ${{success() || failure()}}
+        if: false #${{success() || failure()}}
         run: |
           ${{env.PSHeader}}
           ${{env.PSClearClipboard}}
@@ -73,7 +73,7 @@ jobs:
         run: ${{env.LPRun}} OperatorModules.linq
 
       - name: Execute OperatorModulesParser.linq
-        if: ${{success() || failure()}}
+        if: false #${{success() || failure()}}
         run: |
           ${{env.PSHeader}}
           ${{env.PSClearClipboard}}

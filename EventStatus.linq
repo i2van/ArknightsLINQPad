@@ -48,8 +48,8 @@ void Main()
 			150	3	Headhunting Permit
 			100		Bipolar Nanoflake
 			40	3	Oriron Block
-			35	3	Cutting Fluid Solution
 			30	3	White Horse Kohl
+			35	3	Cutting Fluid Solution
 			60		'Collection'
 			60		'Indications'
 			80		'Implantation'
@@ -57,9 +57,8 @@ void Main()
 			100		'Treeshade Lineations'
 			150		'Elevations'
 			200		'Nostalgic Habitations'
-			10	5	Crystalline Component
 			10	5	Orirock Cluster
-			15	15	Integrated Device
+			10	5	Crystalline Component
 			7	20	LMD
 			5	5	Strategic Battle Record
 			3	10	Tactical Battle Record
@@ -68,7 +67,7 @@ void Main()
 			2	20	Skill Summary - 2
 			3	8	Sugar
 			3	8	Polyester
-			3	25	Polyketon
+			3	8	Polyketon
 			6	5	Supporter Chip
 			""")
 		}
@@ -637,8 +636,8 @@ static class EventData
 		150	3	Headhunting Permit
 		100		Bipolar Nanoflake
 		40	3	Oriron Block
-		35	3	Cutting Fluid Solution
 		30	3	White Horse Kohl
+		35	3	Cutting Fluid Solution
 		60		'Collection'
 		60		'Indications'
 		80		'Implantation'
@@ -646,9 +645,8 @@ static class EventData
 		100		'Treeshade Lineations'
 		150		'Elevations'
 		200		'Nostalgic Habitations'
-		10	5	Crystalline Component
 		10	5	Orirock Cluster
-		15	15	Integrated Device
+		10	5	Crystalline Component
 		7	20	LMD
 		5	5	Strategic Battle Record
 		3	10	Tactical Battle Record
@@ -657,7 +655,7 @@ static class EventData
 		2	20	Skill Summary - 2
 		3	8	Sugar
 		3	8	Polyester
-		3	25	Polyketon
+		3	8	Polyketon
 		6	5	Supporter Chip
 		"""),
 
