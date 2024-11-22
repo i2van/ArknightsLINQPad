@@ -162,10 +162,41 @@ static partial class LINQPadExtensions
 
 static partial class HttpClientExtensions
 {
+	private const string UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
+
 	public static HttpClient Configure(this HttpClient httpClient)
 	{
-		httpClient.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36");
+		httpClient = ConfigureWithProxy();
+
+		httpClient.DefaultRequestHeaders.UserAgent.ParseAdd(UserAgent);
 
 		return httpClient;
+
+		HttpClient ConfigureWithProxy()
+		{
+			var proxy = GetIWebProxy();
+
+			if(proxy is null)
+			{
+				return httpClient;
+			}
+
+			var httpClientWithProxy = new HttpClient(new HttpClientHandler
+			{
+				Proxy = proxy,
+				UseProxy = true
+			})
+			{
+				BaseAddress = httpClient.BaseAddress,
+				DefaultRequestVersion = httpClient.DefaultRequestVersion,
+				DefaultVersionPolicy = httpClient.DefaultVersionPolicy,
+				MaxResponseContentBufferSize = httpClient.MaxResponseContentBufferSize,
+				Timeout = httpClient.Timeout
+			};
+
+			httpClient.DefaultRequestHeaders.Aggregate(httpClientWithProxy.DefaultRequestHeaders, static (headers, header) => { headers.Add(header.Key, header.Value); return headers; });
+
+			return httpClientWithProxy;
+		}
 	}
 }

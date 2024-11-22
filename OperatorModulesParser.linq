@@ -11,6 +11,8 @@
 #load "./lib/Operators.linq"
 #load "./lib/Parsable.linq"
 
+//#define DUMP_OPERATORS_WITHOUT_MODULES
+
 const StringSplitOptions StringSplitOptions = StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries;
 
 using var httpClient = new HttpClient().Configure();
@@ -36,12 +38,26 @@ var operatorModules =
 			.Select(GetOperator)
 		)
 	)
-	.Where( static op => op.Modules.Any())
+	.Where(OperatorHasModules)
 	.Select(static op => op.ToString());
 
 await operatorModules.SetClipboard();
 
 "Operator modules have been copied to clipboard.".Dump();
+
+static bool OperatorHasModules(OperatorWithModules op)
+{
+	if(op.Modules.Any())
+	{
+		return true;
+	}
+
+#if DUMP_OPERATORS_WITHOUT_MODULES
+	new Hyperlinq($"{op.Url.AbsoluteUri[0..(op.Url.AbsoluteUri.Length-op.Url.Query.Length)]}#Module", op.Name).Dump("Operators Without Modules");
+#endif
+
+	return false;
+}
 
 Uri GetUrl(string uri) =>
 	new($"https://arknights.wiki.gg/wiki/{uri}?action=raw");
@@ -77,6 +93,7 @@ async Task<OperatorWithModules> GetOperator(string name)
 		.Select(s => Regex.Match(s, @"\[\[([^]]+-[^]]+)\]\]", RegexOptions.None, regexTimeout).Groups[1].Value.Split('|').Last());
 
 	return new(
+		url,
 		name,
 		Regex.Match(wiki, @"\|class\s*=\s*([^\r\n]+)", RegexOptions.None, regexTimeout).Groups[1].Value,
 		Regex.Match(wiki, @"\|rarity\s*=\s*(\d+)", RegexOptions.None, regexTimeout).Groups[1].Value,
@@ -94,7 +111,7 @@ async Task<OperatorWithModules> GetOperator(string name)
 	}
 }
 
-sealed record OperatorWithModules(string Name, string Class, string Stars, string E2Materials, bool Paradox, IEnumerable<Module> Modules)
+sealed record OperatorWithModules(Uri Url, string Name, string Class, string Stars, string E2Materials, bool Paradox, IEnumerable<Module> Modules)
 {
 	public override string ToString() =>
 		string.Join(Environment.NewLine, Modules.Select(m => $"{Name}\t{Class}\t{Stars}\t{m.Name}\t{m.Mission}\t{E2Materials}{(Paradox ? $"\t{nameof(Paradox)}" : string.Empty)}"));

@@ -38,37 +38,42 @@ void Main()
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Lone_Trail/Rerun#Special_Case_Contact,_C.U.D.O.D.", "Lone Trail Rerun", "Flight_Data_Recorder_Chip")] = new("""
-			// Lone Trail Rerun
-			250		Silence the Paradigmatic's Token
-			300		Silence the Paradigmatic's Token
-			350		Silence the Paradigmatic's Token
-			400		Silence the Paradigmatic's Token
-			450		Silence the Paradigmatic's Token
+			[new("Zwillingstürme_im_Herbst#Herbstmondeskonzert", "Zwillingstürme im Herbst", "Die_Klänge_von_den_Erinnerungen")] = new("""
+			// Zwillingstürme im Herbst
 			150	3	Headhunting Permit
-			100		Bipolar Nanoflake
-			40	3	Oriron Block
-			30	3	White Horse Kohl
-			35	3	Cutting Fluid Solution
-			60		'Collection'
-			60		'Indications'
-			80		'Implantation'
-			100		'Fowlbeast Accommodations'
-			100		'Treeshade Lineations'
-			150		'Elevations'
-			200		'Nostalgic Habitations'
-			10	5	Orirock Cluster
-			10	5	Crystalline Component
-			7	20	LMD
-			5	5	Strategic Battle Record
-			3	10	Tactical Battle Record
-			1	20	Frontline Battle Record
-			4	10	Skill Summary - 3
-			2	20	Skill Summary - 2
-			3	8	Sugar
-			3	8	Polyester
-			3	8	Polyketon
-			6	5	Supporter Chip
+			75	3	Module Data Block
+			100	5	Polymerization Preparation
+			100	5	Nucleic Crystal Sinter
+			25	10	Orirock Concentration
+			40	10	Oriron Block
+			35	10	Grindstone Pentahydrate
+			30	10	Polymerized Gel
+			35	10	Cutting Fluid Solution
+			30	10	Transmuted Salt Agglomerate
+			110		Pipe Organ Literature Stand
+			90		Library Stairs
+			90		'Scenery of Knowledge'
+			90		Knowledge-Seeking Hall Flooring
+			15	10	Data Supplement Instrument
+			5	60	Data Supplement Stick
+			8	15	Polyester Pack
+			10	15	Manganese Ore
+			12	15	Coagulating Gel
+			10	15	Crystalline Component
+			7	120	LMD
+			5	30	Strategic Battle Record
+			3	50	Tactical Battle Record
+			1	150	Frontline Battle Record
+			4	25	Skill Summary - 3
+			2	50	Skill Summary - 2
+			2	40	Orirock Cube
+			3	30	Sugar
+			3	30	Polyester
+			3	25	Oriron
+			3	25	Polyketon
+			4	20	Device
+			6	5	Guard Chip
+			2	200	Furniture Part
 			""")
 		}
 	};
@@ -624,39 +629,6 @@ static class EventData
 		3	25	Polyketon
 		6	5	Sniper Chip
 		2	200	Furniture Part
-		"""),
-
-		[new("Lone_Trail/Rerun#Special_Case_Contact,_C.U.D.O.D.", "Lone Trail Rerun", "Flight_Data_Recorder_Chip")] = new("""
-		// Lone Trail Rerun
-		250		Silence the Paradigmatic's Token
-		300		Silence the Paradigmatic's Token
-		350		Silence the Paradigmatic's Token
-		400		Silence the Paradigmatic's Token
-		450		Silence the Paradigmatic's Token
-		150	3	Headhunting Permit
-		100		Bipolar Nanoflake
-		40	3	Oriron Block
-		30	3	White Horse Kohl
-		35	3	Cutting Fluid Solution
-		60		'Collection'
-		60		'Indications'
-		80		'Implantation'
-		100		'Fowlbeast Accommodations'
-		100		'Treeshade Lineations'
-		150		'Elevations'
-		200		'Nostalgic Habitations'
-		10	5	Orirock Cluster
-		10	5	Crystalline Component
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		3	8	Sugar
-		3	8	Polyester
-		3	8	Polyketon
-		6	5	Supporter Chip
 		"""),
 
 		[new("Operation_Lucent_Arrowhead#Galería_Boutique", "Operation Lucent Arrowhead", "Galería_Stamp_Card")] = new("""
