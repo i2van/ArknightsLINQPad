@@ -13,7 +13,7 @@
 
 const StringSplitOptions StringSplitOptions = StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries;
 
-using var httpClient = new HttpClient();
+using var httpClient = new HttpClient().Configure();
 
 var wikiModules = await httpClient.GetStringAsync(GetUrl("Operator_Module"));
 
@@ -35,7 +35,9 @@ var operatorModules =
 			.OrderBy()
 			.Select(GetOperator)
 		)
-	).Select(static op => op.ToString());
+	)
+	.Where( static op => op.Modules.Any())
+	.Select(static op => op.ToString());
 
 await operatorModules.SetClipboard();
 

@@ -6,6 +6,7 @@
   <Namespace>static System.String</Namespace>
   <Namespace>static System.TimeSpan</Namespace>
   <Namespace>System.Drawing</Namespace>
+  <Namespace>System.Net.Http</Namespace>
   <Namespace>System.Runtime.CompilerServices</Namespace>
 </Query>
 
@@ -156,5 +157,15 @@ static partial class LINQPadExtensions
 			videoHosting is Separator
 				? (object)videoHosting.Name
 				: new Hyperlinq($"{videoHosting.Uri}={string.Join("+", search.Select(Uri.EscapeDataString))}", videoHosting.Name);
+	}
+}
+
+static partial class HttpClientExtensions
+{
+	public static HttpClient Configure(this HttpClient httpClient)
+	{
+		httpClient.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36");
+
+		return httpClient;
 	}
 }

@@ -21,7 +21,7 @@ Episode 14: Absolved Will Be the Seekers
 
 const StringSplitOptions StringSplitOptions = StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries;
 
-using var httpClient = new HttpClient();
+using var httpClient = new HttpClient().Configure();
 
 var wiki = await httpClient.GetStringAsync($"https://arknights.wiki.gg/wiki/{eventUri}?action=raw");
 
