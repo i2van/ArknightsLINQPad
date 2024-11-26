@@ -11,7 +11,7 @@
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-Episode 14: Absolved Will Be the Seekers
+Path of Life
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")

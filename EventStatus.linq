@@ -31,47 +31,47 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Dec, Day.OfMonth(1)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Dec, Day.OfMonth(17)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Zwillingstürme_im_Herbst#Herbstmondeskonzert", "Zwillingstürme im Herbst", "Die_Klänge_von_den_Erinnerungen")] = new("""
-			// Zwillingstürme im Herbst
+			[new("Path_of_Life#Materianomicon_Moceratrix", "Path of Life", @"""Emergency_Supplies""_Blueprint_Chip")] = new("""
+			// Path of Life
+			500		Invisible Dirge
+			200		Underflow's Token
+			240		Underflow's Token
+			280		Underflow's Token
+			320		Underflow's Token
+			360		Underflow's Token
 			150	3	Headhunting Permit
-			75	3	Module Data Block
+			75	2	Module Data Block
 			100	5	Polymerization Preparation
-			100	5	Nucleic Crystal Sinter
-			25	10	Orirock Concentration
-			40	10	Oriron Block
-			35	10	Grindstone Pentahydrate
-			30	10	Polymerized Gel
-			35	10	Cutting Fluid Solution
-			30	10	Transmuted Salt Agglomerate
-			110		Pipe Organ Literature Stand
-			90		Library Stairs
-			90		'Scenery of Knowledge'
-			90		Knowledge-Seeking Hall Flooring
+			35	10	Incandescent Alloy Block
+			35	10	Manganese Trihydrate
+			35	10	RMA70-24
+			90		自律手术云台
+			70		港口枢纽全景显示屏
+			70		承重特化型地面
+			60		自动分类文件架
+			40		"歌蕾蒂娅的倒影"
+			40		"斯卡蒂的刷新点"
+			40		"乌尔比安的帷幕"
 			15	10	Data Supplement Instrument
 			5	60	Data Supplement Stick
+			12	10	Grindstone
 			8	15	Polyester Pack
-			10	15	Manganese Ore
-			12	15	Coagulating Gel
-			10	15	Crystalline Component
-			7	120	LMD
-			5	30	Strategic Battle Record
+			7	100	LMD
+			5	25	Strategic Battle Record
 			3	50	Tactical Battle Record
-			1	150	Frontline Battle Record
+			1	120	Frontline Battle Record
 			4	25	Skill Summary - 3
 			2	50	Skill Summary - 2
-			2	40	Orirock Cube
-			3	30	Sugar
-			3	30	Polyester
-			3	25	Oriron
-			3	25	Polyketon
 			4	20	Device
+			3	30	Oriron
+			3	30	Sugar
 			6	5	Guard Chip
 			2	200	Furniture Part
 			""")
@@ -670,6 +670,44 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
+		[new("Path_of_Life#Materianomicon_Moceratrix", "Path of Life", @"""Emergency_Supplies""_Blueprint_Chip")] = new("""
+		// Path of Life
+		500		Invisible Dirge
+		200		Underflow's Token
+		240		Underflow's Token
+		280		Underflow's Token
+		320		Underflow's Token
+		360		Underflow's Token
+		150	3	Headhunting Permit
+		75	2	Module Data Block
+		100	5	Polymerization Preparation
+		35	10	Incandescent Alloy Block
+		35	10	Manganese Trihydrate
+		35	10	RMA70-24
+		90		自律手术云台
+		70		港口枢纽全景显示屏
+		70		承重特化型地面
+		60		自动分类文件架
+		40		"歌蕾蒂娅的倒影"
+		40		"斯卡蒂的刷新点"
+		40		"乌尔比安的帷幕"
+		15	10	Data Supplement Instrument
+		5	60	Data Supplement Stick
+		12	10	Grindstone
+		8	15	Polyester Pack
+		7	100	LMD
+		5	25	Strategic Battle Record
+		3	50	Tactical Battle Record
+		1	120	Frontline Battle Record
+		4	25	Skill Summary - 3
+		2	50	Skill Summary - 2
+		4	20	Device
+		3	30	Oriron
+		3	30	Sugar
+		6	5	Guard Chip
+		2	200	Furniture Part
+		"""),
+
 		[new(@"So_Long,_Adele#""White_Volcano""", "So Long, Adele", "Fluffy_Critter_Wool")] = new("""
 		// So Long, Adele
 		200		Bryophyta's Token
@@ -744,27 +782,6 @@ static class EventData
 		4	25	Device
 		6	5	Medic Chip
 		2	200	Furniture Part
-		"""),
-
-		[new("What_the_Firelight_Casts/Rerun#River_Valley_Caravan", "What the Firelight Casts Rerun", "Manuscripts_of_Ballads")] = new("""
-		// What the Firelight Casts Rerun
-		150	3	Headhunting Permit
-		100		Bipolar Nanoflake
-		35	3	Keton Colloid
-		30	3	Polymerized Gel
-		35	3	Incandescent Alloy Block
-		8	5	Polyester Pack
-		10	5	Manganese Ore
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		2	8	Orirock Cube
-		3	8	Sugar
-		4	8	Device
-		6	5	Vanguard Chip
 		"""),
 
 		[new("Zwillingstürme_im_Herbst#Herbstmondeskonzert", "Zwillingstürme im Herbst", "Die_Klänge_von_den_Erinnerungen")] = new("""
