@@ -38,40 +38,40 @@ void Main()
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Path_of_Life#Materianomicon_Moceratrix", "Path of Life", @"""Emergency_Supplies""_Blueprint_Chip")] = new("""
+			[new("Path_of_Life#Materianomicon_Moderatrix", "Path of Life", @"""Emergency_Supplies""_Blueprint_Chip")] = new("""
 			// Path of Life
-			500		Invisible Dirge
 			200		Underflow's Token
 			240		Underflow's Token
 			280		Underflow's Token
 			320		Underflow's Token
 			360		Underflow's Token
+			500		Invisible Dirge
 			150	3	Headhunting Permit
 			75	2	Module Data Block
 			100	5	Polymerization Preparation
-			35	10	Incandescent Alloy Block
 			35	10	Manganese Trihydrate
 			35	10	RMA70-24
-			90		自律手术云台
-			70		港口枢纽全景显示屏
-			70		承重特化型地面
-			60		自动分类文件架
-			40		"歌蕾蒂娅的倒影"
-			40		"斯卡蒂的刷新点"
-			40		"乌尔比安的帷幕"
+			35	10	Incandescent Alloy Block
+			90		Stable Surgical Gimbal
+			70		Port Panoramic Display
+			70		Specialized Load-Bearing Floor
+			60		Automatic File Sorter
+			40		'Gladiia's Reflection'
+			40		'Skadi's Refreshment Point'
+			40		'Ulpianus's Curtain'
 			15	10	Data Supplement Instrument
 			5	60	Data Supplement Stick
-			12	10	Grindstone
 			8	15	Polyester Pack
+			12	10	Grindstone
 			7	100	LMD
 			5	25	Strategic Battle Record
 			3	50	Tactical Battle Record
 			1	120	Frontline Battle Record
 			4	25	Skill Summary - 3
 			2	50	Skill Summary - 2
-			4	20	Device
-			3	30	Oriron
-			3	30	Sugar
+			3	25	Sugar
+			3	25	Oriron
+			4	25	Device
 			6	5	Guard Chip
 			2	200	Furniture Part
 			""")
@@ -670,40 +670,40 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("Path_of_Life#Materianomicon_Moceratrix", "Path of Life", @"""Emergency_Supplies""_Blueprint_Chip")] = new("""
+		[new("Path_of_Life#Materianomicon_Moderatrix", "Path of Life", @"""Emergency_Supplies""_Blueprint_Chip")] = new("""
 		// Path of Life
-		500		Invisible Dirge
 		200		Underflow's Token
 		240		Underflow's Token
 		280		Underflow's Token
 		320		Underflow's Token
 		360		Underflow's Token
+		500		Invisible Dirge
 		150	3	Headhunting Permit
 		75	2	Module Data Block
 		100	5	Polymerization Preparation
-		35	10	Incandescent Alloy Block
 		35	10	Manganese Trihydrate
 		35	10	RMA70-24
-		90		自律手术云台
-		70		港口枢纽全景显示屏
-		70		承重特化型地面
-		60		自动分类文件架
-		40		"歌蕾蒂娅的倒影"
-		40		"斯卡蒂的刷新点"
-		40		"乌尔比安的帷幕"
+		35	10	Incandescent Alloy Block
+		90		Stable Surgical Gimbal
+		70		Port Panoramic Display
+		70		Specialized Load-Bearing Floor
+		60		Automatic File Sorter
+		40		'Gladiia's Reflection'
+		40		'Skadi's Refreshment Point'
+		40		'Ulpianus's Curtain'
 		15	10	Data Supplement Instrument
 		5	60	Data Supplement Stick
-		12	10	Grindstone
 		8	15	Polyester Pack
+		12	10	Grindstone
 		7	100	LMD
 		5	25	Strategic Battle Record
 		3	50	Tactical Battle Record
 		1	120	Frontline Battle Record
 		4	25	Skill Summary - 3
 		2	50	Skill Summary - 2
-		4	20	Device
-		3	30	Oriron
-		3	30	Sugar
+		3	25	Sugar
+		3	25	Oriron
+		4	25	Device
 		6	5	Guard Chip
 		2	200	Furniture Part
 		"""),
