@@ -77,7 +77,8 @@ async Task<OperatorWithModules> GetOperator(string name)
 
 	if(string.IsNullOrEmpty(e2Materials))
 	{
-		var noMaterial = $"Missing promotion material{OperatorData.CountSeparator}1";
+		const char noMaterialChar = '❌';
+		var noMaterial = $"{noMaterialChar}{OperatorData.CountSeparator}{noMaterialChar}";
 		e2Materials = $"{noMaterial}{OperatorData.MaterialSeparator}{noMaterial}";
 	}
 
