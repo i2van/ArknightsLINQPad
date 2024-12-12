@@ -46,11 +46,11 @@ void Main()
 			Dormitory 4
 			Recruit
 			Clue
-			Clues
-			Skill
+			Exchange
+			Training
 			Dualchip
-			Gold
-			Misc
+			LMD
+			Any
 		"""),
 
 		// TODO: Specify your timers presets.
@@ -132,6 +132,10 @@ void Main()
 		Header = ExternalLinkHeader("About")
 	};
 
+	var aboutSelectionMenuItem = new MenuItem
+	{
+	};
+
 	var aboutHourglassMenuItem = new MenuItem
 	{
 		Header = ExternalLinkHeader($"About {Hourglass}")
@@ -204,6 +208,7 @@ void Main()
 		new Separator(),
 		launchHourglassMenuItem,
 		new Separator(),
+		aboutSelectionMenuItem,
 		aboutMenuItem,
 		new Separator(),
 		aboutHourglassMenuItem,
@@ -249,6 +254,7 @@ void Main()
 		Focus();
 	}
 
+	launchTimersSplitButton.Flyout.Opened += FlyoutOpened;
 	launchTimersSplitButton.Flyout.Closed += FlyoutClosed;
 
 	clearTimersSplitButton.Click += delegate
@@ -266,6 +272,11 @@ void Main()
 	launchHourglassMenuItem.Click += delegate
 	{
 		RunHourglass();
+	};
+
+	aboutSelectionMenuItem.Click += async delegate
+	{
+		await NavigateLaunchAsync((string)aboutSelectionMenuItem.Tag!);
 	};
 
 	aboutMenuItem.Click += async delegate
@@ -290,7 +301,7 @@ void Main()
 
 	tabControl.SelectionChanged += delegate
 	{
-		timersTextBox.Watermark = $"{((TabItem)tabControl.SelectedItem!).Header!} · {(
+		timersTextBox.Watermark = $"{GetSelectedItemHeader()} · {(
 			config.Options.Contains("-mt on")
 				? @"Specify multiple timers separated by spaces and press Enter. Use double quotation marks for the timers containing spaces, e.g., ""10 Oct 2024"""
 				:  "Specify timer and press Enter"
@@ -301,6 +312,27 @@ void Main()
 	{
 		await NavigateHourglassAsync(downloadHourglassButton, "releases/latest");
 	};
+
+	void FlyoutOpened(object? sender, EventArgs e)
+	{
+		var title = GetSelectedItemHeader();
+
+		aboutSelectionMenuItem.Header = ExternalLinkHeader($"About {title}");
+		aboutSelectionMenuItem.Tag    = $"https://arknights.wiki.gg/wiki/{GetUri()}";
+
+		string GetUri()
+		{
+			return
+				GetUriFor("Dormitory")                  ??
+				GetUriFor("Exchange", "Reception_Room") ??
+				GetUriFor("Recruit",  "Recruitment")    ??
+				GetUriFor("Training", "Training_Room")  ??
+				title;
+
+			string? GetUriFor(string uri, string? explicitUri = null) =>
+				title.StartsWith(uri) ? explicitUri ?? uri : null;
+		}
+	}
 
 	void FlyoutClosed(object? sender, EventArgs e) =>
 		Focus();
@@ -407,6 +439,9 @@ void Main()
 
 		return menuItem;
 	}
+
+	string GetSelectedItemHeader() =>
+		(string)((TabItem)tabControl.SelectedItem!).Header!;
 
 	void Clear() =>
 		timersTextBox.Clear();
