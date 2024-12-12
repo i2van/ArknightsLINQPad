@@ -56,9 +56,9 @@ void Main()
 		// TODO: Specify your timers presets.
 		TimerPresets = new TimerPreset[]
 		{
-			new("Clue",    "7h59"),
-			new("Recruit", "8h59"),
-			new("Clues",   "23h59")
+			new("Clue",     "7h59"),
+			new("Recruit",  "8h59"),
+			new("Exchange", "23h59")
 		},
 
 		// TODO: Specify timer options: https://github.com/i2van/hourglass/blob/develop/Hourglass/Resources/Usage.txt
@@ -74,6 +74,12 @@ void Main()
 			-mt on
 			-st on
 		""")),
+
+		// TODO: Use timer prefix.
+		UseTimerPrefix = false,
+
+		// TODO: Timer prefix.
+		TimerPrefix = "Arknights: ",
 
 		// TODO: Auto clear timers after successfully launching Hourglass.
 		AutoClear = true
@@ -244,7 +250,7 @@ void Main()
 
 		var hourglassCommandLine = args.StartsWith(TitleOption)
 			?  $"{config.Options} {args}"
-			: $@"{config.Options} {TitleOption}""{((TabItem)tabControl.SelectedItem!).Header}"" {args}";
+			: $@"{config.Options} {TitleOption}""{(config.UseTimerPrefix ? config.TimerPrefix : string.Empty)}{((TabItem)tabControl.SelectedItem!).Header}"" {args}";
 
 		if(RunHourglass(hourglassCommandLine) && autoClearCheckBox.IsChecked == true)
 		{
