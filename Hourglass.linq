@@ -11,6 +11,7 @@
   <Namespace>Avalonia.Themes.Fluent</Namespace>
   <Namespace>Avalonia.Threading</Namespace>
   <Namespace>Avalonia.VisualTree</Namespace>
+  <Namespace>System.Collections.ObjectModel</Namespace>
   <Namespace>System.ComponentModel</Namespace>
   <Namespace>System.Threading.Tasks</Namespace>
 </Query>
@@ -52,6 +53,18 @@ void Main()
 			LMD
 			Any
 		"""),
+
+		// TODO: Specify timer help URL.
+		TimerHelpUrl = "https://arknights.wiki.gg/wiki",
+
+		// TODO: Specify timer help URIs.
+		TimerHelpUris = new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+		{
+			["Dormitory"] = "Dormitory",
+			["Exchange"]  = "Reception_Room",
+			["Recruit"]   = "Recruitment",
+			["Training"]  = "Training_Room"
+		}),
 
 		// TODO: Specify your timers presets.
 		TimerPresets = new TimerPreset[]
@@ -324,20 +337,7 @@ void Main()
 		var title = GetSelectedItemHeader();
 
 		aboutSelectionMenuItem.Header = ExternalLinkHeader($"About {title}");
-		aboutSelectionMenuItem.Tag    = $"https://arknights.wiki.gg/wiki/{GetUri()}";
-
-		string GetUri()
-		{
-			return
-				GetUriFor("Dormitory")                  ??
-				GetUriFor("Exchange", "Reception_Room") ??
-				GetUriFor("Recruit",  "Recruitment")    ??
-				GetUriFor("Training", "Training_Room")  ??
-				title;
-
-			string? GetUriFor(string uri, string? explicitUri = null) =>
-				title.StartsWith(uri) ? explicitUri ?? uri : null;
-		}
+		aboutSelectionMenuItem.Tag    = $"{config.TimerHelpUrl}/{(config.TimerHelpUris.Select(titleUri => title.StartsWith(titleUri.Key) ? titleUri.Value : null).FirstOrDefault(static uri => uri is not null) ?? title)}";
 	}
 
 	void FlyoutClosed(object? sender, EventArgs e) =>
