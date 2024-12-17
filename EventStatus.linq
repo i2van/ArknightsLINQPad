@@ -7,6 +7,8 @@
 
 // Ongoing Arknights Global event status tracker.
 
+#LINQPad checked+
+
 #nullable enable
 
 #load "./lib/Context.linq"
@@ -31,49 +33,42 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Dec, Day.OfMonth(17)),
+		EventEndDate   = new DateOnly(Year.Now+1, Month.Jan, Day.OfMonth(3)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Path_of_Life#Materianomicon_Moderatrix", "Path of Life", @"""Emergency_Supplies""_Blueprint_Chip")] = new("""
-			// Path of Life
-			200		Underflow's Token
-			240		Underflow's Token
-			280		Underflow's Token
-			320		Underflow's Token
-			360		Underflow's Token
-			500		Invisible Dirge
+			[new("Hortus_de_Escapismo/Rerun#Convivia_Cenarum_Localia", "Hortus de Escapismo Rerun", "Holy_Statue_Fragment")] = new("""
+			// Hortus de Escapismo Rerun
+			200		Insider's Token
+			240		Insider's Token
+			280		Insider's Token
+			320		Insider's Token
+			360		Insider's Token
 			150	3	Headhunting Permit
-			75	2	Module Data Block
-			100	5	Polymerization Preparation
-			35	10	Manganese Trihydrate
-			35	10	RMA70-24
-			35	10	Incandescent Alloy Block
-			90		Stable Surgical Gimbal
-			70		Port Panoramic Display
-			70		Specialized Load-Bearing Floor
-			60		Automatic File Sorter
-			40		'Gladiia's Reflection'
-			40		'Skadi's Refreshment Point'
-			40		'Ulpianus's Curtain'
-			15	10	Data Supplement Instrument
-			5	60	Data Supplement Stick
-			8	15	Polyester Pack
-			12	10	Grindstone
-			7	100	LMD
-			5	25	Strategic Battle Record
-			3	50	Tactical Battle Record
-			1	120	Frontline Battle Record
-			4	25	Skill Summary - 3
-			2	50	Skill Summary - 2
-			3	25	Sugar
-			3	25	Oriron
-			4	25	Device
-			6	5	Guard Chip
-			2	200	Furniture Part
+			100		Crystalline Electronic Unit
+			50	3	Optimized Device
+			40	3	Crystalline Circuit
+			35	3	Keton Colloid
+			150		'Cultivating Hope'
+			100		'Record of Suffering'
+			80		'Audible Redemption'
+			5		'Purge of Flaws'
+			60		'Witness of Friendship'
+			15	5	RMA70-12
+			7	5	Orirock Cluster
+			7	20	LMD
+			5	5	Strategic Battle Record
+			3	10	Tactical Battle Record
+			1	20	Frontline Battle Record
+			4	10	Skill Summary - 3
+			2	20	Skill Summary - 2
+			3	8	Polyester
+			3	8	Polyketon
+			2	8	Orirock Cube
+			6	5	Sniper Chip
 			""")
 		}
 	};
@@ -596,39 +591,35 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("Hortus_de_Escapismo#Convivia_Cenarum_Localia", "Hortus de Escapismo", "Holy_Statue_Fragment")] = new("""
-		// Hortus de Escapismo
+		[new("Hortus_de_Escapismo/Rerun#Convivia_Cenarum_Localia", "Hortus de Escapismo Rerun", "Holy_Statue_Fragment")] = new("""
+		// Hortus de Escapismo Rerun
 		200		Insider's Token
 		240		Insider's Token
 		280		Insider's Token
 		320		Insider's Token
 		360		Insider's Token
 		150	3	Headhunting Permit
-		75	2	Module Data Block
-		100	5	Crystalline Electronic Unit
-		25	10	Orirock Concentration
-		35	10	Manganese Trihydrate
-		35	10	RMA70-24
-		40		'Cultivating Hope'
-		40		'Record of Suffering'
-		40		'Audible Redemption'
-		40		'Purge of Flaws'
+		100		Crystalline Electronic Unit
+		50	3	Optimized Device
+		40	3	Crystalline Circuit
+		35	3	Keton Colloid
+		150		'Cultivating Hope'
+		100		'Record of Suffering'
+		80		'Audible Redemption'
+		5		'Purge of Flaws'
 		60		'Witness of Friendship'
-		15	10	Data Supplement Instrument
-		5	60	Data Supplement Stick
-		8	15	Sugar Pack
-		8	10	Loxic Kohl
-		7	100	LMD
-		5	25	Strategic Battle Record
-		3	50	Tactical Battle Record
-		1	120	Frontline Battle Record
-		4	25	Skill Summary - 3
-		2	50	Skill Summary - 2
-		2	25	Orirock Cube
-		3	25	Oriron
-		3	25	Polyketon
+		15	5	RMA70-12
+		7	5	Orirock Cluster
+		7	20	LMD
+		5	5	Strategic Battle Record
+		3	10	Tactical Battle Record
+		1	20	Frontline Battle Record
+		4	10	Skill Summary - 3
+		2	20	Skill Summary - 2
+		3	8	Polyester
+		3	8	Polyketon
+		2	8	Orirock Cube
 		6	5	Sniper Chip
-		2	200	Furniture Part
 		"""),
 
 		[new("Operation_Lucent_Arrowhead#Galería_Boutique", "Operation Lucent Arrowhead", "Galería_Stamp_Card")] = new("""
