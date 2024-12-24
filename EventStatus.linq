@@ -49,25 +49,25 @@ void Main()
 			360		Insider's Token
 			150	3	Headhunting Permit
 			100		Crystalline Electronic Unit
-			50	3	Optimized Device
-			40	3	Crystalline Circuit
 			35	3	Keton Colloid
+			40	3	Crystalline Circuit
+			50	3	Optimized Device
 			150		'Cultivating Hope'
 			100		'Record of Suffering'
 			80		'Audible Redemption'
-			5		'Purge of Flaws'
-			60		'Witness of Friendship'
-			15	5	RMA70-12
+			60		'Purge of Flaws'
+			40		'Witness of Friendship'
 			7	5	Orirock Cluster
+			15	5	RMA70-12
 			7	20	LMD
 			5	5	Strategic Battle Record
 			3	10	Tactical Battle Record
 			1	20	Frontline Battle Record
 			4	10	Skill Summary - 3
 			2	20	Skill Summary - 2
+			2	8	Orirock Cube
 			3	8	Polyester
 			3	8	Polyketon
-			2	8	Orirock Cube
 			6	5	Sniper Chip
 			""")
 		}
@@ -600,25 +600,25 @@ static class EventData
 		360		Insider's Token
 		150	3	Headhunting Permit
 		100		Crystalline Electronic Unit
-		50	3	Optimized Device
-		40	3	Crystalline Circuit
 		35	3	Keton Colloid
+		40	3	Crystalline Circuit
+		50	3	Optimized Device
 		150		'Cultivating Hope'
 		100		'Record of Suffering'
 		80		'Audible Redemption'
-		5		'Purge of Flaws'
-		60		'Witness of Friendship'
-		15	5	RMA70-12
+		60		'Purge of Flaws'
+		40		'Witness of Friendship'
 		7	5	Orirock Cluster
+		15	5	RMA70-12
 		7	20	LMD
 		5	5	Strategic Battle Record
 		3	10	Tactical Battle Record
 		1	20	Frontline Battle Record
 		4	10	Skill Summary - 3
 		2	20	Skill Summary - 2
+		2	8	Orirock Cube
 		3	8	Polyester
 		3	8	Polyketon
-		2	8	Orirock Cube
 		6	5	Sniper Chip
 		"""),
 
