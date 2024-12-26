@@ -33,42 +33,42 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now+1, Month.Jan, Day.OfMonth(3)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Jan, Day.OfMonth(13)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Hortus_de_Escapismo/Rerun#Convivia_Cenarum_Localia", "Hortus de Escapismo Rerun", "Holy_Statue_Fragment")] = new("""
-			// Hortus de Escapismo Rerun
-			200		Insider's Token
-			240		Insider's Token
-			280		Insider's Token
-			320		Insider's Token
-			360		Insider's Token
+			[new(@"So_Long,_Adele/Rerun#""White_Volcano""", "So Long, Adele Rerun", "Fluffy_Critter_Wool")] = new("""
+			// So Long, Adele Rerun
+			200		Bryophyta's Token
+			240		Bryophyta's Token
+			280		Bryophyta's Token
+			320		Bryophyta's Token
+			360		Bryophyta's Token
 			150	3	Headhunting Permit
-			100		Crystalline Electronic Unit
-			35	3	Keton Colloid
-			40	3	Crystalline Circuit
-			50	3	Optimized Device
-			150		'Cultivating Hope'
-			100		'Record of Suffering'
-			80		'Audible Redemption'
-			60		'Purge of Flaws'
-			40		'Witness of Friendship'
-			7	5	Orirock Cluster
-			15	5	RMA70-12
+			100		D32 Steel
+			30	3	White Horse Kohl
+			35	3	Manganese Trihydrate
+			30	3	Transmuted Salt Agglomerate
+			70		Mischievously Spliced Table
+			70		Stumpy Little Fridge
+			75		Yellowy Gauze Curtain
+			100		Toasty Shop Lamp
+			45	2	Dizzy Spinning Chair
+			12	5	Coagulating Gel
+			12	5	Transmuted Salt
 			7	20	LMD
 			5	5	Strategic Battle Record
 			3	10	Tactical Battle Record
 			1	20	Frontline Battle Record
 			4	10	Skill Summary - 3
 			2	20	Skill Summary - 2
-			2	8	Orirock Cube
+			3	8	Sugar
 			3	8	Polyester
 			3	8	Polyketon
-			6	5	Sniper Chip
+			6	5	Guard Chip
 			""")
 		}
 	};
@@ -293,7 +293,7 @@ abstract class TimePart<T> where T : TimePart<T>
 
 class Year : TimePart<Year>
 {
-	public const int Now = 2024;
+	public const int Now = 2025;
 
 	private Year(int year)
 		: base(nameof(Year), year, Now, Now+1)
@@ -591,37 +591,6 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("Hortus_de_Escapismo/Rerun#Convivia_Cenarum_Localia", "Hortus de Escapismo Rerun", "Holy_Statue_Fragment")] = new("""
-		// Hortus de Escapismo Rerun
-		200		Insider's Token
-		240		Insider's Token
-		280		Insider's Token
-		320		Insider's Token
-		360		Insider's Token
-		150	3	Headhunting Permit
-		100		Crystalline Electronic Unit
-		35	3	Keton Colloid
-		40	3	Crystalline Circuit
-		50	3	Optimized Device
-		150		'Cultivating Hope'
-		100		'Record of Suffering'
-		80		'Audible Redemption'
-		60		'Purge of Flaws'
-		40		'Witness of Friendship'
-		7	5	Orirock Cluster
-		15	5	RMA70-12
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		2	8	Orirock Cube
-		3	8	Polyester
-		3	8	Polyketon
-		6	5	Sniper Chip
-		"""),
-
 		[new("Operation_Lucent_Arrowhead#Galería_Boutique", "Operation Lucent Arrowhead", "Galería_Stamp_Card")] = new("""
 		// Operation Lucent Arrowhead
 		200		Fuze's Token
@@ -699,45 +668,35 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new(@"So_Long,_Adele#""White_Volcano""", "So Long, Adele", "Fluffy_Critter_Wool")] = new("""
-		// So Long, Adele
+		[new(@"So_Long,_Adele/Rerun#""White_Volcano""", "So Long, Adele Rerun", "Fluffy_Critter_Wool")] = new("""
+		// So Long, Adele Rerun
 		200		Bryophyta's Token
 		240		Bryophyta's Token
 		280		Bryophyta's Token
 		320		Bryophyta's Token
 		360		Bryophyta's Token
 		150	3	Headhunting Permit
-		75	3	Module Data Block
-		100	5	Bipolar Nanoflake
-		25	10	Orirock Concentration
-		30	10	Transmuted Salt Agglomerate
-		35	10	Manganese Trihydrate
-		40	10	Crystalline Circuit
+		100		D32 Steel
+		30	3	White Horse Kohl
+		35	3	Manganese Trihydrate
+		30	3	Transmuted Salt Agglomerate
 		70		Mischievously Spliced Table
 		70		Stumpy Little Fridge
 		75		Yellowy Gauze Curtain
 		100		Toasty Shop Lamp
 		45	2	Dizzy Spinning Chair
-		15	10	Data Supplement Instrument
-		5	60	Data Supplement Stick
-		8	15	Polyester Pack
-		12	15	Coagulating Gel
-		12	15	Compound Cutting Fluid
-		12	15	Transmuted Salt
-		7	120	LMD
-		5	30	Strategic Battle Record
-		3	50	Tactical Battle Record
-		1	150	Frontline Battle Record
-		4	25	Skill Summary - 3
-		2	50	Skill Summary - 2
-		2	40	Orirock Cube
-		3	30	Sugar
-		3	30	Polyester
-		3	25	Oriron
-		3	25	Polyketon
-		4	20	Device
+		12	5	Coagulating Gel
+		12	5	Transmuted Salt
+		7	20	LMD
+		5	5	Strategic Battle Record
+		3	10	Tactical Battle Record
+		1	20	Frontline Battle Record
+		4	10	Skill Summary - 3
+		2	20	Skill Summary - 2
+		3	8	Sugar
+		3	8	Polyester
+		3	8	Polyketon
 		6	5	Guard Chip
-		2	200	Furniture Part
 		"""),
 
 		[new("The_Rides_to_Lake_Silberneherze#Onboard_Services", "The Rides to Lake Silberneherze", "Burdenbeast_Blind_Box")] = new("""

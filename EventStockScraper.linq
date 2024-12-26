@@ -11,7 +11,7 @@
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-Hortus de Escapismo Rerun
+So Long, Adele Rerun
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")
