@@ -52,12 +52,12 @@ jobs:
         if: ${{success() || failure()}}
         run: ${{env.LPRun}} EventStatus.linq
 
-      - name: Execute EventStockParser.linq
+      - name: Execute EventStockScraper.linq
         if: ${{success() || failure()}}
         run: |
           ${{env.PSHeader}}
           ${{env.PSClearClipboard}}
-          ${{env.LPRun}} EventStockParser.linq
+          ${{env.LPRun}} EventStockScraper.linq
           ${{env.PSAssertClipboardEventStock}}
 
       - name: Compile Hourglass.linq
@@ -72,12 +72,12 @@ jobs:
         if: ${{success() || failure()}}
         run: ${{env.LPRun}} OperatorModules.linq
 
-      - name: Execute OperatorModulesParser.linq
+      - name: Execute OperatorModulesScraper.linq
         if: ${{success() || failure()}}
         run: |
           ${{env.PSHeader}}
           ${{env.PSClearClipboard}}
-          ${{env.LPRun}} OperatorModulesParser.linq
+          ${{env.LPRun}} OperatorModulesScraper.linq
           ${{env.PSAssertClipboard}}
           ${{env.PSAssertModules}}
 

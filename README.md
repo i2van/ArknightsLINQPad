@@ -15,11 +15,11 @@ Collection of the [Arknights](https://arknights.wiki.gg) [LINQPad 8](https://www
 * [How to use](#how-to-use)
 * [Scripts](#scripts)
   * [Ongoing Arknights Global event status tracker](#eventstatuslinq) [`EventStatus.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/EventStatus.linq)
-  * [Arknights event stock parser](#eventstockparserlinq) [`EventStockParser.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/EventStockParser.linq)
+  * [Arknights event stock scraper](#eventstockscraperlinq) [`EventStockScraper.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/EventStockScraper.linq)
   * [Launch Arknights countdown timers using Hourglass](#hourglasslinq) [`Hourglass.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/Hourglass.linq)
   * [Arknights operation's strategies](#operationstrategieslinq) [`OperationStrategies.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/OperationStrategies.linq)
   * [Arknights operators's modules missions](#operatormoduleslinq) [`OperatorModules.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/OperatorModules.linq)
-  * [Arknights operators's modules parser](#operatormodulesparserlinq) [`OperatorModulesParser.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/OperatorModulesParser.linq)
+  * [Arknights operators's modules scraper](#operatormodulesscraperlinq) [`OperatorModulesScraper.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/OperatorModulesScraper.linq)
   * [Arknights packs store Originite Prime price calculator](#originiteprimepackslinq) [`OriginitePrimePacks.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/OriginitePrimePacks.linq)
 
 ## Requirements
@@ -41,9 +41,9 @@ Ongoing [Arknights](https://arknights.wiki.gg) [Global](https://arknights.wiki.g
 
 ![EventStatus.linq](img/EventStatus.png)
 
-### [`EventStockParser.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/EventStockParser.linq)
+### [`EventStockScraper.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/EventStockScraper.linq)
 
-[Arknights](https://arknights.wiki.gg) [event](https://arknights.wiki.gg/wiki/Event) stock parser.
+[Arknights](https://arknights.wiki.gg) [event](https://arknights.wiki.gg/wiki/Event) stock scraper.
 
 ```csharp
 [new("To_the_Grinning_Valley#Sandbeast's_Cave", "To the Grinning Valley", "Spicy_Bottletree_Sap")] = new("""
@@ -92,9 +92,9 @@ Launch [Arknights](https://arknights.wiki.gg) countdown timers using the [Hourgl
 
 ![OperatorModules.linq](img/OperatorModules.png)
 
-### [`OperatorModulesParser.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/OperatorModulesParser.linq)
+### [`OperatorModulesScraper.linq`](https://github.com/i2van/ArknightsLINQPad/blob/main/OperatorModulesScraper.linq)
 
-[Arknights](https://arknights.wiki.gg) [operators](https://arknights.wiki.gg/wiki/Operator)'s [modules](https://arknights.wiki.gg/wiki/Operator_Module) parser.
+[Arknights](https://arknights.wiki.gg) [operators](https://arknights.wiki.gg/wiki/Operator)'s [modules](https://arknights.wiki.gg/wiki/Operator_Module) scraper.
 
 ```text
 Aak	Specialist	6	GEE-X	2-8	D32 Steel❂4｜Polymerized Gel❂7	Paradox

@@ -2,7 +2,7 @@
   <Namespace>System.Net.Http</Namespace>
 </Query>
 
-// Arknights operators modules parser.
+// Arknights operators modules scraper.
 
 #nullable enable
 

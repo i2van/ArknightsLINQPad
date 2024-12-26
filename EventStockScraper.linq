@@ -2,7 +2,7 @@
   <Namespace>System.Net.Http</Namespace>
 </Query>
 
-// Arknights event stock parser.
+// Arknights event stock scraper.
 
 #nullable enable
 
