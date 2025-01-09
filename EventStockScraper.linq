@@ -11,7 +11,7 @@
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-So Long, Adele Rerun
+Inudi Harek, Horakhet
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")
