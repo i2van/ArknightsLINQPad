@@ -33,42 +33,58 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Jan, Day.OfMonth(13)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Feb, Day.OfMonth(6)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new(@"So_Long,_Adele/Rerun#""White_Volcano""", "So Long, Adele Rerun", "Fluffy_Critter_Wool")] = new("""
-			// So Long, Adele Rerun
-			200		Bryophyta's Token
-			240		Bryophyta's Token
-			280		Bryophyta's Token
-			320		Bryophyta's Token
-			360		Bryophyta's Token
+			[new("Adventure_That_Cannot_Wait_for_the_Sun#Grand_Bazaar", "Adventure That Cannot Wait for the Sun", "Flowing_Glimmerdust")] = new("""
+			// Adventure That Cannot Wait for the Sun
+			200		Papyrus's Token
+			240		Papyrus's Token
+			280		Papyrus's Token
+			320		Papyrus's Token
+			360		Papyrus's Token
+			30		Tuye's Token
+			40		Tuye's Token
+			50		Tuye's Token
+			60		Tuye's Token
+			70		Tuye's Token
+			500		Bitter Herbs
 			150	3	Headhunting Permit
-			100		D32 Steel
-			30	3	White Horse Kohl
-			35	3	Manganese Trihydrate
-			30	3	Transmuted Salt Agglomerate
-			70		Mischievously Spliced Table
-			70		Stumpy Little Fridge
-			75		Yellowy Gauze Curtain
-			100		Toasty Shop Lamp
-			45	2	Dizzy Spinning Chair
-			12	5	Coagulating Gel
-			12	5	Transmuted Salt
-			7	20	LMD
-			5	5	Strategic Battle Record
-			3	10	Tactical Battle Record
-			1	20	Frontline Battle Record
-			4	10	Skill Summary - 3
-			2	20	Skill Summary - 2
-			3	8	Sugar
-			3	8	Polyester
-			3	8	Polyketon
-			6	5	Guard Chip
+			75	3	Module Data Block
+			100	5	Crystalline Electronic Unit
+			25	10	Orirock Concentration
+			30	10	Polymerized Gel
+			35	10	Refined Solvent
+			35	10	Grindstone Pentahydrate
+			60		Carved Wood Decoration
+			60		'Go No Further'
+			80		Lunar Desk
+			80		Historical Stone Vase
+			110		Wall of Life
+			15	10	Data Supplement Instrument
+			5	60	Data Supplement Stick
+			8	15	Sugar Pack
+			10	15	Aketon
+			10	15	Manganese Ore
+			12	15	Compound Cutting Fluid
+			7	120	LMD
+			5	30	Strategic Battle Record
+			3	50	Tactical Battle Record
+			1	150	Frontline Battle Record
+			4	25	Skill Summary - 3
+			2	50	Skill Summary - 2
+			2	40	Orirock Cube
+			3	30	Sugar
+			3	30	Polyester
+			3	25	Oriron
+			3	25	Polyketon
+			4	20	Device
+			6	5	Medic Chip
+			2	200	Furniture Part
 			""")
 		}
 	};
@@ -468,9 +484,59 @@ static class EventData
 {
 	public static readonly ReadOnlyDictionary<WikiHyperlinq, Items> Value = new(new Dictionary<WikiHyperlinq, Items>
 	{
-		// One or two whitespace/tab(s) separated number(s) per line in any order: Price and/or Count and optional item name.
-		// EventStockParser.linq script parses event stock.
-		// Key is (EventURI#EventStock, EventName, EventCurrency)
+		/*
+			One or two whitespace/tab(s) separated number(s) per line in any order: Price and/or Count and optional item name.
+			EventStockParser.linq script parses event stock.
+			Key is (EventURI#EventStock, EventName, EventCurrency)
+		*/
+
+		[new("Adventure_That_Cannot_Wait_for_the_Sun#Grand_Bazaar", "Adventure That Cannot Wait for the Sun", "Flowing_Glimmerdust")] = new("""
+		// Adventure That Cannot Wait for the Sun
+		200		Papyrus's Token
+		240		Papyrus's Token
+		280		Papyrus's Token
+		320		Papyrus's Token
+		360		Papyrus's Token
+		30		Tuye's Token
+		40		Tuye's Token
+		50		Tuye's Token
+		60		Tuye's Token
+		70		Tuye's Token
+		500		Bitter Herbs
+		150	3	Headhunting Permit
+		75	3	Module Data Block
+		100	5	Crystalline Electronic Unit
+		25	10	Orirock Concentration
+		30	10	Polymerized Gel
+		35	10	Refined Solvent
+		35	10	Grindstone Pentahydrate
+		60		Carved Wood Decoration
+		60		'Go No Further'
+		80		Lunar Desk
+		80		Historical Stone Vase
+		110		Wall of Life
+		15	10	Data Supplement Instrument
+		5	60	Data Supplement Stick
+		8	15	Sugar Pack
+		10	15	Aketon
+		10	15	Manganese Ore
+		12	15	Compound Cutting Fluid
+		7	120	LMD
+		5	30	Strategic Battle Record
+		3	50	Tactical Battle Record
+		1	150	Frontline Battle Record
+		4	25	Skill Summary - 3
+		2	50	Skill Summary - 2
+		2	40	Orirock Cube
+		3	30	Sugar
+		3	30	Polyester
+		3	25	Oriron
+		3	25	Polyketon
+		4	20	Device
+		6	5	Medic Chip
+		2	200	Furniture Part
+		"""),
+
 		[new("Babel_(event)#Motorized_Logistical_Camp", "Babel", "Raw_Sugar_Lumps")] = new("""
 		// Babel
 		200		Odda's Token
@@ -666,37 +732,6 @@ static class EventData
 		4	25	Device
 		6	5	Guard Chip
 		2	200	Furniture Part
-		"""),
-
-		[new(@"So_Long,_Adele/Rerun#""White_Volcano""", "So Long, Adele Rerun", "Fluffy_Critter_Wool")] = new("""
-		// So Long, Adele Rerun
-		200		Bryophyta's Token
-		240		Bryophyta's Token
-		280		Bryophyta's Token
-		320		Bryophyta's Token
-		360		Bryophyta's Token
-		150	3	Headhunting Permit
-		100		D32 Steel
-		30	3	White Horse Kohl
-		35	3	Manganese Trihydrate
-		30	3	Transmuted Salt Agglomerate
-		70		Mischievously Spliced Table
-		70		Stumpy Little Fridge
-		75		Yellowy Gauze Curtain
-		100		Toasty Shop Lamp
-		45	2	Dizzy Spinning Chair
-		12	5	Coagulating Gel
-		12	5	Transmuted Salt
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		3	8	Sugar
-		3	8	Polyester
-		3	8	Polyketon
-		6	5	Guard Chip
 		"""),
 
 		[new("The_Rides_to_Lake_Silberneherze#Onboard_Services", "The Rides to Lake Silberneherze", "Burdenbeast_Blind_Box")] = new("""

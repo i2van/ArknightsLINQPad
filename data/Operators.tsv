@@ -41,12 +41,12 @@ Blue Poison	Sniper	5	MAR-Y	3-4	Manganese Trihydrate❂8｜Integrated Device❂8	
 Bobbing	Supporter	5	RIT-X	4-8	Cutting Fluid Solution❂7｜Semi-Synthetic Solvent❂13
 Breeze	Medic	5	RIN-X	4-1	Optimized Device❂5｜Loxic Kohl❂18	Paradox
 Broca	Guard	5	CEN-X	7-8	Sugar Lump❂7｜Grindstone❂13	Paradox
-Bryophyta	Guard	5	INS-X	9-3	Refined Solvent❂7｜Aketon❂15
+Bryophyta	Guard	5	INS-X	9-3	Refined Solvent❂7｜Aketon❂15	Paradox
 Bubble	Defender	4	PRO-X	4-6	Coagulating Gel❂16｜Loxic Kohl❂8	Paradox
 Carnelian	Caster	6	PLX-X	7-3	D32 Steel❂4｜RMA70-24❂7	Paradox
 Carnelian	Caster	6	PLX-Y	4-6	D32 Steel❂4｜RMA70-24❂7	Paradox
 Catherine	Supporter	5	CRA-X	11-7	Optimized Device❂6｜Sugar Pack❂13
-Cement	Defender	5	HES-X	IW-EX-6	Manganese Trihydrate❂7｜Grindstone❂13
+Cement	Defender	5	HES-X	IW-EX-6	Manganese Trihydrate❂7｜Grindstone❂13	Paradox
 Ceobe	Caster	6	CCR-X	RI-6	Bipolar Nanoflake❂4｜Incandescent Alloy Block❂5	Paradox
 Ceobe	Caster	6	CCR-Y	11-7	Bipolar Nanoflake❂4｜Incandescent Alloy Block❂5	Paradox
 Ceylon	Medic	5	WAH-X	OF-3	Oriron Block❂7｜Aketon❂10	Paradox
@@ -94,7 +94,7 @@ Executor the Ex Foedere	Guard	6	REA-X	7-14	Nucleic Crystal Sinter❂3｜Polymeri
 Exusiai	Sniper	6	MAR-X	4-10	Polymerization Preparation❂4｜Sugar Lump❂5	Paradox
 Exusiai	Sniper	6	MAR-Y	2-8	Polymerization Preparation❂4｜Sugar Lump❂5	Paradox
 Eyjafjalla	Caster	6	CCR-X	OF-5	Polymerization Preparation❂4｜Optimized Device❂5	Paradox
-Eyjafjalla the Hvít Aska	Medic	6	WDM-X	FC-5	Bipolar Nanoflake❂4｜Oriron Block❂5
+Eyjafjalla the Hvít Aska	Medic	6	WDM-X	FC-5	Bipolar Nanoflake❂4｜Oriron Block❂5	Paradox
 Fang the Fire-sharpened	Vanguard	5	CHG-X	4-2	Orirock Concentration❂6｜RMA70-12❂12
 Fartooth	Sniper	6	DEA-X	S2-2	D32 Steel❂4｜Cutting Fluid Solution❂7
 Fartooth	Sniper	6	DEA-Y	2-5	D32 Steel❂4｜Cutting Fluid Solution❂7
@@ -215,7 +215,7 @@ Mostima	Caster	6	SPC-Y	CB-5	Bipolar Nanoflake❂4｜Grindstone Pentahydrate❂7	
 Mountain	Guard	6	FGT-Y	MB-EX-3	Crystalline Electronic Unit❂4｜Polymerized Gel❂8	Paradox
 Mousse	Guard	4	AFT-X	2-2	Orirock Cluster❂20｜Grindstone❂8	Paradox
 Mr. Nothing	Specialist	5	MER-X	3-7	Optimized Device❂6｜Manganese Ore❂10	Paradox
-Mudrock	Defender	6	UNY-X	11-7	Crystalline Electronic Unit❂4｜Incandescent Alloy Block❂5
+Mudrock	Defender	6	UNY-X	11-7	Crystalline Electronic Unit❂4｜Incandescent Alloy Block❂5	Paradox
 Muelsyse	Vanguard	6	TAC-X	3-4	Bipolar Nanoflake❂4｜Grindstone Pentahydrate❂4	Paradox
 Mulberry	Medic	5	WDM-X	SV-5	Orirock Concentration❂9｜Semi-Synthetic Solvent❂12	Paradox
 Myrrh	Medic	4	PHY-X	6-11	Aketon❂14｜Polyester Pack❂12	Paradox

@@ -1,6 +1,4 @@
-<Query Kind="Statements">
-  <Namespace>System.Net.Http</Namespace>
-</Query>
+<Query Kind="Statements" />
 
 // Arknights event stock scraper.
 
@@ -11,7 +9,7 @@
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-So Long, Adele Rerun
+Adventure That Cannot Wait for the Sun
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")
