@@ -1,6 +1,4 @@
-<Query Kind="Statements">
-  <Namespace>System.Net.Http</Namespace>
-</Query>
+<Query Kind="Statements" />
 
 // Arknights operators modules scraper.
 
@@ -68,7 +66,7 @@ async Task<OperatorWithModules> GetOperator(string name)
 
 	const string Title = "|title =";
 
-	var wiki = await httpClient.GetStringAsync(url);
+	var wiki = await httpClient.GetStringAsync(url).RetryAsync();
 
 	var e2Materials = string.Join(OperatorData.MaterialSeparator, Regex.Matches(wiki, @"\|e2\s+m[2-9]\s*=\s*([^\r\n}]+)", RegexOptions.None, regexTimeout)
 		.Select(static match => match.Groups)

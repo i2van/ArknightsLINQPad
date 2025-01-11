@@ -1,4 +1,5 @@
 <Query Kind="Statements">
+  <NuGetReference>Polly</NuGetReference>
   <Namespace>LINQPad.Controls</Namespace>
   <Namespace>static LINQPad.Util</Namespace>
   <Namespace>static System.Environment</Namespace>
@@ -8,6 +9,9 @@
   <Namespace>System.Drawing</Namespace>
   <Namespace>System.Net.Http</Namespace>
   <Namespace>System.Runtime.CompilerServices</Namespace>
+  <Namespace>System.Threading.Tasks</Namespace>
+  <Namespace>Polly</Namespace>
+  <Namespace>Polly.Retry</Namespace>
 </Query>
 
 #nullable enable
@@ -199,4 +203,16 @@ static partial class HttpClientExtensions
 			return httpClientWithProxy;
 		}
 	}
+}
+
+static partial class PollyExtensions
+{
+	private static readonly Random Random = new Random();
+
+	private static readonly AsyncRetryPolicy RetryPolicy = Policy
+		.Handle<Exception>()
+		.WaitAndRetryAsync(6, static retryAttempt => TimeSpan.FromSeconds(20 * retryAttempt * Random.NextDouble()));
+
+	public static Task<T> RetryAsync<T>(this Task<T> result) =>
+		RetryPolicy.ExecuteAsync(() => result);
 }

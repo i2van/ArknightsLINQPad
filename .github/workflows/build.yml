@@ -19,6 +19,7 @@ env:
     if($(Get-Clipboard).Length -le (4 + 8)){ throw "Event stock parsing failed" }
   PSAssertModules: |
     if((Get-Content -Raw ./data/Operators.tsv).Split("`n", [StringSplitOptions]::RemoveEmptyEntries -bor [StringSplitOptions]::TrimEntries) -join "`n" -ne ($(Get-Clipboard) -join "`n")){ throw "Modules have been updated" }
+  RETENTION_DAYS: 30
 
 jobs:
   build:
@@ -84,3 +85,20 @@ jobs:
       - name: Execute OriginitePrimePacks.linq
         if: ${{success() || failure()}}
         run: ${{env.LPRun}} OriginitePrimePacks.linq
+
+      - name: Archive current event
+        run: |
+          ${{env.PSHeader}}
+          $eventName = $("Arknights-$((git show-branch --no-name HEAD).Trim() -replace ' event$','' -replace ' ','_')")
+          git checkout-index -a -f --prefix=./$eventName/
+          Remove-Item $eventName/.github -Force -Recurse
+          7z -tzip -mx=9 a $eventName $eventName/*
+
+      - name: Upload current event
+        uses: actions/upload-artifact@v4.4.3
+        with:
+          name: CurrentEvent
+          path: |
+            *.zip
+          compression-level: 0
+          retention-days: ${{env.RETENTION_DAYS}}
