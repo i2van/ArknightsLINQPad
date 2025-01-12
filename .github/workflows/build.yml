@@ -19,6 +19,8 @@ env:
     if($(Get-Clipboard).Length -le (4 + 8)){ throw "Event stock parsing failed" }
   PSAssertModules: |
     if((Get-Content -Raw ./data/Operators.tsv).Split("`n", [StringSplitOptions]::RemoveEmptyEntries -bor [StringSplitOptions]::TrimEntries) -join "`n" -ne ($(Get-Clipboard) -join "`n")){ throw "Modules have been updated" }
+  ARTIFACT_NAME: LatestCommit
+  RETENTION_DAYS: 30
 
 jobs:
   build:
@@ -84,3 +86,22 @@ jobs:
       - name: Execute OriginitePrimePacks.linq
         if: ${{success() || failure()}}
         run: ${{env.LPRun}} OriginitePrimePacks.linq
+
+      - name: Archive latest commit
+        run: |
+          ${{env.PSHeader}}
+          # Get latest commit message.
+          $message = "Arknights-$((git show-branch --no-name HEAD).Trim() -replace ' event$','' -replace ' ','_')"
+          # Export latest commit to the commit message dir.
+          git checkout-index -a -f --prefix=./$message/
+          # Archive latest commit message dir.
+          7z -tzip -mx=9 a $message $message/* '-xr!.github'
+
+      - name: Upload latest commit archive
+        uses: actions/upload-artifact@v4.4.3
+        with:
+          name: ${{env.ARTIFACT_NAME}}
+          path: |
+            *.zip
+          compression-level: 0
+          retention-days: ${{env.RETENTION_DAYS}}
