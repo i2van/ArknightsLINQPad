@@ -1,6 +1,4 @@
-<Query Kind="Statements">
-  <Namespace>System.Net.Http</Namespace>
-</Query>
+<Query Kind="Statements"/>
 
 // Arknights operators modules scraper.
 
