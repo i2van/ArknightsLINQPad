@@ -1,6 +1,6 @@
 ﻿name: build
 
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 
 env:
   LPRunUrl: https://www.linqpad.net/GetFile.aspx?preview+LINQPad8-Beta.zip
@@ -9,16 +9,25 @@ env:
   PSHeader: |
     $ErrorActionPreference = 'Stop'
     $Verbose = $VerbosePreference -ne 'SilentlyContinue'
+  DoWikiScrape: -compileonly
   PSClearClipboard: |
     '' | Set-Clipboard
   PSAssertClipboard: |
-    Get-Clipboard
-    if(-not $(Get-Clipboard -Raw).Trim()){ throw "Clipboard is empty" }
+    if(-not $env:DoWikiScrape){
+      Get-Clipboard
+      if(-not $(Get-Clipboard -Raw).Trim()){ throw "Clipboard is empty" }
+    }
   PSAssertClipboardEventStock: |
-    Get-Clipboard
-    if($(Get-Clipboard).Length -le (4 + 8)){ throw "Event stock parsing failed" }
+    if(-not $env:DoWikiScrape){
+      Get-Clipboard
+      if($(Get-Clipboard).Length -le (4 + 8)){ throw "Event stock parsing failed" }
+    }
   PSAssertModules: |
-    if((Get-Content -Raw ./data/Operators.tsv).Split("`n", [StringSplitOptions]::RemoveEmptyEntries -bor [StringSplitOptions]::TrimEntries) -join "`n" -ne ($(Get-Clipboard) -join "`n")){ throw "Modules have been updated" }
+    if(-not $env:DoWikiScrape){
+      if((Get-Content -Raw ./data/Operators.tsv).Split("`n", [StringSplitOptions]::RemoveEmptyEntries -bor [StringSplitOptions]::TrimEntries) -join "`n" -ne ($(Get-Clipboard) -join "`n")){
+        throw "Modules have been updated"
+      }
+    }
   ARTIFACT_NAME: LatestCommit
   RETENTION_DAYS: 30
 
@@ -31,7 +40,7 @@ jobs:
       # Set up
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v4.1.0
+        uses: actions/setup-dotnet@v4.2.0
         with:
           dotnet-version: |
             9.0.x
@@ -48,42 +57,42 @@ jobs:
       - name: Check out
         uses: actions/checkout@v4.2.2
 
-      # Execute LPRun scripts
+      # LPRun scripts
 
-      - name: Execute EventStatus.linq
+      - name: LPRun EventStatus.linq
         if: ${{success() || failure()}}
         run: ${{env.LPRun}} EventStatus.linq
 
-      - name: Execute EventStockScraper.linq
+      - name: LPRun EventStockScraper.linq
         if: ${{success() || failure()}}
         run: |
           ${{env.PSHeader}}
           ${{env.PSClearClipboard}}
-          ${{env.LPRun}} EventStockScraper.linq
+          ${{env.LPRun}} ${{env.DoWikiScrape}} EventStockScraper.linq
           ${{env.PSAssertClipboardEventStock}}
 
-      - name: Compile Hourglass.linq
+      - name: LPRun Hourglass.linq
         if: ${{success() || failure()}}
         run: ${{env.LPRun}} ${{env.CompileOnly}} Hourglass.linq
 
-      - name: Execute OperationStrategies.linq
+      - name: LPRun OperationStrategies.linq
         if: ${{success() || failure()}}
         run: ${{env.LPRun}} OperationStrategies.linq
 
-      - name: Execute OperatorModules.linq
+      - name: LPRun OperatorModules.linq
         if: ${{success() || failure()}}
         run: ${{env.LPRun}} OperatorModules.linq
 
-      - name: Execute OperatorModulesScraper.linq
+      - name: LPRun OperatorModulesScraper.linq
         if: ${{success() || failure()}}
         run: |
           ${{env.PSHeader}}
           ${{env.PSClearClipboard}}
-          ${{env.LPRun}} OperatorModulesScraper.linq
+          ${{env.LPRun}} ${{env.DoWikiScrape}} OperatorModulesScraper.linq
           ${{env.PSAssertClipboard}}
           ${{env.PSAssertModules}}
 
-      - name: Execute OriginitePrimePacks.linq
+      - name: LPRun OriginitePrimePacks.linq
         if: ${{success() || failure()}}
         run: ${{env.LPRun}} OriginitePrimePacks.linq
 
@@ -95,7 +104,7 @@ jobs:
           # Export latest commit to the commit message dir.
           git checkout-index -a -f --prefix=./$message/
           # Archive latest commit message dir.
-          7z -tzip -mx=9 a $message $message/* '-xr!.github'
+          7z a -tzip -mx=9 $message $message/* '-xr!.github'
 
       - name: Upload latest commit archive
         uses: actions/upload-artifact@v4.4.3
