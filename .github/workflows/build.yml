@@ -3,31 +3,9 @@
 on: [push, pull_request, workflow_dispatch]
 
 env:
-  LPRunUrl: https://www.linqpad.net/GetFile.aspx?preview+LINQPad8-Beta.zip
-  LPRun: LPRun8-x64.exe --% -fx=9.0
-  CompileOnly: -compileonly
-  PSHeader: |
-    $ErrorActionPreference = 'Stop'
-    $Verbose = $VerbosePreference -ne 'SilentlyContinue'
-  DoWikiScrape: -compileonly
-  PSClearClipboard: |
-    '' | Set-Clipboard
-  PSAssertClipboard: |
-    if(-not $env:DoWikiScrape){
-      Get-Clipboard
-      if(-not $(Get-Clipboard -Raw).Trim()){ throw "Clipboard is empty" }
-    }
-  PSAssertClipboardEventStock: |
-    if(-not $env:DoWikiScrape){
-      Get-Clipboard
-      if($(Get-Clipboard).Length -le (4 + 8)){ throw "Event stock parsing failed" }
-    }
-  PSAssertModules: |
-    if(-not $env:DoWikiScrape){
-      if((Get-Content -Raw ./data/Operators.tsv).Split("`n", [StringSplitOptions]::RemoveEmptyEntries -bor [StringSplitOptions]::TrimEntries) -join "`n" -ne ($(Get-Clipboard) -join "`n")){
-        throw "Modules have been updated"
-      }
-    }
+  LPRUN_URL: https://www.linqpad.net/GetFile.aspx?preview+LINQPad8-Beta.zip
+  LPRUN: LPRun8-x64.exe --% -fx=9.0
+  COMPILE_ONLY: -compileonly
   ARTIFACT_NAME: LatestCommit
   RETENTION_DAYS: 30
 
@@ -50,7 +28,7 @@ jobs:
       - name: Set up LPRun
         uses: Alex079/setup-custom-tool@v2.0.0
         with:
-          archiveUrl: ${{env.LPRunUrl}}
+          archiveUrl: ${{env.LPRUN_URL}}
 
       # Check out
 
@@ -61,44 +39,37 @@ jobs:
 
       - name: LPRun EventStatus.linq
         if: ${{success() || failure()}}
-        run: ${{env.LPRun}} EventStatus.linq
+        run: ${{env.LPRUN}} EventStatus.linq
 
       - name: LPRun EventStockScraper.linq
         if: ${{success() || failure()}}
-        run: |
-          ${{env.PSHeader}}
-          ${{env.PSClearClipboard}}
-          ${{env.LPRun}} ${{env.DoWikiScrape}} EventStockScraper.linq
-          ${{env.PSAssertClipboardEventStock}}
+        run: ${{env.LPRUN}} ${{env.COMPILE_ONLY}} EventStockScraper.linq
 
       - name: LPRun Hourglass.linq
         if: ${{success() || failure()}}
-        run: ${{env.LPRun}} ${{env.CompileOnly}} Hourglass.linq
+        run: ${{env.LPRUN}} ${{env.COMPILE_ONLY}} Hourglass.linq
 
       - name: LPRun OperationStrategies.linq
         if: ${{success() || failure()}}
-        run: ${{env.LPRun}} OperationStrategies.linq
+        run: ${{env.LPRUN}} OperationStrategies.linq
 
       - name: LPRun OperatorModules.linq
         if: ${{success() || failure()}}
-        run: ${{env.LPRun}} OperatorModules.linq
+        run: ${{env.LPRUN}} OperatorModules.linq
 
       - name: LPRun OperatorModulesScraper.linq
         if: ${{success() || failure()}}
-        run: |
-          ${{env.PSHeader}}
-          ${{env.PSClearClipboard}}
-          ${{env.LPRun}} ${{env.DoWikiScrape}} OperatorModulesScraper.linq
-          ${{env.PSAssertClipboard}}
-          ${{env.PSAssertModules}}
+        run: ${{env.LPRUN}} ${{env.COMPILE_ONLY}} OperatorModulesScraper.linq
 
       - name: LPRun OriginitePrimePacks.linq
         if: ${{success() || failure()}}
-        run: ${{env.LPRun}} OriginitePrimePacks.linq
+        run: ${{env.LPRUN}} OriginitePrimePacks.linq
 
       - name: Archive latest commit
+        if: ${{success() || failure()}}
         run: |
-          ${{env.PSHeader}}
+          $ErrorActionPreference = 'Stop'
+          $Verbose = $VerbosePreference -ne 'SilentlyContinue'
           # Get latest commit message.
           $message = "Arknights-$((git show-branch --no-name HEAD).Trim() -replace ' event$','' -replace ' ','_')"
           # Export latest commit to the commit message dir.

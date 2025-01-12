@@ -1,10 +1,11 @@
-<Query Kind="Statements"/>
+<Query Kind="Statements">
+  <Namespace>System.Threading.Tasks</Namespace>
+</Query>
 
 // Arknights operators modules scraper.
 
 #nullable enable
 
-#load "./lib/Clipboard.linq"
 #load "./lib/Extensions.linq"
 #load "./lib/Operators.linq"
 #load "./lib/Parsable.linq"
@@ -39,9 +40,10 @@ var operatorModules =
 	.Where(OperatorHasModules)
 	.Select(static op => op.ToString());
 
-await operatorModules.SetClipboard();
+var operatorsFile = Path.Combine(Path.GetDirectoryName(Util.CurrentQueryPath)!, "data", "Operators.tsv");
+File.WriteAllLines(operatorsFile, operatorModules);
 
-"Operator modules have been copied to clipboard.".Dump();
+$"Operator modules have been written to '{operatorsFile}'.".Dump();
 
 static bool OperatorHasModules(OperatorWithModules op)
 {
