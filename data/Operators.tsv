@@ -57,6 +57,7 @@ Chestnut	Medic	4	WDM-X	SV-3	Loxic Kohl❂20｜Incandescent Alloy❂8	Paradox
 Chiave	Vanguard	5	SOL-Y	1-1	Manganese Trihydrate❂7｜Grindstone❂13	Paradox
 Chilchuck	Vanguard	5	AGE-X	4-3	Refined Solvent❂9｜RMA70-12❂7
 Chongyue	Guard	6	FGT-X	WB-7	Polymerization Preparation❂4｜Incandescent Alloy❂5	Paradox
+Chongyue	Guard	6	FGT-Y	GA-5	Polymerization Preparation❂4｜Incandescent Alloy❂5	Paradox
 Civilight Eterna	Supporter	6	BAR-X	14-5	Polymerization Preparation❂4｜Manganese Trihydrate❂6
 Click	Caster	4	FUN-Y	11-7	Manganese Ore❂15｜Oriron Cluster❂9	Paradox
 Cliffheart	Specialist	5	HOK-X	MN-5	Oriron Block❂6｜Manganese Ore❂13	Paradox
@@ -184,6 +185,7 @@ Lessing	Guard	6	DRE-X	7-11	Crystalline Electronic Unit❂4｜Cyclicene Prefab❂
 Lessing	Guard	6	DRE-Y	TW-5	Crystalline Electronic Unit❂4｜Cyclicene Prefab❂5
 Leto	Guard	5	LOR-Y	4-3	Oriron Block❂7｜Incandescent Alloy❂10
 Lin	Caster	6	PLX-X	11-6	D32 Steel❂4｜Cutting Fluid Solution❂8
+Lin	Caster	6	PLX-Y	6-5	D32 Steel❂4｜Cutting Fluid Solution❂8
 Ling	Supporter	6	SUM-Y	3-4	D32 Steel❂4｜Crystalline Circuit❂5	Paradox
 Liskarm	Defender	5	SPT-X	4-6	Grindstone Pentahydrate❂7｜Aketon❂15	Paradox
 Logos	Caster	6	CCR-Δ	11-6	Nucleic Crystal Sinter❂4｜White Horse Kohl❂6
@@ -229,12 +231,14 @@ Nightingale	Medic	6	RIN-X	3-6	D32 Steel❂4｜Keton Colloid❂6	Paradox
 Nightingale	Medic	6	RIN-Y	TW-3	D32 Steel❂4｜Keton Colloid❂6	Paradox
 Nightmare	Caster	5	CCR-Y	S4-1	Sugar Lump❂7｜Manganese Ore❂14
 Nine-Colored Deer	Supporter	5	BLS-X	IW-3	Manganese Trihydrate❂7｜Crystalline Component❂14
+Odda	Guard	5	HAM-X	S3-6	Manganese Trihydrate❂7｜Fuscous Fiber❂13
 Pallas	Guard	6	INS-X	3-6	Crystalline Electronic Unit❂4｜White Horse Kohl❂6
 Pallas	Guard	6	INS-Y	4-3	Crystalline Electronic Unit❂4｜White Horse Kohl❂6
 Passenger	Caster	6	CHA-X	2-2	Bipolar Nanoflake❂4｜Oriron Block❂5
 Passenger	Caster	6	CHA-Y	5-10	Bipolar Nanoflake❂4｜Oriron Block❂5
 Penance	Defender	6	UNY-X	CB-4	D32 Steel❂4｜White Horse Kohl❂8	Paradox
 Penance	Defender	6	UNY-Y	IS-7	D32 Steel❂4｜White Horse Kohl❂8	Paradox
+Pepe	Guard	6	HAM-X	3-8	D32 Steel❂4｜Solidified Fiber Board❂5
 Perfumer	Medic	4	RIN-Y	3-4	Loxic Kohl❂19｜Aketon❂8	Paradox
 Phantom	Specialist	6	EXE-X	3-6	Polymerization Preparation❂4｜Polymerized Gel❂9	Paradox
 Phantom	Specialist	6	EXE-Y	DM-5	Polymerization Preparation❂4｜Polymerized Gel❂9	Paradox
@@ -347,5 +351,7 @@ Wild Mane	Vanguard	5	CHG-X	MN-2	Cutting Fluid Solution❂8｜Aketon❂11	Paradox
 Wind Chimes	Guard	5	CRU-X	2-1	Cutting Fluid Solution❂7｜Incandescent Alloy❂16	Paradox
 Windflit	Supporter	5	CRA-X	11-9	Keton Colloid❂7｜Grindstone❂11	Paradox
 Wiš'adel	Sniper	6	BOM-X	DM-5	Crystalline Electronic Unit❂3｜Optimized Device❂6
+Xingzhu	Supporter	5	BLS-X	3-2	Refined Solvent❂7｜Loxic Kohl❂20
 Zima	Vanguard	5	SOL-X	1-5	Sugar Lump❂7｜RMA70-12❂11	Paradox
 Zuo Le	Guard	6	SBL-X	WB-5	Polymerization Preparation❂4｜White Horse Kohl❂8
+Zuo Le	Guard	6	SBL-Y	RI-7	Polymerization Preparation❂4｜White Horse Kohl❂8
