@@ -30,6 +30,8 @@ const bool ForceDarkTheme = false;
 
 void Main()
 {
+	Util.HideEditor();
+
 	var config = new
 	{
 		// TODO: Use Hourglass executable placed next to this script.
