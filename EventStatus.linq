@@ -33,58 +33,34 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Feb, Day.OfMonth(6)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Feb, Day.OfMonth(14)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Adventure_That_Cannot_Wait_for_the_Sun#Grand_Bazaar", "Adventure That Cannot Wait for the Sun", "Flowing_Glimmerdust")] = new("""
-			// Adventure That Cannot Wait for the Sun
-			200		Papyrus's Token
-			240		Papyrus's Token
-			280		Papyrus's Token
-			320		Papyrus's Token
-			360		Papyrus's Token
-			30		Tuye's Token
-			40		Tuye's Token
-			50		Tuye's Token
-			60		Tuye's Token
-			70		Tuye's Token
-			500		Bitter Herbs
-			150	3	Headhunting Permit
-			75	3	Module Data Block
-			100	5	Crystalline Electronic Unit
-			25	10	Orirock Concentration
-			30	10	Polymerized Gel
-			35	10	Refined Solvent
-			35	10	Grindstone Pentahydrate
-			60		Carved Wood Decoration
-			60		'Go No Further'
-			80		Lunar Desk
-			80		Historical Stone Vase
-			110		Wall of Life
-			15	10	Data Supplement Instrument
-			5	60	Data Supplement Stick
-			8	15	Sugar Pack
-			10	15	Aketon
-			10	15	Manganese Ore
-			12	15	Compound Cutting Fluid
-			7	120	LMD
-			5	30	Strategic Battle Record
-			3	50	Tactical Battle Record
-			1	150	Frontline Battle Record
-			4	25	Skill Summary - 3
-			2	50	Skill Summary - 2
-			2	40	Orirock Cube
-			3	30	Sugar
-			3	30	Polyester
-			3	25	Oriron
-			3	25	Polyketon
-			4	20	Device
-			6	5	Medic Chip
-			2	200	Furniture Part
+			[new("A_Kazdelian_Rescue#Furnace_Node", "A Kazdelian Rescue", "Slag")] = new("""
+			// A Kazdelian Rescue
+			350		Holiday HD66
+			10	6	Information Fragment
+			100	2	Module Data Block
+			30	8	Data Supplement Instrument
+			10	40	Data Supplement Stick
+			200		Bipolar Nanoflake
+			65		Chip Catalyst
+			60	2	Grindstone Pentahydrate
+			20	4	Semi-Synthetic Solvent
+			15	4	Loxic Kohl
+			5	10	LMD
+			5	5	Strategic Battle Record
+			5	5	Tactical Battle Record
+			6	5	Skill Summary - 3
+			6	5	Skill Summary - 2
+			4	5	Pure Gold
+			6	5	Oriron
+			30	5	Recruitment Permit
+			4	10	Furniture Part
 			""")
 		}
 	};
@@ -489,6 +465,29 @@ static class EventData
 			EventStockParser.linq script parses event stock.
 			Key is (EventURI#EventStock, EventName, EventCurrency)
 		*/
+
+		[new("A_Kazdelian_Rescue#Furnace_Node", "A Kazdelian Rescue", "Slag")] = new("""
+		// A Kazdelian Rescue
+		350		Holiday HD66
+		10	6	Information Fragment
+		100	2	Module Data Block
+		30	8	Data Supplement Instrument
+		10	40	Data Supplement Stick
+		200		Bipolar Nanoflake
+		65		Chip Catalyst
+		60	2	Grindstone Pentahydrate
+		20	4	Semi-Synthetic Solvent
+		15	4	Loxic Kohl
+		5	10	LMD
+		5	5	Strategic Battle Record
+		5	5	Tactical Battle Record
+		6	5	Skill Summary - 3
+		6	5	Skill Summary - 2
+		4	5	Pure Gold
+		6	5	Oriron
+		30	5	Recruitment Permit
+		4	10	Furniture Part
+		"""),
 
 		[new("Adventure_That_Cannot_Wait_for_the_Sun#Grand_Bazaar", "Adventure That Cannot Wait for the Sun", "Flowing_Glimmerdust")] = new("""
 		// Adventure That Cannot Wait for the Sun
