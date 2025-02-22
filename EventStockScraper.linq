@@ -9,7 +9,7 @@
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-A Kazdelian Rescue
+Come Catastrophes or Wakes of Vultures Rerun
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")

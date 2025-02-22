@@ -33,34 +33,42 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Feb, Day.OfMonth(14)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Mar, Day.OfMonth(10)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("A_Kazdelian_Rescue#Furnace_Node", "A Kazdelian Rescue", "Slag")] = new("""
-			// A Kazdelian Rescue
-			350		Holiday HD66
-			10	6	Information Fragment
-			100	2	Module Data Block
-			30	8	Data Supplement Instrument
-			10	40	Data Supplement Stick
-			200		Bipolar Nanoflake
-			65		Chip Catalyst
-			60	2	Grindstone Pentahydrate
-			20	4	Semi-Synthetic Solvent
-			15	4	Loxic Kohl
-			5	10	LMD
+			[new("Come_Catastrophes_or_Wakes_of_Vultures/Rerun#Shack_by_the_Tower", "Come Catastrophes or Wakes of Vultures Rerun", "Shoddy_Fuel")] = new("""
+			// Come Catastrophes or Wakes of Vultures Rerun
+			200		Coldshot's Token
+			240		Coldshot's Token
+			280		Coldshot's Token
+			320		Coldshot's Token
+			360		Coldshot's Token
+			150	3	Headhunting Permit
+			100		Nucleic Crystal Sinter
+			50	3	Optimized Device
+			35	3	Grindstone Pentahydrate
+			45	3	Cyclicene Prefab
+			25		Reinforced Work Chair
+			25		Explosion-proof Fluorescent Lamp
+			30		Shock-proof Pillar
+			50		'Advance Patchwork'
+			50		Assembly Workbench
+			12	5	Grindstone
+			12	5	Fuscous Fiber
+			7	20	LMD
 			5	5	Strategic Battle Record
-			5	5	Tactical Battle Record
-			6	5	Skill Summary - 3
-			6	5	Skill Summary - 2
-			4	5	Pure Gold
-			6	5	Oriron
-			30	5	Recruitment Permit
-			4	10	Furniture Part
+			3	10	Tactical Battle Record
+			1	20	Frontline Battle Record
+			4	10	Skill Summary - 3
+			2	20	Skill Summary - 2
+			3	8	Sugar
+			3	8	Polyester
+			3	8	Polyketon
+			6	5	Sniper Chip
 			""")
 		}
 	};
@@ -466,29 +474,6 @@ static class EventData
 			Key is (EventURI#EventStock, EventName, EventCurrency)
 		*/
 
-		[new("A_Kazdelian_Rescue#Furnace_Node", "A Kazdelian Rescue", "Slag")] = new("""
-		// A Kazdelian Rescue
-		350		Holiday HD66
-		10	6	Information Fragment
-		100	2	Module Data Block
-		30	8	Data Supplement Instrument
-		10	40	Data Supplement Stick
-		200		Bipolar Nanoflake
-		65		Chip Catalyst
-		60	2	Grindstone Pentahydrate
-		20	4	Semi-Synthetic Solvent
-		15	4	Loxic Kohl
-		5	10	LMD
-		5	5	Strategic Battle Record
-		5	5	Tactical Battle Record
-		6	5	Skill Summary - 3
-		6	5	Skill Summary - 2
-		4	5	Pure Gold
-		6	5	Oriron
-		30	5	Recruitment Permit
-		4	10	Furniture Part
-		"""),
-
 		[new("Adventure_That_Cannot_Wait_for_the_Sun#Grand_Bazaar", "Adventure That Cannot Wait for the Sun", "Flowing_Glimmerdust")] = new("""
 		// Adventure That Cannot Wait for the Sun
 		200		Papyrus's Token
@@ -578,40 +563,36 @@ static class EventData
 		6	5	Guard Chip
 		2	200	Furniture Part
 		"""),
-
-		[new("Come_Catastrophes_or_Wakes_of_Vultures#Shack_by_the_Tower", "Come Catastrophes or Wakes of Vultures", "Shoddy_Fuel")] = new("""
-		// Come Catastrophes or Wakes of Vultures
+		
+		[new("Come_Catastrophes_or_Wakes_of_Vultures/Rerun#Shack_by_the_Tower", "Come Catastrophes or Wakes of Vultures Rerun", "Shoddy_Fuel")] = new("""
+		// Come Catastrophes or Wakes of Vultures Rerun
 		200		Coldshot's Token
 		240		Coldshot's Token
 		280		Coldshot's Token
 		320		Coldshot's Token
 		360		Coldshot's Token
 		150	3	Headhunting Permit
-		75	2	Module Data Block
-		100	5	Bipolar Nanoflake
-		25	10	Orirock Concentration
-		40	10	Oriron Block
-		35	10	Grindstone Pentahydrate
+		100		Nucleic Crystal Sinter
+		50	3	Optimized Device
+		35	3	Grindstone Pentahydrate
+		45	3	Cyclicene Prefab
 		25		Reinforced Work Chair
 		25		Explosion-proof Fluorescent Lamp
 		30		Shock-proof Pillar
 		50		'Advance Patchwork'
 		50		Assembly Workbench
-		15	10	Data Supplement Instrument
-		5	60	Data Supplement Stick
-		8	15	Loxic Kohl
-		12	10	Semi-Synthetic Solvent
-		7	100	LMD
-		5	25	Strategic Battle Record
-		3	50	Tactical Battle Record
-		1	120	Frontline Battle Record
-		4	25	Skill Summary - 3
-		2	50	Skill Summary - 2
-		2	25	Orirock Cube
-		3	25	Oriron
-		4	25	Device
+		12	5	Grindstone
+		12	5	Fuscous Fiber
+		7	20	LMD
+		5	5	Strategic Battle Record
+		3	10	Tactical Battle Record
+		1	20	Frontline Battle Record
+		4	10	Skill Summary - 3
+		2	20	Skill Summary - 2
+		3	8	Sugar
+		3	8	Polyester
+		3	8	Polyketon
 		6	5	Sniper Chip
-		2	200	Furniture Part
 		"""),
 
 		[new("Here_A_People_Sows#Shennong_Market", "Here A People Sows", "Sky_Pole")] = new("""
