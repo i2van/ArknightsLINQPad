@@ -76,8 +76,8 @@ void Main()
 			new("Exchange", "23h59")
 		},
 
-		// TODO: Specify timer options: https://github.com/i2van/hourglass/blob/develop/Hourglass/Resources/Usage.txt
-		// Hourglass FAQ: https://github.com/i2van/hourglass/blob/develop/FAQ.md
+		// TODO: Specify timer options: https://github.com/i2van/hourglass/blob/main/Hourglass/Resources/Usage.txt
+		// Hourglass FAQ: https://github.com/i2van/hourglass/blob/main/FAQ.md
 		Options = string.Join(" ", SplitTrim("""
 			-n on
 			-a on
@@ -485,7 +485,7 @@ void Main()
 	}
 
 	Task NavigateHourglassBlobAsync(string uri) =>
-		NavigateLaunchAsync($"blob/develop/{uri}");
+		NavigateLaunchAsync($"blob/main/{uri}");
 
 	Task NavigateLaunchAsync(string uri) =>
 		NavigateHourglassAsync(launchTimersSplitButton, uri);
