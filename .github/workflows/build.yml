@@ -78,7 +78,7 @@ jobs:
           7z a -tzip -mx=9 $message $message/* '-xr!.github'
 
       - name: Upload latest commit archive
-        uses: actions/upload-artifact@v4.6.0
+        uses: actions/upload-artifact@v4.6.1
         with:
           name: ${{env.ARTIFACT_NAME}}
           path: |
