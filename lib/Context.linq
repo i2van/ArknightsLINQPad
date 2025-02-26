@@ -8,7 +8,7 @@
 
 static DumpContext Context = null!;
 
-class DumpContext
+sealed class DumpContext
 {
 	public static readonly CultureInfo CultureInfo = CultureInfo.InvariantCulture;
 

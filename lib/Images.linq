@@ -71,7 +71,7 @@ class ItemImage
 	}
 }
 
-class SkinImage : ItemImage
+sealed class SkinImage : ItemImage
 {
 	public SkinImage(string name, string pathUri, string fileName)
 		: base(name, pathUri, fileName, DumpContext.ImageHeight.Skin)
@@ -79,7 +79,7 @@ class SkinImage : ItemImage
 	}
 }
 
-class LazyImage
+sealed class LazyImage
 {
 	public static readonly LazyImage NotAvailable = new("https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg", DumpContext.ImageHeight.NotAvailable);
 
@@ -108,7 +108,7 @@ class LazyImage
 		Control;
 }
 
-class MaterialImages : Parsable<ItemImage>
+sealed class MaterialImages : Parsable<ItemImage>
 {
 	private const string PathUri  = nameof(PathUri);
 	private const string Name     = nameof(Name);
@@ -134,9 +134,9 @@ class MaterialImages : Parsable<ItemImage>
 	}
 }
 
-record ImageUriMap(string Name, string Map);
+sealed record ImageUriMap(string Name, string Map);
 
-class ImageUriMaps : Parsable<ImageUriMap>
+sealed class ImageUriMaps : Parsable<ImageUriMap>
 {
 	private const string Name = nameof(Name);
 	private const string Map  = nameof(Map);

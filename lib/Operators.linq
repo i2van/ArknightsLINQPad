@@ -5,12 +5,12 @@
 #load "./Extensions.linq"
 #load "./Parsable.linq"
 
-record Operator(string Name, string Class, int Stars, string Module, string Stage, string E2Materials, bool Paradox)
+sealed record Operator(string Name, string Class, int Stars, string Module, string Stage, string E2Materials, bool Paradox)
 {
 	public string Uri { get; } = Name.Replace(" (", "/").Replace(")", string.Empty);
 }
 
-class Operators : Parsable<Operator>
+sealed class Operators : Parsable<Operator>
 {
 	private const string Name        = nameof(Name);
 	private const string Class       = nameof(Class);
@@ -50,9 +50,9 @@ enum ModuleType
 	D
 }
 
-record OperatorModule(string Name, ModuleType ModuleType);
+sealed record OperatorModule(string Name, ModuleType ModuleType);
 
-class OperatorModules : Parsable<OperatorModule>
+sealed class OperatorModules : Parsable<OperatorModule>
 {
 	private const string Name   = nameof(Name);
 	private const string Module = nameof(Module);

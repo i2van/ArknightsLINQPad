@@ -5,7 +5,7 @@
 #load "./Context.linq"
 #load "./Extensions.linq"
 
-class WikiHyperlinq : Hyperlinq
+sealed class WikiHyperlinq : Hyperlinq
 {
 	private const string WikiUri = $"{DumpContext.Url.Wiki}/wiki/";
 

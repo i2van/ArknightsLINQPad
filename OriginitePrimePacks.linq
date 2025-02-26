@@ -57,14 +57,14 @@ static object ToDump(object input) =>
 	};
 
 
-record OriginitePrime(string Name, double Primes, double TotalPrice, bool Pack = false)
+sealed record OriginitePrime(string Name, double Primes, double TotalPrice, bool Pack = false)
 {
 	public double PrimePrice { get; } = TotalPrice / Primes;
 
 	public int ID { get; set; }
 }
 
-class Pack
+sealed class Pack
 {
 	// TODO: Specify your level max sanity.
 	private const double SanityPerPrime  = 135;
@@ -122,7 +122,7 @@ class Pack
 		new OriginitePrime(pack.Name, pack.TotalPrimes, pack.Price, true);
 }
 
-class WikiHyperlinq : Hyperlinq
+sealed class WikiHyperlinq : Hyperlinq
 {
 	public WikiHyperlinq(string uri, string? fragment = null, string? text = null)
 		: base($"https://arknights.wiki.gg/wiki/{uri.Replace(' ', '_')}{GetFragment(fragment)}", text ?? uri)

@@ -283,7 +283,7 @@ abstract class TimePart<T> where T : TimePart<T>
 		timePart._value;
 }
 
-class Year : TimePart<Year>
+sealed class Year : TimePart<Year>
 {
 	public const int Now = 2025;
 
@@ -296,7 +296,7 @@ class Year : TimePart<Year>
 		new(year);
 }
 
-class Month : TimePart<Month>
+sealed class Month : TimePart<Month>
 {
 	private const int First = 1;
 	private const int Last  = First+11;
@@ -320,7 +320,7 @@ class Month : TimePart<Month>
 	public static readonly Month Dec = new(Last);
 }
 
-class Day : TimePart<Day>
+sealed class Day : TimePart<Day>
 {
 	private Day(int day)
 		: base(nameof(Day), day, 1, 31)
@@ -331,7 +331,7 @@ class Day : TimePart<Day>
 		new(day);
 }
 
-class Hour : TimePart<Hour>
+sealed class Hour : TimePart<Hour>
 {
 	private Hour(int hour)
 		: base(nameof(Hour), hour, 0, 23)
@@ -342,7 +342,7 @@ class Hour : TimePart<Hour>
 		new(hour);
 }
 
-class Minute : TimePart<Minute>
+sealed class Minute : TimePart<Minute>
 {
 	private Minute(int minute)
 		: base(nameof(Minute), minute, 0, 59)
@@ -353,7 +353,7 @@ class Minute : TimePart<Minute>
 		new(minute);
 }
 
-record Sanity(string Uri, int Left, int Spent, int SanityPerPrime, IReadOnlyCollection<Color> Colors, string Title)
+sealed record Sanity(string Uri, int Left, int Spent, int SanityPerPrime, IReadOnlyCollection<Color> Colors, string Title)
 {
 	public int PercentLeft
 	{
@@ -378,12 +378,12 @@ record Sanity(string Uri, int Left, int Spent, int SanityPerPrime, IReadOnlyColl
 		Colors.Last().InterpolateTo(PercentLeft / 100, Colors.First());
 }
 
-record Item(int Price, int Count, string Name)
+sealed record Item(int Price, int Count, string Name)
 {
 	public int Total { get; } = Price * Count;
 }
 
-class Items : Parsable<Item>
+sealed class Items : Parsable<Item>
 {
 	private const string Price = nameof(Price);
 	private const string Count = nameof(Count);
@@ -429,7 +429,7 @@ struct Event
 	}
 }
 
-class SanityHyperlink : Hyperlink
+sealed class SanityHyperlink : Hyperlink
 {
 	public SanityHyperlink(Sanity sanity)
 		: base(sanity.Left.ToString(DumpContext.CultureInfo), sanity.Uri) =>
