@@ -40,35 +40,47 @@ void Main()
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Come_Catastrophes_or_Wakes_of_Vultures/Rerun#Shack_by_the_Tower", "Come Catastrophes or Wakes of Vultures Rerun", "Shoddy_Fuel")] = new("""
-			// Come Catastrophes or Wakes of Vultures Rerun
-			200		Coldshot's Token
-			240		Coldshot's Token
-			280		Coldshot's Token
-			320		Coldshot's Token
-			360		Coldshot's Token
+			[new("Babel_(event)#Motorized_Logistical_Camp", "Babel", "Raw_Sugar_Lumps")] = new("""
+			// Babel
+			200		Odda's Token
+			240		Odda's Token
+			280		Odda's Token
+			320		Odda's Token
+			360		Odda's Token
+			500		Newsgirl
 			150	3	Headhunting Permit
-			100		Nucleic Crystal Sinter
-			50	3	Optimized Device
-			35	3	Grindstone Pentahydrate
-			45	3	Cyclicene Prefab
-			25		Reinforced Work Chair
-			25		Explosion-proof Fluorescent Lamp
-			30		Shock-proof Pillar
-			50		'Advance Patchwork'
-			50		Assembly Workbench
-			12	5	Grindstone
-			12	5	Fuscous Fiber
-			7	20	LMD
-			5	5	Strategic Battle Record
-			3	10	Tactical Battle Record
-			1	20	Frontline Battle Record
-			4	10	Skill Summary - 3
-			2	20	Skill Summary - 2
-			3	8	Sugar
-			3	8	Polyester
-			3	8	Polyketon
-			6	5	Sniper Chip
+			75	3	Module Data Block
+			100	5	D32 Steel
+			35	10	Keton Colloid
+			35	10	RMA70-24
+			40	10	Crystalline Circuit
+			45	10	Cyclicene Prefab
+			60		Witchcraft Workbench
+			60		Welded Storage Box
+			80		Oddities Showcase
+			80		Load-bearing Pillar
+			90		Ice-Cold Patchwork Wallpaper
+			90		Never Even Flooring
+			15	10	Data Supplement Instrument
+			5	60	Data Supplement Stick
+			8	15	Sugar Pack
+			10	15	Manganese Ore
+			10	15	Incandescent Alloy
+			12	15	Transmuted Salt
+			7	120	LMD
+			5	30	Strategic Battle Record
+			3	50	Tactical Battle Record
+			1	150	Frontline Battle Record
+			4	25	Skill Summary - 3
+			2	50	Skill Summary - 2
+			2	40	Orirock Cube
+			3	30	Sugar
+			3	30	Polyester
+			3	25	Oriron
+			3	25	Polyketon
+			4	20	Device
+			6	5	Guard Chip
+			2	200	Furniture Part
 			""")
 		}
 	};
@@ -562,37 +574,6 @@ static class EventData
 		4	20	Device
 		6	5	Guard Chip
 		2	200	Furniture Part
-		"""),
-		
-		[new("Come_Catastrophes_or_Wakes_of_Vultures/Rerun#Shack_by_the_Tower", "Come Catastrophes or Wakes of Vultures Rerun", "Shoddy_Fuel")] = new("""
-		// Come Catastrophes or Wakes of Vultures Rerun
-		200		Coldshot's Token
-		240		Coldshot's Token
-		280		Coldshot's Token
-		320		Coldshot's Token
-		360		Coldshot's Token
-		150	3	Headhunting Permit
-		100		Nucleic Crystal Sinter
-		50	3	Optimized Device
-		35	3	Grindstone Pentahydrate
-		45	3	Cyclicene Prefab
-		25		Reinforced Work Chair
-		25		Explosion-proof Fluorescent Lamp
-		30		Shock-proof Pillar
-		50		'Advance Patchwork'
-		50		Assembly Workbench
-		12	5	Grindstone
-		12	5	Fuscous Fiber
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		3	8	Sugar
-		3	8	Polyester
-		3	8	Polyketon
-		6	5	Sniper Chip
 		"""),
 
 		[new("Here_A_People_Sows#Shennong_Market", "Here A People Sows", "Sky_Pole")] = new("""
