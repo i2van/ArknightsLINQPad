@@ -25,7 +25,7 @@
 const string TitleOption = "-t ";
 const string Hourglass   = nameof(Hourglass);
 
-// TODO: Force the dark theme. Press Shift+F5 and then F5 after changing.
+// TODO: Force the dark theme. Press Alt+Shift+X to apply.
 const bool ForceDarkTheme = false;
 
 void Main()
