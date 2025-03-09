@@ -100,6 +100,9 @@ static partial class HtmlExtensions
 	private const string H1ToA = $"{nameof(HtmlExtensions)}_{nameof(H1ToA)}";
 
 	static HtmlExtensions() =>
+		AddH1ToAScript();
+
+	private static void AddH1ToAScript() =>
 		HtmlHead.AddScript($$"""
 			function {{H1ToA}}(text, uri){
 				const elem = [].find.call(document.getElementsByTagName("h1"), elem => elem.innerHTML === text);
@@ -109,8 +112,24 @@ static partial class HtmlExtensions
 			}
 			""");
 
-	public static void AsHyperlink(this string text, string uri) =>
-		InvokeScript(false, H1ToA, text, uri);
+	public static void AsHyperlink(this string text, string uri)
+	{
+		var count = 3;
+
+		do
+		{
+			try
+			{
+				InvokeScript(false, H1ToA, text, uri);
+				return;
+			}
+			catch(JavaScriptException)
+			{
+				AddH1ToAScript();
+			}
+		}
+		while(--count > 0);
+	}
 }
 
 static partial class LINQExtensions
