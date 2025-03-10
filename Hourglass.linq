@@ -23,6 +23,11 @@
 //#define DUMP_CONFIG_AND_EXIT
 
 const string TitleOption = "-t ";
+const string LoopOption  = "-l ";
+const string On          = "on";
+const string Off         = "off";
+
+const string Any         = nameof(Any);
 const string Hourglass   = nameof(Hourglass);
 
 // TODO: Force the dark theme. Press Alt+Shift+X to apply.
@@ -42,7 +47,7 @@ void Main()
 		HourglassPath = @"",
 
 		// TODO: Specify timers.
-		Timers = SplitTrim("""
+		Timers = SplitTrim($"""
 			Dormitory 1
 			Dormitory 2
 			Dormitory 3
@@ -53,7 +58,7 @@ void Main()
 			Training
 			Dualchip
 			LMD
-			Any
+			{Any}
 		"""),
 
 		// TODO: Specify timer help URL.
@@ -78,16 +83,16 @@ void Main()
 
 		// TODO: Specify timer options: https://github.com/i2van/hourglass/blob/main/Hourglass/Resources/Usage.txt
 		// Hourglass FAQ: https://github.com/i2van/hourglass/blob/main/FAQ.md
-		Options = string.Join(" ", SplitTrim("""
-			-n on
-			-a on
-			-g on
-			-c on
-			-v on
+		Options = string.Join(" ", SplitTrim($"""
+			-n {On}
+			-a {On}
+			-g {On}
+			-c {On}
+			-v {On}
 			-w minimized
 			-i left+title
-			-mt on
-			-st on
+			-mt {On}
+			-st {On}
 		""")),
 
 		// TODO: Use timer prefix.
@@ -179,6 +184,13 @@ void Main()
 	}
 	.SetWidth(buttonWidth);
 
+	var loopCheckBox = new CheckBox
+	{
+		Content   = "Loop",
+		IsVisible = false,
+		Margin    = buttonHorizontalThickness
+	};
+
 	var autoClearCheckBox = new CheckBox
 	{
 		Content   = "Auto Clear Timers After Launch",
@@ -259,13 +271,19 @@ void Main()
 		LaunchTimers();
 	};
 
+	loopCheckBox.Click += delegate
+	{
+		Focus();
+	};
+
 	void LaunchTimers()
 	{
 		var args = timersTextBox.Text!.Trim();
+		var loopOption = $"{LoopOption}{(loopCheckBox.IsChecked == true ? On : Off)}";
 
 		var hourglassCommandLine = args.StartsWith(TitleOption)
-			?  $"{config.Options} {args}"
-			: $@"{config.Options} {TitleOption}""{(config.UseTimerPrefix ? config.TimerPrefix : string.Empty)}{((TabItem)tabControl.SelectedItem!).Header}"" {args}";
+			?  $"{config.Options} {loopOption} {args}"
+			: $@"{config.Options} {loopOption} {TitleOption}""{(config.UseTimerPrefix ? config.TimerPrefix : string.Empty)}{((TabItem)tabControl.SelectedItem!).Header}"" {args}";
 
 		if(RunHourglass(hourglassCommandLine) && autoClearCheckBox.IsChecked == true)
 		{
@@ -322,7 +340,11 @@ void Main()
 
 	tabControl.SelectionChanged += delegate
 	{
-		timersTextBox.Watermark = $"{GetSelectedItemHeader()} · {(
+		var selectedItemHeader = GetSelectedItemHeader();
+		loopCheckBox.IsChecked = false;
+		loopCheckBox.IsVisible = selectedItemHeader == Any;
+
+		timersTextBox.Watermark = $"{selectedItemHeader} · {(
 			config.Options.Contains("-mt on")
 				? @"Specify multiple timers separated by spaces and press Enter. Use double quotation marks for the timers containing spaces, e.g., ""10 Oct 2024"""
 				:  "Specify timer and press Enter"
@@ -366,7 +388,8 @@ void Main()
 			.AddChildren
 			(
 				launchTimersSplitButton,
-				clearTimersSplitButton
+				clearTimersSplitButton,
+				loopCheckBox
 			)
 		)
 	).Dump(Hourglass);
@@ -451,8 +474,11 @@ void Main()
 	string GetSelectedItemHeader() =>
 		(string)((TabItem)tabControl.SelectedItem!).Header!;
 
-	void Clear() =>
+	void Clear()
+	{
 		timersTextBox.Clear();
+		loopCheckBox.IsChecked = false;
+	}
 
 	void Focus()
 	{
