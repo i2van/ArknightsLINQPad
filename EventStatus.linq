@@ -33,47 +33,46 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Mar, Day.OfMonth(24)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Apr, Day.OfMonth(22)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Delicious_On_Terra#Rhodes_Island_Healthy_Market", "Delicious On Terra", "Daily_Recipe")] = new("""
-			// Delicious On Terra
-			200		Senshi's Token
-			240		Senshi's Token
-			280		Senshi's Token
-			320		Senshi's Token
-			360		Senshi's Token
+			[new("Ending_a_Grand_Overture#Office_of_Proposed_Resolutions", "Ending a Grand Overture", @"""Nay!""")] = new("""
+			// Ending a Grand Overture
+			200		Catherine's Token
+			240		Catherine's Token
+			280		Catherine's Token
+			320		Catherine's Token
+			360		Catherine's Token
+			500		Queen No. 1
 			150	3	Headhunting Permit
 			75	2	Module Data Block
-			100	5	Polymerization Preparation
-			35	10	Keton Colloid
-			35	10	RMA70-24
-			40	10	Crystalline Circuit
-			50		Little Cub Ice Cream Table
-			40		Shamare's Dessert Table
-			40		Stamina-Booster Cabinet
-			40		Scene's Spicy Food Cart
-			30		Eater's Chair
-			30	4	Mountain's Chair
-			30		Stealth Chair
+			100	5	Nucleic Crystal Sinter
+			35	10	Manganese Trihydrate
+			35	10	Incandescent Alloy Block
+			35	10	Refined Solvent
+			50		Engraved Briefcase
+			60		'The Future is Nigh'
+			80		Engraved Pushcart
+			90		Railway Platform Bench
+			90		Railway Platform Panoramic Display
 			15	10	Data Supplement Instrument
 			5	60	Data Supplement Stick
-			10	15	Oriron Cluster
-			15	10	Aggregate Cyclicene
+			10	15	Manganese Ore
+			10	10	Incandescent Alloy
 			7	100	LMD
 			5	25	Strategic Battle Record
 			3	50	Tactical Battle Record
 			1	120	Frontline Battle Record
 			4	25	Skill Summary - 3
 			2	50	Skill Summary - 2
-			3	25	Sugar
+			2	25	Orirock Cube
+			3	25	Polyester
 			3	25	Oriron
-			4	25	Device
-			6	5	Defender Chip
+			6	5	Supporter Chip
 			2	200	Furniture Part
 			""")
 		}
@@ -570,40 +569,39 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("Delicious_On_Terra#Rhodes_Island_Healthy_Market", "Delicious On Terra", "Daily_Recipe")] = new("""
-		// Delicious On Terra
-		200		Senshi's Token
-		240		Senshi's Token
-		280		Senshi's Token
-		320		Senshi's Token
-		360		Senshi's Token
+		[new("Ending_a_Grand_Overture#Office_of_Proposed_Resolutions", "Ending a Grand Overture", @"""Nay!""")] = new("""
+		// Ending a Grand Overture
+		200		Catherine's Token
+		240		Catherine's Token
+		280		Catherine's Token
+		320		Catherine's Token
+		360		Catherine's Token
+		500		Queen No. 1
 		150	3	Headhunting Permit
 		75	2	Module Data Block
-		100	5	Polymerization Preparation
-		35	10	Keton Colloid
-		35	10	RMA70-24
-		40	10	Crystalline Circuit
-		50		Little Cub Ice Cream Table
-		40		Shamare's Dessert Table
-		40		Stamina-Booster Cabinet
-		40		Scene's Spicy Food Cart
-		30		Eater's Chair
-		30	4	Mountain's Chair
-		30		Stealth Chair
+		100	5	Nucleic Crystal Sinter
+		35	10	Manganese Trihydrate
+		35	10	Incandescent Alloy Block
+		35	10	Refined Solvent
+		50		Engraved Briefcase
+		60		'The Future is Nigh'
+		80		Engraved Pushcart
+		90		Railway Platform Bench
+		90		Railway Platform Panoramic Display
 		15	10	Data Supplement Instrument
 		5	60	Data Supplement Stick
-		10	15	Oriron Cluster
-		15	10	Aggregate Cyclicene
+		10	15	Manganese Ore
+		10	10	Incandescent Alloy
 		7	100	LMD
 		5	25	Strategic Battle Record
 		3	50	Tactical Battle Record
 		1	120	Frontline Battle Record
 		4	25	Skill Summary - 3
 		2	50	Skill Summary - 2
-		3	25	Sugar
+		2	25	Orirock Cube
+		3	25	Polyester
 		3	25	Oriron
-		4	25	Device
-		6	5	Defender Chip
+		6	5	Supporter Chip
 		2	200	Furniture Part
 		"""),
 
