@@ -181,7 +181,7 @@ static partial class LINQPadExtensions
 
 static partial class HttpClientExtensions
 {
-	private const string UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36";
+	private const string UserAgent = "ArknightsLINQPad (contact: https://github.com/i2van/ArknightsLINQPad)";
 
 	public static HttpClient Configure(this HttpClient httpClient)
 	{
