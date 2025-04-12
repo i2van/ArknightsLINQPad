@@ -1,5 +1,5 @@
 Aak	Specialist	6	GEE-X	2-8	D32 Steel❂4｜Polymerized Gel❂7	Paradox
-Absinthe	Caster	5	CCR-X	3-4	Orirock Concentration❂10｜Incandescent Alloy❂10
+Absinthe	Caster	5	CCR-X	3-4	Orirock Concentration❂10｜Incandescent Alloy❂10	Paradox
 Aciddrop	Sniper	4	ARC-X	2-8	RMA70-12❂10｜Integrated Device❂8	Paradox
 Akafuyu	Guard	5	SBL-X	3-8	Polymerized Gel❂8｜Aketon❂15	Paradox
 Alanna	Supporter	5	CRA-X	7-14	Cutting Fluid Solution❂9｜Aggregate Cyclicene❂8
@@ -26,7 +26,7 @@ Aurora	Defender	5	HES-X	3-8	White Horse Kohl❂9｜Orirock Cluster❂19	Paradox
 Ayerscarpe	Guard	5	LOR-X	5-8	Oriron Block❂6｜Coagulating Gel❂12	Paradox
 Bagpipe	Vanguard	6	CHG-X	4-5	Polymerization Preparation❂4｜Orirock Concentration❂9	Paradox
 Bagpipe	Vanguard	6	CHG-Y	9-5	Polymerization Preparation❂4｜Orirock Concentration❂9	Paradox
-Bassline	Defender	5	GUA-Y	LE-4	Cyclicene Prefab❂7｜Manganese Ore❂15
+Bassline	Defender	5	GUA-Y	LE-4	Cyclicene Prefab❂7｜Manganese Ore❂15	Paradox
 Beanstalk	Vanguard	4	TAC-Y	S3-7	Coagulating Gel❂13｜Manganese Ore❂10	Paradox
 Beehunter	Guard	4	FGT-Y	7-4	Sugar Pack❂19｜RMA70-12❂7	Paradox
 Beeswax	Caster	5	PLX-X	DH-6	Optimized Device❂5｜Loxic Kohl❂18	Paradox
@@ -316,8 +316,8 @@ Specter	Guard	5	CEN-X	SN-EX-1	White Horse Kohl❂8｜Aketon❂15	Paradox
 Specter the Unchained	Specialist	6	PUM-X	SV-EX-1	Polymerization Preparation❂4｜Keton Colloid❂6	Paradox
 Specter the Unchained	Specialist	6	PUM-Y	S4-1	Polymerization Preparation❂4｜Keton Colloid❂6	Paradox
 Spuria	Specialist	5	GEE-X	DM-2	Crystalline Circuit❂7｜Compound Cutting Fluid❂9	Paradox
-Stainless	Supporter	6	CRA-X	11-6	Polymerization Preparation❂4｜Refined Solvent❂6
-Stainless	Supporter	6	CRA-Y	9-6	Polymerization Preparation❂4｜Refined Solvent❂6
+Stainless	Supporter	6	CRA-X	11-6	Polymerization Preparation❂4｜Refined Solvent❂6	Paradox
+Stainless	Supporter	6	CRA-Y	9-6	Polymerization Preparation❂4｜Refined Solvent❂6	Paradox
 Surfer	Vanguard	5	AGE-X	3-5	Oriron Block❂6｜Integrated Device❂11
 Surtr	Guard	6	AFT-X	3-8	Polymerization Preparation❂4｜Keton Colloid❂5
 Sussurro	Medic	4	PHY-X	4-7	RMA70-12❂10｜Loxic Kohl❂13	Paradox
