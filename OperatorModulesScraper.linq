@@ -29,7 +29,7 @@ var operatorModules =
 	(await Task.WhenAll(
 		wikiModules
 			.Split("|")
-			.Where( s => operators.Any(o => s.StartsWith(o)))
+			.Where( s => operators.Any(s.StartsWith))
 			.Select(s => operators.Aggregate(s, static (s, o) => s.Replace(o, string.Empty)).TrimStart().TrimStart('='))
 			.SelectMany(static s => s.Split(Comma, StringSplitOptions))
 			.Distinct()
@@ -38,7 +38,8 @@ var operatorModules =
 		)
 	)
 	.Where(OperatorHasModules)
-	.Select(static op => op.ToString());
+	.Select(static op => op.ToString())
+	.WhereNot(static s => s.Contains("\t\t"));
 
 var operatorsFile = Path.Combine(Path.GetDirectoryName(Util.CurrentQueryPath)!, "data", "Operators.tsv");
 File.WriteAllLines(operatorsFile, operatorModules);
