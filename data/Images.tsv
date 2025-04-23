@@ -1,4 +1,6 @@
+'A Window Away'	b/b1
 'Awards Ceremony'	8/89
+'Gang Meeting Spot'	1/14
 'Gladiia's Reflection'	b/bd	Gladiia's_Reflection_(furniture)
 'Go No Further'	5/52
 'Help Yourself'	a/a9
@@ -8,6 +10,7 @@
 'Prize for Excellence'	3/3b
 'Scenery of Knowledge'	8/8a
 'Skadi's Refreshment Point'	3/3c
+'Sword Holder'	1/1d
 'The Archives'	2/25
 'The Future is Nigh'	f/ff
 'Ulpianus's Curtain'	4/4f
@@ -23,6 +26,7 @@ Catherine's Token	1/1b
 Chip Catalyst	3/32
 Coagulating Gel	b/bd
 Compound Cutting Fluid	2/2c
+Crownslayer's Token	3/3c
 Crystalline Circuit	4/46
 Crystalline Component	2/20
 Crystalline Electronic Unit	d/d0
@@ -36,6 +40,8 @@ Defender Chip	2/24
 Device	a/a4
 Engraved Briefcase	0/0b
 Engraved Pushcart	3/33
+Erato	b/bb	Erato_icon
+Erato's Token	a/ab
 Frontline Battle Record	f/f7
 Furniture Part	0/0d
 Fuscous Fiber	d/d6
@@ -47,6 +53,7 @@ Galería Plant	4/42
 Grindstone	6/69
 Grindstone Pentahydrate	a/a5
 Guard Chip	6/63
+Handmade Leather Sofa	4/4d
 Harold's Token	8/8b
 Headhunting Permit	0/0b
 Historical Stone Vase	8/8a
@@ -73,6 +80,7 @@ Night Watcher	0/02	Hibiscus_Skin_1
 Nucleic Crystal Sinter	7/7e
 Odda's Token	3/33
 Oddities Showcase	c/c1
+Old Clothes Cabinet	0/05
 Optimized Device	f/fd
 Orirock Cluster	4/4d
 Orirock Concentration	d/d4
@@ -111,6 +119,8 @@ Sniper Chip	c/cd
 Solidified Fiber Board	e/e2
 Specialist Chip	e/e2
 Specialized Load-Bearing Floor	7/7a
+Species Plantarum	6/6d	Perfumer_Skin_1
+Spool Light	0/01
 Stable Surgical Gimbal	2/2d
 Strategic Battle Record	5/55
 Sugar	a/a9

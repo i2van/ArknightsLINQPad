@@ -9,7 +9,7 @@
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-Ending a Grand Overture
+I Portatori dei Velluti
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")

@@ -33,46 +33,59 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Apr, Day.OfMonth(22)),
+		EventEndDate   = new DateOnly(Year.Now, Month.May, Day.OfMonth(15)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Ending_a_Grand_Overture#Office_of_Proposed_Resolutions", "Ending a Grand Overture", @"""Nay!""")] = new("""
-			// Ending a Grand Overture
-			200		Catherine's Token
-			240		Catherine's Token
-			280		Catherine's Token
-			320		Catherine's Token
-			360		Catherine's Token
-			500		Queen No. 1
+			[new("I_Portatori_dei_Velluti#Fiera_delle_Meraviglie_Notturne", "I Portatori dei Velluti", "Invito_Mistico")] = new("""
+			// I Portatori dei Velluti
+			250		Crownslayer's Token
+			300		Crownslayer's Token
+			350		Crownslayer's Token
+			400		Crownslayer's Token
+			450		Crownslayer's Token
+			500		Erato
+			30		Erato's Token
+			40		Erato's Token
+			50		Erato's Token
+			60		Erato's Token
+			70		Erato's Token
+			500		Species Plantarum
 			150	3	Headhunting Permit
-			75	2	Module Data Block
-			100	5	Nucleic Crystal Sinter
-			35	10	Manganese Trihydrate
-			35	10	Incandescent Alloy Block
+			75	3	Module Data Block
+			100	5	Crystalline Electronic Unit
+			25	10	Orirock Concentration
+			40	10	Oriron Block
+			30	10	Polymerized Gel
 			35	10	Refined Solvent
-			50		Engraved Briefcase
-			60		'The Future is Nigh'
-			80		Engraved Pushcart
-			90		Railway Platform Bench
-			90		Railway Platform Panoramic Display
+			20	2	Spool Light
+			45		'Sword Holder'
+			80		'A Window Away'
+			100		'Gang Meeting Spot'
+			100		Handmade Leather Sofa
+			160		Old Clothes Cabinet
 			15	10	Data Supplement Instrument
 			5	60	Data Supplement Stick
-			10	15	Manganese Ore
-			10	10	Incandescent Alloy
-			7	100	LMD
-			5	25	Strategic Battle Record
+			7	15	Orirock Cluster
+			8	15	Polyester Pack
+			10	15	Aketon
+			10	15	Crystalline Component
+			7	120	LMD
+			5	30	Strategic Battle Record
 			3	50	Tactical Battle Record
-			1	120	Frontline Battle Record
+			1	150	Frontline Battle Record
 			4	25	Skill Summary - 3
 			2	50	Skill Summary - 2
-			2	25	Orirock Cube
-			3	25	Polyester
+			2	40	Orirock Cube
+			3	30	Sugar
+			3	30	Polyester
 			3	25	Oriron
-			6	5	Supporter Chip
+			3	25	Polyketon
+			4	20	Device
+			6	5	Specialist Chip
 			2	200	Furniture Part
 			""")
 		}
@@ -644,6 +657,55 @@ static class EventData
 		3	25	Polyketon
 		4	20	Device
 		6	5	Vanguard Chip
+		2	200	Furniture Part
+		"""),
+
+		[new("I_Portatori_dei_Velluti#Fiera_delle_Meraviglie_Notturne", "I Portatori dei Velluti", "Invito_Mistico")] = new("""
+		// I Portatori dei Velluti
+		250		Crownslayer's Token
+		300		Crownslayer's Token
+		350		Crownslayer's Token
+		400		Crownslayer's Token
+		450		Crownslayer's Token
+		500		Erato
+		30		Erato's Token
+		40		Erato's Token
+		50		Erato's Token
+		60		Erato's Token
+		70		Erato's Token
+		500		Species Plantarum
+		150	3	Headhunting Permit
+		75	3	Module Data Block
+		100	5	Crystalline Electronic Unit
+		25	10	Orirock Concentration
+		40	10	Oriron Block
+		30	10	Polymerized Gel
+		35	10	Refined Solvent
+		20	2	Spool Light
+		45		'Sword Holder'
+		80		'A Window Away'
+		100		'Gang Meeting Spot'
+		100		Handmade Leather Sofa
+		160		Old Clothes Cabinet
+		15	10	Data Supplement Instrument
+		5	60	Data Supplement Stick
+		7	15	Orirock Cluster
+		8	15	Polyester Pack
+		10	15	Aketon
+		10	15	Crystalline Component
+		7	120	LMD
+		5	30	Strategic Battle Record
+		3	50	Tactical Battle Record
+		1	150	Frontline Battle Record
+		4	25	Skill Summary - 3
+		2	50	Skill Summary - 2
+		2	40	Orirock Cube
+		3	30	Sugar
+		3	30	Polyester
+		3	25	Oriron
+		3	25	Polyketon
+		4	20	Device
+		6	5	Specialist Chip
 		2	200	Furniture Part
 		"""),
 
