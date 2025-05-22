@@ -9,7 +9,7 @@
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-I Portatori dei Velluti
+Zwillingstürme im Herbst Rerun
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")

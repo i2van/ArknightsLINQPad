@@ -33,60 +33,40 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.May, Day.OfMonth(15)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Jun, Day.OfMonth(1)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("I_Portatori_dei_Velluti#Fiera_delle_Meraviglie_Notturne", "I Portatori dei Velluti", "Invito_Mistico")] = new("""
-			// I Portatori dei Velluti
-			250		Crownslayer's Token
-			300		Crownslayer's Token
-			350		Crownslayer's Token
-			400		Crownslayer's Token
-			450		Crownslayer's Token
-			500		Erato
-			30		Erato's Token
-			40		Erato's Token
-			50		Erato's Token
-			60		Erato's Token
-			70		Erato's Token
-			500		Species Plantarum
+			[new("Zwillingstürme_im_Herbst/Rerun#Herbstmondeskonzert", "Zwillingstürme im Herbst Rerun", "Die_Klänge_von_den_Erinnerungen")] = new("""
+			// Zwillingstürme im Herbst Rerun
 			150	3	Headhunting Permit
-			75	3	Module Data Block
-			100	5	Crystalline Electronic Unit
-			25	10	Orirock Concentration
-			40	10	Oriron Block
-			30	10	Polymerized Gel
-			35	10	Refined Solvent
-			20	2	Spool Light
-			45		'Sword Holder'
-			80		'A Window Away'
-			100		'Gang Meeting Spot'
-			100		Handmade Leather Sofa
-			160		Old Clothes Cabinet
-			15	10	Data Supplement Instrument
-			5	60	Data Supplement Stick
-			7	15	Orirock Cluster
-			8	15	Polyester Pack
-			10	15	Aketon
-			10	15	Crystalline Component
-			7	120	LMD
-			5	30	Strategic Battle Record
-			3	50	Tactical Battle Record
-			1	150	Frontline Battle Record
-			4	25	Skill Summary - 3
-			2	50	Skill Summary - 2
-			2	40	Orirock Cube
-			3	30	Sugar
-			3	30	Polyester
-			3	25	Oriron
-			3	25	Polyketon
-			4	20	Device
-			6	5	Specialist Chip
-			2	200	Furniture Part
+			100		Crystalline Electronic Unit
+			100		Bipolar Nanoflake
+			40	3	Crystalline Circuit
+			40	3	Solidified Fiber Board
+			35	3	Incandescent Alloy Block
+			35	3	Manganese Trihydrate
+			30	3	Polymerized Gel
+			30	3	Transmuted Salt Agglomerate
+			110		Pipe Organ Literature Stand
+			90		Library Stairs
+			90		'Scenery of Knowledge'
+			90		Knowledge-Seeking Hall Flooring
+			10	5	Incandescent Alloy
+			12	5	Transmuted Salt
+			7	20	LMD
+			5	5	Strategic Battle Record
+			3	10	Tactical Battle Record
+			1	20	Frontline Battle Record
+			4	10	Skill Summary - 3
+			2	20	Skill Summary - 2
+			3	8	Sugar
+			3	8	Oriron
+			3	8	Polyketon
+			6	5	Guard Chip
 			""")
 		}
 	};
@@ -821,42 +801,33 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("Zwillingstürme_im_Herbst#Herbstmondeskonzert", "Zwillingstürme im Herbst", "Die_Klänge_von_den_Erinnerungen")] = new("""
-		// Zwillingstürme im Herbst
+		[new("Zwillingstürme_im_Herbst/Rerun#Herbstmondeskonzert", "Zwillingstürme im Herbst Rerun", "Die_Klänge_von_den_Erinnerungen")] = new("""
+		// Zwillingstürme im Herbst Rerun
 		150	3	Headhunting Permit
-		75	3	Module Data Block
-		100	5	Polymerization Preparation
-		100	5	Nucleic Crystal Sinter
-		25	10	Orirock Concentration
-		40	10	Oriron Block
-		35	10	Grindstone Pentahydrate
-		30	10	Polymerized Gel
-		35	10	Cutting Fluid Solution
-		30	10	Transmuted Salt Agglomerate
+		100		Crystalline Electronic Unit
+		100		Bipolar Nanoflake
+		40	3	Crystalline Circuit
+		40	3	Solidified Fiber Board
+		35	3	Incandescent Alloy Block
+		35	3	Manganese Trihydrate
+		30	3	Polymerized Gel
+		30	3	Transmuted Salt Agglomerate
 		110		Pipe Organ Literature Stand
 		90		Library Stairs
 		90		'Scenery of Knowledge'
 		90		Knowledge-Seeking Hall Flooring
-		15	10	Data Supplement Instrument
-		5	60	Data Supplement Stick
-		8	15	Polyester Pack
-		10	15	Manganese Ore
-		12	15	Coagulating Gel
-		10	15	Crystalline Component
-		7	120	LMD
-		5	30	Strategic Battle Record
-		3	50	Tactical Battle Record
-		1	150	Frontline Battle Record
-		4	25	Skill Summary - 3
-		2	50	Skill Summary - 2
-		2	40	Orirock Cube
-		3	30	Sugar
-		3	30	Polyester
-		3	25	Oriron
-		3	25	Polyketon
-		4	20	Device
+		10	5	Incandescent Alloy
+		12	5	Transmuted Salt
+		7	20	LMD
+		5	5	Strategic Battle Record
+		3	10	Tactical Battle Record
+		1	20	Frontline Battle Record
+		4	10	Skill Summary - 3
+		2	20	Skill Summary - 2
+		3	8	Sugar
+		3	8	Oriron
+		3	8	Polyketon
 		6	5	Guard Chip
-		2	200	Furniture Part
 		""")
 	});
 }
