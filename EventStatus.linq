@@ -33,40 +33,49 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Jun, Day.OfMonth(1)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Jun, Day.OfMonth(19)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Zwillingstürme_im_Herbst/Rerun#Herbstmondeskonzert", "Zwillingstürme im Herbst Rerun", "Die_Klänge_von_den_Erinnerungen")] = new("""
-			// Zwillingstürme im Herbst Rerun
+			[new("Exodus_From_The_Pale_Sea#Salt_Ship_Marketplace", "Exodus From The Pale Sea", "Saltfin_Garum")] = new("""
+			// Exodus From The Pale Sea
+			200		Rose Salt's Token
+			240		Rose Salt's Token
+			280		Rose Salt's Token
+			320		Rose Salt's Token
+			360		Rose Salt's Token
+			500		Shoal Beat
 			150	3	Headhunting Permit
-			100		Crystalline Electronic Unit
-			100		Bipolar Nanoflake
-			40	3	Crystalline Circuit
-			40	3	Solidified Fiber Board
-			35	3	Incandescent Alloy Block
-			35	3	Manganese Trihydrate
-			30	3	Polymerized Gel
-			30	3	Transmuted Salt Agglomerate
-			110		Pipe Organ Literature Stand
-			90		Library Stairs
-			90		'Scenery of Knowledge'
-			90		Knowledge-Seeking Hall Flooring
-			10	5	Incandescent Alloy
-			12	5	Transmuted Salt
-			7	20	LMD
-			5	5	Strategic Battle Record
-			3	10	Tactical Battle Record
-			1	20	Frontline Battle Record
-			4	10	Skill Summary - 3
-			2	20	Skill Summary - 2
-			3	8	Sugar
-			3	8	Oriron
-			3	8	Polyketon
-			6	5	Guard Chip
+			75	2	Module Data Block
+			100	5	Polymerization Preparation
+			35	10	Grindstone Pentahydrate
+			35	10	Cutting Fluid Solution
+			45	10	Cyclicene Prefab
+			30		Mesh Rug
+			70		Saltfin Chandelier
+			60		Cask 'n Bone Chair
+			50	2	Sturdy Cask Chair
+			30		Saltfin Candle Hanger
+			40		Thick Patterned Rug
+			60		Cabin Stairs
+			15	10	Data Supplement Instrument
+			5	60	Data Supplement Stick
+			10	15	Oriron Cluster
+			12	10	Coagulating Gel
+			7	100	LMD
+			5	25	Strategic Battle Record
+			3	50	Tactical Battle Record
+			1	120	Frontline Battle Record
+			4	25	Skill Summary - 3
+			2	50	Skill Summary - 2
+			2	25	Orirock Cube
+			3	25	Polyester
+			4	25	Device
+			6	5	Medic Chip
+			2	200	Furniture Part
 			""")
 		}
 	};
@@ -598,6 +607,44 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
+		[new("Exodus_From_The_Pale_Sea#Salt_Ship_Marketplace", "Exodus From The Pale Sea", "Saltfin_Garum")] = new("""
+		// Exodus From The Pale Sea
+		200		Rose Salt's Token
+		240		Rose Salt's Token
+		280		Rose Salt's Token
+		320		Rose Salt's Token
+		360		Rose Salt's Token
+		500		Shoal Beat
+		150	3	Headhunting Permit
+		75	2	Module Data Block
+		100	5	Polymerization Preparation
+		35	10	Grindstone Pentahydrate
+		35	10	Cutting Fluid Solution
+		45	10	Cyclicene Prefab
+		30		Mesh Rug
+		70		Saltfin Chandelier
+		60		Cask 'n Bone Chair
+		50	2	Sturdy Cask Chair
+		30		Saltfin Candle Hanger
+		40		Thick Patterned Rug
+		60		Cabin Stairs
+		15	10	Data Supplement Instrument
+		5	60	Data Supplement Stick
+		10	15	Oriron Cluster
+		12	10	Coagulating Gel
+		7	100	LMD
+		5	25	Strategic Battle Record
+		3	50	Tactical Battle Record
+		1	120	Frontline Battle Record
+		4	25	Skill Summary - 3
+		2	50	Skill Summary - 2
+		2	25	Orirock Cube
+		3	25	Polyester
+		4	25	Device
+		6	5	Medic Chip
+		2	200	Furniture Part
+		"""),
+
 		[new("Here_A_People_Sows#Shennong_Market", "Here A People Sows", "Sky_Pole")] = new("""
 		// Here A People Sows
 		200		Wanqing's Token
@@ -799,35 +846,6 @@ static class EventData
 		4	25	Device
 		6	5	Medic Chip
 		2	200	Furniture Part
-		"""),
-
-		[new("Zwillingstürme_im_Herbst/Rerun#Herbstmondeskonzert", "Zwillingstürme im Herbst Rerun", "Die_Klänge_von_den_Erinnerungen")] = new("""
-		// Zwillingstürme im Herbst Rerun
-		150	3	Headhunting Permit
-		100		Crystalline Electronic Unit
-		100		Bipolar Nanoflake
-		40	3	Crystalline Circuit
-		40	3	Solidified Fiber Board
-		35	3	Incandescent Alloy Block
-		35	3	Manganese Trihydrate
-		30	3	Polymerized Gel
-		30	3	Transmuted Salt Agglomerate
-		110		Pipe Organ Literature Stand
-		90		Library Stairs
-		90		'Scenery of Knowledge'
-		90		Knowledge-Seeking Hall Flooring
-		10	5	Incandescent Alloy
-		12	5	Transmuted Salt
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		3	8	Sugar
-		3	8	Oriron
-		3	8	Polyketon
-		6	5	Guard Chip
 		""")
 	});
 }

@@ -9,7 +9,7 @@
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-Zwillingstürme im Herbst Rerun
+Exodus From The Pale Sea
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")

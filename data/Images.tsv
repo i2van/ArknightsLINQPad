@@ -8,7 +8,6 @@
 'Light and Heat'	d/d1
 'Off the Rails'	f/f3
 'Prize for Excellence'	3/3b
-'Scenery of Knowledge'	8/8a
 'Skadi's Refreshment Point'	3/3c
 'Sword Holder'	1/1d
 'The Archives'	2/25
@@ -21,7 +20,9 @@ Bibeak's Token	e/ef
 Biphasic Enantiomorphic Medium	6/6e
 Bipolar Nanoflake	b/b6
 Bitter Herbs	c/c2	Myrrh_Skin_1
+Cabin Stairs	4/41
 Carved Wood Decoration	e/ed
+Cask 'n Bone Chair	7/78	Cask_%27n_Bone_Chair
 Caster Chip	9/94
 Catherine's Token	1/1b
 Chip Catalyst	3/32
@@ -65,8 +66,6 @@ Information Fragment	1/1d
 Integrated Device	f/fb
 Invisible Dirge	a/a6	Manticore_Skin_1
 Keton Colloid	a/ae
-Knowledge-Seeking Hall Flooring	b/b6
-Library Stairs	6/62
 LMD	e/e7
 Load-bearing Pillar	2/29
 Loxic Kohl	4/4a
@@ -74,6 +73,7 @@ Lunar Desk	c/cc
 Manganese Ore	6/6a
 Manganese Trihydrate	c/cd
 Medic Chip	e/eb
+Mesh Rug	b/b1
 Module Data Block	6/66
 Never Even Flooring	5/57
 Newsgirl	1/14	Amiya_Skin_1
@@ -90,7 +90,6 @@ Oriron	4/44
 Oriron Block	5/52
 Oriron Cluster	8/87
 Papyrus's Token	f/fe
-Pipe Organ Literature Stand	8/8b
 Polyester	3/3a
 Polyester Lump	e/ed
 Polyester Pack	f/f3
@@ -107,10 +106,14 @@ Refined Solvent	9/9f
 Responsive Floorlamp	2/22
 RMA70-12	1/10
 RMA70-24	f/f1
+Rose Salt's Token	5/53
+Saltfin Candle Hanger	3/31
+Saltfin Chandelier	c/c9
 Scene's Token	c/ce
 Secret Exhibit 'Do Not Touch'	2/28
 Semi-Synthetic Solvent	5/58
 Shipping Counter	1/12
+Shoal Beat	c/c7	Blue_Poison_Skin_1
 Skill Summary - 2	b/b0	Skill_Summary_Volume_2
 Skill Summary - 3	a/a7	Skill_Summary_Volume_3
 Small Dougong Lamp	9/9b
@@ -124,11 +127,13 @@ Species Plantarum	6/6d	Perfumer_Skin_1
 Spool Light	0/01
 Stable Surgical Gimbal	2/2d
 Strategic Battle Record	5/55
+Sturdy Cask Chair	a/a4
 Sugar	a/a9
 Sugar Lump	d/d2
 Sugar Pack	2/23
 Supporter Chip	d/d7
 Tactical Battle Record	a/a7
+Thick Patterned Rug	c/ca
 Transmuted Salt	b/bd
 Transmuted Salt Agglomerate	b/bd
 Tuye's Token	3/34
