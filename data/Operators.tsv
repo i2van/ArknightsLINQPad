@@ -17,6 +17,7 @@ Archetto	Sniper	6	MAR-Y	2-9	Polymerization Preparation❂4｜Orirock Concentrati
 Arene	Guard	4	LOR-Y	2-8	Orirock Cluster❂21｜Integrated Device❂7
 Aroma	Caster	5	BLA-X	GT-HX-3	RMA70-24❂7｜Loxic Kohl❂21	Paradox
 Ascalon	Specialist	6	AMB-X	11-6	D32 Steel❂4｜Keton Colloid❂6	Paradox
+Ascalon	Specialist	6	AMB-Y	5-10	D32 Steel❂4｜Keton Colloid❂6	Paradox
 Ash	Sniper	6	MAR-X	SV-8	D32 Steel❂4｜Polymerized Gel❂6
 Ash	Sniper	6	MAR-Y	1-12	D32 Steel❂4｜Polymerized Gel❂6
 Ashlock	Defender	5	FOR-X	7-9	Polymerized Gel❂8｜Compound Cutting Fluid❂13
@@ -78,6 +79,7 @@ Degenbrecher	Guard	6	SWO-X	BI-6	Nucleic Crystal Sinter❂3｜Grindstone Pentahyd
 Delphine	Caster	5	MSC-Y	WD-6	Cyclicene Prefab❂8｜Semi-Synthetic Solvent❂10
 Dobermann	Guard	4	INS-Y	1-12	Manganese Ore❂15｜Loxic Kohl❂11
 Doc	Guard	5	INS-Y	2-5	Polymerized Gel❂8｜Integrated Device❂11
+Dorothy	Specialist	6	TRP-X	MB-EX-1	Polymerization Preparation❂4｜Cutting Fluid Solution❂8	Paradox
 Dorothy	Specialist	6	TRP-Y	4-5	Polymerization Preparation❂4｜Cutting Fluid Solution❂8	Paradox
 Dusk	Caster	6	SPC-X	1-6	Crystalline Electronic Unit❂4｜Manganese Trihydrate❂6	Paradox
 Dusk	Caster	6	SPC-Y	4-3	Crystalline Electronic Unit❂4｜Manganese Trihydrate❂6	Paradox
@@ -191,7 +193,7 @@ Lemuen	Sniper	6	DEA-Y	13-13	Polymerization Preparation❂4｜Incandescent Alloy 
 Leonhardt	Caster	5	SPC-X	3-5	Keton Colloid❂7｜Loxic Kohl❂15	Paradox
 Lessing	Guard	6	DRE-X	7-11	Crystalline Electronic Unit❂4｜Cyclicene Prefab❂5	Paradox
 Lessing	Guard	6	DRE-Y	TW-5	Crystalline Electronic Unit❂4｜Cyclicene Prefab❂5	Paradox
-Leto	Guard	5	LOR-Y	4-3	Oriron Block❂7｜Incandescent Alloy❂10
+Leto	Guard	5	LOR-Y	4-3	Oriron Block❂7｜Incandescent Alloy❂10	Paradox
 Lin	Caster	6	PLX-X	11-6	D32 Steel❂4｜Cutting Fluid Solution❂8
 Lin	Caster	6	PLX-Y	6-5	D32 Steel❂4｜Cutting Fluid Solution❂8
 Ling	Supporter	6	SUM-Y	3-4	D32 Steel❂4｜Crystalline Circuit❂5	Paradox
@@ -223,6 +225,7 @@ Mizuki	Specialist	6	AMB-Y	4-5	Polymerization Preparation❂4｜Crystalline Circu
 Morgan	Guard	5	DRE-X	4-5	Cutting Fluid Solution❂8｜Transmuted Salt❂11	Paradox
 Mostima	Caster	6	SPC-X	DM-3	Bipolar Nanoflake❂4｜Grindstone Pentahydrate❂7	Paradox
 Mostima	Caster	6	SPC-Y	CB-5	Bipolar Nanoflake❂4｜Grindstone Pentahydrate❂7	Paradox
+Mountain	Guard	6	FGT-X	LE-5	Crystalline Electronic Unit❂4｜Polymerized Gel❂8	Paradox
 Mountain	Guard	6	FGT-Y	MB-EX-3	Crystalline Electronic Unit❂4｜Polymerized Gel❂8	Paradox
 Mousse	Guard	4	AFT-X	2-2	Orirock Cluster❂20｜Grindstone❂8	Paradox
 Mr. Nothing	Specialist	5	MER-X	3-7	Optimized Device❂6｜Manganese Ore❂10	Paradox
@@ -236,6 +239,7 @@ Myrtle	Vanguard	4	BEA-X	6-3	Grindstone❂12｜Integrated Device❂8	Paradox
 Nearl	Defender	5	GUA-X	1-12	White Horse Kohl❂9｜Polyester Pack❂16
 Nearl the Radiant Knight	Guard	6	DRE-X	MN-8	Polymerization Preparation❂4｜Polymerized Gel❂8	Paradox
 Nearl the Radiant Knight	Guard	6	DRE-Y	NL-10	Polymerization Preparation❂4｜Polymerized Gel❂8	Paradox
+Necrass	Caster	6	SOC-X	4-8	Polymerization Preparation❂4｜Transmuted Salt Agglomerate❂6
 Nian	Defender	6	PRO-X	WR-9	Polymerization Preparation❂4｜Incandescent Alloy Block❂7	Paradox
 Nian	Defender	6	PRO-Y	S6-2	Polymerization Preparation❂4｜Incandescent Alloy Block❂7	Paradox
 Nightingale	Medic	6	RIN-X	3-6	D32 Steel❂4｜Keton Colloid❂6	Paradox
@@ -333,6 +337,7 @@ Swire	Guard	5	INS-X	S2-3	Sugar Lump❂7｜Polyester Pack❂17	Paradox
 Swire the Elegant Wit	Specialist	6	MER-X	5-2	D32 Steel❂4｜White Horse Kohl❂6
 Swire the Elegant Wit	Specialist	6	MER-Y	11-16	D32 Steel❂4｜White Horse Kohl❂6
 Tachanka	Guard	5	SWO-X	S2-3	RMA70-24❂7｜Coagulating Gel❂12
+Tecno	Caster	5	SOC-Y	DH-6	Incandescent Alloy Block❂7｜Coagulating Gel❂14
 Tequila	Guard	5	LIB-X	7-11	Optimized Device❂5｜Grindstone❂11	Paradox
 Texas	Vanguard	5	SOL-Y	CB-3	Polyester Lump❂8｜Orirock Cluster❂16	Paradox
 Texas the Omertosa	Specialist	6	EXE-Y	CB-8	Bipolar Nanoflake❂4｜Oriron Block❂7
