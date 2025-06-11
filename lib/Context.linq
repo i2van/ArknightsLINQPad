@@ -32,6 +32,13 @@ sealed class DumpContext
 		{
 			public const string FloatRight = "float: right";
 		}
+
+		public const string EventBackgroundUriTemplate = $$"""<span>{{HtmlExtensions.H1InnerHTMLTemplate}}<sup><a href="{{Url.Wiki}}/images/5/51/Wiki-background.png" class="reference" title="Event background" style="{{Style.Sup}}">bg</a></sup></span>""";
+
+		private static class Style
+		{
+			public const string Sup = "margin-left: 0.3ex; font-size: 71%";
+		}
 	}
 
 	public static class Glyphs

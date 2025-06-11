@@ -97,6 +97,8 @@ static partial class DataExtensions
 
 static partial class HtmlExtensions
 {
+	public const string H1InnerHTMLTemplate = $"<{nameof(H1InnerHTMLTemplate)}>";
+
 	private const string H1ToA = $"{nameof(HtmlExtensions)}_{nameof(H1ToA)}";
 
 	static HtmlExtensions() =>
@@ -104,15 +106,15 @@ static partial class HtmlExtensions
 
 	private static void AddH1ToAScript() =>
 		HtmlHead.AddScript($$"""
-			function {{H1ToA}}(text, uri){
+			function {{H1ToA}}(text, uri, uriTemplate){
 				const elem = [].find.call(document.getElementsByTagName("h1"), elem => elem.innerHTML === text);
 				if(elem){
-					elem.innerHTML = `<a href="${uri}" class="headingpresenter reference">${elem.innerHTML}</a>`;
+					elem.innerHTML = uriTemplate.replace('{{H1InnerHTMLTemplate}}', `<a href="${uri}" class="headingpresenter reference">${elem.innerHTML}</a>`);
 				}
 			}
 			""");
 
-	public static void AsHyperlink(this string text, string uri)
+	public static void AsHyperlink(this string text, string uri, string uriTemplate = H1InnerHTMLTemplate)
 	{
 		var count = 3;
 
@@ -120,11 +122,12 @@ static partial class HtmlExtensions
 		{
 			try
 			{
-				InvokeScript(false, H1ToA, text, uri);
+				InvokeScript(false, H1ToA, text, uri, uriTemplate);
 				return;
 			}
 			catch(JavaScriptException)
 			{
+				Thread.Sleep(10);
 				AddH1ToAScript();
 			}
 		}

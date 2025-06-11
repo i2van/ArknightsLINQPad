@@ -118,7 +118,7 @@ void Main()
 
 	stockName = (stockName ?? title).SpaceUnderscores();
 
-	using var _ = new DisposableAction(() => title.AsHyperlink(baseUri));
+	using var _ = new DisposableAction(() => title.AsHyperlink(baseUri, DumpContext.Document.EventBackgroundUriTemplate));
 
 	if(NoTimeLeft(timeLeft))
 	{
