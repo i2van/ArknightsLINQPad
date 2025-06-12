@@ -40,8 +40,8 @@ void Main()
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Exodus_From_The_Pale_Sea#Salt_Ship_Marketplace", "Exodus From The Pale Sea", "Saltfin_Garum")] = new("""
-			// Exodus From The Pale Sea
+			[new("Exodus_from_the_Pale_Sea#Salt_Ship_Marketplace", "Exodus from the Pale Sea", "Saltfin_Garum")] = new("""
+			// Exodus from the Pale Sea
 			200		Rose Salt's Token
 			240		Rose Salt's Token
 			280		Rose Salt's Token
@@ -607,8 +607,8 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("Exodus_From_The_Pale_Sea#Salt_Ship_Marketplace", "Exodus From The Pale Sea", "Saltfin_Garum")] = new("""
-		// Exodus From The Pale Sea
+		[new("Exodus_from_the_Pale_Sea#Salt_Ship_Marketplace", "Exodus from the Pale Sea", "Saltfin_Garum")] = new("""
+		// Exodus from the Pale Sea
 		200		Rose Salt's Token
 		240		Rose Salt's Token
 		280		Rose Salt's Token
