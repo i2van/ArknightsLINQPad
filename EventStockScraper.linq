@@ -9,7 +9,7 @@
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-Exodus From The Pale Sea
+The Rides to Lake Silberneherze Rerun
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")
