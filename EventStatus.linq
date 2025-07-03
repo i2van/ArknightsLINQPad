@@ -33,42 +33,41 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Jun, Day.OfMonth(30)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Jul, Day.OfMonth(13)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("The_Rides_to_Lake_Silberneherze/Rerun#Onboard_Services", "The Rides to Lake Silberneherze Rerun", "Burdenbeast_Blind_Box")] = new("""
-			// The Rides to Lake Silberneherze Rerun
-			200		Harold's Token
-			240		Harold's Token
-			280		Harold's Token
-			320		Harold's Token
-			360		Harold's Token
+			[new("Here_A_People_Sows/Rerun#Shennong_Market", "Here A People Sows Rerun", "Sky_Pole")] = new("""
+			// Here A People Sows Rerun
+			200		Wanqing's Token
+			240		Wanqing's Token
+			280		Wanqing's Token
+			320		Wanqing's Token
+			360		Wanqing's Token
 			150	3	Headhunting Permit
 			100		D32 Steel
-			25	3	Orirock Concentration
-			35	3	Keton Colloid
+			35	3	Grindstone Pentahydrate
+			35	3	Incandescent Alloy Block
 			35	3	Refined Solvent
-			30		'Window to the Snowy Mountains'
-			45		Shipping Counter
-			60		Small Mailbox
-			60		'Kjeragandr's Bones'
-			90		Small Post Office Floor
-			15	5	Integrated Device
+			100		'The Archives'
+			90		'Prize for Excellence'
+			70		Responsive Floorlamp
+			35		Small Dougong Lamp
 			12	5	Grindstone
+			12	5	Compound Cutting Fluid
 			7	20	LMD
 			5	5	Strategic Battle Record
 			3	10	Tactical Battle Record
 			1	20	Frontline Battle Record
 			4	10	Skill Summary - 3
 			2	20	Skill Summary - 2
+			2	8	Orirock Cube
 			3	8	Sugar
 			3	8	Polyester
-			3	8	Polyketon
-			6	5	Medic Chip
+			6	5	Vanguard Chip
 			""")
 		}
 	};
@@ -638,46 +637,34 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("Here_A_People_Sows#Shennong_Market", "Here A People Sows", "Sky_Pole")] = new("""
-		// Here A People Sows
+		[new("Here_A_People_Sows/Rerun#Shennong_Market", "Here A People Sows Rerun", "Sky_Pole")] = new("""
+		// Here A People Sows Rerun
 		200		Wanqing's Token
 		240		Wanqing's Token
 		280		Wanqing's Token
 		320		Wanqing's Token
 		360		Wanqing's Token
-		70		Bibeak's Token
-		500		Night Watcher
 		150	3	Headhunting Permit
-		75	2	Module Data Block
-		100	5	Polymerization Preparation
-		25	10	Orirock Concentration
-		35	10	Manganese Trihydrate
-		35	10	RMA70-24
-		35	10	Cutting Fluid Solution
+		100		D32 Steel
+		35	3	Grindstone Pentahydrate
+		35	3	Incandescent Alloy Block
+		35	3	Refined Solvent
 		100		'The Archives'
 		90		'Prize for Excellence'
 		70		Responsive Floorlamp
 		35		Small Dougong Lamp
-		15	10	Data Supplement Instrument
-		5	60	Data Supplement Stick
-		8	15	Polyester Pack
-		10	15	Manganese Ore
-		12	15	Coagulating Gel
-		10	15	Incandescent Alloy
-		7	120	LMD
-		5	30	Strategic Battle Record
-		3	50	Tactical Battle Record
-		1	150	Frontline Battle Record
-		4	25	Skill Summary - 3
-		2	50	Skill Summary - 2
-		2	40	Orirock Cube
-		3	30	Sugar
-		3	30	Polyester
-		3	25	Oriron
-		3	25	Polyketon
-		4	20	Device
+		12	5	Grindstone
+		12	5	Compound Cutting Fluid
+		7	20	LMD
+		5	5	Strategic Battle Record
+		3	10	Tactical Battle Record
+		1	20	Frontline Battle Record
+		4	10	Skill Summary - 3
+		2	20	Skill Summary - 2
+		2	8	Orirock Cube
+		3	8	Sugar
+		3	8	Polyester
 		6	5	Vanguard Chip
-		2	200	Furniture Part
 		"""),
 
 		[new("I_Portatori_dei_Velluti#Fiera_delle_Meraviglie_Notturne", "I Portatori dei Velluti", "Invito_Mistico")] = new("""
@@ -804,37 +791,6 @@ static class EventData
 		4	25	Device
 		6	5	Guard Chip
 		2	200	Furniture Part
-		"""),
-
-		[new("The_Rides_to_Lake_Silberneherze/Rerun#Onboard_Services", "The Rides to Lake Silberneherze Rerun", "Burdenbeast_Blind_Box")] = new("""
-		// The Rides to Lake Silberneherze Rerun
-		200		Harold's Token
-		240		Harold's Token
-		280		Harold's Token
-		320		Harold's Token
-		360		Harold's Token
-		150	3	Headhunting Permit
-		100		D32 Steel
-		35	3	Keton Colloid
-		35	3	Refined Solvent
-		25	3	Orirock Concentration
-		90		Small Post Office Floor
-		60		Small Mailbox
-		60		'Kjeragandr's Bones'
-		45		Shipping Counter
-		30		'Window to the Snowy Mountains'
-		15	5	Integrated Device
-		12	5	Grindstone
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		3	8	Polyester
-		3	8	Polyketon
-		3	8	Sugar
-		6	5	Medic Chip
 		""")
 	});
 }
