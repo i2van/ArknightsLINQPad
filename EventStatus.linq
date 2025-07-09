@@ -33,49 +33,34 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Jul, Day.OfMonth(13)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Jul, Day.OfMonth(30)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Exodus_from_the_Pale_Sea#Salt_Ship_Marketplace", "Exodus from the Pale Sea", "Saltfin_Garum")] = new("""
-			// Exodus from the Pale Sea
-			200		Rose Salt's Token
-			240		Rose Salt's Token
-			280		Rose Salt's Token
-			320		Rose Salt's Token
-			360		Rose Salt's Token
-			500		Shoal Beat
-			150	3	Headhunting Permit
-			75	2	Module Data Block
-			100	5	Polymerization Preparation
-			35	10	Grindstone Pentahydrate
-			35	10	Cutting Fluid Solution
-			45	10	Cyclicene Prefab
-			30		Mesh Rug
-			70		Saltfin Chandelier
-			60		Cask 'n Bone Chair
-			50	2	Sturdy Cask Chair
-			30		Saltfin Candle Hanger
-			40		Thick Patterned Rug
-			60		Cabin Stairs
-			15	10	Data Supplement Instrument
-			5	60	Data Supplement Stick
-			10	15	Oriron Cluster
-			12	10	Coagulating Gel
-			7	100	LMD
-			5	25	Strategic Battle Record
-			3	50	Tactical Battle Record
-			1	120	Frontline Battle Record
-			4	25	Skill Summary - 3
-			2	50	Skill Summary - 2
-			2	25	Orirock Cube
-			3	25	Polyester
-			4	25	Device
-			6	5	Medic Chip
-			2	200	Furniture Part
+			[new("See_You_Soon#Empty_Ferry", "See You Soon... And the Canoe'll Carry Us to You", "Crushed_Petal")] = new("""
+			// See You Soon... And the Canoe'll Carry Us to You
+			350		Rose Rider
+			10	7	Information Fragment
+			100		Module Data Block
+			30	8	Data Supplement Instrument
+			10	40	Data Supplement Stick
+			200		Crystalline Electronic Unit
+			65		Chip Catalyst
+			65	2	RMA70-24
+			25	4	Aggregate Cyclicene
+			20	4	Sugar Pack
+			5	10	LMD
+			5	5	Strategic Battle Record
+			5	5	Tactical Battle Record
+			5	5	Skill Summary - 3
+			5	5	Skill Summary - 2
+			4	5	Pure Gold
+			6	5	Polyketon
+			30	5	Recruitment Permit
+			4	10	Furniture Part
 			""")
 		}
 	};
@@ -769,6 +754,29 @@ static class EventData
 		4	25	Device
 		6	5	Guard Chip
 		2	200	Furniture Part
+		"""),
+
+		[new("See_You_Soon#Empty_Ferry", "See You Soon... And the Canoe'll Carry Us to You", "Crushed_Petal")] = new("""
+		// See You Soon... And the Canoe'll Carry Us to You
+		350		Rose Rider
+		10	7	Information Fragment
+		100		Module Data Block
+		30	8	Data Supplement Instrument
+		10	40	Data Supplement Stick
+		200		Crystalline Electronic Unit
+		65		Chip Catalyst
+		65	2	RMA70-24
+		25	4	Aggregate Cyclicene
+		20	4	Sugar Pack
+		5	10	LMD
+		5	5	Strategic Battle Record
+		5	5	Tactical Battle Record
+		5	5	Skill Summary - 3
+		5	5	Skill Summary - 2
+		4	5	Pure Gold
+		6	5	Polyketon
+		30	5	Recruitment Permit
+		4	10	Furniture Part
 		""")
 	});
 }
