@@ -76,9 +76,9 @@ void Main()
 		// TODO: Specify your timers presets.
 		TimerPresets = new TimerPreset[]
 		{
-			new("Clue",     "7h59"),
 			new("Recruit",  "8h59"),
-			new("Exchange", "23h59")
+			new("Exchange", "23h59"),
+			new("Clue",     "7h59")
 		},
 
 		// TODO: Specify timer options: https://github.com/i2van/hourglass/blob/main/Hourglass/Resources/Usage.txt
