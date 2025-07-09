@@ -40,34 +40,42 @@ void Main()
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Here_A_People_Sows/Rerun#Shennong_Market", "Here A People Sows Rerun", "Sky_Pole")] = new("""
-			// Here A People Sows Rerun
-			200		Wanqing's Token
-			240		Wanqing's Token
-			280		Wanqing's Token
-			320		Wanqing's Token
-			360		Wanqing's Token
+			[new("Exodus_from_the_Pale_Sea#Salt_Ship_Marketplace", "Exodus from the Pale Sea", "Saltfin_Garum")] = new("""
+			// Exodus from the Pale Sea
+			200		Rose Salt's Token
+			240		Rose Salt's Token
+			280		Rose Salt's Token
+			320		Rose Salt's Token
+			360		Rose Salt's Token
+			500		Shoal Beat
 			150	3	Headhunting Permit
-			100		D32 Steel
-			35	3	Grindstone Pentahydrate
-			35	3	Incandescent Alloy Block
-			35	3	Refined Solvent
-			100		'The Archives'
-			90		'Prize for Excellence'
-			70		Responsive Floorlamp
-			35		Small Dougong Lamp
-			12	5	Grindstone
-			12	5	Compound Cutting Fluid
-			7	20	LMD
-			5	5	Strategic Battle Record
-			3	10	Tactical Battle Record
-			1	20	Frontline Battle Record
-			4	10	Skill Summary - 3
-			2	20	Skill Summary - 2
-			2	8	Orirock Cube
-			3	8	Sugar
-			3	8	Polyester
-			6	5	Vanguard Chip
+			75	2	Module Data Block
+			100	5	Polymerization Preparation
+			35	10	Grindstone Pentahydrate
+			35	10	Cutting Fluid Solution
+			45	10	Cyclicene Prefab
+			30		Mesh Rug
+			70		Saltfin Chandelier
+			60		Cask 'n Bone Chair
+			50	2	Sturdy Cask Chair
+			30		Saltfin Candle Hanger
+			40		Thick Patterned Rug
+			60		Cabin Stairs
+			15	10	Data Supplement Instrument
+			5	60	Data Supplement Stick
+			10	15	Oriron Cluster
+			12	10	Coagulating Gel
+			7	100	LMD
+			5	25	Strategic Battle Record
+			3	50	Tactical Battle Record
+			1	120	Frontline Battle Record
+			4	25	Skill Summary - 3
+			2	50	Skill Summary - 2
+			2	25	Orirock Cube
+			3	25	Polyester
+			4	25	Device
+			6	5	Medic Chip
+			2	200	Furniture Part
 			""")
 		}
 	};
@@ -635,36 +643,6 @@ static class EventData
 		4	25	Device
 		6	5	Medic Chip
 		2	200	Furniture Part
-		"""),
-
-		[new("Here_A_People_Sows/Rerun#Shennong_Market", "Here A People Sows Rerun", "Sky_Pole")] = new("""
-		// Here A People Sows Rerun
-		200		Wanqing's Token
-		240		Wanqing's Token
-		280		Wanqing's Token
-		320		Wanqing's Token
-		360		Wanqing's Token
-		150	3	Headhunting Permit
-		100		D32 Steel
-		35	3	Grindstone Pentahydrate
-		35	3	Incandescent Alloy Block
-		35	3	Refined Solvent
-		100		'The Archives'
-		90		'Prize for Excellence'
-		70		Responsive Floorlamp
-		35		Small Dougong Lamp
-		12	5	Grindstone
-		12	5	Compound Cutting Fluid
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		2	8	Orirock Cube
-		3	8	Sugar
-		3	8	Polyester
-		6	5	Vanguard Chip
 		"""),
 
 		[new("I_Portatori_dei_Velluti#Fiera_delle_Meraviglie_Notturne", "I Portatori dei Velluti", "Invito_Mistico")] = new("""
