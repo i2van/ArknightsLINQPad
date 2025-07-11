@@ -9,7 +9,7 @@
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-See You Soon
+Such is the Joy of Our Reunion
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")
