@@ -23,6 +23,28 @@ void Main()
 	// TODO: Add operator(s) with (optionally) X or Y modules.
 	var operators = new OperatorModules("""
 		// name <tab> type (X, Y, D or empty for all)
+		/*** Vanguard ***/
+
+
+		/*** Guard ***/
+
+
+		/*** Defender ***/
+
+
+		/*** Sniper ***/
+
+
+		/*** Caster ***/
+
+
+		/*** Medic ***/
+
+
+		/*** Supporter ***/
+
+
+		/*** Specialist ***/
 	""")
 #if DUMP_OPERATORS
 		.OrderBy(static op => op.Name)
