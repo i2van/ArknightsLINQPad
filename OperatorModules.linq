@@ -55,7 +55,7 @@ void Main()
 			Operator    = VerticalRun(v.Operators.Select(static v => new WikiHyperlinq(v.Uri, v.Name))),
 			Class       = VerticalRun(v.Operators.Select(static v => new WikiHyperlinq(v.Class))),
 			v.Stars,
-			Module      = VerticalRun(v.Operators.Select(static v => new WikiHyperlinq($"{v.Uri}#{v.Module}", v.Module))),
+			Module      = VerticalRun(v.Operators.Select(static v => new WikiHyperlinq($"{v.Uri}#Operator_Modules", v.Module))),
 			v.Total,
 			Paradox     = VerticalRun(v.Operators.Select(static v => v.Paradox ? GetParadoxHyperlinq(v.Name) : Empty)),
 			E2Materials = VerticalRun(v.Operators.Select(static v => GetMaterials(v.Uri, v.E2Materials)))
