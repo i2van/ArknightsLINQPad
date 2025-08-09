@@ -65,7 +65,7 @@ Uri GetUrl(string uri) =>
 
 async Task<OperatorWithModules> GetOperator(string name)
 {
-	var url = GetUrl(GetOperatorUri(" (Medic)").Replace(' ', '_'));
+	var url = GetUrl(GetOperatorUri().Replace(' ', '_'));
 
 	const string Title = "|title =";
 
@@ -104,12 +104,20 @@ async Task<OperatorWithModules> GetOperator(string name)
 		Enumerable.Zip(titles, missions, static (t, m) => new Module(t, m)).ToArray()
 	);
 
-	string GetOperatorUri(string operatorTag)
+	string GetOperatorUri()
 	{
-		var index = name.IndexOf(operatorTag);
-		return index < 0
-			? name
-			: $"{name.Substring(0, index)}/{operatorTag.Trim(" ()".ToCharArray())}";
+		return
+			GetOperatorUriFromTag(" (Medic)") ??
+			GetOperatorUriFromTag(" (Guard)") ??
+			name;
+
+		string? GetOperatorUriFromTag(string operatorTag)
+		{
+			var index = name.IndexOf(operatorTag);
+			return index < 0
+				? null
+				: $"{name.Substring(0, index)}/{operatorTag.Trim(" ()".ToCharArray())}";
+		}
 	}
 }
 
