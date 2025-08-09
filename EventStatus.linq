@@ -42,15 +42,7 @@ void Main()
 		{
 			[new("See_You_Soon#Unoccupied_Canoe_Port", "See You Soon", "Broken_Petal")] = new("""
 			// See You Soon
-			350		Rose Rider
-			10	6	Information Fragment
-			100	2	Module Data Block
-			30	8	Data Supplement Instrument
-			10	40	Data Supplement Stick
-			200		Crystalline Electronic Unit
-			65		Chip Catalyst
-			65	2	RMA70-24
-			15	4	Sugar Pack
+			15	2	Sugar Pack
 			25	4	Aggregate Cyclicene
 			5	10	LMD
 			5	5	Strategic Battle Record
@@ -59,7 +51,6 @@ void Main()
 			6	5	Skill Summary - 2
 			4	5	Pure Gold
 			6	5	Polyketon
-			30	5	Recruitment Permit
 			4	10	Furniture Part
 			""")
 		}
@@ -758,7 +749,6 @@ static class EventData
 
 		[new("See_You_Soon#Unoccupied_Canoe_Port", "See You Soon", "Broken_Petal")] = new("""
 		// See You Soon
-		350		Rose Rider
 		10	6	Information Fragment
 		100	2	Module Data Block
 		30	8	Data Supplement Instrument
