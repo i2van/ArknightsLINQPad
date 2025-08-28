@@ -16,8 +16,8 @@ class ItemImage
 	public string Name { get; }
 	public LazyImage Image { get; }
 
-	public ItemImage(string name, string pathUri, string? fileName = null, int? height = null) =>
-		(Name, Image) = (name, new($"{DumpContext.Url.Wiki}/images/{pathUri}/{(fileName ?? name).UnderscoreSpaces()}.png", height));
+	public ItemImage(string name, string? pathUri, string? fileName = null, int? height = null) =>
+		(Name, Image) = (name, new($"{DumpContext.Url.Wiki}/images{(string.IsNullOrWhiteSpace(pathUri) ? string.Empty : $"/{pathUri}")}/{(fileName ?? name).UnderscoreSpaces()}.png", height));
 
 	public static Hyperlink GetHyperlink(string name)
 	{
@@ -114,7 +114,7 @@ sealed class MaterialImages : Parsable<ItemImage>
 	private const string Name     = nameof(Name);
 	private const string FileName = nameof(FileName);
 
-	protected override string Regex { get; } = $@"^(?<{Name}>[^\t]+)\t+(?<{PathUri}>[^\t]+)(\t+(?<{FileName}>[^\t]+))?$";
+	protected override string Regex { get; } = $@"^(?<{Name}>[^\t]+)(\t+(?<{PathUri}>[^\t]+))?(\t+(?<{FileName}>[^\t]+))?$";
 	protected override string ErrorMessage { get; } = $"Expected: 'name pathUri [fileName]'";
 
 	public MaterialImages(string items) :

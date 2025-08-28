@@ -33,25 +33,48 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Aug, Day.OfMonth(14)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Sep, Day.OfMonth(11)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("See_You_Soon#Unoccupied_Canoe_Port", "See You Soon", "Broken_Petal")] = new("""
-			// See You Soon
-			15	2	Sugar Pack
-			25	4	Aggregate Cyclicene
-			5	10	LMD
-			5	5	Strategic Battle Record
-			6	5	Tactical Battle Record
-			6	5	Skill Summary - 3
-			6	5	Skill Summary - 2
-			4	5	Pure Gold
-			6	5	Polyketon
-			4	10	Furniture Part
+			[new("When_Elegies_Are_Ashes#Lives_Yet_to_Begin", "When Elegies Are Ashes", "Broken_Originium_Lamp")] = new("""
+			// When Elegies Are Ashes
+			200		Brigid's Token
+			240		Brigid's Token
+			280		Brigid's Token
+			320		Brigid's Token
+			360		Brigid's Token
+			500		Casual Vacation HD31
+			150	3	Headhunting Permit
+			75	2	Module Data Block
+			100	5	Nucleic Crystal Sinter
+			40	10	Oriron Block
+			35	10	Keton Colloid
+			35	10	Cutting Fluid Solution
+			95		'On the Ruins'
+			65		Handmade Wall Shelf
+			55		Classic Storage Cabinet
+			50		Linen Tapestry
+			40		Knot Design Carpet
+			40	2	Tall Stool (With Cushion)
+			15	10	Data Supplement Instrument
+			5	60	Data Supplement Stick
+			8	15	Sugar Pack
+			15	10	RMA70-12
+			7	100	LMD
+			5	25	Strategic Battle Record
+			3	50	Tactical Battle Record
+			1	120	Frontline Battle Record
+			4	25	Skill Summary - 3
+			2	50	Skill Summary - 2
+			3	25	Sugar
+			3	25	Oriron
+			4	25	Device
+			6	5	Sniper Chip
+			2	200	Furniture Part
 			""")
 		}
 	};
@@ -747,28 +770,6 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("See_You_Soon#Unoccupied_Canoe_Port", "See You Soon", "Broken_Petal")] = new("""
-		// See You Soon
-		10	6	Information Fragment
-		100	2	Module Data Block
-		30	8	Data Supplement Instrument
-		10	40	Data Supplement Stick
-		200		Crystalline Electronic Unit
-		65		Chip Catalyst
-		65	2	RMA70-24
-		15	4	Sugar Pack
-		25	4	Aggregate Cyclicene
-		5	10	LMD
-		5	5	Strategic Battle Record
-		6	5	Tactical Battle Record
-		6	5	Skill Summary - 3
-		6	5	Skill Summary - 2
-		4	5	Pure Gold
-		6	5	Polyketon
-		30	5	Recruitment Permit
-		4	10	Furniture Part
-		"""),
-
 		[new("Such_is_the_Joy_of_Our_Reunion#Savors_at_Yu's", "Such is the Joy of Our Reunion", @"""Yum-yum!""")] = new("""
 		// Such is the Joy of Our Reunion
 		200		Xingzhu's Token
@@ -808,6 +809,43 @@ static class EventData
 		3	25	Polyketon
 		4	20	Device
 		6	5	Supporter Chip
+		2	200	Furniture Part
+		"""),
+
+		[new("When_Elegies_Are_Ashes#Lives_Yet_to_Begin", "When Elegies Are Ashes", "Broken_Originium_Lamp")] = new("""
+		// When Elegies Are Ashes
+		200		Brigid's Token
+		240		Brigid's Token
+		280		Brigid's Token
+		320		Brigid's Token
+		360		Brigid's Token
+		500		Casual Vacation HD31
+		150	3	Headhunting Permit
+		75	2	Module Data Block
+		100	5	Nucleic Crystal Sinter
+		40	10	Oriron Block
+		35	10	Keton Colloid
+		35	10	Cutting Fluid Solution
+		95		'On the Ruins'
+		65		Handmade Wall Shelf
+		55		Classic Storage Cabinet
+		50		Linen Tapestry
+		40		Knot Design Carpet
+		40	2	Tall Stool (With Cushion)
+		15	10	Data Supplement Instrument
+		5	60	Data Supplement Stick
+		8	15	Sugar Pack
+		15	10	RMA70-12
+		7	100	LMD
+		5	25	Strategic Battle Record
+		3	50	Tactical Battle Record
+		1	120	Frontline Battle Record
+		4	25	Skill Summary - 3
+		2	50	Skill Summary - 2
+		3	25	Sugar
+		3	25	Oriron
+		4	25	Device
+		6	5	Sniper Chip
 		2	200	Furniture Part
 		""")
 	});
