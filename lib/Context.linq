@@ -33,7 +33,7 @@ sealed class DumpContext
 			public const string FloatRight = "float: right";
 		}
 
-		public const string EventBackgroundUriTemplate = $$"""<span>{{HtmlExtensions.H1InnerHTMLTemplate}}<sup><a href="{{Url.Wiki}}/images/5/51/Wiki-background.png" class="reference" title="Event background" style="{{Style.Sup}}">bg</a></sup></span>""";
+		public const string EventBackgroundUriTemplate = $$"""<span>{{HtmlExtensions.H1InnerHTMLTemplate}}<sup><a href="{{Url.Wiki}}/images/Site-background-dark.jpg" class="reference" title="Event background" style="{{Style.Sup}}">bg</a></sup></span>""";
 
 		private static class Style
 		{
