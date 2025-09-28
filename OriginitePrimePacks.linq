@@ -1,4 +1,4 @@
-<Query Kind="Program"/>
+<Query Kind="Program" />
 
 // Arknights packs store Originite Prime price calculator.
 

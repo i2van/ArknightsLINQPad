@@ -1,4 +1,4 @@
-﻿# Arknights LINQPad scripts
+# Arknights LINQPad scripts
 
 [![Latest build](https://github.com/i2van/ArknightsLINQPad/workflows/build/badge.svg)](https://github.com/i2van/ArknightsLINQPad/actions)
 [![Latest release](https://img.shields.io/github/downloads/i2van/ArknightsLINQPad/total.svg)](https://github.com/i2van/ArknightsLINQPad/releases/latest)
