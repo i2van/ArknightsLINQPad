@@ -17,7 +17,7 @@ class ItemImage
 	public LazyImage Image { get; }
 
 	public ItemImage(string name, string? pathUri, string? fileName = null, int? height = null) =>
-		(Name, Image) = (name, new($"{DumpContext.Url.Wiki}/images{(string.IsNullOrWhiteSpace(pathUri) ? string.Empty : $"/{pathUri}")}/{(fileName ?? name).UnderscoreSpaces()}.png", height));
+		(Name, Image) = (name, new($"{DumpContext.Url.Wiki}/images{(string.IsNullOrWhiteSpace(pathUri) || pathUri == "/" ? string.Empty : $"/{pathUri}")}/{(fileName ?? name).UnderscoreSpaces()}.png", height));
 
 	public static Hyperlink GetHyperlink(string name)
 	{
