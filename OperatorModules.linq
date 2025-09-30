@@ -20,9 +20,9 @@
 
 void Main()
 {
-	// TODO: Add operator(s) with (optionally) X or Y modules.
+	// TODO: Add one operator per line with X, Y, D module or empty for all.
 	var operators = new OperatorModules("""
-		// name <tab> type (X, Y, D or empty for all)
+		// name <tab> [type] (X, Y, D module or empty for all)
 		/*** Vanguard ***/
 
 

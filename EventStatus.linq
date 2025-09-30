@@ -66,9 +66,9 @@ void Main()
 			1	20	Frontline Battle Record
 			4	10	Skill Summary - 3
 			2	20	Skill Summary - 2
+			3	8	Sugar
 			3	8	Oriron
 			3	8	Polyketon
-			3	8	Sugar
 			6	5	Guard Chip
 			""")
 		}
@@ -548,9 +548,9 @@ static class EventData
 		1	20	Frontline Battle Record
 		4	10	Skill Summary - 3
 		2	20	Skill Summary - 2
+		3	8	Sugar
 		3	8	Oriron
 		3	8	Polyketon
-		3	8	Sugar
 		6	5	Guard Chip
 		"""),
 
