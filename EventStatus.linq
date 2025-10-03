@@ -33,43 +33,54 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Oct, Day.OfMonth(10)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Nov, Day.OfMonth(4)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Babel_(event)/Rerun#Motorized_Logistical_Camp", "Babel Rerun", "Raw_Sugar_Lumps")] = new("""
-			// Babel Rerun
-			200		Odda's Token
-			240		Odda's Token
-			280		Odda's Token
-			320		Odda's Token
-			360		Odda's Token
+			[new("The_Masses'_Travels#Sweet_Dream_Hall", "The Masses' Travels", "Enlightened_Pacifier")] = new("""
+			// The Masses' Travels
+			250		Sankta Miksaparato's Token
+			300		Sankta Miksaparato's Token
+			350		Sankta Miksaparato's Token
+			400		Sankta Miksaparato's Token
+			450		Sankta Miksaparato's Token
+			500		Rest Between Sets
+			500		Fresh Fastener
 			150	3	Headhunting Permit
-			100		Polymerization Preparation
-			25	3	Orirock Concentration
-			35	3	Grindstone Pentahydrate
-			35	3	Incandescent Alloy Block
-			60		Witchcraft Workbench
-			60		Welded Storage Box
-			80		Oddities Showcase
-			80		Load-bearing Pillar
-			90		Ice-Cold Patchwork Wallpaper
-			90		Never Even Flooring
-			8	5	Polyester Pack
-			10	5	Crystalline Component
-			7	20	LMD
-			5	5	Strategic Battle Record
-			3	10	Tactical Battle Record
-			1	20	Frontline Battle Record
-			4	10	Skill Summary - 3
-			2	20	Skill Summary - 2
-			3	8	Sugar
-			3	8	Oriron
-			3	8	Polyketon
-			6	5	Guard Chip
+			75	3	Module Data Block
+			100	5	Rephasic Enantiomer
+			35	10	RMA70-24
+			30	10	Polymerized Gel
+			40	10	Crystalline Circuit
+			30	10	Transmuted Salt Agglomerate
+			90		Painted Wooden Wall
+			80		Large Rifle Display Rack
+			70		Small Handgun Display Case
+			50		Storage Rack
+			45		Display Light
+			15	10	Data Supplement Instrument
+			5	60	Data Supplement Stick
+			15	15	Integrated Device
+			12	15	Coagulating Gel
+			10	15	Incandescent Alloy
+			12	15	Fuscous Fiber
+			7	120	LMD
+			5	30	Strategic Battle Record
+			3	50	Tactical Battle Record
+			1	150	Frontline Battle Record
+			4	25	Skill Summary - 3
+			2	50	Skill Summary - 2
+			2	40	Orirock Cube
+			3	30	Sugar
+			3	30	Polyester
+			3	25	Oriron
+			3	25	Polyketon
+			4	20	Device
+			6	5	Defender Chip
+			2	200	Furniture Part
 			""")
 		}
 	};
@@ -522,38 +533,6 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("Babel_(event)/Rerun#Motorized_Logistical_Camp", "Babel Rerun", "Raw_Sugar_Lumps")] = new("""
-		// Babel Rerun
-		200		Odda's Token
-		240		Odda's Token
-		280		Odda's Token
-		320		Odda's Token
-		360		Odda's Token
-		150	3	Headhunting Permit
-		100		Polymerization Preparation
-		25	3	Orirock Concentration
-		35	3	Grindstone Pentahydrate
-		35	3	Incandescent Alloy Block
-		60		Witchcraft Workbench
-		60		Welded Storage Box
-		80		Oddities Showcase
-		80		Load-bearing Pillar
-		90		Ice-Cold Patchwork Wallpaper
-		90		Never Even Flooring
-		8	5	Polyester Pack
-		10	5	Crystalline Component
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		3	8	Sugar
-		3	8	Oriron
-		3	8	Polyketon
-		6	5	Guard Chip
-		"""),
-
 		[new("Ending_a_Grand_Overture#Office_of_Proposed_Resolutions", "Ending a Grand Overture", @"""Nay!""")] = new("""
 		// Ending a Grand Overture
 		200		Catherine's Token
@@ -793,6 +772,49 @@ static class EventData
 		3	25	Polyketon
 		4	20	Device
 		6	5	Supporter Chip
+		2	200	Furniture Part
+		"""),
+
+		[new("The_Masses'_Travels#Sweet_Dream_Hall", "The Masses' Travels", "Enlightened_Pacifier")] = new("""
+		// The Masses' Travels
+		250		Sankta Miksaparato's Token
+		300		Sankta Miksaparato's Token
+		350		Sankta Miksaparato's Token
+		400		Sankta Miksaparato's Token
+		450		Sankta Miksaparato's Token
+		500		Rest Between Sets
+		500		Fresh Fastener
+		150	3	Headhunting Permit
+		75	3	Module Data Block
+		100	5	Rephasic Enantiomer
+		35	10	RMA70-24
+		30	10	Polymerized Gel
+		40	10	Crystalline Circuit
+		30	10	Transmuted Salt Agglomerate
+		90		Painted Wooden Wall
+		80		Large Rifle Display Rack
+		70		Small Handgun Display Case
+		50		Storage Rack
+		45		Display Light
+		15	10	Data Supplement Instrument
+		5	60	Data Supplement Stick
+		15	15	Integrated Device
+		12	15	Coagulating Gel
+		10	15	Incandescent Alloy
+		12	15	Fuscous Fiber
+		7	120	LMD
+		5	30	Strategic Battle Record
+		3	50	Tactical Battle Record
+		1	150	Frontline Battle Record
+		4	25	Skill Summary - 3
+		2	50	Skill Summary - 2
+		2	40	Orirock Cube
+		3	30	Sugar
+		3	30	Polyester
+		3	25	Oriron
+		3	25	Polyketon
+		4	20	Device
+		6	5	Defender Chip
 		2	200	Furniture Part
 		"""),
 
