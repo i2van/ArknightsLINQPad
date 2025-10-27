@@ -1,4 +1,5 @@
 <Query Kind="Statements">
+  <Namespace>System.Collections.ObjectModel</Namespace>
   <Namespace>System.Threading.Tasks</Namespace>
 </Query>
 
@@ -11,6 +12,11 @@
 #load "./lib/Parsable.linq"
 
 //#define DUMP_OPERATORS_WITHOUT_MODULES
+
+var NamesMap = new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
+{
+	["Mlynar"] = "Młynar"
+});
 
 const StringSplitOptions StringSplitOptions = StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries;
 
@@ -32,6 +38,7 @@ var operatorModules =
 			.Where( s => operators.Any(s.StartsWith))
 			.Select(s => operators.Aggregate(s, static (s, o) => s.Replace(o, string.Empty)).TrimStart().TrimStart('='))
 			.SelectMany(static s => s.Split(Comma, StringSplitOptions))
+			.Select(n => NamesMap.TryGetValue(n, out var name) ? name : n)
 			.Distinct()
 			.OrderBy()
 			.Select(GetOperator)

@@ -15,7 +15,7 @@ Aosta	Sniper	5	RPR-X	6-8	Oriron Block❂7｜Incandescent Alloy❂10	Paradox
 April	Sniper	5	MAR-Y	5-3	Polymerized Gel❂9｜RMA70-12❂9	Paradox
 Archetto	Sniper	6	MAR-X	SV-4	Polymerization Preparation❂4｜Orirock Concentration❂8	Paradox
 Archetto	Sniper	6	MAR-Y	2-9	Polymerization Preparation❂4｜Orirock Concentration❂8	Paradox
-Arene	Guard	4	LOR-Y	2-8	Orirock Cluster❂21｜Integrated Device❂7
+Arene	Guard	4	LOR-Y	2-8	Orirock Cluster❂21｜Integrated Device❂7	Paradox
 Aroma	Caster	5	BLA-X	GT-HX-3	RMA70-24❂7｜Loxic Kohl❂21	Paradox
 Ascalon	Specialist	6	AMB-X	11-6	D32 Steel❂4｜Keton Colloid❂6	Paradox
 Ascalon	Specialist	6	AMB-Y	5-10	D32 Steel❂4｜Keton Colloid❂6	Paradox
@@ -45,10 +45,12 @@ Blitz	Defender	5	SPT-X	3-4	Manganese Trihydrate❂8｜RMA70-12❂8
 Blue Poison	Sniper	5	MAR-Y	3-4	Manganese Trihydrate❂8｜Integrated Device❂8	Paradox
 Bobbing	Supporter	5	RIT-X	4-8	Cutting Fluid Solution❂7｜Semi-Synthetic Solvent❂13
 Breeze	Medic	5	RIN-X	4-1	Optimized Device❂5｜Loxic Kohl❂18	Paradox
+Brigid	Sniper	5	LPS-X	4-6	Solidified Fiber Board❂8｜Manganese Ore❂12
 Broca	Guard	5	CEN-X	7-8	Sugar Lump❂7｜Grindstone❂13	Paradox
 Bryophyta	Guard	5	INS-X	9-3	Refined Solvent❂7｜Aketon❂15	Paradox
 Bubble	Defender	4	PRO-X	4-6	Coagulating Gel❂16｜Loxic Kohl❂8	Paradox
 Cantabile	Vanguard	5	AGE-Y	5-3	Incandescent Alloy Block❂7｜Loxic Kohl❂18	Paradox
+Caper	Sniper	4	LPS-X	4-2	Integrated Device❂11｜Aggregate Cyclicene❂7	Paradox
 Carnelian	Caster	6	PLX-X	7-3	D32 Steel❂4｜RMA70-24❂7	Paradox
 Carnelian	Caster	6	PLX-Y	4-6	D32 Steel❂4｜RMA70-24❂7	Paradox
 Catherine	Supporter	5	CRA-X	11-7	Optimized Device❂6｜Sugar Pack❂13
@@ -106,7 +108,7 @@ Executor the Ex Foedere	Guard	6	REA-X	7-14	Nucleic Crystal Sinter❂3｜Polymeri
 Executor the Ex Foedere	Guard	6	REA-Y	GA-3	Nucleic Crystal Sinter❂3｜Polymerized Gel❂7	Paradox
 Exusiai	Sniper	6	MAR-X	4-10	Polymerization Preparation❂4｜Sugar Lump❂5	Paradox
 Exusiai	Sniper	6	MAR-Y	2-8	Polymerization Preparation❂4｜Sugar Lump❂5	Paradox
-Exusiai the New Covenant	Specialist	6	GEE-X	GA-EX-5	Biphasic Enantiomorphic Medium❂4｜RMA70-24❂2
+Exusiai the New Covenant	Specialist	6	GEE-X	GA-EX-5	Rephasic Enantiomer❂4｜RMA70-24❂2
 Eyjafjalla	Caster	6	CCR-X	OF-5	Polymerization Preparation❂4｜Optimized Device❂5	Paradox
 Eyjafjalla	Caster	6	CCR-Y	SL-4	Polymerization Preparation❂4｜Optimized Device❂5	Paradox
 Eyjafjalla the Hvít Aska	Medic	6	WDM-X	FC-5	Bipolar Nanoflake❂4｜Oriron Block❂5	Paradox
@@ -221,6 +223,7 @@ Lutonada	Defender	4	UNY-X	3-1	Semi-Synthetic Solvent❂14｜Integrated Device❂
 Magallan	Supporter	6	SUM-X	2-5	Polymerization Preparation❂4｜Manganese Trihydrate❂6	Paradox
 Magallan	Supporter	6	SUM-Y	2-2	Polymerization Preparation❂4｜Manganese Trihydrate❂6	Paradox
 Manticore	Specialist	5	AMB-X	1-9	Manganese Trihydrate❂8｜Sugar Pack❂12	Paradox
+Mantra	Caster	6	PRI-X	FC-5	Nucleic Crystal Sinter❂4｜Incandescent Alloy Block❂2
 Marcille	Caster	6	SPC-Y	5-10	Nucleic Crystal Sinter❂4｜Grindstone Pentahydrate❂2
 Matoimaru	Guard	4	DRE-Y	S2-10	Aketon❂16｜Sugar Pack❂10
 Matterhorn	Defender	4	PRO-Y	3-6	Manganese Ore❂14｜Integrated Device❂7	Paradox
@@ -236,6 +239,7 @@ Misumi Uika	Supporter	5	BAR-X	ZT-6	Refined Solvent❂9｜Integrated Device❂7
 Mitm	Vanguard	5	TAC-Y	3-1	Crystalline Circuit❂6｜Oriron Cluster❂12
 Mizuki	Specialist	6	AMB-X	4-3	Polymerization Preparation❂4｜Crystalline Circuit❂6	Paradox
 Mizuki	Specialist	6	AMB-Y	4-5	Polymerization Preparation❂4｜Crystalline Circuit❂6	Paradox
+Młynar	Guard	6	LIB-X	11-15	D32 Steel❂4｜Incandescent Alloy Block❂5
 Morgan	Guard	5	DRE-X	4-5	Cutting Fluid Solution❂8｜Transmuted Salt❂11	Paradox
 Mostima	Caster	6	SPC-X	DM-3	Bipolar Nanoflake❂4｜Grindstone Pentahydrate❂7	Paradox
 Mostima	Caster	6	SPC-Y	CB-5	Bipolar Nanoflake❂4｜Grindstone Pentahydrate❂7	Paradox
@@ -250,6 +254,7 @@ Muelsyse	Vanguard	6	TAC-Y	6-12	Bipolar Nanoflake❂4｜Grindstone Pentahydrate�
 Mulberry	Medic	5	WDM-X	SV-5	Orirock Concentration❂9｜Semi-Synthetic Solvent❂12	Paradox
 Myrrh	Medic	4	PHY-X	6-11	Aketon❂14｜Polyester Pack❂12	Paradox
 Myrtle	Vanguard	4	BEA-X	6-3	Grindstone❂12｜Integrated Device❂8	Paradox
+Narantuya	Sniper	6	LPS-X	WB-6	Bipolar Nanoflake❂4｜Polymerized Gel❂7
 Nearl	Defender	5	GUA-X	1-12	White Horse Kohl❂9｜Polyester Pack❂16
 Nearl the Radiant Knight	Guard	6	DRE-X	MN-8	Polymerization Preparation❂4｜Polymerized Gel❂8	Paradox
 Nearl the Radiant Knight	Guard	6	DRE-Y	NL-10	Polymerization Preparation❂4｜Polymerized Gel❂8	Paradox
@@ -260,7 +265,7 @@ Nightingale	Medic	6	RIN-X	3-6	D32 Steel❂4｜Keton Colloid❂6	Paradox
 Nightingale	Medic	6	RIN-Y	TW-3	D32 Steel❂4｜Keton Colloid❂6	Paradox
 Nightmare	Caster	5	CCR-Y	S4-1	Sugar Lump❂7｜Manganese Ore❂14
 Nine-Colored Deer	Supporter	5	BLS-X	IW-3	Manganese Trihydrate❂7｜Crystalline Component❂14
-Nowell	Medic	5	WAH-Y	5-7	Cutting Fluid Solution❂8｜Aggregate Cyclicene❂10
+Nowell	Medic	5	WAH-Y	5-7	Cutting Fluid Solution❂8｜Aggregate Cyclicene❂10	Paradox
 Nymph	Caster	6	PRI-X	14-7	Polymerization Preparation❂4｜Optimized Device❂5
 Odda	Guard	5	HAM-X	S3-6	Manganese Trihydrate❂7｜Fuscous Fiber❂13
 Pallas	Guard	6	INS-X	3-6	Crystalline Electronic Unit❂4｜White Horse Kohl❂6
@@ -336,6 +341,7 @@ Skadi	Guard	6	DRE-X	GT-4	D32 Steel❂4｜Orirock Concentration❂9	Paradox
 Skadi	Guard	6	DRE-Y	GT-6	D32 Steel❂4｜Orirock Concentration❂9	Paradox
 Skadi the Corrupting Heart	Supporter	6	BAR-X	SV-5	Polymerization Preparation❂4｜Grindstone Pentahydrate❂5
 Skyfire	Caster	5	SPC-Y	S3-5	Polyester Lump❂7｜Grindstone❂13	Paradox
+Snegurochka	Vanguard	4	AGE-X	R8-2	Aggregate Cyclicene❂13｜RMA70-12❂6
 Snowsant	Specialist	5	HOK-X	4-6	Polymerized Gel❂8｜Oriron Cluster❂15	Paradox
 Sora	Supporter	5	BAR-X	CB-7	White Horse Kohl❂9｜Orirock Cluster❂17	Paradox
 Specter	Guard	5	CEN-X	SN-EX-1	White Horse Kohl❂8｜Aketon❂15	Paradox
@@ -377,6 +383,7 @@ Valarqvin	Supporter	5	RIT-X	7-13	Orirock Concentration❂10｜Integrated Device�
 Vendela	Medic	5	INC-X	IC-2	Keton Colloid❂5｜Grindstone❂13
 Verdant	Specialist	4	PUM-Y	9-3	Oriron Cluster❂15｜Fuscous Fiber❂9	Paradox
 Vermeil	Sniper	4	MAR-X	3-1	Polyester Pack❂18｜Sugar Pack❂12	Paradox
+Vetochki	Defender	5	UNY-X	MB-5	Solidified Fiber Board❂8｜Sugar Pack❂15
 Vigil	Vanguard	6	TAC-X	3-8	Crystalline Electronic Unit❂3｜Optimized Device❂4	Paradox
 Vigil	Vanguard	6	TAC-Y	IS-6	Crystalline Electronic Unit❂3｜Optimized Device❂4	Paradox
 Vigna	Vanguard	4	CHG-Y	3-3	Oriron Cluster❂16｜Orirock Cluster❂11	Paradox
