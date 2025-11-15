@@ -33,53 +33,46 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Nov, Day.OfMonth(4)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Nov, Day.OfMonth(27)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("The_Masses'_Travels#Sweet_Dream_Hall", "The Masses' Travels", "Enlightened_Pacifier")] = new("""
-			// The Masses' Travels
-			250		Sankta Miksaparato's Token
-			300		Sankta Miksaparato's Token
-			350		Sankta Miksaparato's Token
-			400		Sankta Miksaparato's Token
-			450		Sankta Miksaparato's Token
-			500		Rest Between Sets
-			500		Fresh Fastener
+			[new("Act_or_Die#Studio_Self-Service_Bar", "Act or Die", "Phantom_of_the_Studio")] = new("""
+			// Act or Die
+			200		Miss.Christine's Token
+			240		Miss.Christine's Token
+			280		Miss.Christine's Token
+			320		Miss.Christine's Token
+			360		Miss.Christine's Token
+			500		Afternoon Teatime
 			150	3	Headhunting Permit
-			75	3	Module Data Block
-			100	5	Rephasic Enantiomer
-			35	10	RMA70-24
-			30	10	Polymerized Gel
-			40	10	Crystalline Circuit
-			30	10	Transmuted Salt Agglomerate
-			90		Painted Wooden Wall
-			80		Large Rifle Display Rack
-			70		Small Handgun Display Case
-			50		Storage Rack
-			45		Display Light
+			75	2	Module Data Block
+			100	5	Nucleic Crystal Sinter
+			25	10	Orirock Concentration
+			35	10	Grindstone Pentahydrate
+			35	10	Cutting Fluid Solution	
+			50		Director's Chair
+			65		Prop Trolley
+			75		Small Prop Rack
+			80		Large Ceiling Light
+			85		Red Curtain Backdrop (Side)
 			15	10	Data Supplement Instrument
 			5	60	Data Supplement Stick
-			15	15	Integrated Device
-			12	15	Coagulating Gel
-			10	15	Incandescent Alloy
-			12	15	Fuscous Fiber
-			7	120	LMD
-			5	30	Strategic Battle Record
+			8	15	Sugar Pack
+			10	10	Aketon
+			7	100	LMD
+			5	25	Strategic Battle Record
 			3	50	Tactical Battle Record
-			1	150	Frontline Battle Record
+			1	120	Frontline Battle Record
 			4	25	Skill Summary - 3
 			2	50	Skill Summary - 2
-			2	40	Orirock Cube
-			3	30	Sugar
-			3	30	Polyester
-			3	25	Oriron
+			2	25	Orirock Cube
+			3	25	Polyester
 			3	25	Polyketon
-			4	20	Device
-			6	5	Defender Chip
+			6	5	Caster Chip
 			2	200	Furniture Part
 			""")
 		}
@@ -485,6 +478,42 @@ static class EventData
 			EventStockParser.linq script parses event stock.
 			Key is (EventURI#EventStock, EventName, EventCurrency)
 		*/
+
+		[new("Act_or_Die#Studio_Self-Service_Bar", "Act or Die", "Phantom_of_the_Studio")] = new("""
+		// Act or Die
+		200		Miss.Christine's Token
+		240		Miss.Christine's Token
+		280		Miss.Christine's Token
+		320		Miss.Christine's Token
+		360		Miss.Christine's Token
+		500		Afternoon Teatime
+		150	3	Headhunting Permit
+		75	2	Module Data Block
+		100	5	Nucleic Crystal Sinter
+		25	10	Orirock Concentration
+		35	10	Grindstone Pentahydrate
+		35	10	Cutting Fluid Solution	
+		50		Director's Chair
+		65		Prop Trolley
+		75		Small Prop Rack
+		80		Large Ceiling Light
+		85		Red Curtain Backdrop (Side)
+		15	10	Data Supplement Instrument
+		5	60	Data Supplement Stick
+		8	15	Sugar Pack
+		10	10	Aketon
+		7	100	LMD
+		5	25	Strategic Battle Record
+		3	50	Tactical Battle Record
+		1	120	Frontline Battle Record
+		4	25	Skill Summary - 3
+		2	50	Skill Summary - 2
+		2	25	Orirock Cube
+		3	25	Polyester
+		3	25	Polyketon
+		6	5	Caster Chip
+		2	200	Furniture Part
+		"""),
 
 		[new("Adventure_That_Cannot_Wait_for_the_Sun#Grand_Bazaar", "Adventure That Cannot Wait for the Sun", "Flowing_Glimmerdust")] = new("""
 		// Adventure That Cannot Wait for the Sun
