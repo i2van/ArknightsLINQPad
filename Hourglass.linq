@@ -28,6 +28,12 @@ const string On          = "on";
 const string Off         = "off";
 
 const string Any         = nameof(Any);
+const string Clue        = nameof(Clue);
+const string Dormitory   = nameof(Dormitory);
+const string Reception   = nameof(Reception);
+const string Recruitment = nameof(Recruitment);
+const string Training    = nameof(Training);
+
 const string Hourglass   = nameof(Hourglass);
 
 // TODO: Force the dark theme. Press Alt+Shift+X to apply.
@@ -48,16 +54,14 @@ void Main()
 
 		// TODO: Specify timers.
 		Timers = SplitTrim($"""
-			Dormitory 1
-			Dormitory 2
-			Dormitory 3
-			Dormitory 4
-			Recruit
-			Clue
-			Exchange
-			Training
-			Dualchip
-			LMD
+			{Dormitory} 1
+			{Dormitory} 2
+			{Dormitory} 3
+			{Dormitory} 4
+			{Recruitment}
+			{Clue}
+			{Reception}
+			{Training}
 			{Any}
 		"""),
 
@@ -67,18 +71,17 @@ void Main()
 		// TODO: Specify timer help URIs.
 		TimerHelpUris = new ReadOnlyDictionary<string, string>(new Dictionary<string, string>
 		{
-			["Dormitory"] = "Dormitory",
-			["Exchange"]  = "Reception_Room",
-			["Recruit"]   = "Recruitment",
-			["Training"]  = "Training_Room"
+			[Dormitory] = "Dormitory",
+			[Reception] = "Reception_Room",
+			[Training]  = "Training_Room"
 		}),
 
 		// TODO: Specify your timers presets.
 		TimerPresets = new TimerPreset[]
 		{
-			new("Recruit",  "8h59"),
-			new("Exchange", "23h59"),
-			new("Clue",     "7h59")
+			new(Recruitment, "8h59"),
+			new(Reception,   "23h59"),
+			new(Clue,        "7h59")
 		},
 
 		// TODO: Specify timer options: https://github.com/i2van/hourglass/blob/main/Hourglass/Resources/Usage.txt

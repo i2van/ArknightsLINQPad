@@ -4,10 +4,10 @@
 [![Latest release](https://img.shields.io/github/downloads/i2van/ArknightsLINQPad/total.svg)](https://github.com/i2van/ArknightsLINQPad/releases/latest)
 [![License](https://img.shields.io/badge/license-MIT-orange)](https://opensource.org/licenses/MIT)
 [![Arknights](https://img.shields.io/badge/arknights-wiki-black)](https://arknights.wiki.gg)
-[![Requires LINQPad](https://img.shields.io/badge/requires-linqpad%208-teal)](https://www.linqpad.net/Download.aspx)
-[![Requires LINQPad Latest Beta](https://img.shields.io/badge/recommended-linqpad%208%20beta-blue)](https://www.linqpad.net/LINQPad8.aspx#beta)
+[![Requires LINQPad](https://img.shields.io/badge/requires-linqpad-teal)](https://www.linqpad.net/Download.aspx)
+[![Requires LINQPad Latest Beta](https://img.shields.io/badge/recommended-linqpad%20beta-blue)](https://www.linqpad.net/linqpad9.aspx#beta)
 
-Collection of the [Arknights](https://arknights.wiki.gg) [LINQPad 8](https://www.linqpad.net) scripts. LINQPad for Windows, macOS (Beta) can be downloaded [here](https://www.linqpad.net/Download.aspx). LINQPad Beta for Windows can be downloaded [here](https://www.linqpad.net/LINQPad8.aspx#beta).
+Collection of the [Arknights](https://arknights.wiki.gg) [LINQPad](https://www.linqpad.net) scripts. LINQPad for Windows or macOS can be downloaded [here](https://www.linqpad.net/Download.aspx) ([beta](https://www.linqpad.net/linqpad9.aspx#beta)).
 
 ## Table of Contents ##
 
@@ -24,12 +24,12 @@ Collection of the [Arknights](https://arknights.wiki.gg) [LINQPad 8](https://www
 
 ## Requirements
 
-[LINQPad 8](https://www.linqpad.net/Download.aspx) or [LINQPad 8 Latest Beta](https://www.linqpad.net/LINQPad8.aspx#beta) (recommended) with the [latest](https://dotnet.microsoft.com/en-us/download/dotnet/latest) [.NET](https://dotnet.microsoft.com/en-us/download/dotnet) installed.
+[LINQPad](https://www.linqpad.net/Download.aspx) or [LINQPad Beta](https://www.linqpad.net/linqpad9.aspx#beta) (recommended) with the [latest](https://dotnet.microsoft.com/en-us/download/dotnet/latest) [.NET](https://dotnet.microsoft.com/en-us/download/dotnet) installed.
 
 ## How to use
 
-1. Download from [releases](https://github.com/i2van/ArknightsLINQPad/releases) or download [`main` branch ZIP](https://github.com/i2van/ArknightsLINQPad/archive/refs/heads/main.zip) or `git clone` repository.
-2. Open [script](#scripts) in the [LINQPad 8](https://www.linqpad.net/Download.aspx).
+1. Download [Arknights LINQPad scripts](https://github.com/i2van/ArknightsLINQPad/releases) for the [ongoing Global event](https://arknights.wiki.gg/wiki/Event#Ongoing).
+2. Open [script](#scripts) in the [LINQPad](https://www.linqpad.net/Download.aspx).
 3. Search (`Ctrl+F`) for all the `TODO:`s and edit as necessary.
 4. Execute.
 
