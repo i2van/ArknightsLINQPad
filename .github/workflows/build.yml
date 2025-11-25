@@ -18,10 +18,10 @@ jobs:
       # Set up
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v4.3.1
+        uses: actions/setup-dotnet@v5.0.0
         with:
           dotnet-version: |
-            9.0.x
+            10.0.x
 
       # Set up LPRun
 
@@ -33,7 +33,7 @@ jobs:
       # Check out
 
       - name: Check out
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v6.0.0
 
       # LPRun scripts
 
@@ -78,7 +78,7 @@ jobs:
           7z a -tzip -mx=9 $message $message/* '-xr!.github'
 
       - name: Upload latest commit archive
-        uses: actions/upload-artifact@v4.6.2
+        uses: actions/upload-artifact@v5.0.0
         with:
           name: ${{env.ARTIFACT_NAME}}
           path: |
