@@ -33,47 +33,44 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Nov, Day.OfMonth(27)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Dec, Day.OfMonth(7)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Act_or_Die#Studio_Self-Service_Bar", "Act or Die", "Phantom_of_the_Studio")] = new("""
-			// Act or Die
-			200		Miss.Christine's Token
-			240		Miss.Christine's Token
-			280		Miss.Christine's Token
-			320		Miss.Christine's Token
-			360		Miss.Christine's Token
-			500		Afternoon Teatime
+			[new("Path_of_Life/Rerun#Materianomicon_Moderatrix", "Path of Life Rerun", @"""Emergency_Supplies""_Blueprint_Chip")] = new("""
+			// Path of Life Rerun
+			200		Underflow's Token
+			240		Underflow's Token
+			280		Underflow's Token
+			320		Underflow's Token
+			360		Underflow's Token
 			150	3	Headhunting Permit
-			75	2	Module Data Block
-			100	5	Nucleic Crystal Sinter
-			25	10	Orirock Concentration
-			35	10	Grindstone Pentahydrate
-			35	10	Cutting Fluid Solution	
-			50		Director's Chair
-			65		Prop Trolley
-			75		Small Prop Rack
-			80		Large Ceiling Light
-			85		Red Curtain Backdrop (Side)
-			15	10	Data Supplement Instrument
-			5	60	Data Supplement Stick
-			8	15	Sugar Pack
-			10	10	Aketon
-			7	100	LMD
-			5	25	Strategic Battle Record
-			3	50	Tactical Battle Record
-			1	120	Frontline Battle Record
-			4	25	Skill Summary - 3
-			2	50	Skill Summary - 2
-			2	25	Orirock Cube
-			3	25	Polyester
-			3	25	Polyketon
-			6	5	Caster Chip
-			2	200	Furniture Part
+			100		Polymerization Preparation
+			45	3	Cyclicene Prefab
+			35	3	RMA70-24
+			35	3	Incandescent Alloy Block
+			90		Stable Surgical Gimbal
+			70		Port Panoramic Display
+			70		Specialized Load-Bearing Floor
+			60		Automatic File Sorter
+			40		'Gladiia's Reflection'
+			40		'Skadi's Refreshment Point'
+			40		'Ulpianus's Curtain'
+			8	5	Polyester Pack
+			12	5	Grindstone
+			7	20	LMD
+			5	5	Strategic Battle Record
+			3	10	Tactical Battle Record
+			1	20	Frontline Battle Record
+			4	10	Skill Summary - 3
+			2	20	Skill Summary - 2
+			3	8	Sugar
+			3	8	Oriron
+			4	8	Device
+			6	5	Defender Chip
 			""")
 		}
 	};
@@ -724,20 +721,18 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("Path_of_Life#Materianomicon_Moderatrix", "Path of Life", @"""Emergency_Supplies""_Blueprint_Chip")] = new("""
-		// Path of Life
+		[new("Path_of_Life/Rerun#Materianomicon_Moderatrix", "Path of Life Rerun", @"""Emergency_Supplies""_Blueprint_Chip")] = new("""
+		// Path of Life Rerun
 		200		Underflow's Token
 		240		Underflow's Token
 		280		Underflow's Token
 		320		Underflow's Token
 		360		Underflow's Token
-		500		Invisible Dirge
 		150	3	Headhunting Permit
-		75	2	Module Data Block
-		100	5	Polymerization Preparation
-		35	10	Manganese Trihydrate
-		35	10	RMA70-24
-		35	10	Incandescent Alloy Block
+		100		Polymerization Preparation
+		45	3	Cyclicene Prefab
+		35	3	RMA70-24
+		35	3	Incandescent Alloy Block
 		90		Stable Surgical Gimbal
 		70		Port Panoramic Display
 		70		Specialized Load-Bearing Floor
@@ -745,21 +740,18 @@ static class EventData
 		40		'Gladiia's Reflection'
 		40		'Skadi's Refreshment Point'
 		40		'Ulpianus's Curtain'
-		15	10	Data Supplement Instrument
-		5	60	Data Supplement Stick
-		8	15	Polyester Pack
-		12	10	Grindstone
-		7	100	LMD
-		5	25	Strategic Battle Record
-		3	50	Tactical Battle Record
-		1	120	Frontline Battle Record
-		4	25	Skill Summary - 3
-		2	50	Skill Summary - 2
-		3	25	Sugar
-		3	25	Oriron
-		4	25	Device
-		6	5	Guard Chip
-		2	200	Furniture Part
+		8	5	Polyester Pack
+		12	5	Grindstone
+		7	20	LMD
+		5	5	Strategic Battle Record
+		3	10	Tactical Battle Record
+		1	20	Frontline Battle Record
+		4	10	Skill Summary - 3
+		2	20	Skill Summary - 2
+		3	8	Sugar
+		3	8	Oriron
+		4	8	Device
+		6	5	Defender Chip
 		"""),
 
 		[new("Such_is_the_Joy_of_Our_Reunion#Savors_at_Yu's", "Such is the Joy of Our Reunion", @"""Yum-yum!""")] = new("""

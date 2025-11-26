@@ -9,7 +9,7 @@
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-Act or Die
+Path of Life Rerun
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")
