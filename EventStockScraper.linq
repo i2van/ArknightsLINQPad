@@ -9,7 +9,7 @@
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-Fantasy in The Mirage
+Adventure That Cannot Wait for the Sun Rerun
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")

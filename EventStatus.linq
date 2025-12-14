@@ -33,34 +33,42 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Dec, Day.OfMonth(18)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Jan, Day.OfMonth(16)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new(@"Fantasy_in_The_Mirage#A_School_For_Item_Spirits", "Fantasy in The Mirage", @"""Sweetie""")] = new("""
-			// Fantasy in The Mirage
-			350		Soaring Will
-			10	7	Information Fragment
-			100	2	Module Data Block
-			30	8	Data Supplement Instrument
-			10	40	Data Supplement Stick
-			200		Rephasic Enantiomer
-			65		Chip Catalyst
-			60	2	Chiral Refractor
-			20	4	Oriron Cluster
-			25	4	Aggregate Cyclicene
-			5	10	LMD
+			[new("Adventure_That_Cannot_Wait_for_the_Sun/Rerun#Grand_Bazaar", "Adventure That Cannot Wait for the Sun Rerun", "Flowing_Glimmerdust")] = new("""
+			// Adventure That Cannot Wait for the Sun Rerun
+			200		Papyrus's Token
+			240		Papyrus's Token
+			280		Papyrus's Token
+			320		Papyrus's Token
+			360		Papyrus's Token
+			150	3	Headhunting Permit
+			100		Crystalline Electronic Unit
+			25	3	Orirock Concentration
+			35	3	Grindstone Pentahydrate
+			30	3	Polymerized Gel
+			60		Carved Wood Decoration
+			60		'Go No Further'
+			80		Lunar Desk
+			80		Historical Stone Vase
+			110		Wall of Life
+			8	5	Sugar Pack
+			12	5	Compound Cutting Fluid
+			7	20	LMD
 			5	5	Strategic Battle Record
-			5	5	Tactical Battle Record
-			6	5	Skill Summary - 3
-			6	5	Skill Summary - 2
-			4	5	Pure Gold
-			6	5	Polyketon
-			30	5	Recruitment Permit
-			4	10	Furniture Part
+			3	10	Tactical Battle Record
+			1	20	Frontline Battle Record
+			4	10	Skill Summary - 3
+			2	20	Skill Summary - 2
+			2	8	Orirock Cube
+			3	8	Polyester
+			3	8	Polyketon
+			6	5	Medic Chip
 			""")
 		}
 	};
@@ -285,7 +293,7 @@ abstract class TimePart<T> where T : TimePart<T>
 
 sealed class Year : TimePart<Year>
 {
-	public const int Now = 2025;
+	public const int Now = 2026;
 
 	private Year(int year)
 		: base(nameof(Year), year, Now, Now+1)
@@ -502,6 +510,37 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
+		[new("Adventure_That_Cannot_Wait_for_the_Sun/Rerun#Grand_Bazaar", "Adventure That Cannot Wait for the Sun Rerun", "Flowing_Glimmerdust")] = new("""
+		// Adventure That Cannot Wait for the Sun Rerun
+		200		Papyrus's Token
+		240		Papyrus's Token
+		280		Papyrus's Token
+		320		Papyrus's Token
+		360		Papyrus's Token
+		150	3	Headhunting Permit
+		100		Crystalline Electronic Unit
+		25	3	Orirock Concentration
+		35	3	Grindstone Pentahydrate
+		30	3	Polymerized Gel
+		60		Carved Wood Decoration
+		60		'Go No Further'
+		80		Lunar Desk
+		80		Historical Stone Vase
+		110		Wall of Life
+		8	5	Sugar Pack
+		12	5	Compound Cutting Fluid
+		7	20	LMD
+		5	5	Strategic Battle Record
+		3	10	Tactical Battle Record
+		1	20	Frontline Battle Record
+		4	10	Skill Summary - 3
+		2	20	Skill Summary - 2
+		2	8	Orirock Cube
+		3	8	Polyester
+		3	8	Polyketon
+		6	5	Medic Chip
+		"""),
+
 		[new("Adventure_That_Cannot_Wait_for_the_Sun#Grand_Bazaar", "Adventure That Cannot Wait for the Sun", "Flowing_Glimmerdust")] = new("""
 		// Adventure That Cannot Wait for the Sun
 		200		Papyrus's Token
@@ -621,29 +660,6 @@ static class EventData
 		4	25	Device
 		6	5	Medic Chip
 		2	200	Furniture Part
-		"""),
-
-		[new(@"Fantasy_in_The_Mirage#A_School_For_Item_Spirits", "Fantasy in The Mirage", @"""Sweetie""")] = new("""
-		// Fantasy in The Mirage
-		350		Soaring Will
-		10	7	Information Fragment
-		100	2	Module Data Block
-		30	8	Data Supplement Instrument
-		10	40	Data Supplement Stick
-		200		Rephasic Enantiomer
-		65		Chip Catalyst
-		60	2	Chiral Refractor
-		20	4	Oriron Cluster
-		25	4	Aggregate Cyclicene
-		5	10	LMD
-		5	5	Strategic Battle Record
-		5	5	Tactical Battle Record
-		6	5	Skill Summary - 3
-		6	5	Skill Summary - 2
-		4	5	Pure Gold
-		6	5	Polyketon
-		30	5	Recruitment Permit
-		4	10	Furniture Part
 		"""),
 
 		[new("I_Portatori_dei_Velluti#Fiera_delle_Meraviglie_Notturne", "I Portatori dei Velluti", "Invito_Mistico")] = new("""

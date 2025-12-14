@@ -305,8 +305,8 @@ Qiubai	Guard	6	LOR-X	WB-7	Crystalline Electronic Unit❂3｜Manganese Trihydrate
 Quartz	Guard	4	CRU-X	DH-4	Oriron Cluster❂15｜Incandescent Alloy❂9	Paradox
 Quercus	Supporter	5	BLS-X	9-2	Oriron Block❂6｜Manganese Ore❂13	Paradox
 Rathalos S Noir Corne	Guard	5	SBL-X	3-8	Transmuted Salt Agglomerate❂8｜Crystalline Component❂11
-Ray	Sniper	6	HUN-X	S9-1	Bipolar Nanoflake❂4｜Orirock Concentration❂8
-Ray	Sniper	6	HUN-Y	GO-4	Bipolar Nanoflake❂4｜Orirock Concentration❂8
+Ray	Sniper	6	HUN-X	S9-1	Bipolar Nanoflake❂4｜Orirock Concentration❂8	Paradox
+Ray	Sniper	6	HUN-Y	GO-4	Bipolar Nanoflake❂4｜Orirock Concentration❂8	Paradox
 Record Keeper	Medic	5	PHY-X	HS-5	Crystalline Circuit❂7｜Orirock Cluster❂16
 Reed	Vanguard	5	CHG-Y	9-5	Orirock Concentration❂9｜Manganese Ore❂12	Paradox
 Reed the Flame Shadow	Medic	6	INC-X	11-6	Nucleic Crystal Sinter❂3｜Orirock Concentration❂9
@@ -317,8 +317,8 @@ Rope	Specialist	4	HOK-X	3-3	Oriron Cluster❂15｜Sugar Pack❂11	Paradox
 Rosa	Sniper	6	SIE-X	7-9	Bipolar Nanoflake❂4｜Optimized Device❂6	Paradox
 Rose Salt	Medic	5	RIN-X	4-6	Crystalline Circuit❂7｜Compound Cutting Fluid❂11
 Rosmontis	Sniper	6	BOM-X	4-1	D32 Steel❂4｜Keton Colloid❂5
-Saga	Vanguard	6	SOL-X	WR-3	Bipolar Nanoflake❂4｜Incandescent Alloy Block❂6
-Saga	Vanguard	6	SOL-Y	WR-1	Bipolar Nanoflake❂4｜Incandescent Alloy Block❂6
+Saga	Vanguard	6	SOL-X	WR-3	Bipolar Nanoflake❂4｜Incandescent Alloy Block❂6	Paradox
+Saga	Vanguard	6	SOL-Y	WR-1	Bipolar Nanoflake❂4｜Incandescent Alloy Block❂6	Paradox
 Saileach	Vanguard	6	BEA-X	9-2	Crystalline Electronic Unit❂4｜Refined Solvent❂6	Paradox
 Saileach	Vanguard	6	BEA-Y	5-3	Crystalline Electronic Unit❂4｜Refined Solvent❂6	Paradox
 Sand Reckoner	Supporter	5	SUM-X	DV-2	Transmuted Salt Agglomerate❂9｜Incandescent Alloy❂12
@@ -376,7 +376,7 @@ Texas the Omertosa	Specialist	6	EXE-Y	CB-8	Bipolar Nanoflake❂4｜Oriron Block�
 Thorns	Guard	6	LOR-X	SV-6	Polymerization Preparation❂4｜Oriron Block❂6	Paradox
 Thorns	Guard	6	LOR-Δ	7-2	Polymerization Preparation❂4｜Oriron Block❂6	Paradox
 Thorns the Lodestar	Specialist	6	ALC-X	OF-7	Polymerization Preparation❂4｜Refined Solvent❂7
-Tin Man	Specialist	5	ALC-X	4-3	Keton Colloid❂7｜Orirock Cluster❂18
+Tin Man	Specialist	5	ALC-X	4-3	Keton Colloid❂7｜Orirock Cluster❂18	Paradox
 Toddifons	Sniper	5	SIE-X	4-6	Crystalline Circuit❂10｜Incandescent Alloy❂10	Paradox
 Togawa Sakiko	Guard	6	LOR-Y	IS-7	D32 Steel❂4｜RMA70-24❂7
 Tomimi	Caster	5	CCR-Y	RI-2	RMA70-24❂8｜Orirock Cluster❂14	Paradox
