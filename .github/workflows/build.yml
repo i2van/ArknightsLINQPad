@@ -1,4 +1,4 @@
-﻿name: build
+name: build
 
 on: [push, pull_request, workflow_dispatch]
 
@@ -78,7 +78,7 @@ jobs:
           7z a -tzip -mx=9 $message $message/* '-xr!.github'
 
       - name: Upload latest commit archive
-        uses: actions/upload-artifact@v5.0.0
+        uses: actions/upload-artifact@v6.0.0
         with:
           name: ${{env.ARTIFACT_NAME}}
           path: |
