@@ -33,42 +33,53 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Jan, Day.OfMonth(16)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Feb, Day.OfMonth(6)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Adventure_That_Cannot_Wait_for_the_Sun/Rerun#Grand_Bazaar", "Adventure That Cannot Wait for the Sun Rerun", "Flowing_Glimmerdust")] = new("""
-			// Adventure That Cannot Wait for the Sun Rerun
-			200		Papyrus's Token
-			240		Papyrus's Token
-			280		Papyrus's Token
-			320		Papyrus's Token
-			360		Papyrus's Token
+			[new("Ato#Vintage_Bazaar", "Ato", "Performer_Meeting_Chuusen-ken")] = new("""
+			// Ato
+			200		Matsukiri's Token
+			240		Matsukiri's Token
+			280		Matsukiri's Token
+			320		Matsukiri's Token
+			360		Matsukiri's Token
+			500		Fantastic Crafts
+			500		Letters from Wessex
 			150	3	Headhunting Permit
-			100		Crystalline Electronic Unit
-			25	3	Orirock Concentration
-			35	3	Grindstone Pentahydrate
-			30	3	Polymerized Gel
-			60		Carved Wood Decoration
-			60		'Go No Further'
-			80		Lunar Desk
-			80		Historical Stone Vase
-			110		Wall of Life
-			8	5	Sugar Pack
-			12	5	Compound Cutting Fluid
-			7	20	LMD
-			5	5	Strategic Battle Record
-			3	10	Tactical Battle Record
-			1	20	Frontline Battle Record
-			4	10	Skill Summary - 3
-			2	20	Skill Summary - 2
-			2	8	Orirock Cube
-			3	8	Polyester
-			3	8	Polyketon
-			6	5	Medic Chip
+			75	3	Module Data Block
+			100	5	Crystalline Electronic Unit
+			40	10	Oriron Block
+			35	10	Grindstone Pentahydrate
+			35	10	Refined Solvent
+			30	10	Transmuted Salt Agglomerate
+			30		Floral Hanging Lamp
+			60		Window Divan
+			75		Bamboo Decor
+			100		Summer in Kajimachi
+			15	10	Data Supplement Instrument
+			5	60	Data Supplement Stick
+			15	15	Integrated Device
+			15	15	RMA70-12
+			12	15	Coagulating Gel
+			12	15	Fuscous Fiber
+			7	120	LMD
+			5	30	Strategic Battle Record
+			3	50	Tactical Battle Record
+			1	150	Frontline Battle Record
+			4	25	Skill Summary - 3
+			2	50	Skill Summary - 2
+			2	40	Orirock Cube
+			3	30	Sugar
+			3	30	Polyester
+			3	25	Oriron
+			3	25	Polyketon
+			4	40	Device
+			6	5	Vanguard Chip
+			2	200	Furniture Part
 			""")
 		}
 	};
@@ -510,68 +521,32 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("Adventure_That_Cannot_Wait_for_the_Sun/Rerun#Grand_Bazaar", "Adventure That Cannot Wait for the Sun Rerun", "Flowing_Glimmerdust")] = new("""
-		// Adventure That Cannot Wait for the Sun Rerun
-		200		Papyrus's Token
-		240		Papyrus's Token
-		280		Papyrus's Token
-		320		Papyrus's Token
-		360		Papyrus's Token
-		150	3	Headhunting Permit
-		100		Crystalline Electronic Unit
-		25	3	Orirock Concentration
-		35	3	Grindstone Pentahydrate
-		30	3	Polymerized Gel
-		60		Carved Wood Decoration
-		60		'Go No Further'
-		80		Lunar Desk
-		80		Historical Stone Vase
-		110		Wall of Life
-		8	5	Sugar Pack
-		12	5	Compound Cutting Fluid
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		2	8	Orirock Cube
-		3	8	Polyester
-		3	8	Polyketon
-		6	5	Medic Chip
-		"""),
-
-		[new("Adventure_That_Cannot_Wait_for_the_Sun#Grand_Bazaar", "Adventure That Cannot Wait for the Sun", "Flowing_Glimmerdust")] = new("""
-		// Adventure That Cannot Wait for the Sun
-		200		Papyrus's Token
-		240		Papyrus's Token
-		280		Papyrus's Token
-		320		Papyrus's Token
-		360		Papyrus's Token
-		30		Tuye's Token
-		40		Tuye's Token
-		50		Tuye's Token
-		60		Tuye's Token
-		70		Tuye's Token
-		500		Bitter Herbs
+		[new("Ato#Vintage_Bazaar", "Ato", "Performer_Meeting_Chuusen-ken")] = new("""
+		// Ato
+		200		Matsukiri's Token
+		240		Matsukiri's Token
+		280		Matsukiri's Token
+		320		Matsukiri's Token
+		360		Matsukiri's Token
+		500		Fantastic Crafts
+		500		Letters from Wessex
 		150	3	Headhunting Permit
 		75	3	Module Data Block
 		100	5	Crystalline Electronic Unit
-		25	10	Orirock Concentration
-		30	10	Polymerized Gel
-		35	10	Refined Solvent
+		40	10	Oriron Block
 		35	10	Grindstone Pentahydrate
-		60		Carved Wood Decoration
-		60		'Go No Further'
-		80		Lunar Desk
-		80		Historical Stone Vase
-		110		Wall of Life
+		35	10	Refined Solvent
+		30	10	Transmuted Salt Agglomerate
+		30		Floral Hanging Lamp
+		60		Window Divan
+		75		Bamboo Decor
+		100		Summer in Kajimachi
 		15	10	Data Supplement Instrument
 		5	60	Data Supplement Stick
-		8	15	Sugar Pack
-		10	15	Aketon
-		10	15	Manganese Ore
-		12	15	Compound Cutting Fluid
+		15	15	Integrated Device
+		15	15	RMA70-12
+		12	15	Coagulating Gel
+		12	15	Fuscous Fiber
 		7	120	LMD
 		5	30	Strategic Battle Record
 		3	50	Tactical Battle Record
@@ -583,8 +558,8 @@ static class EventData
 		3	30	Polyester
 		3	25	Oriron
 		3	25	Polyketon
-		4	20	Device
-		6	5	Medic Chip
+		4	40	Device
+		6	5	Vanguard Chip
 		2	200	Furniture Part
 		"""),
 

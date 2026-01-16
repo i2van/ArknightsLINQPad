@@ -54,7 +54,7 @@ Cantabile	Vanguard	5	AGE-Y	5-3	Incandescent Alloy Block❂7｜Loxic Kohl❂18	Pa
 Caper	Sniper	4	LPS-X	4-2	Integrated Device❂11｜Aggregate Cyclicene❂7	Paradox
 Carnelian	Caster	6	PLX-X	7-3	D32 Steel❂4｜RMA70-24❂7	Paradox
 Carnelian	Caster	6	PLX-Y	4-6	D32 Steel❂4｜RMA70-24❂7	Paradox
-Catherine	Supporter	5	CRA-X	11-7	Optimized Device❂6｜Sugar Pack❂13
+Catherine	Supporter	5	CRA-X	11-7	Optimized Device❂6｜Sugar Pack❂13	Paradox
 Cement	Defender	5	HES-X	IW-EX-6	Manganese Trihydrate❂7｜Grindstone❂13	Paradox
 Ceobe	Caster	6	CCR-X	RI-6	Bipolar Nanoflake❂4｜Incandescent Alloy Block❂5	Paradox
 Ceobe	Caster	6	CCR-Y	11-7	Bipolar Nanoflake❂4｜Incandescent Alloy Block❂5	Paradox
@@ -167,8 +167,8 @@ Hoederer	Guard	6	CRU-X	IW-7	Crystalline Electronic Unit❂4｜Transmuted Salt Ag
 Honeyberry	Medic	5	WDM-X	GA-2	Refined Solvent❂7｜Integrated Device❂12	Paradox
 Horn	Defender	6	FOR-X	7-15	D32 Steel❂4｜Oriron Block❂7	Paradox
 Horn	Defender	6	FOR-Y	9-5	D32 Steel❂4｜Oriron Block❂7	Paradox
-Hoshiguma	Defender	6	PRO-X	6-4	Polymerization Preparation❂4｜Grindstone Pentahydrate❂5
-Hoshiguma	Defender	6	PRO-Y	3-1	Polymerization Preparation❂4｜Grindstone Pentahydrate❂5
+Hoshiguma	Defender	6	PRO-X	6-4	Polymerization Preparation❂4｜Grindstone Pentahydrate❂5	Paradox
+Hoshiguma	Defender	6	PRO-Y	3-1	Polymerization Preparation❂4｜Grindstone Pentahydrate❂5	Paradox
 Hoshiguma the Breacher	Defender	6	AST-X	OF-8	Rephasic Enantiomer❂4｜Chiral Refractor❂2
 Humus	Guard	4	REA-X	7-8	RMA70-12❂11｜Sugar Pack❂12	Paradox
 Hung	Defender	5	GUA-Y	S2-4	Incandescent Alloy Block❂7｜Aketon❂15	Paradox
@@ -277,7 +277,7 @@ Odda	Guard	5	HAM-X	S3-6	Manganese Trihydrate❂7｜Fuscous Fiber❂13
 Pallas	Guard	6	INS-X	3-6	Crystalline Electronic Unit❂4｜White Horse Kohl❂6
 Pallas	Guard	6	INS-Y	4-3	Crystalline Electronic Unit❂4｜White Horse Kohl❂6
 Paprika	Medic	5	XAH-X	3-5	Orirock Concentration❂8｜Integrated Device❂12	Paradox
-Papyrus	Medic	5	XAH-X	AS-5	Manganese Trihydrate❂7｜Grindstone❂13
+Papyrus	Medic	5	XAH-X	AS-5	Manganese Trihydrate❂7｜Grindstone❂13	Paradox
 Passenger	Caster	6	CHA-X	2-2	Bipolar Nanoflake❂4｜Oriron Block❂5
 Passenger	Caster	6	CHA-Y	5-10	Bipolar Nanoflake❂4｜Oriron Block❂5
 Penance	Defender	6	UNY-X	CB-4	D32 Steel❂4｜White Horse Kohl❂8	Paradox
@@ -321,7 +321,7 @@ Saga	Vanguard	6	SOL-X	WR-3	Bipolar Nanoflake❂4｜Incandescent Alloy Block❂6	
 Saga	Vanguard	6	SOL-Y	WR-1	Bipolar Nanoflake❂4｜Incandescent Alloy Block❂6	Paradox
 Saileach	Vanguard	6	BEA-X	9-2	Crystalline Electronic Unit❂4｜Refined Solvent❂6	Paradox
 Saileach	Vanguard	6	BEA-Y	5-3	Crystalline Electronic Unit❂4｜Refined Solvent❂6	Paradox
-Sand Reckoner	Supporter	5	SUM-X	DV-2	Transmuted Salt Agglomerate❂9｜Incandescent Alloy❂12
+Sand Reckoner	Supporter	5	SUM-X	DV-2	Transmuted Salt Agglomerate❂9｜Incandescent Alloy❂12	Paradox
 Sankta Miksaparato	Defender	6	SPT-X	14-5	D32 Steel❂4｜Crystalline Circuit❂5
 Santalla	Caster	5	SPC-Y	BI-2	White Horse Kohl❂8｜Polyester Pack❂17	Paradox
 Saria	Defender	6	GUA-X	MB-3	Bipolar Nanoflake❂4｜Manganese Trihydrate❂5
