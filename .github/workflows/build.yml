@@ -1,4 +1,4 @@
-﻿name: build
+name: build
 
 on: [push, pull_request, workflow_dispatch]
 
@@ -33,7 +33,7 @@ jobs:
       # Check out
 
       - name: Check out
-        uses: actions/checkout@v6.0.1
+        uses: actions/checkout@v6.0.2
 
       # LPRun scripts
 
