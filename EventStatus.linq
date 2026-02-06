@@ -33,52 +33,50 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Feb, Day.OfMonth(6)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Feb, Day.OfMonth(24)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Ato#Vintage_Bazaar", "Ato", "Performer_Meeting_Chuusen-ken")] = new("""
-			// Ato
-			200		Matsukiri's Token
-			240		Matsukiri's Token
-			280		Matsukiri's Token
-			320		Matsukiri's Token
-			360		Matsukiri's Token
-			500		Fantastic Crafts
-			500		Letters from Wessex
+			[new("Somniloquium_Serenum#Coretton's_Museum", "Somniloquium Serenum", "Dream_Puzzle_Pieces")] = new("""
+			// Somniloquium Serenum
+			200		Yūtenji Nyamu's Token
+			240		Yūtenji Nyamu's Token
+			280		Yūtenji Nyamu's Token
+			320		Yūtenji Nyamu's Token
+			360		Yūtenji Nyamu's Token
+			200		Yahata Umiri's Token
+			240		Yahata Umiri's Token
+			280		Yahata Umiri's Token
+			320		Yahata Umiri's Token
+			360		Yahata Umiri's Token
 			150	3	Headhunting Permit
-			75	3	Module Data Block
-			100	5	Crystalline Electronic Unit
-			40	10	Oriron Block
-			35	10	Grindstone Pentahydrate
-			35	10	Refined Solvent
+			75	2	Module Data Block
+			100	5	Polymerization Preparation
+			35	10	Keton Colloid
+			40	10	Crystalline Circuit
 			30	10	Transmuted Salt Agglomerate
-			30		Floral Hanging Lamp
-			60		Window Divan
-			75		Bamboo Decor
-			100		Summer in Kajimachi
+			75		Dark Red Night Sky Carpet
+			65		Pointed-Top Bookshelf
+			55		Castle Table
+			30	5	Dreamseeker's Chair
 			15	10	Data Supplement Instrument
 			5	60	Data Supplement Stick
-			15	15	Integrated Device
-			15	15	RMA70-12
-			12	15	Coagulating Gel
-			12	15	Fuscous Fiber
-			7	120	LMD
-			5	30	Strategic Battle Record
+			7	15	Orirock Cluster
+			10	10	Oriron Cluster
+			7	100	LMD
+			5	25	Strategic Battle Record
 			3	50	Tactical Battle Record
-			1	150	Frontline Battle Record
+			1	120	Frontline Battle Record
 			4	25	Skill Summary - 3
 			2	50	Skill Summary - 2
-			2	40	Orirock Cube
-			3	30	Sugar
-			3	30	Polyester
+			3	25	Sugar
 			3	25	Oriron
-			3	25	Polyketon
-			4	40	Device
-			6	5	Vanguard Chip
+			4	25	Device
+			6	5	Guard Chip
+			6	5	Specialist Chip
 			2	200	Furniture Part
 			""")
 		}
@@ -722,6 +720,46 @@ static class EventData
 		3	25	Sugar
 		3	25	Oriron
 		6	5	Guard Chip
+		2	200	Furniture Part
+		"""),
+
+		[new("Somniloquium_Serenum#Coretton's_Museum", "Somniloquium Serenum", "Dream_Puzzle_Pieces")] = new("""
+		// Somniloquium Serenum
+		200		Yūtenji Nyamu's Token
+		240		Yūtenji Nyamu's Token
+		280		Yūtenji Nyamu's Token
+		320		Yūtenji Nyamu's Token
+		360		Yūtenji Nyamu's Token
+		200		Yahata Umiri's Token
+		240		Yahata Umiri's Token
+		280		Yahata Umiri's Token
+		320		Yahata Umiri's Token
+		360		Yahata Umiri's Token
+		150	3	Headhunting Permit
+		75	2	Module Data Block
+		100	5	Polymerization Preparation
+		35	10	Keton Colloid
+		40	10	Crystalline Circuit
+		30	10	Transmuted Salt Agglomerate
+		75		Dark Red Night Sky Carpet
+		65		Pointed-Top Bookshelf
+		55		Castle Table
+		30	5	Dreamseeker's Chair
+		15	10	Data Supplement Instrument
+		5	60	Data Supplement Stick
+		7	15	Orirock Cluster
+		10	10	Oriron Cluster
+		7	100	LMD
+		5	25	Strategic Battle Record
+		3	50	Tactical Battle Record
+		1	120	Frontline Battle Record
+		4	25	Skill Summary - 3
+		2	50	Skill Summary - 2
+		3	25	Sugar
+		3	25	Oriron
+		4	25	Device
+		6	5	Guard Chip
+		6	5	Specialist Chip
 		2	200	Furniture Part
 		"""),
 
