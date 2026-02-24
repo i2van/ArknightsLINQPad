@@ -33,51 +33,42 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Feb, Day.OfMonth(24)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Mar, Day.OfMonth(6)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Somniloquium_Serenum#Coretton's_Museum", "Somniloquium Serenum", "Dream_Puzzle_Pieces")] = new("""
-			// Somniloquium Serenum
-			200		Yūtenji Nyamu's Token
-			240		Yūtenji Nyamu's Token
-			280		Yūtenji Nyamu's Token
-			320		Yūtenji Nyamu's Token
-			360		Yūtenji Nyamu's Token
-			200		Yahata Umiri's Token
-			240		Yahata Umiri's Token
-			280		Yahata Umiri's Token
-			320		Yahata Umiri's Token
-			360		Yahata Umiri's Token
+			[new("Ending_a_Grand_Overture/Rerun#Office_of_Proposed_Resolutions", "Ending a Grand Overture Rerun", "Nay!")] = new("""
+			// Ending a Grand Overture Rerun
+			200		Catherine's Token
+			240		Catherine's Token
+			280		Catherine's Token
+			320		Catherine's Token
+			360		Catherine's Token
 			150	3	Headhunting Permit
-			75	2	Module Data Block
-			100	5	Polymerization Preparation
-			35	10	Keton Colloid
-			40	10	Crystalline Circuit
-			30	10	Transmuted Salt Agglomerate
-			75		Dark Red Night Sky Carpet
-			65		Pointed-Top Bookshelf
-			55		Castle Table
-			30	5	Dreamseeker's Chair
-			15	10	Data Supplement Instrument
-			5	60	Data Supplement Stick
-			7	15	Orirock Cluster
-			10	10	Oriron Cluster
-			7	100	LMD
-			5	25	Strategic Battle Record
-			3	50	Tactical Battle Record
-			1	120	Frontline Battle Record
-			4	25	Skill Summary - 3
-			2	50	Skill Summary - 2
-			3	25	Sugar
-			3	25	Oriron
-			4	25	Device
-			6	5	Guard Chip
-			6	5	Specialist Chip
-			2	200	Furniture Part
+			35	3	RMA70-24
+			35	3	Incandescent Alloy Block
+			40	3	Solidified Fiber Board
+			100		Nucleic Crystal Sinter
+			50		Engraved Briefcase
+			60		'The Future is Nigh'
+			80		Engraved Pushcart
+			90		Railway Platform Bench
+			90		Railway Platform Panoramic Display
+			10	5	Aketon
+			10	5	Incandescent Alloy
+			7	20	LMD
+			5	5	Strategic Battle Record
+			3	10	Tactical Battle Record
+			1	20	Frontline Battle Record
+			4	10	Skill Summary - 3
+			2	20	Skill Summary - 2
+			2	8	Orirock Cube
+			3	8	Polyester
+			3	8	Oriron
+			6	5	Supporter Chip
 			""")
 		}
 	};
@@ -561,40 +552,35 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("Ending_a_Grand_Overture#Office_of_Proposed_Resolutions", "Ending a Grand Overture", @"""Nay!""")] = new("""
-		// Ending a Grand Overture
+		[new("Ending_a_Grand_Overture/Rerun#Office_of_Proposed_Resolutions", "Ending a Grand Overture Rerun", "Nay!")] = new("""
+		// Ending a Grand Overture Rerun
 		200		Catherine's Token
 		240		Catherine's Token
 		280		Catherine's Token
 		320		Catherine's Token
 		360		Catherine's Token
-		500		Queen No. 1
 		150	3	Headhunting Permit
-		75	2	Module Data Block
-		100	5	Nucleic Crystal Sinter
-		35	10	Manganese Trihydrate
-		35	10	Incandescent Alloy Block
-		35	10	Refined Solvent
+		35	3	RMA70-24
+		35	3	Incandescent Alloy Block
+		40	3	Solidified Fiber Board
+		100		Nucleic Crystal Sinter
 		50		Engraved Briefcase
 		60		'The Future is Nigh'
 		80		Engraved Pushcart
 		90		Railway Platform Bench
 		90		Railway Platform Panoramic Display
-		15	10	Data Supplement Instrument
-		5	60	Data Supplement Stick
-		10	15	Manganese Ore
-		10	10	Incandescent Alloy
-		7	100	LMD
-		5	25	Strategic Battle Record
-		3	50	Tactical Battle Record
-		1	120	Frontline Battle Record
-		4	25	Skill Summary - 3
-		2	50	Skill Summary - 2
-		2	25	Orirock Cube
-		3	25	Polyester
-		3	25	Oriron
+		10	5	Aketon
+		10	5	Incandescent Alloy
+		7	20	LMD
+		5	5	Strategic Battle Record
+		3	10	Tactical Battle Record
+		1	20	Frontline Battle Record
+		4	10	Skill Summary - 3
+		2	20	Skill Summary - 2
+		2	8	Orirock Cube
+		3	8	Polyester
+		3	8	Oriron
 		6	5	Supporter Chip
-		2	200	Furniture Part
 		"""),
 
 		[new("Exodus_from_the_Pale_Sea#Salt_Ship_Marketplace", "Exodus from the Pale Sea", "Saltfin_Garum")] = new("""

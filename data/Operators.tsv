@@ -50,6 +50,7 @@ Brigid	Sniper	5	LPS-X	4-6	Solidified Fiber Board❂8｜Manganese Ore❂12
 Broca	Guard	5	CEN-X	7-8	Sugar Lump❂7｜Grindstone❂13	Paradox
 Bryophyta	Guard	5	INS-X	9-3	Refined Solvent❂7｜Aketon❂15	Paradox
 Bubble	Defender	4	PRO-X	4-6	Coagulating Gel❂16｜Loxic Kohl❂8	Paradox
+Cairn	Defender	5	PRP-X	TW-7	Orirock Concentration❂9｜Coagulating Gel❂11
 Cantabile	Vanguard	5	AGE-Y	5-3	Incandescent Alloy Block❂7｜Loxic Kohl❂18	Paradox
 Caper	Sniper	4	LPS-X	4-2	Integrated Device❂11｜Aggregate Cyclicene❂7	Paradox
 Carnelian	Caster	6	PLX-X	7-3	D32 Steel❂4｜RMA70-24❂7	Paradox
@@ -61,6 +62,7 @@ Ceobe	Caster	6	CCR-Y	11-7	Bipolar Nanoflake❂4｜Incandescent Alloy Block❂5	P
 Ceylon	Medic	5	WAH-X	OF-3	Oriron Block❂7｜Aketon❂10	Paradox
 Ch'en	Guard	6	SWO-X	5-8	Polymerization Preparation❂4｜White Horse Kohl❂6	Paradox
 Ch'en	Guard	6	SWO-Y	5-9	Polymerization Preparation❂4｜White Horse Kohl❂6	Paradox
+Ch'en the Dawnstreak	Guard	6	AFT-X	5-10	Nucleic Crystal Sinter❂4｜Transmuted Salt Agglomerate❂3
 Ch'en the Holungday	Sniper	6	RPR-X	9-13	Bipolar Nanoflake❂4｜Incandescent Alloy Block❂6	Paradox
 Ch'en the Holungday	Sniper	6	RPR-Y	DH-7	Bipolar Nanoflake❂4｜Incandescent Alloy Block❂6	Paradox
 Chestnut	Medic	4	WDM-X	SV-3	Loxic Kohl❂20｜Incandescent Alloy❂8	Paradox
@@ -190,6 +192,7 @@ Jaye	Specialist	4	MER-X	S3-2	Grindstone❂14｜Aketon❂8	Paradox
 Jessica	Sniper	4	MAR-Y	SV-4	Loxic Kohl❂20｜Oriron Cluster❂7	Paradox
 Jessica the Liberated	Defender	6	SPT-X	3-8	Crystalline Electronic Unit❂4｜Optimized Device❂4	Paradox
 Jieyun	Sniper	5	ART-Y	S2-2	Keton Colloid❂7｜RMA70-12❂11	Paradox
+Ju	Sniper	5	SIE-X	WB-4	Solidified Fiber Board❂8｜Loxic Kohl❂13
 Kafka	Specialist	5	EXE-Y	2-7	Polymerized Gel❂8｜Oriron Cluster❂15	Paradox
 Kal'tsit	Medic	6	PHY-X	5-10	Crystalline Electronic Unit❂4｜Optimized Device❂4	Paradox
 Kal'tsit	Medic	6	PHY-Y	5-10	Crystalline Electronic Unit❂4｜Optimized Device❂4	Paradox
@@ -289,6 +292,7 @@ Perfumer	Medic	4	RIN-Y	3-4	Loxic Kohl❂19｜Aketon❂8	Paradox
 Perfumer the Distilled	Supporter	5	BLS-Y	4-3	Crystalline Circuit❂6｜Integrated Device❂11
 Phantom	Specialist	6	EXE-X	3-6	Polymerization Preparation❂4｜Polymerized Gel❂9	Paradox
 Phantom	Specialist	6	EXE-Y	DM-5	Polymerization Preparation❂4｜Polymerized Gel❂9	Paradox
+Philae	Defender	5	PRP-X	10-2	RMA70-24❂6｜Aketon❂16
 Pinecone	Sniper	4	RPR-X	3-6	Incandescent Alloy❂16｜Grindstone❂8	Paradox
 Platinum	Sniper	5	MAR-X	5-7	Grindstone Pentahydrate❂8｜Loxic Kohl❂15	Paradox
 Podenco	Supporter	4	DEC-X	4-6	Incandescent Alloy❂15｜Grindstone❂5	Paradox
@@ -414,7 +418,7 @@ Vulpisfoglia	Vanguard	6	SOL-X	S2-3	Nucleic Crystal Sinter❂4｜Cyclicene Prefab
 W	Sniper	6	ART-X	DM-3	Bipolar Nanoflake❂4｜Keton Colloid❂7
 W	Sniper	6	ART-Y	DM-7	Bipolar Nanoflake❂4｜Keton Colloid❂7
 Waai Fu	Specialist	5	EXE-X	4-7	RMA70-24❂7｜Orirock Cluster❂16	Paradox
-Wakaba Mutsumi	Specialist	5	PUM-Y	13-16	Cyclicene Prefab❂8｜Polyester Pack❂13
+Wang	Specialist	6	TRP-X	HS-7	Polymerization Preparation❂4｜Keton Colloid❂6
 Wanqing	Vanguard	5	BEA-X	9-13	Cutting Fluid Solution❂9｜Coagulating Gel❂9	Paradox
 Warfarin	Medic	5	PHY-X	2-10	Optimized Device❂5｜Sugar Pack❂17	Paradox
 Warmy	Caster	5	PRI-X	6-11	Grindstone Pentahydrate❂6｜Crystalline Component❂19	Paradox
@@ -430,6 +434,7 @@ Wiš'adel	Sniper	6	BOM-X	DM-5	Crystalline Electronic Unit❂3｜Optimized Device
 Wulfenite	Specialist	5	TRP-Y	9-6	Polymerized Gel❂9｜Fuscous Fiber❂10
 Xingzhu	Supporter	5	BLS-X	3-2	Refined Solvent❂7｜Loxic Kohl❂20
 Yahata Umiri	Specialist	5	AMB-Y	BB-7	Cutting Fluid Solution❂8｜Semi-Synthetic Solvent❂12
+Yu	Defender	6	PRP-X	WR-4	D32 Steel❂4｜Incandescent Alloy Block❂5
 Yūtenji Nyamu	Guard	5	HAM-X	ZT-4	Refined Solvent❂7｜RMA70-12❂12
 Zima	Vanguard	5	SOL-X	1-5	Sugar Lump❂7｜RMA70-12❂11	Paradox
 Zuo Le	Guard	6	SBL-X	WB-5	Polymerization Preparation❂4｜White Horse Kohl❂8
