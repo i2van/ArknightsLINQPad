@@ -402,9 +402,9 @@ void Main()
 
 	void AddRootHandles()
 	{
-		if(launchTimersSplitButton.GetVisualRoot() is Control visualRoot)
+		if(TopLevel.GetTopLevel(launchTimersSplitButton) is Interactive interactiveRoot)
 		{
-			visualRoot.AddHandler(InputElement.PointerPressedEvent, PointerPressedEventHandler, RoutingStrategies.Tunnel);
+			interactiveRoot.AddHandler(InputElement.PointerPressedEvent, PointerPressedEventHandler, RoutingStrategies.Tunnel);
 		}
 
 		void PointerPressedEventHandler(object? sender, RoutedEventArgs e)

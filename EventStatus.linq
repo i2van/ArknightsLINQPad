@@ -33,42 +33,54 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Mar, Day.OfMonth(6)),
+		EventEndDate   = new DateOnly(Year.Now, Month.May, Day.OfMonth(5)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Ending_a_Grand_Overture/Rerun#Office_of_Proposed_Resolutions", "Ending a Grand Overture Rerun", "Nay!")] = new("""
-			// Ending a Grand Overture Rerun
-			200		Catherine's Token
-			240		Catherine's Token
-			280		Catherine's Token
-			320		Catherine's Token
-			360		Catherine's Token
+			[new("Retracing_Our_Steps#Observatory_Support_Division", "Retracing Our Steps", "Multi-functional_Snow_Detector")] = new("""
+			// Retracing Our Steps
+			250		Astgenne the Lightchaser's Token
+			300		Astgenne the Lightchaser's Token
+			350		Astgenne the Lightchaser's Token
+			400		Astgenne the Lightchaser's Token
+			450		Astgenne the Lightchaser's Token
+			500		Cheerful Guardian
+			500		Clivia
 			150	3	Headhunting Permit
-			35	3	RMA70-24
-			35	3	Incandescent Alloy Block
-			40	3	Solidified Fiber Board
-			100		Nucleic Crystal Sinter
-			50		Engraved Briefcase
-			60		'The Future is Nigh'
-			80		Engraved Pushcart
-			90		Railway Platform Bench
-			90		Railway Platform Panoramic Display
-			10	5	Aketon
-			10	5	Incandescent Alloy
-			7	20	LMD
-			5	5	Strategic Battle Record
-			3	10	Tactical Battle Record
-			1	20	Frontline Battle Record
-			4	10	Skill Summary - 3
-			2	20	Skill Summary - 2
-			2	8	Orirock Cube
-			3	8	Polyester
-			3	8	Oriron
+			75	3	Module Data Block
+			100	5	Nucleic Crystal Sinter
+			35	10	Keton Colloid
+			35	10	Incandescent Alloy Block
+			35	10	Refined Solvent
+			30	10	Transmuted Salt Agglomerate
+			55		Pale Patchwork Rug
+			65		Snow Mountain Projector
+			70		Simple Stone Table
+			75		Karlan Trade Wallpaper
+			75		Kjerag Stone Floor
+			15	10	Data Supplement Instrument
+			5	60	Data Supplement Stick
+			10	15	Oriron Cluster
+			10	15	Aketon
+			10	15	Incandescent Alloy
+			12	15	Semi-Synthetic Solvent
+			7	120	LMD
+			5	30	Strategic Battle Record
+			3	50	Tactical Battle Record
+			1	150	Frontline Battle Record
+			4	25	Skill Summary - 3
+			2	50	Skill Summary - 2
+			2	40	Orirock Cube
+			3	30	Sugar
+			3	30	Polyester
+			3	25	Oriron
+			3	25	Polyketon
+			4	20	Device
 			6	5	Supporter Chip
+			2	200	Furniture Part
 			""")
 		}
 	};
@@ -487,7 +499,7 @@ static class EventData
 		100	5	Nucleic Crystal Sinter
 		25	10	Orirock Concentration
 		35	10	Grindstone Pentahydrate
-		35	10	Cutting Fluid Solution	
+		35	10	Cutting Fluid Solution
 		50		Director's Chair
 		65		Prop Trolley
 		75		Small Prop Rack
@@ -550,37 +562,6 @@ static class EventData
 		4	40	Device
 		6	5	Vanguard Chip
 		2	200	Furniture Part
-		"""),
-
-		[new("Ending_a_Grand_Overture/Rerun#Office_of_Proposed_Resolutions", "Ending a Grand Overture Rerun", "Nay!")] = new("""
-		// Ending a Grand Overture Rerun
-		200		Catherine's Token
-		240		Catherine's Token
-		280		Catherine's Token
-		320		Catherine's Token
-		360		Catherine's Token
-		150	3	Headhunting Permit
-		35	3	RMA70-24
-		35	3	Incandescent Alloy Block
-		40	3	Solidified Fiber Board
-		100		Nucleic Crystal Sinter
-		50		Engraved Briefcase
-		60		'The Future is Nigh'
-		80		Engraved Pushcart
-		90		Railway Platform Bench
-		90		Railway Platform Panoramic Display
-		10	5	Aketon
-		10	5	Incandescent Alloy
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		2	8	Orirock Cube
-		3	8	Polyester
-		3	8	Oriron
-		6	5	Supporter Chip
 		"""),
 
 		[new("Exodus_from_the_Pale_Sea#Salt_Ship_Marketplace", "Exodus from the Pale Sea", "Saltfin_Garum")] = new("""
@@ -706,6 +687,49 @@ static class EventData
 		3	25	Sugar
 		3	25	Oriron
 		6	5	Guard Chip
+		2	200	Furniture Part
+		"""),
+
+		[new("Retracing_Our_Steps#Observatory_Support_Division", "Retracing Our Steps", "Multi-functional_Snow_Detector")] = new("""
+		// Retracing Our Steps
+		250		Astgenne the Lightchaser's Token
+		300		Astgenne the Lightchaser's Token
+		350		Astgenne the Lightchaser's Token
+		400		Astgenne the Lightchaser's Token
+		450		Astgenne the Lightchaser's Token
+		500		Cheerful Guardian
+		500		Clivia
+		150	3	Headhunting Permit
+		75	3	Module Data Block
+		100	5	Nucleic Crystal Sinter
+		35	10	Keton Colloid
+		35	10	Incandescent Alloy Block
+		35	10	Refined Solvent
+		30	10	Transmuted Salt Agglomerate
+		55		Pale Patchwork Rug
+		65		Snow Mountain Projector
+		70		Simple Stone Table
+		75		Karlan Trade Wallpaper
+		75		Kjerag Stone Floor
+		15	10	Data Supplement Instrument
+		5	60	Data Supplement Stick
+		10	15	Oriron Cluster
+		10	15	Aketon
+		10	15	Incandescent Alloy
+		12	15	Semi-Synthetic Solvent
+		7	120	LMD
+		5	30	Strategic Battle Record
+		3	50	Tactical Battle Record
+		1	150	Frontline Battle Record
+		4	25	Skill Summary - 3
+		2	50	Skill Summary - 2
+		2	40	Orirock Cube
+		3	30	Sugar
+		3	30	Polyester
+		3	25	Oriron
+		3	25	Polyketon
+		4	20	Device
+		6	5	Supporter Chip
 		2	200	Furniture Part
 		"""),
 
