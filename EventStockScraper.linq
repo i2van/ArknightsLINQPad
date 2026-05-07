@@ -9,7 +9,7 @@
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-Retracing Our Steps
+I Portatori dei Velluti Rerun
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")
@@ -21,7 +21,10 @@ const StringSplitOptions StringSplitOptions = StringSplitOptions.RemoveEmptyEntr
 
 using var httpClient = new HttpClient().Configure();
 
-var wiki = await httpClient.GetStringAsync($"https://arknights.wiki.gg/wiki/{eventUri}?action=raw");
+var wikiUrl = $"https://arknights.wiki.gg/wiki/{eventUri}";
+var rawWikiUrl = $"{wikiUrl}?action=raw";
+
+var wiki = await httpClient.GetStringAsync(rawWikiUrl);
 
 var regexTimeout = TimeSpan.FromMilliseconds(100);
 
@@ -41,7 +44,7 @@ var stockItems = wiki
 
 if(!stockItems.Any())
 {
-	throw new("No event stock items found");
+	throw new($"No event stock items found at {wikiUrl}");
 }
 
 await new string[]{

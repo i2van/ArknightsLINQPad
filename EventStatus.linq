@@ -33,54 +33,43 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.May, Day.OfMonth(5)),
+		EventEndDate   = new DateOnly(Year.Now, Month.May, Day.OfMonth(17)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Retracing_Our_Steps#Observatory_Support_Division", "Retracing Our Steps", "Multi-functional_Snow_Detector")] = new("""
-			// Retracing Our Steps
-			250		Astgenne the Lightchaser's Token
-			300		Astgenne the Lightchaser's Token
-			350		Astgenne the Lightchaser's Token
-			400		Astgenne the Lightchaser's Token
-			450		Astgenne the Lightchaser's Token
-			500		Cheerful Guardian
-			500		Clivia
+			[new("I_Portatori_dei_Velluti/Rerun#Fiera_delle_Meraviglie_Notturne", "I Portatori dei Velluti Rerun", "Invito_Mistico")] = new("""
+			// I Portatori dei Velluti Rerun
+			250		Crownslayer's Token
+			300		Crownslayer's Token
+			350		Crownslayer's Token
+			400		Crownslayer's Token
+			450		Crownslayer's Token
 			150	3	Headhunting Permit
-			75	3	Module Data Block
-			100	5	Nucleic Crystal Sinter
-			35	10	Keton Colloid
-			35	10	Incandescent Alloy Block
-			35	10	Refined Solvent
-			30	10	Transmuted Salt Agglomerate
-			55		Pale Patchwork Rug
-			65		Snow Mountain Projector
-			70		Simple Stone Table
-			75		Karlan Trade Wallpaper
-			75		Kjerag Stone Floor
-			15	10	Data Supplement Instrument
-			5	60	Data Supplement Stick
-			10	15	Oriron Cluster
-			10	15	Aketon
-			10	15	Incandescent Alloy
-			12	15	Semi-Synthetic Solvent
-			7	120	LMD
-			5	30	Strategic Battle Record
-			3	50	Tactical Battle Record
-			1	150	Frontline Battle Record
-			4	25	Skill Summary - 3
-			2	50	Skill Summary - 2
-			2	40	Orirock Cube
-			3	30	Sugar
-			3	30	Polyester
-			3	25	Oriron
-			3	25	Polyketon
-			4	20	Device
-			6	5	Supporter Chip
-			2	200	Furniture Part
+			100		D32 Steel
+			35	3	RMA70-24
+			40	3	Crystalline Circuit
+			35	3	Chiral Refractor
+			20	2	Spool Light
+			45		'Sword Holder'
+			80		'A Window Away'
+			100		'Gang Meeting Spot'
+			100		Handmade Leather Sofa
+			160		Old Clothes Cabinet
+			8	5	Sugar Pack
+			12	5	Compound Cutting Fluid
+			7	20	LMD
+			5	5	Strategic Battle Record
+			3	10	Tactical Battle Record
+			1	20	Frontline Battle Record
+			4	10	Skill Summary - 3
+			2	20	Skill Summary - 2
+			2	8	Orirock Cube
+			3	8	Oriron
+			4	8	Device
+			6	5	Specialist Chip
 			""")
 		}
 	};
@@ -602,53 +591,36 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("I_Portatori_dei_Velluti#Fiera_delle_Meraviglie_Notturne", "I Portatori dei Velluti", "Invito_Mistico")] = new("""
-		// I Portatori dei Velluti
+		[new("I_Portatori_dei_Velluti/Rerun#Fiera_delle_Meraviglie_Notturne", "I Portatori dei Velluti Rerun", "Invito_Mistico")] = new("""
+		// I Portatori dei Velluti Rerun
 		250		Crownslayer's Token
 		300		Crownslayer's Token
 		350		Crownslayer's Token
 		400		Crownslayer's Token
 		450		Crownslayer's Token
-		500		Erato
-		30		Erato's Token
-		40		Erato's Token
-		50		Erato's Token
-		60		Erato's Token
-		70		Erato's Token
-		500		Species Plantarum
 		150	3	Headhunting Permit
-		75	3	Module Data Block
-		100	5	Crystalline Electronic Unit
-		25	10	Orirock Concentration
-		40	10	Oriron Block
-		30	10	Polymerized Gel
-		35	10	Refined Solvent
+		100		D32 Steel
+		35	3	RMA70-24
+		40	3	Crystalline Circuit
+		35	3	Chiral Refractor
 		20	2	Spool Light
 		45		'Sword Holder'
 		80		'A Window Away'
 		100		'Gang Meeting Spot'
 		100		Handmade Leather Sofa
 		160		Old Clothes Cabinet
-		15	10	Data Supplement Instrument
-		5	60	Data Supplement Stick
-		7	15	Orirock Cluster
-		8	15	Polyester Pack
-		10	15	Aketon
-		10	15	Crystalline Component
-		7	120	LMD
-		5	30	Strategic Battle Record
-		3	50	Tactical Battle Record
-		1	150	Frontline Battle Record
-		4	25	Skill Summary - 3
-		2	50	Skill Summary - 2
-		2	40	Orirock Cube
-		3	30	Sugar
-		3	30	Polyester
-		3	25	Oriron
-		3	25	Polyketon
-		4	20	Device
+		8	5	Sugar Pack
+		12	5	Compound Cutting Fluid
+		7	20	LMD
+		5	5	Strategic Battle Record
+		3	10	Tactical Battle Record
+		1	20	Frontline Battle Record
+		4	10	Skill Summary - 3
+		2	20	Skill Summary - 2
+		2	8	Orirock Cube
+		3	8	Oriron
+		4	8	Device
 		6	5	Specialist Chip
-		2	200	Furniture Part
 		"""),
 
 		[new("Operation_Lucent_Arrowhead#Galería_Boutique", "Operation Lucent Arrowhead", "Galería_Stamp_Card")] = new("""
