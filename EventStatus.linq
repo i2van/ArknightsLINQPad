@@ -33,43 +33,47 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.May, Day.OfMonth(17)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Jun, Day.OfMonth(4)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("I_Portatori_dei_Velluti/Rerun#Fiera_delle_Meraviglie_Notturne", "I Portatori dei Velluti Rerun", "Invito_Mistico")] = new("""
-			// I Portatori dei Velluti Rerun
-			250		Crownslayer's Token
-			300		Crownslayer's Token
-			350		Crownslayer's Token
-			400		Crownslayer's Token
-			450		Crownslayer's Token
+			[new("Unrealized_Realities#Stratosphere_Estate_Agency", "Unrealized Realities", "Dr_Oxygen")] = new("""
+			// Unrealized Realities
+			200		Skybox's Token
+			240		Skybox's Token
+			280		Skybox's Token
+			320		Skybox's Token
+			360		Skybox's Token
+			500		Eggcellent Craftsman
 			150	3	Headhunting Permit
-			100		D32 Steel
-			35	3	RMA70-24
-			40	3	Crystalline Circuit
-			35	3	Chiral Refractor
-			20	2	Spool Light
-			45		'Sword Holder'
-			80		'A Window Away'
-			100		'Gang Meeting Spot'
-			100		Handmade Leather Sofa
-			160		Old Clothes Cabinet
-			8	5	Sugar Pack
-			12	5	Compound Cutting Fluid
-			7	20	LMD
-			5	5	Strategic Battle Record
-			3	10	Tactical Battle Record
-			1	20	Frontline Battle Record
-			4	10	Skill Summary - 3
-			2	20	Skill Summary - 2
-			2	8	Orirock Cube
-			3	8	Oriron
-			4	8	Device
-			6	5	Specialist Chip
+			75	2	Module Data Block
+			100	5	Rephasic Enantiomer
+			25	10	Orirock Concentration
+			35	10	Keton Colloid
+			45	10	Cyclicene Prefab
+			30	2	Planet Swivel Chair
+			40		Egg Beater Landing Pad
+			50		'Mutual Compromise'
+			65		'Meal Cart'
+			80		Radiation-Proof Conductive Curtain
+			15	10	Data Supplement Instrument
+			5	60	Data Supplement Stick
+			15	15	Integrated Device
+			10	15	RMA70-12
+			7	100	LMD
+			5	25	Strategic Battle Record
+			3	50	Tactical Battle Record
+			1	120	Frontline Battle Record
+			4	25	Skill Summary - 3
+			2	50	Skill Summary - 2
+			2	25	Orirock Cube
+			3	25	Sugar
+			3	25	Oriron
+			6	5	Sniper Chip
+			2	200	Furniture Part
 			""")
 		}
 	};
@@ -591,36 +595,40 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("I_Portatori_dei_Velluti/Rerun#Fiera_delle_Meraviglie_Notturne", "I Portatori dei Velluti Rerun", "Invito_Mistico")] = new("""
-		// I Portatori dei Velluti Rerun
-		250		Crownslayer's Token
-		300		Crownslayer's Token
-		350		Crownslayer's Token
-		400		Crownslayer's Token
-		450		Crownslayer's Token
+		[new("Unrealized_Realities#Stratosphere_Estate_Agency", "Unrealized Realities", "Dr_Oxygen")] = new("""
+		// Unrealized Realities
+		200		Skybox's Token
+		240		Skybox's Token
+		280		Skybox's Token
+		320		Skybox's Token
+		360		Skybox's Token
+		500		Eggcellent Craftsman
 		150	3	Headhunting Permit
-		100		D32 Steel
-		35	3	RMA70-24
-		40	3	Crystalline Circuit
-		35	3	Chiral Refractor
-		20	2	Spool Light
-		45		'Sword Holder'
-		80		'A Window Away'
-		100		'Gang Meeting Spot'
-		100		Handmade Leather Sofa
-		160		Old Clothes Cabinet
-		8	5	Sugar Pack
-		12	5	Compound Cutting Fluid
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		2	8	Orirock Cube
-		3	8	Oriron
-		4	8	Device
-		6	5	Specialist Chip
+		75	2	Module Data Block
+		100	5	Rephasic Enantiomer
+		25	10	Orirock Concentration
+		35	10	Keton Colloid
+		45	10	Cyclicene Prefab
+		30	2	Planet Swivel Chair
+		40		Egg Beater Landing Pad
+		50		'Mutual Compromise'
+		65		'Meal Cart'
+		80		Radiation-Proof Conductive Curtain
+		15	10	Data Supplement Instrument
+		5	60	Data Supplement Stick
+		15	15	Integrated Device
+		10	15	RMA70-12
+		7	100	LMD
+		5	25	Strategic Battle Record
+		3	50	Tactical Battle Record
+		1	120	Frontline Battle Record
+		4	25	Skill Summary - 3
+		2	50	Skill Summary - 2
+		2	25	Orirock Cube
+		3	25	Sugar
+		3	25	Oriron
+		6	5	Sniper Chip
+		2	200	Furniture Part
 		"""),
 
 		[new("Operation_Lucent_Arrowhead#Galería_Boutique", "Operation Lucent Arrowhead", "Galería_Stamp_Card")] = new("""

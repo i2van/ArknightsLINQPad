@@ -78,10 +78,12 @@ Chongyue	Guard	6	FGT-Y	GA-5	Polymerization Preparation❂4｜Incandescent Alloy 
 Civilight Eterna	Supporter	6	BAR-X	14-5	Polymerization Preparation❂4｜Manganese Trihydrate❂6	Paradox
 Click	Caster	4	FUN-Y	11-7	Manganese Ore❂15｜Oriron Cluster❂9	Paradox
 Cliffheart	Specialist	5	HOK-X	MN-4	Oriron Block❂6｜Manganese Ore❂13	Paradox
+Closure	Vanguard	6	TAC-X	BB-4	Nucleic Crystal Sinter❂4｜Oriron Block❂2
 Coldshot	Sniper	5	HUN-X	S3-3	RMA70-24❂8｜Oriron Cluster❂10	Paradox
 Conviction	Guard	4	DRE-X	2-4	Integrated Device❂11｜Coagulating Gel❂9
 Corroserum	Caster	5	BLA-X	BI-6	Optimized Device❂5｜RMA70-12❂10	Paradox
 Courier	Vanguard	4	SOL-X	S2-2	Integrated Device❂11｜Aketon❂10	Paradox
+Crackborne	Defender	5	PRP-X	NL-7	Transmuted Salt Agglomerate❂9｜Electrode Unit❂9
 Croissant	Defender	5	PRO-Y	2-8	RMA70-24❂8｜Integrated Device❂8	Paradox
 Crownslayer	Specialist	6	EXE-X	4-4	D32 Steel❂4｜Transmuted Salt Agglomerate❂7
 Crownslayer	Specialist	6	EXE-Y	4-8	D32 Steel❂4｜Transmuted Salt Agglomerate❂7
@@ -205,7 +207,7 @@ Kafka	Specialist	5	EXE-Y	2-7	Polymerized Gel❂8｜Oriron Cluster❂15	Paradox
 Kal'tsit	Medic	6	PHY-X	5-10	Crystalline Electronic Unit❂4｜Optimized Device❂4	Paradox
 Kal'tsit	Medic	6	PHY-Y	5-10	Crystalline Electronic Unit❂4｜Optimized Device❂4	Paradox
 Kazemaru	Specialist	5	PUM-X	3-1	Orirock Concentration❂9｜Semi-Synthetic Solvent❂13	Paradox
-Kestrel	Vanguard	5	SOL-Y	11-18	Refined Solvent❂7｜Polyester Pack❂18
+Kestrel	Vanguard	5	SOL-Y	11-18	Refined Solvent❂7｜Polyester Pack❂18	Paradox
 Kichisei	Sniper	5	RPR-X	S5-9	Keton Colloid❂6｜Grindstone❂14	Paradox
 Kirara	Specialist	5	AMB-X	3-1	Incandescent Alloy Block❂7｜Integrated Device❂11	Paradox
 Kirin R Yato	Specialist	6	EXE-X	3-7	Nucleic Crystal Sinter❂3｜Keton Colloid❂6
@@ -301,7 +303,7 @@ Perfumer	Medic	4	RIN-Y	3-4	Loxic Kohl❂19｜Aketon❂8	Paradox
 Perfumer the Distilled	Supporter	5	BLS-Y	4-3	Crystalline Circuit❂6｜Integrated Device❂11
 Phantom	Specialist	6	EXE-X	3-6	Polymerization Preparation❂4｜Polymerized Gel❂9	Paradox
 Phantom	Specialist	6	EXE-Y	DM-5	Polymerization Preparation❂4｜Polymerized Gel❂9	Paradox
-Philae	Defender	5	PRP-X	10-2	RMA70-24❂6｜Aketon❂16
+Philae	Defender	5	PRP-X	10-2	RMA70-24❂6｜Aketon❂16	Paradox
 Pinecone	Sniper	4	RPR-X	3-6	Incandescent Alloy❂16｜Grindstone❂8	Paradox
 Platinum	Sniper	5	MAR-X	5-7	Grindstone Pentahydrate❂8｜Loxic Kohl❂15	Paradox
 Podenco	Supporter	4	DEC-X	4-6	Incandescent Alloy❂15｜Grindstone❂5	Paradox
@@ -334,7 +336,7 @@ Rockrock	Caster	5	FUN-X	RI-EX-4	Cutting Fluid Solution❂7｜Aketon❂14	Paradox
 Rope	Specialist	4	HOK-X	3-3	Oriron Cluster❂15｜Sugar Pack❂11	Paradox
 Rosa	Sniper	6	SIE-X	7-9	Bipolar Nanoflake❂4｜Optimized Device❂6	Paradox
 Rosa	Sniper	6	SIE-Y	7-14	Bipolar Nanoflake❂4｜Optimized Device❂6	Paradox
-Rose Salt	Medic	5	RIN-X	4-6	Crystalline Circuit❂7｜Compound Cutting Fluid❂11
+Rose Salt	Medic	5	RIN-X	4-6	Crystalline Circuit❂7｜Compound Cutting Fluid❂11	Paradox
 Rosmontis	Sniper	6	BOM-X	4-1	D32 Steel❂4｜Keton Colloid❂5
 Saga	Vanguard	6	SOL-X	WR-3	Bipolar Nanoflake❂4｜Incandescent Alloy Block❂6	Paradox
 Saga	Vanguard	6	SOL-Y	WR-1	Bipolar Nanoflake❂4｜Incandescent Alloy Block❂6	Paradox
@@ -343,8 +345,8 @@ Saileach	Vanguard	6	BEA-Y	5-3	Crystalline Electronic Unit❂4｜Refined Solvent�
 Sand Reckoner	Supporter	5	SUM-X	DV-2	Transmuted Salt Agglomerate❂9｜Incandescent Alloy❂12	Paradox
 Sankta Miksaparato	Defender	6	SPT-X	14-5	D32 Steel❂4｜Crystalline Circuit❂5
 Santalla	Caster	5	SPC-Y	BI-2	White Horse Kohl❂8｜Polyester Pack❂17	Paradox
-Saria	Defender	6	GUA-X	MB-3	Bipolar Nanoflake❂4｜Manganese Trihydrate❂5
-Saria	Defender	6	GUA-Y	4-6	Bipolar Nanoflake❂4｜Manganese Trihydrate❂5
+Saria	Defender	6	GUA-X	MB-3	Bipolar Nanoflake❂4｜Manganese Trihydrate❂5	Paradox
+Saria	Defender	6	GUA-Y	4-6	Bipolar Nanoflake❂4｜Manganese Trihydrate❂5	Paradox
 Savage	Guard	5	CEN-X	4-5	Orirock Concentration❂9｜Sugar Pack❂18	Paradox
 Scavenger	Vanguard	4	SOL-X	1-3	Loxic Kohl❂20｜Integrated Device❂6	Paradox
 Scene	Supporter	5	SUM-X	3-1	White Horse Kohl❂9｜Manganese Ore❂12	Paradox
@@ -391,7 +393,7 @@ Swire	Guard	5	INS-X	S2-3	Sugar Lump❂7｜Polyester Pack❂17	Paradox
 Swire the Elegant Wit	Specialist	6	MER-X	5-2	D32 Steel❂4｜White Horse Kohl❂6
 Swire the Elegant Wit	Specialist	6	MER-Y	11-16	D32 Steel❂4｜White Horse Kohl❂6
 Tachanka	Guard	5	SWO-X	S2-3	RMA70-24❂7｜Coagulating Gel❂12
-Tecno	Caster	5	SOC-Y	DH-6	Incandescent Alloy Block❂7｜Coagulating Gel❂14
+Tecno	Caster	5	SOC-Y	DH-6	Incandescent Alloy Block❂7｜Coagulating Gel❂14	Paradox
 Tequila	Guard	5	LIB-X	7-11	Optimized Device❂5｜Grindstone❂11	Paradox
 Texas	Vanguard	5	SOL-Y	CB-3	Polyester Lump❂8｜Orirock Cluster❂16	Paradox
 Texas the Omertosa	Specialist	6	EXE-X	5-3	Bipolar Nanoflake❂4｜Oriron Block❂7
@@ -429,6 +431,7 @@ Virtuosa	Supporter	6	RIT-X	GA-7	Polymerization Preparation❂4｜RMA70-24❂5	Pa
 Virtuosa	Supporter	6	RIT-Y	ZT-8	Polymerization Preparation❂4｜RMA70-24❂5	Paradox
 Viviana	Guard	6	AFT-Δ	MN-3	D32 Steel❂4｜Polymerized Gel❂8	Paradox
 Viviana	Guard	6	AFT-Y	NL-8	D32 Steel❂4｜Polymerized Gel❂8	Paradox
+Viy	Caster	6	MSC-Y	7-10	Crystalline Electronic Unit❂4｜Refined Solvent❂6
 Vulcan	Defender	5	UNY-X	S4-4	Orirock Concentration❂8｜Aketon❂15	Paradox
 Vulpisfoglia	Vanguard	6	SOL-X	S2-3	Nucleic Crystal Sinter❂4｜Cyclicene Prefab❂2
 W	Sniper	6	ART-X	DM-3	Bipolar Nanoflake❂4｜Keton Colloid❂7
