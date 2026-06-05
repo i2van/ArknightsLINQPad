@@ -33,47 +33,44 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Jun, Day.OfMonth(4)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Jun, Day.OfMonth(15)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Unrealized_Realities#Stratosphere_Estate_Agency", "Unrealized Realities", "Dr_Oxygen")] = new("""
-			// Unrealized Realities
-			200		Skybox's Token
-			240		Skybox's Token
-			280		Skybox's Token
-			320		Skybox's Token
-			360		Skybox's Token
-			500		Eggcellent Craftsman
+			[new("Exodus_from_the_Pale_Sea/Rerun#Salt_Ship_Marketplace", "Exodus from the Pale Sea Rerun", "Saltfin_Garum")] = new("""
+			// Exodus from the Pale Sea Rerun
+			200		Rose Salt's Token
+			240		Rose Salt's Token
+			280		Rose Salt's Token
+			320		Rose Salt's Token
+			360		Rose Salt's Token
 			150	3	Headhunting Permit
-			75	2	Module Data Block
-			100	5	Rephasic Enantiomer
-			25	10	Orirock Concentration
-			35	10	Keton Colloid
-			45	10	Cyclicene Prefab
-			30	2	Planet Swivel Chair
-			40		Egg Beater Landing Pad
-			50		'Mutual Compromise'
-			65		'Meal Cart'
-			80		Radiation-Proof Conductive Curtain
-			15	10	Data Supplement Instrument
-			5	60	Data Supplement Stick
-			15	15	Integrated Device
-			10	15	RMA70-12
-			7	100	LMD
-			5	25	Strategic Battle Record
-			3	50	Tactical Battle Record
-			1	120	Frontline Battle Record
-			4	25	Skill Summary - 3
-			2	50	Skill Summary - 2
-			2	25	Orirock Cube
-			3	25	Sugar
-			3	25	Oriron
-			6	5	Sniper Chip
-			2	200	Furniture Part
+			100		Crystalline Electronic Unit
+			30	3	Polymerized Gel
+			35	3	Incandescent Alloy Block
+			35	3	Refined Solvent
+			30		Mesh Rug
+			70		Saltfin Chandelier
+			60		Cask 'n Bone Chair
+			50	2	Sturdy Cask Chair
+			30		Saltfin Candle Hanger
+			40		Thick Patterned Rug
+			60		Cabin Stairs
+			15	5	Aggregate Cyclicene
+			12	5	Coagulative Nodule
+			7	20	LMD
+			5	5	Strategic Battle Record
+			3	10	Tactical Battle Record
+			1	20	Frontline Battle Record
+			4	10	Skill Summary - 3
+			2	20	Skill Summary - 2
+			3	8	Polyester
+			3	8	Polyketon
+			4	8	Device
+			6	5	Medic Chip
 			""")
 		}
 	};
@@ -557,20 +554,18 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("Exodus_from_the_Pale_Sea#Salt_Ship_Marketplace", "Exodus from the Pale Sea", "Saltfin_Garum")] = new("""
-		// Exodus from the Pale Sea
+		[new("Exodus_from_the_Pale_Sea/Rerun#Salt_Ship_Marketplace", "Exodus from the Pale Sea Rerun", "Saltfin_Garum")] = new("""
+		// Exodus from the Pale Sea Rerun
 		200		Rose Salt's Token
 		240		Rose Salt's Token
 		280		Rose Salt's Token
 		320		Rose Salt's Token
 		360		Rose Salt's Token
-		500		Shoal Beat
 		150	3	Headhunting Permit
-		75	2	Module Data Block
-		100	5	Polymerization Preparation
-		35	10	Grindstone Pentahydrate
-		35	10	Cutting Fluid Solution
-		45	10	Cyclicene Prefab
+		100		Crystalline Electronic Unit
+		30	3	Polymerized Gel
+		35	3	Incandescent Alloy Block
+		35	3	Refined Solvent
 		30		Mesh Rug
 		70		Saltfin Chandelier
 		60		Cask 'n Bone Chair
@@ -578,21 +573,18 @@ static class EventData
 		30		Saltfin Candle Hanger
 		40		Thick Patterned Rug
 		60		Cabin Stairs
-		15	10	Data Supplement Instrument
-		5	60	Data Supplement Stick
-		10	15	Oriron Cluster
-		12	10	Coagulating Gel
-		7	100	LMD
-		5	25	Strategic Battle Record
-		3	50	Tactical Battle Record
-		1	120	Frontline Battle Record
-		4	25	Skill Summary - 3
-		2	50	Skill Summary - 2
-		2	25	Orirock Cube
-		3	25	Polyester
-		4	25	Device
+		15	5	Aggregate Cyclicene
+		12	5	Coagulative Nodule
+		7	20	LMD
+		5	5	Strategic Battle Record
+		3	10	Tactical Battle Record
+		1	20	Frontline Battle Record
+		4	10	Skill Summary - 3
+		2	20	Skill Summary - 2
+		3	8	Polyester
+		3	8	Polyketon
+		4	8	Device
 		6	5	Medic Chip
-		2	200	Furniture Part
 		"""),
 
 		[new("Unrealized_Realities#Stratosphere_Estate_Agency", "Unrealized Realities", "Dr_Oxygen")] = new("""
@@ -617,7 +609,7 @@ static class EventData
 		15	10	Data Supplement Instrument
 		5	60	Data Supplement Stick
 		15	15	Integrated Device
-		10	15	RMA70-12
+		15	10	RMA70-12
 		7	100	LMD
 		5	25	Strategic Battle Record
 		3	50	Tactical Battle Record
