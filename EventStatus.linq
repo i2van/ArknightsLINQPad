@@ -33,44 +33,47 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Jun, Day.OfMonth(15)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Jul, Day.OfMonth(6)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Exodus_from_the_Pale_Sea/Rerun#Salt_Ship_Marketplace", "Exodus from the Pale Sea Rerun", "Saltfin_Garum")] = new("""
-			// Exodus from the Pale Sea Rerun
-			200		Rose Salt's Token
-			240		Rose Salt's Token
-			280		Rose Salt's Token
-			320		Rose Salt's Token
-			360		Rose Salt's Token
+			[new("Medjehtiqedti_Bound#Astynomos's_Office", "Medjehtiqedti Bound", "Ostracon")] = new("""
+			// Medjehtiqedti Bound
+			200		Varkáris's Token
+			240		Varkáris's Token
+			280		Varkáris's Token
+			320		Varkáris's Token
+			360		Varkáris's Token
+			500		Dreadnaught
 			150	3	Headhunting Permit
-			100		Crystalline Electronic Unit
-			30	3	Polymerized Gel
-			35	3	Incandescent Alloy Block
-			35	3	Refined Solvent
-			30		Mesh Rug
-			70		Saltfin Chandelier
-			60		Cask 'n Bone Chair
-			50	2	Sturdy Cask Chair
-			30		Saltfin Candle Hanger
-			40		Thick Patterned Rug
-			60		Cabin Stairs
-			15	5	Aggregate Cyclicene
-			12	5	Coagulative Nodule
-			7	20	LMD
-			5	5	Strategic Battle Record
-			3	10	Tactical Battle Record
-			1	20	Frontline Battle Record
-			4	10	Skill Summary - 3
-			2	20	Skill Summary - 2
-			3	8	Polyester
-			3	8	Polyketon
-			4	8	Device
-			6	5	Medic Chip
+			75	2	Module Data Block
+			100	5	Rephasic Enantiomer
+			40	10	Crystalline Circuit
+			40	10	Solidified Fiber Board
+			35	10	Chiral Refractor
+			65		Bell of Odes
+			100		'Faith and Vigor'
+			70		Therapy Wheelchair
+			90		Pillar Pool
+			80		'A New Sight'
+			15	10	Data Supplement Instrument
+			5	60	Data Supplement Stick
+			10	15	Oriron Cluster
+			12	10	Coagulating Gel
+			7	100	LMD
+			5	25	Strategic Battle Record
+			3	50	Tactical Battle Record
+			1	120	Frontline Battle Record
+			4	25	Skill Summary - 3
+			2	50	Skill Summary - 2
+			2	25	Orirock Cube
+			3	25	Polyester
+			3	25	Polyketon
+			6	5	Guard Chip
+			2	200	Furniture Part
 			""")
 		}
 	};
@@ -554,37 +557,40 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("Exodus_from_the_Pale_Sea/Rerun#Salt_Ship_Marketplace", "Exodus from the Pale Sea Rerun", "Saltfin_Garum")] = new("""
-		// Exodus from the Pale Sea Rerun
-		200		Rose Salt's Token
-		240		Rose Salt's Token
-		280		Rose Salt's Token
-		320		Rose Salt's Token
-		360		Rose Salt's Token
+		[new("Medjehtiqedti_Bound#Astynomos's_Office", "Medjehtiqedti Bound", "Ostracon")] = new("""
+		// Medjehtiqedti Bound
+		200		Varkáris's Token
+		240		Varkáris's Token
+		280		Varkáris's Token
+		320		Varkáris's Token
+		360		Varkáris's Token
+		500		Dreadnaught
 		150	3	Headhunting Permit
-		100		Crystalline Electronic Unit
-		30	3	Polymerized Gel
-		35	3	Incandescent Alloy Block
-		35	3	Refined Solvent
-		30		Mesh Rug
-		70		Saltfin Chandelier
-		60		Cask 'n Bone Chair
-		50	2	Sturdy Cask Chair
-		30		Saltfin Candle Hanger
-		40		Thick Patterned Rug
-		60		Cabin Stairs
-		15	5	Aggregate Cyclicene
-		12	5	Coagulative Nodule
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		3	8	Polyester
-		3	8	Polyketon
-		4	8	Device
-		6	5	Medic Chip
+		75	2	Module Data Block
+		100	5	Rephasic Enantiomer
+		40	10	Crystalline Circuit
+		40	10	Solidified Fiber Board
+		35	10	Chiral Refractor
+		65		Bell of Odes
+		100		'Faith and Vigor'
+		70		Therapy Wheelchair
+		90		Pillar Pool
+		80		'A New Sight'
+		15	10	Data Supplement Instrument
+		5	60	Data Supplement Stick
+		10	15	Oriron Cluster
+		12	10	Coagulating Gel
+		7	100	LMD
+		5	25	Strategic Battle Record
+		3	50	Tactical Battle Record
+		1	120	Frontline Battle Record
+		4	25	Skill Summary - 3
+		2	50	Skill Summary - 2
+		2	25	Orirock Cube
+		3	25	Polyester
+		3	25	Polyketon
+		6	5	Guard Chip
+		2	200	Furniture Part
 		"""),
 
 		[new("Unrealized_Realities#Stratosphere_Estate_Agency", "Unrealized Realities", "Dr_Oxygen")] = new("""
