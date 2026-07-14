@@ -33,46 +33,53 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Jul, Day.OfMonth(6)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Aug, Day.OfMonth(6)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Medjehtiqedti_Bound#Astynomos's_Office", "Medjehtiqedti Bound", "Ostracon")] = new("""
-			// Medjehtiqedti Bound
-			200		Varkáris's Token
-			240		Varkáris's Token
-			280		Varkáris's Token
-			320		Varkáris's Token
-			360		Varkáris's Token
-			500		Dreadnaught
+			[new("First_of_A_Thousand_Autumns#Sky_Mirror_Teahouse", "First of A Thousand Autumns", "Draft_of_History")] = new("""
+			// First of A Thousand Autumns
+			200		Ju's Token
+			240		Ju's Token
+			280		Ju's Token
+			320		Ju's Token
+			360		Ju's Token
+			500		Light and Shadow
+			500		Tremble Cold
 			150	3	Headhunting Permit
-			75	2	Module Data Block
-			100	5	Rephasic Enantiomer
-			40	10	Crystalline Circuit
-			40	10	Solidified Fiber Board
-			35	10	Chiral Refractor
-			65		Bell of Odes
-			100		'Faith and Vigor'
-			70		Therapy Wheelchair
-			90		Pillar Pool
-			80		'A New Sight'
+			75	3	Module Data Block
+			100	5	Crystalline Electronic Unit
+			40	10	Oriron Block
+			30	10	Polymerized Gel
+			35	10	Refined Solvent
+			30	10	Transmuted Salt Agglomerate
+			25	2	'Night Made Bright'
+			25	2	'Waning Lights'
+			30		'Fenced But Free'
+			65	2	'Old Recollections'
+			90		'Sun-Veiling Gauze'
 			15	10	Data Supplement Instrument
 			5	60	Data Supplement Stick
-			10	15	Oriron Cluster
-			12	10	Coagulating Gel
-			7	100	LMD
-			5	25	Strategic Battle Record
+			8	15	Sugar Pack
+			15	15	Integrated Device
+			12	15	Compound Cutting Fluid
+			12	15	Coagulative Nodule
+			7	120	LMD
+			5	30	Strategic Battle Record
 			3	50	Tactical Battle Record
-			1	120	Frontline Battle Record
+			1	150	Frontline Battle Record
 			4	25	Skill Summary - 3
 			2	50	Skill Summary - 2
-			2	25	Orirock Cube
-			3	25	Polyester
+			2	40	Orirock Cube
+			3	30	Sugar
+			3	30	Polyester
+			3	25	Oriron
 			3	25	Polyketon
-			6	5	Guard Chip
+			4	20	Device
+			6	5	Sniper Chip
 			2	200	Furniture Part
 			""")
 		}
@@ -557,6 +564,49 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
+		[new("First_of_A_Thousand_Autumns#Sky_Mirror_Teahouse", "First of A Thousand Autumns", "Draft_of_History")] = new("""
+		// First of A Thousand Autumns
+		200		Ju's Token
+		240		Ju's Token
+		280		Ju's Token
+		320		Ju's Token
+		360		Ju's Token
+		500		Light and Shadow
+		500		Tremble Cold
+		150	3	Headhunting Permit
+		75	3	Module Data Block
+		100	5	Crystalline Electronic Unit
+		40	10	Oriron Block
+		30	10	Polymerized Gel
+		35	10	Refined Solvent
+		30	10	Transmuted Salt Agglomerate
+		25	2	'Night Made Bright'
+		25	2	'Waning Lights'
+		30		'Fenced But Free'
+		65	2	'Old Recollections'
+		90		'Sun-Veiling Gauze'
+		15	10	Data Supplement Instrument
+		5	60	Data Supplement Stick
+		8	15	Sugar Pack
+		15	15	Integrated Device
+		12	15	Compound Cutting Fluid
+		12	15	Coagulative Nodule
+		7	120	LMD
+		5	30	Strategic Battle Record
+		3	50	Tactical Battle Record
+		1	150	Frontline Battle Record
+		4	25	Skill Summary - 3
+		2	50	Skill Summary - 2
+		2	40	Orirock Cube
+		3	30	Sugar
+		3	30	Polyester
+		3	25	Oriron
+		3	25	Polyketon
+		4	20	Device
+		6	5	Sniper Chip
+		2	200	Furniture Part
+		"""),
+
 		[new("Medjehtiqedti_Bound#Astynomos's_Office", "Medjehtiqedti Bound", "Ostracon")] = new("""
 		// Medjehtiqedti Bound
 		200		Varkáris's Token
@@ -748,48 +798,6 @@ static class EventData
 		4	25	Device
 		6	5	Guard Chip
 		6	5	Specialist Chip
-		2	200	Furniture Part
-		"""),
-
-		[new("Such_is_the_Joy_of_Our_Reunion#Savors_at_Yu's", "Such is the Joy of Our Reunion", @"""Yum-yum!""")] = new("""
-		// Such is the Joy of Our Reunion
-		200		Xingzhu's Token
-		240		Xingzhu's Token
-		280		Xingzhu's Token
-		320		Xingzhu's Token
-		360		Xingzhu's Token
-		500		Healing Hand, Evil Heart
-		500		Unknown Journey
-		150	3	Headhunting Permit
-		75	3	Module Data Block
-		100	5	Nucleic Crystal Sinter
-		40	10	Oriron Block
-		35	10	Manganese Trihydrate
-		40	10	Crystalline Circuit
-		35	10	Cutting Fluid Solution
-		20	4	'The Hanging Candle'
-		80		'Emptiness'
-		75		'Wasted Talent'
-		65		'Gentle Haven'
-		15	10	Data Supplement Instrument
-		5	60	Data Supplement Stick
-		8	15	Polyester Pack
-		10	15	Aketon
-		10	15	Manganese Ore
-		10	15	Crystalline Component
-		7	120	LMD
-		5	30	Strategic Battle Record
-		3	50	Tactical Battle Record
-		1	150	Frontline Battle Record
-		4	25	Skill Summary - 3
-		2	50	Skill Summary - 2
-		2	40	Orirock Cube
-		3	30	Sugar
-		3	30	Polyester
-		3	25	Oriron
-		3	25	Polyketon
-		4	20	Device
-		6	5	Supporter Chip
 		2	200	Furniture Part
 		"""),
 
