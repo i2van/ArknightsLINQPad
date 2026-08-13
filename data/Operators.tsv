@@ -14,6 +14,7 @@ Andreana	Sniper	5	DEA-X	3-2	Grindstone Pentahydrate❂8｜RMA70-12❂8
 Angelina	Supporter	6	DEC-X	2-7	Bipolar Nanoflake❂4｜Sugar Lump❂5	Paradox
 Angelina	Supporter	6	DEC-Y	4-4	Bipolar Nanoflake❂4｜Sugar Lump❂5	Paradox
 Aosta	Sniper	5	RPR-X	6-8	Oriron Block❂7｜Incandescent Alloy❂10	Paradox
+Aphrissa	Caster	6	BLA-Y	DV-8	Rephasic Enantiomer❂4｜Liquified Ether Absorber❂2
 April	Sniper	5	MAR-Y	5-3	Polymerized Gel❂9｜RMA70-12❂9	Paradox
 Archetto	Sniper	6	MAR-X	SV-4	Polymerization Preparation❂4｜Orirock Concentration❂8	Paradox
 Archetto	Sniper	6	MAR-Y	2-9	Polymerization Preparation❂4｜Orirock Concentration❂8	Paradox
@@ -44,6 +45,7 @@ Blacknight	Vanguard	5	TAC-X	3-1	Incandescent Alloy Block❂8｜Loxic Kohl❂15	P
 Blaze	Guard	6	CEN-X	11-13	D32 Steel❂4｜Optimized Device❂6	Paradox
 Blaze	Guard	6	CEN-Y	11-6	D32 Steel❂4｜Optimized Device❂6	Paradox
 Blaze the Igniting Spark	Caster	6	PRI-X	6-10	Nucleic Crystal Sinter❂4｜Crystalline Circuit❂2
+Blaze the Igniting Spark	Caster	6	PRI-Y	OR-8	Nucleic Crystal Sinter❂4｜Crystalline Circuit❂2
 Blemishine	Defender	6	GUA-X	MN-4	D32 Steel❂4｜RMA70-24❂7	Paradox
 Blemishine	Defender	6	GUA-Y	MN-2	D32 Steel❂4｜RMA70-24❂7	Paradox
 Blitz	Defender	5	SPT-X	3-4	Manganese Trihydrate❂8｜RMA70-12❂8
@@ -51,7 +53,7 @@ Blue Poison	Sniper	5	MAR-Y	3-4	Manganese Trihydrate❂8｜Integrated Device❂8	
 Bobbing	Supporter	5	RIT-X	4-8	Cutting Fluid Solution❂7｜Semi-Synthetic Solvent❂13	Paradox
 Botani	Supporter	5	RIT-X	16-8	Crystalline Circuit❂6｜Orirock Cluster❂22
 Breeze	Medic	5	RIN-X	4-1	Optimized Device❂5｜Loxic Kohl❂18	Paradox
-Brigid	Sniper	5	LPS-X	4-6	Solidified Fiber Board❂8｜Manganese Ore❂12
+Brigid	Sniper	5	LPS-X	4-6	Solidified Fiber Board❂8｜Manganese Ore❂12	Paradox
 Broca	Guard	5	CEN-X	7-8	Sugar Lump❂7｜Grindstone❂13	Paradox
 Bryophyta	Guard	5	INS-X	9-3	Refined Solvent❂7｜Aketon❂15	Paradox
 Bubble	Defender	4	PRO-X	4-6	Coagulating Gel❂16｜Loxic Kohl❂8	Paradox
@@ -245,7 +247,7 @@ Magallan	Supporter	6	SUM-Y	2-2	Polymerization Preparation❂4｜Manganese Trihyd
 Manticore	Specialist	5	AMB-X	1-9	Manganese Trihydrate❂8｜Sugar Pack❂12	Paradox
 Mantra	Caster	6	PRI-X	FC-5	Nucleic Crystal Sinter❂4｜Incandescent Alloy Block❂2
 Marcille	Caster	6	SPC-Y	5-10	Nucleic Crystal Sinter❂4｜Grindstone Pentahydrate❂2
-Matoimaru	Guard	4	DRE-Y	S2-10	Aketon❂16｜Sugar Pack❂10
+Matoimaru	Guard	4	DRE-Y	S2-10	Aketon❂16｜Sugar Pack❂10	Paradox
 Matterhorn	Defender	4	PRO-Y	3-6	Manganese Ore❂14｜Integrated Device❂7	Paradox
 May	Sniper	4	MAR-X	4-4	Oriron Cluster❂14｜Polyester Pack❂12	Paradox
 Mayer	Supporter	5	SUM-X	2-9	Oriron Block❂6｜RMA70-12❂11	Paradox
@@ -331,6 +333,7 @@ Ray	Sniper	6	HUN-Y	GO-4	Bipolar Nanoflake❂4｜Orirock Concentration❂8	Parado
 Record Keeper	Medic	5	PHY-X	HS-5	Crystalline Circuit❂7｜Orirock Cluster❂16
 Reed	Vanguard	5	CHG-Y	9-5	Orirock Concentration❂9｜Manganese Ore❂12	Paradox
 Reed the Flame Shadow	Medic	6	INC-X	11-6	Nucleic Crystal Sinter❂3｜Orirock Concentration❂9
+Reed the Flame Shadow	Medic	6	INC-Y	EA-EX-1	Nucleic Crystal Sinter❂3｜Orirock Concentration❂9
 Ripresa	Caster	5	SPC-Y	3-5	Orirock Concentration❂8｜Fuscous Fiber❂14
 Roberta	Supporter	4	CRA-X	3-8	Semi-Synthetic Solvent❂14｜Integrated Device❂7	Paradox
 Robin	Specialist	5	TRP-Y	BI-EX-2	Incandescent Alloy Block❂8｜Aketon❂11	Paradox

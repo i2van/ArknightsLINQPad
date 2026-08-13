@@ -9,7 +9,7 @@
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-First of A Thousand Autumns
+Crossing
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")

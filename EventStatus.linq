@@ -33,54 +33,34 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Aug, Day.OfMonth(6)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Aug, Day.OfMonth(20)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("First_of_A_Thousand_Autumns#Sky_Mirror_Teahouse", "First of A Thousand Autumns", "Draft_of_History")] = new("""
-			// First of A Thousand Autumns
-			200		Ju's Token
-			240		Ju's Token
-			280		Ju's Token
-			320		Ju's Token
-			360		Ju's Token
-			500		Light and Shadow
-			500		Tremble Cold
-			150	3	Headhunting Permit
-			75	3	Module Data Block
-			100	5	Crystalline Electronic Unit
-			40	10	Oriron Block
-			30	10	Polymerized Gel
-			35	10	Refined Solvent
-			30	10	Transmuted Salt Agglomerate
-			25	2	'Night Made Bright'
-			25	2	'Waning Lights'
-			30		'Fenced But Free'
-			65	2	'Old Recollections'
-			90		'Sun-Veiling Gauze'
-			15	10	Data Supplement Instrument
-			5	60	Data Supplement Stick
-			8	15	Sugar Pack
-			15	15	Integrated Device
-			12	15	Compound Cutting Fluid
-			12	15	Coagulative Nodule
-			7	120	LMD
-			5	30	Strategic Battle Record
-			3	50	Tactical Battle Record
-			1	150	Frontline Battle Record
-			4	25	Skill Summary - 3
-			2	50	Skill Summary - 2
-			2	40	Orirock Cube
-			3	30	Sugar
-			3	30	Polyester
-			3	25	Oriron
-			3	25	Polyketon
-			4	20	Device
-			6	5	Sniper Chip
-			2	200	Furniture Part
+			[new("Crossing#Red_Wine_Championship_Commission", "Crossing", "Cork_Stopper")] = new("""
+			// Crossing
+			350		Charm of the Tiles
+			10	6	Information Fragment
+			100	2	Module Data Block
+			30	8	Data Supplement Instrument
+			10	40	Data Supplement Stick
+			200		D32 Steel
+			65		Chip Catalyst
+			60	2	Incandescent Alloy Block
+			15	4	Polyester Pack
+			20	4	Semi-Synthetic Solvent
+			5	10	LMD
+			5	5	Strategic Battle Record
+			5	5	Tactical Battle Record
+			6	5	Skill Summary - 3
+			6	5	Skill Summary - 2
+			4	5	Pure Gold
+			3	5	Orirock Cube
+			30	5	Recruitment Permit
+			4	10	Furniture Part
 			""")
 		}
 	};
@@ -562,6 +542,29 @@ static class EventData
 		4	40	Device
 		6	5	Vanguard Chip
 		2	200	Furniture Part
+		"""),
+
+		[new("Crossing#Red_Wine_Championship_Commission", "Crossing", "Cork_Stopper")] = new("""
+		// Crossing
+		350		Charm of the Tiles
+		10	6	Information Fragment
+		100	2	Module Data Block
+		30	8	Data Supplement Instrument
+		10	40	Data Supplement Stick
+		200		D32 Steel
+		65		Chip Catalyst
+		60	2	Incandescent Alloy Block
+		15	4	Polyester Pack
+		20	4	Semi-Synthetic Solvent
+		5	10	LMD
+		5	5	Strategic Battle Record
+		5	5	Tactical Battle Record
+		6	5	Skill Summary - 3
+		6	5	Skill Summary - 2
+		4	5	Pure Gold
+		3	5	Orirock Cube
+		30	5	Recruitment Permit
+		4	10	Furniture Part
 		"""),
 
 		[new("First_of_A_Thousand_Autumns#Sky_Mirror_Teahouse", "First of A Thousand Autumns", "Draft_of_History")] = new("""

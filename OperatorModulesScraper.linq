@@ -67,8 +67,14 @@ static bool OperatorHasModules(OperatorWithModules op)
 	return false;
 }
 
-Uri GetUrl(string uri) =>
-	new($"https://arknights.wiki.gg/wiki/{uri}?action=raw");
+
+Uri GetUrl(string uri)
+{
+	return new($"https://arknights.wiki.gg/wiki/{CleanUri()}?action=raw");
+
+	string CleanUri() =>
+		uri.Replace("_(Stronghold_Protocol)", string.Empty);
+}
 
 async Task<OperatorWithModules> GetOperator(string name)
 {
