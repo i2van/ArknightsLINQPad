@@ -33,34 +33,44 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Aug, Day.OfMonth(20)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Sep, Day.OfMonth(6)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("Crossing#Red_Wine_Championship_Commission", "Crossing", "Cork_Stopper")] = new("""
-			// Crossing
-			350		Charm of the Tiles
-			10	6	Information Fragment
-			100	2	Module Data Block
-			30	8	Data Supplement Instrument
-			10	40	Data Supplement Stick
-			200		D32 Steel
-			65		Chip Catalyst
-			60	2	Incandescent Alloy Block
-			15	4	Polyester Pack
-			20	4	Semi-Synthetic Solvent
-			5	10	LMD
+			[new("When_Elegies_Are_Ashes/Rerun#Lives_yet_to_Begin", "When Elegies Are Ashes Rerun", "Broken_Originium_Lamp")] = new("""
+			// When Elegies Are Ashes Rerun
+			200		Brigid's Token
+			240		Brigid's Token
+			280		Brigid's Token
+			320		Brigid's Token
+			360		Brigid's Token
+			150	3	Headhunting Permit
+			100		Polymerization Preparation
+			40	3	Crystalline Circuit
+			45	3	Cyclicene Prefab
+			35	3	Chiral Refractor
+			95		'On the Ruins'
+			65		Handmade Wall Shelf
+			55		Classic Storage Cabinet
+			50		Linen Tapestry
+			40		Knot Design Carpet
+			40	2	Tall Stool (With Cushion)
+			8	5	Sugar Pack
+			12	5	Transmuted Salt
+			7	20	LMD
 			5	5	Strategic Battle Record
-			5	5	Tactical Battle Record
-			6	5	Skill Summary - 3
-			6	5	Skill Summary - 2
-			4	5	Pure Gold
-			3	5	Orirock Cube
-			30	5	Recruitment Permit
-			4	10	Furniture Part
+			3	10	Tactical Battle Record
+			1	20	Frontline Battle Record
+			4	10	Skill Summary - 3
+			2	20	Skill Summary - 2
+			2	8	Orirock Cube
+			3	8	Oriron
+			3	8	Polyketon
+			6	5	Sniper Chip
+			2	200	Furniture Part
 			""")
 		}
 	};
@@ -544,29 +554,6 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("Crossing#Red_Wine_Championship_Commission", "Crossing", "Cork_Stopper")] = new("""
-		// Crossing
-		350		Charm of the Tiles
-		10	6	Information Fragment
-		100	2	Module Data Block
-		30	8	Data Supplement Instrument
-		10	40	Data Supplement Stick
-		200		D32 Steel
-		65		Chip Catalyst
-		60	2	Incandescent Alloy Block
-		15	4	Polyester Pack
-		20	4	Semi-Synthetic Solvent
-		5	10	LMD
-		5	5	Strategic Battle Record
-		5	5	Tactical Battle Record
-		6	5	Skill Summary - 3
-		6	5	Skill Summary - 2
-		4	5	Pure Gold
-		3	5	Orirock Cube
-		30	5	Recruitment Permit
-		4	10	Furniture Part
-		"""),
-
 		[new("First_of_A_Thousand_Autumns#Sky_Mirror_Teahouse", "First of A Thousand Autumns", "Draft_of_History")] = new("""
 		// First of A Thousand Autumns
 		200		Ju's Token
@@ -847,39 +834,35 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
-		[new("When_Elegies_Are_Ashes#Lives_Yet_to_Begin", "When Elegies Are Ashes", "Broken_Originium_Lamp")] = new("""
-		// When Elegies Are Ashes
+		[new("When_Elegies_Are_Ashes/Rerun#Lives_yet_to_Begin", "When Elegies Are Ashes Rerun", "Broken_Originium_Lamp")] = new("""
+		// When Elegies Are Ashes Rerun
 		200		Brigid's Token
 		240		Brigid's Token
 		280		Brigid's Token
 		320		Brigid's Token
 		360		Brigid's Token
-		500		Casual Vacation HD31
 		150	3	Headhunting Permit
-		75	2	Module Data Block
-		100	5	Nucleic Crystal Sinter
-		40	10	Oriron Block
-		35	10	Keton Colloid
-		35	10	Cutting Fluid Solution
+		100		Polymerization Preparation
+		40	3	Crystalline Circuit
+		45	3	Cyclicene Prefab
+		35	3	Chiral Refractor
 		95		'On the Ruins'
 		65		Handmade Wall Shelf
 		55		Classic Storage Cabinet
 		50		Linen Tapestry
 		40		Knot Design Carpet
 		40	2	Tall Stool (With Cushion)
-		15	10	Data Supplement Instrument
-		5	60	Data Supplement Stick
-		8	15	Sugar Pack
-		15	10	RMA70-12
-		7	100	LMD
-		5	25	Strategic Battle Record
-		3	50	Tactical Battle Record
-		1	120	Frontline Battle Record
-		4	25	Skill Summary - 3
-		2	50	Skill Summary - 2
-		3	25	Sugar
-		3	25	Oriron
-		4	25	Device
+		8	5	Sugar Pack
+		12	5	Transmuted Salt
+		7	20	LMD
+		5	5	Strategic Battle Record
+		3	10	Tactical Battle Record
+		1	20	Frontline Battle Record
+		4	10	Skill Summary - 3
+		2	20	Skill Summary - 2
+		2	8	Orirock Cube
+		3	8	Oriron
+		3	8	Polyketon
 		6	5	Sniper Chip
 		2	200	Furniture Part
 		""")
