@@ -33,43 +33,53 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Sep, Day.OfMonth(6)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Sep, Day.OfMonth(20)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("When_Elegies_Are_Ashes/Rerun#Lives_yet_to_Begin", "When Elegies Are Ashes Rerun", "Broken_Originium_Lamp")] = new("""
-			// When Elegies Are Ashes Rerun
-			200		Brigid's Token
-			240		Brigid's Token
-			280		Brigid's Token
-			320		Brigid's Token
-			360		Brigid's Token
+			[new("The_Masses'_Travels#Sweet_Dream_Hall", "The Masses' Travels", "Enlightened_Pacifier")] = new("""
+			// The Masses' Travels
+			250		Sankta Miksaparato's Token
+			300		Sankta Miksaparato's Token
+			350		Sankta Miksaparato's Token
+			400		Sankta Miksaparato's Token
+			450		Sankta Miksaparato's Token
+			500		Rest Between Sets
+			500		Fresh Fastener
 			150	3	Headhunting Permit
-			100		Polymerization Preparation
-			40	3	Crystalline Circuit
-			45	3	Cyclicene Prefab
-			35	3	Chiral Refractor
-			95		'On the Ruins'
-			65		Handmade Wall Shelf
-			55		Classic Storage Cabinet
-			50		Linen Tapestry
-			40		Knot Design Carpet
-			40	2	Tall Stool (With Cushion)
-			8	5	Sugar Pack
-			12	5	Transmuted Salt
-			7	20	LMD
-			5	5	Strategic Battle Record
-			3	10	Tactical Battle Record
-			1	20	Frontline Battle Record
-			4	10	Skill Summary - 3
-			2	20	Skill Summary - 2
-			2	8	Orirock Cube
-			3	8	Oriron
-			3	8	Polyketon
-			6	5	Sniper Chip
+			75	3	Module Data Block
+			100	5	Rephasic Enantiomer
+			35	10	RMA70-24
+			30	10	Polymerized Gel
+			40	10	Crystalline Circuit
+			30	10	Transmuted Salt Agglomerate
+			90		Painted Wooden Wall
+			80		Large Rifle Display Rack
+			70		Small Handgun Display Case
+			50		Storage Rack
+			45		Display Light
+			15	10	Data Supplement Instrument
+			5	60	Data Supplement Stick
+			15	15	Integrated Device
+			12	15	Coagulating Gel
+			10	15	Incandescent Alloy
+			12	15	Fuscous Fiber
+			7	120	LMD
+			5	30	Strategic Battle Record
+			3	50	Tactical Battle Record
+			1	150	Frontline Battle Record
+			4	25	Skill Summary - 3
+			2	50	Skill Summary - 2
+			2	40	Orirock Cube
+			3	30	Sugar
+			3	30	Polyester
+			3	25	Oriron
+			3	25	Polyketon
+			4	20	Device
+			6	5	Defender Chip
 			2	200	Furniture Part
 			""")
 		}
@@ -831,39 +841,6 @@ static class EventData
 		3	25	Polyketon
 		4	20	Device
 		6	5	Defender Chip
-		2	200	Furniture Part
-		"""),
-
-		[new("When_Elegies_Are_Ashes/Rerun#Lives_yet_to_Begin", "When Elegies Are Ashes Rerun", "Broken_Originium_Lamp")] = new("""
-		// When Elegies Are Ashes Rerun
-		200		Brigid's Token
-		240		Brigid's Token
-		280		Brigid's Token
-		320		Brigid's Token
-		360		Brigid's Token
-		150	3	Headhunting Permit
-		100		Polymerization Preparation
-		40	3	Crystalline Circuit
-		45	3	Cyclicene Prefab
-		35	3	Chiral Refractor
-		95		'On the Ruins'
-		65		Handmade Wall Shelf
-		55		Classic Storage Cabinet
-		50		Linen Tapestry
-		40		Knot Design Carpet
-		40	2	Tall Stool (With Cushion)
-		8	5	Sugar Pack
-		12	5	Transmuted Salt
-		7	20	LMD
-		5	5	Strategic Battle Record
-		3	10	Tactical Battle Record
-		1	20	Frontline Battle Record
-		4	10	Skill Summary - 3
-		2	20	Skill Summary - 2
-		2	8	Orirock Cube
-		3	8	Oriron
-		3	8	Polyketon
-		6	5	Sniper Chip
 		2	200	Furniture Part
 		""")
 	});
