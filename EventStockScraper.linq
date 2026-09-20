@@ -9,7 +9,7 @@
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-The Masses' Travels Rerun
+People, A People
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")

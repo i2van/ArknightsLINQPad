@@ -33,53 +33,47 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Sep, Day.OfMonth(20)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Sep, Day.OfMonth(30)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("The_Masses'_Travels#Sweet_Dream_Hall", "The Masses' Travels", "Enlightened_Pacifier")] = new("""
-			// The Masses' Travels
-			250		Sankta Miksaparato's Token
-			300		Sankta Miksaparato's Token
-			350		Sankta Miksaparato's Token
-			400		Sankta Miksaparato's Token
-			450		Sankta Miksaparato's Token
-			500		Rest Between Sets
-			500		Fresh Fastener
+			[new("People,_A_People#Snow-Soaked_Campfire", "People, A People", "Broken_Verses")] = new("""
+			// People, A People
+			200		Botani's Token
+			240		Botani's Token
+			280		Botani's Token
+			320		Botani's Token
+			360		Botani's Token
+			500		Infiltrator
 			150	3	Headhunting Permit
-			75	3	Module Data Block
-			100	5	Rephasic Enantiomer
-			35	10	RMA70-24
-			30	10	Polymerized Gel
-			40	10	Crystalline Circuit
+			75	2	Module Data Block
+			100	5	Crystalline Electronic Unit
+			25	10	Orirock Concentration
 			30	10	Transmuted Salt Agglomerate
-			90		Painted Wooden Wall
-			80		Large Rifle Display Rack
-			70		Small Handgun Display Case
-			50		Storage Rack
-			45		Display Light
+			40	10	Solidified Fiber Board
+			40		Standard Wooden Basin
+			45		Small High Stool
+			55		Small Framed Window
+			65		Chimed Tapestry Rack
+			80		'V Plameni Svechi'
+			140		Long Meeting Table
 			15	10	Data Supplement Instrument
 			5	60	Data Supplement Stick
-			15	15	Integrated Device
-			12	15	Coagulating Gel
 			10	15	Incandescent Alloy
-			12	15	Fuscous Fiber
-			7	120	LMD
-			5	30	Strategic Battle Record
+			12	10	Fuscous Fiber
+			7	100	LMD
+			5	25	Strategic Battle Record
 			3	50	Tactical Battle Record
-			1	150	Frontline Battle Record
+			1	120	Frontline Battle Record
 			4	25	Skill Summary - 3
 			2	50	Skill Summary - 2
-			2	40	Orirock Cube
-			3	30	Sugar
-			3	30	Polyester
-			3	25	Oriron
-			3	25	Polyketon
-			4	20	Device
-			6	5	Defender Chip
+			3	25	Sugar
+			3	25	Polyester
+			4	25	Device
+			6	5	Supporter Chip
 			2	200	Furniture Part
 			""")
 		}
@@ -715,6 +709,43 @@ static class EventData
 		3	25	Sugar
 		3	25	Oriron
 		6	5	Guard Chip
+		2	200	Furniture Part
+		"""),
+
+		[new("People,_A_People#Snow-Soaked_Campfire", "People, A People", "Broken_Verses")] = new("""
+		// People, A People
+		200		Botani's Token
+		240		Botani's Token
+		280		Botani's Token
+		320		Botani's Token
+		360		Botani's Token
+		500		Infiltrator
+		150	3	Headhunting Permit
+		75	2	Module Data Block
+		100	5	Crystalline Electronic Unit
+		25	10	Orirock Concentration
+		30	10	Transmuted Salt Agglomerate
+		40	10	Solidified Fiber Board
+		40		Standard Wooden Basin
+		45		Small High Stool
+		55		Small Framed Window
+		65		Chimed Tapestry Rack
+		80		'V Plameni Svechi'
+		140		Long Meeting Table
+		15	10	Data Supplement Instrument
+		5	60	Data Supplement Stick
+		10	15	Incandescent Alloy
+		12	10	Fuscous Fiber
+		7	100	LMD
+		5	25	Strategic Battle Record
+		3	50	Tactical Battle Record
+		1	120	Frontline Battle Record
+		4	25	Skill Summary - 3
+		2	50	Skill Summary - 2
+		3	25	Sugar
+		3	25	Polyester
+		4	25	Device
+		6	5	Supporter Chip
 		2	200	Furniture Part
 		"""),
 
