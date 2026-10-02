@@ -91,9 +91,7 @@ async Task<OperatorWithModules> GetOperator(string name)
 
 	if(string.IsNullOrEmpty(e2Materials))
 	{
-		const char noMaterialChar = '❌';
-		var noMaterial = $"{noMaterialChar}{OperatorData.CountSeparator}{noMaterialChar}";
-		e2Materials = $"{noMaterial}{OperatorData.MaterialSeparator}{noMaterial}";
+		e2Materials = OperatorData.NoMaterials;
 	}
 
 	var wikiModules = wiki.Split("==Operator Modules==", StringSplitOptions).Last().Split("==").First();
@@ -105,7 +103,7 @@ async Task<OperatorWithModules> GetOperator(string name)
 
 	var missions = wikiModules.Split(Endl, StringSplitOptions)
 		.Where( static s => s.StartsWith("|mission2"))
-		.Select(s => Regex.Match(s, @"\[\[([^]]+-[^]]+)\]\]", RegexOptions.None, regexTimeout).Groups[1].Value.Split('|').Last());
+		.Select(s => Regex.Match(s, @"\[\[([^]]+-[^]]+)\]\]", RegexOptions.None, regexTimeout).Groups[1].Value.Split('|').First());
 
 	return new(
 		url,

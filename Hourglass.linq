@@ -36,9 +36,6 @@ const string Training    = nameof(Training);
 
 const string Hourglass   = nameof(Hourglass);
 
-// TODO: Force the dark theme. Press Alt+Shift+X to apply.
-const bool ForceDarkTheme = false;
-
 void Main()
 {
 	Util.HideEditor();
@@ -113,7 +110,9 @@ void Main()
 #endif
 	;
 
-	const double buttonWidth = 150;
+	const double buttonWidth     = 150;
+	const double minColumnWidth  = buttonWidth / 2;
+	const double titleWidthRatio = 0.3;
 
 	const int verticalSpacing         = 5;
 	const int checkBoxVerticalSpacing = 10;
@@ -127,6 +126,8 @@ void Main()
 	var tabHorizontalThickness     = new Thickness(-horizontalSpacing, 0);
 	var buttonHorizontalThickness  = new Thickness(buttonHorizontalSpacing, 0);
 	var autoClearCheckBoxThickness = new Thickness(0, -checkBoxVerticalSpacing);
+
+	var titleHistory = new SortedSet<string>(StringComparer.CurrentCultureIgnoreCase);
 
 	// Controls.
 
@@ -193,6 +194,42 @@ void Main()
 		IsVisible = false,
 		Margin    = buttonHorizontalThickness
 	};
+
+	var titleTextBox = new TextBox
+	{
+		Watermark = $"Title · {Any} if not set",
+		IsVisible = false,
+		Margin    = verticalThickness
+	};
+
+	var titleSplitter = new GridSplitter
+	{
+		IsVisible       = false,
+		Width           = buttonHorizontalSpacing,
+		Margin          = verticalThickness,
+		ResizeDirection = GridResizeDirection.Columns
+	};
+
+	var initialTimersColumnWidth = new GridLength(1 - titleWidthRatio, GridUnitType.Star);
+	var initialTitleColumnWidth  = new GridLength(titleWidthRatio, GridUnitType.Star);
+
+	var timersColumn     = new ColumnDefinition { Width = initialTimersColumnWidth, MinWidth = minColumnWidth };
+	var titleColumn      = new ColumnDefinition(0, GridUnitType.Pixel);
+	var titleColumnWidth = initialTitleColumnWidth;
+
+	var timersPanel = new Grid
+	{
+		ColumnDefinitions = new ColumnDefinitions { timersColumn, new(GridLength.Auto), titleColumn }
+	}
+	.AddChildren
+	(
+		timersTextBox,
+		titleSplitter,
+		titleTextBox
+	);
+
+	Grid.SetColumn(titleSplitter, 1);
+	Grid.SetColumn(titleTextBox,  2);
 
 	var autoClearCheckBox = new CheckBox
 	{
@@ -269,6 +306,26 @@ void Main()
 		}
 	};
 
+	titleTextBox.KeyDown += (_, e) =>
+	{
+		if(e.Key == Key.Enter && !string.IsNullOrWhiteSpace(timersTextBox.Text))
+		{
+			LaunchTimers();
+		}
+	};
+
+	titleTextBox.TextChanged += delegate
+	{
+		RunOnce(EnableButtons);
+	};
+
+	titleSplitter.DoubleTapped += delegate
+	{
+		titleColumnWidth   = initialTitleColumnWidth;
+		timersColumn.Width = initialTimersColumnWidth;
+		titleColumn.Width  = initialTitleColumnWidth;
+	};
+
 	launchTimersSplitButton.Click += delegate
 	{
 		LaunchTimers();
@@ -284,13 +341,29 @@ void Main()
 		var args = timersTextBox.Text!.Trim();
 		var loopOption = $"{LoopOption}{(loopCheckBox.IsChecked == true ? On : Off)}";
 
-		var hourglassCommandLine = args.StartsWith(TitleOption)
-			?  $"{config.Options} {loopOption} {args}"
-			: $@"{config.Options} {loopOption} {TitleOption}""{(config.UseTimerPrefix ? config.TimerPrefix : string.Empty)}{((TabItem)tabControl.SelectedItem!).Header}"" {args}";
+		var useCustomTitle = titleTextBox.IsVisible && !string.IsNullOrWhiteSpace(titleTextBox.Text);
 
-		if(RunHourglass(hourglassCommandLine) && autoClearCheckBox.IsChecked == true)
+		var title = useCustomTitle
+			? titleTextBox.Text!.Trim()
+			: GetSelectedItemHeader();
+
+		var hasTitleOption = args.StartsWith(TitleOption);
+
+		var hourglassCommandLine = hasTitleOption
+			?  $"{config.Options} {loopOption} {args}"
+			: $@"{config.Options} {loopOption} {TitleOption}""{(config.UseTimerPrefix ? config.TimerPrefix : string.Empty)}{title}"" {args}";
+
+		if(RunHourglass(hourglassCommandLine))
 		{
-			Clear();
+			if(useCustomTitle && !hasTitleOption)
+			{
+				RememberTitle(title);
+			}
+
+			if(autoClearCheckBox.IsChecked == true)
+			{
+				Clear();
+			}
 		}
 
 		Focus();
@@ -346,6 +419,25 @@ void Main()
 		var selectedItemHeader = GetSelectedItemHeader();
 		loopCheckBox.IsChecked = false;
 		loopCheckBox.IsVisible = selectedItemHeader == Any;
+		titleTextBox.Clear();
+		titleTextBox.IsVisible  = loopCheckBox.IsVisible;
+		titleSplitter.IsVisible = titleTextBox.IsVisible;
+
+		if(titleTextBox.IsVisible)
+		{
+			titleColumn.MinWidth = minColumnWidth;
+			titleColumn.Width    = titleColumnWidth;
+		}
+		else
+		{
+			if(titleColumn.Width.Value > 0)
+			{
+				titleColumnWidth = titleColumn.Width;
+			}
+
+			titleColumn.MinWidth = 0;
+			titleColumn.Width    = new GridLength(0);
+		}
 
 		timersTextBox.Watermark = $"{selectedItemHeader} · {(
 			config.Options.Contains("-mt on")
@@ -382,7 +474,7 @@ void Main()
 		new StackPanel()
 		.AddChildren
 		(
-			timersTextBox,
+			timersPanel,
 			errorPanel,
 			new StackPanel
 			{
@@ -398,6 +490,7 @@ void Main()
 	).Dump(Hourglass);
 
 	RunOnce(Enable);
+	RunOnce(AddTitleHistoryContextMenu);
 	RunOnce(AddRootHandles, 250, 1);
 
 	void AddRootHandles()
@@ -413,7 +506,8 @@ void Main()
 
 			if(	NotA<TextBox>() &&
 				NotA<Button>() &&
-				NotA<SplitButton>())
+				NotA<SplitButton>() &&
+				NotA<GridSplitter>())
 			{
 				Focus();
 			}
@@ -423,14 +517,49 @@ void Main()
 		}
 	}
 
+	void AddTitleHistoryContextMenu()
+	{
+		// The themed edit context flyout instance is shared by all text boxes.
+		var titleContextMenuFlyout = (MenuFlyout)titleTextBox.ContextFlyout!;
+		var titleHistoryMenuItems  = new List<Control>();
+
+		titleContextMenuFlyout.Opening += delegate
+		{
+			foreach(var menuItem in titleHistoryMenuItems)
+			{
+				titleContextMenuFlyout.Items.Remove(menuItem);
+			}
+
+			titleHistoryMenuItems.Clear();
+
+			if(titleContextMenuFlyout.Target != titleTextBox || titleHistory.Count == 0)
+			{
+				return;
+			}
+
+			titleHistoryMenuItems.AddRange(titleHistory.Select(CreateTitleHistoryMenuItem));
+			titleHistoryMenuItems.Add(new Separator());
+
+			for(var index = 0; index < titleHistoryMenuItems.Count; index++)
+			{
+				titleContextMenuFlyout.Items.Insert(index, titleHistoryMenuItems[index]);
+			}
+		};
+	}
+
 	void Enable()
+	{
+		EnableButtons();
+
+		Focus();
+	}
+
+	void EnableButtons()
 	{
 		var text = timersTextBox.Text;
 
 		launchTimersSplitButton.EnablePrimaryButton(!string.IsNullOrWhiteSpace(text));
-		clearTimersSplitButton .EnablePrimaryButton(!string.IsNullOrEmpty(text));
-
-		Focus();
+		clearTimersSplitButton .EnablePrimaryButton(!string.IsNullOrEmpty(text) || !string.IsNullOrEmpty(titleTextBox.Text));
 	}
 
 	bool RunHourglass(string args = "")
@@ -474,12 +603,36 @@ void Main()
 		return menuItem;
 	}
 
+	MenuItem CreateTitleHistoryMenuItem(string title)
+	{
+		var menuItem = new MenuItem
+		{
+			Header = new TextBlock { Text = title }
+		};
+
+		menuItem.Click += delegate
+		{
+			titleTextBox.Text = title;
+
+			Focus();
+		};
+
+		return menuItem;
+	}
+
+	void RememberTitle(string title)
+	{
+		titleHistory.Remove(title);
+		titleHistory.Add(title);
+	}
+
 	string GetSelectedItemHeader() =>
 		(string)((TabItem)tabControl.SelectedItem!).Header!;
 
 	void Clear()
 	{
 		timersTextBox.Clear();
+		titleTextBox.Clear();
 		loopCheckBox.IsChecked = false;
 	}
 
@@ -564,10 +717,17 @@ void OnInit()
 
 	Application.Current!.Styles.Add(new FluentTheme());
 
-	if (Util.IsDarkThemeEnabled || ForceDarkTheme)
+	ApplyTheme();
+
+	Util.ThemeChanged += delegate
 	{
-		Application.Current.RequestedThemeVariant = ThemeVariant.Dark;
-	}
+		Dispatcher.UIThread.Post(ApplyTheme);
+	};
+
+	static void ApplyTheme() =>
+		Application.Current!.RequestedThemeVariant = Util.IsDarkThemeEnabled
+			? ThemeVariant.Dark
+			: ThemeVariant.Light;
 }
 
 static class AvaloniaExtensions

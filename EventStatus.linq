@@ -17,8 +17,6 @@
 #load "./lib/Parsable.linq"
 #load "./lib/WikiHyperlinq.linq"
 
-#define DUMP_MISSING_IMAGES
-
 /*
 #define DUMP_CONFIG
 #define CONFIG_INTERPOLATE_COLORS
@@ -33,48 +31,43 @@ void Main()
 		// TODO: Specify your level max sanity.
 		SanityPerPrime = 135,
 		// TODO: Specify event's in-game date and time end.
-		EventEndDate   = new DateOnly(Year.Now, Month.Sep, Day.OfMonth(30)),
+		EventEndDate   = new DateOnly(Year.Now, Month.Oct, Day.OfMonth(28)),
 		EventEndTime   = new TimeOnly(Hour.OfDay(3), Minute.OfHour(59)),
 		// TODO: Specify in-game UTC offset.
 		UtcOffset      = FromHours(-7),
 		// TODO: Copy and paste current event data from EventData.Value below. Remove item(s) when done.
 		Event          = new Event
 		{
-			[new("People,_A_People#Snow-Soaked_Campfire", "People, A People", "Broken_Verses")] = new("""
-			// People, A People
-			200		Botani's Token
-			240		Botani's Token
-			280		Botani's Token
-			320		Botani's Token
-			360		Botani's Token
-			500		Infiltrator
-			150	3	Headhunting Permit
-			75	2	Module Data Block
-			100	5	Crystalline Electronic Unit
-			25	10	Orirock Concentration
-			30	10	Transmuted Salt Agglomerate
-			40	10	Solidified Fiber Board
-			40		Standard Wooden Basin
-			45		Small High Stool
-			55		Small Framed Window
-			65		Chimed Tapestry Rack
-			80		'V Plameni Svechi'
-			140		Long Meeting Table
-			15	10	Data Supplement Instrument
-			5	60	Data Supplement Stick
-			10	15	Incandescent Alloy
-			12	10	Fuscous Fiber
-			7	100	LMD
-			5	25	Strategic Battle Record
-			3	50	Tactical Battle Record
-			1	120	Frontline Battle Record
-			4	25	Skill Summary - 3
-			2	50	Skill Summary - 2
-			3	25	Sugar
-			3	25	Polyester
-			4	25	Device
-			6	5	Supporter Chip
-			2	200	Furniture Part
+			[new("Critical_Phase_Transition#Unlicensed_Clinic", "Critical Phase Transition", "Factory_Vouchers")] = new("""
+			// Critical Phase Transition
+			500		Sing a Song
+			500		Professional
+			30	7	Emergency Sanity Sampler
+			100	3	Module Data Block
+			200	2	Crystalline Electronic Unit
+			200	2	Rephasic Enantiomer
+			70	3	Oriron Block
+			60	3	Incandescent Alloy Block
+			60	3	Liquified Ether Absorber
+			45		胶片照明灯
+			65		"回看"高脚凳
+			75		影音室零食架
+			70		"清新像素"
+			30	10	Data Supplement Instrument
+			10	60	Data Supplement Stick
+			20	6	Oriron Cluster
+			15	6	Polyester Pack
+			15	6	Crystalline Circuit
+			20	6	Electrode Unit
+			30	5	LMD
+			5	15	Strategic Battle Record
+			5	30	Tactical Battle Record
+			6	15	Skill Summary - 3
+			6	30	Skill Summary - 2
+			4	15	Sugar
+			4	15	Polyester
+			6	15	Polyketon
+			4	30	Furniture Part
 			""")
 		}
 	};
@@ -83,24 +76,6 @@ void Main()
 		config.EventEndDate.ToDateTime(config.EventEndTime),
 		CreateCustomTimeZone("Arknights", config.UtcOffset, null, null),
 		Local);
-
-#if DUMP_MISSING_IMAGES
-	{
-		HashSet<string> existingImagesKeys = new(ImageData.Value.Keys);
-		var missingImages = EventData.Value.Keys
-			.SelectMany(static v => EventData.Value[v])
-			.Concat(config.Event.Items)
-			.WhereNot(static v => string.IsNullOrWhiteSpace(v.Name))
-			.Where(v => existingImagesKeys.Add(v.Name))
-			.OrderBy(static v => v.Name)
-			.ToArray();
-
-		if(missingImages.Any())
-		{
-			missingImages.Dump("Config - Images Missing");
-		}
-	}
-#endif
 
 	Context = new();
 
@@ -558,6 +533,38 @@ static class EventData
 		2	200	Furniture Part
 		"""),
 
+		[new("Critical_Phase_Transition#Unlicensed_Clinic", "Critical Phase Transition", "Factory_Vouchers")] = new("""
+		// Critical Phase Transition
+		500		Sing a Song
+		500		Professional
+		30	7	Emergency Sanity Sampler
+		100	3	Module Data Block
+		200	2	Crystalline Electronic Unit
+		200	2	Rephasic Enantiomer
+		70	3	Oriron Block
+		60	3	Incandescent Alloy Block
+		60	3	Liquified Ether Absorber
+		45		胶片照明灯
+		65		"回看"高脚凳
+		75		影音室零食架
+		70		"清新像素"
+		30	10	Data Supplement Instrument
+		10	60	Data Supplement Stick
+		20	6	Oriron Cluster
+		15	6	Polyester Pack
+		15	6	Crystalline Circuit
+		20	6	Electrode Unit
+		30	5	LMD
+		5	15	Strategic Battle Record
+		5	30	Tactical Battle Record
+		6	15	Skill Summary - 3
+		6	30	Skill Summary - 2
+		4	15	Sugar
+		4	15	Polyester
+		6	15	Polyketon
+		4	30	Furniture Part
+		"""),
+
 		[new("First_of_A_Thousand_Autumns#Sky_Mirror_Teahouse", "First of A Thousand Autumns", "Draft_of_History")] = new("""
 		// First of A Thousand Autumns
 		200		Ju's Token
@@ -709,43 +716,6 @@ static class EventData
 		3	25	Sugar
 		3	25	Oriron
 		6	5	Guard Chip
-		2	200	Furniture Part
-		"""),
-
-		[new("People,_A_People#Snow-Soaked_Campfire", "People, A People", "Broken_Verses")] = new("""
-		// People, A People
-		200		Botani's Token
-		240		Botani's Token
-		280		Botani's Token
-		320		Botani's Token
-		360		Botani's Token
-		500		Infiltrator
-		150	3	Headhunting Permit
-		75	2	Module Data Block
-		100	5	Crystalline Electronic Unit
-		25	10	Orirock Concentration
-		30	10	Transmuted Salt Agglomerate
-		40	10	Solidified Fiber Board
-		40		Standard Wooden Basin
-		45		Small High Stool
-		55		Small Framed Window
-		65		Chimed Tapestry Rack
-		80		'V Plameni Svechi'
-		140		Long Meeting Table
-		15	10	Data Supplement Instrument
-		5	60	Data Supplement Stick
-		10	15	Incandescent Alloy
-		12	10	Fuscous Fiber
-		7	100	LMD
-		5	25	Strategic Battle Record
-		3	50	Tactical Battle Record
-		1	120	Frontline Battle Record
-		4	25	Skill Summary - 3
-		2	50	Skill Summary - 2
-		3	25	Sugar
-		3	25	Polyester
-		4	25	Device
-		6	5	Supporter Chip
 		2	200	Furniture Part
 		"""),
 
