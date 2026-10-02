@@ -9,7 +9,7 @@
 
 // TODO: Specify the event URI including /Rerun if present.
 var eventUri = """
-People, A People
+Critical Phase Transition
 """
 	.Trim()
 	.Replace(" Rerun", "/Rerun")

@@ -92,7 +92,17 @@ static partial class ControlsExtensions
 static partial class DataExtensions
 {
 	public static string Load(this string fileName) =>
-		File.ReadAllText(Path.Join(Path.GetDirectoryName(Util.CurrentQueryPath), "data", fileName));
+		File.ReadAllText(fileName.GetDataPath());
+
+	public static string LoadOptional(this string fileName)
+	{
+		var path = fileName.GetDataPath();
+
+		return File.Exists(path) ? File.ReadAllText(path) : string.Empty;
+	}
+
+	private static string GetDataPath(this string fileName) =>
+		Path.Join(Path.GetDirectoryName(Util.CurrentQueryPath), "data", fileName);
 }
 
 static partial class HtmlExtensions

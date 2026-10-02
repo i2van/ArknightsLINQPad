@@ -16,38 +16,17 @@ class ItemImage
 	public string Name { get; }
 	public LazyImage Image { get; }
 
-	public ItemImage(string name, string? pathUri, string? fileName = null, int? height = null) =>
-		(Name, Image) = (name, new($"{DumpContext.Url.Wiki}/images{(string.IsNullOrWhiteSpace(pathUri) || pathUri == "/" ? string.Empty : $"/{pathUri}")}/{(fileName ?? name).UnderscoreSpaces()}.png", height));
+	public ItemImage(string name, string? fileName = null, int? height = null, bool invertOnLightTheme = false) =>
+		(Name, Image) = (name, new($"{DumpContext.Url.Wiki}/images/{(fileName ?? name).UnderscoreSpaces()}.png", height, invertOnLightTheme));
 
 	public static Hyperlink GetHyperlink(string name)
 	{
-		var itemHyperlinq = GetItemHyperlinq(name);
-
 		if(!ImageData.Value.TryGetValue(name, out var imageData))
 		{
-			imageData = LazyImage.NotAvailable;
+			imageData = new ItemImage(name).Image;
 		}
 
-		var hyperlink = new Hyperlink(itemHyperlinq.Text, itemHyperlinq.Uri);
-		var htmlElement = hyperlink.HtmlElement;
-
-		htmlElement.AddEventListener("mouseenter", ShowImageEventHandler);
-		htmlElement.AddEventListener("mouseout",   HideImageEventHandler);
-		htmlElement.AddEventListener("focusin",    ShowImageEventHandler);
-		htmlElement.AddEventListener("focusout",   HideImageEventHandler);
-
-		return hyperlink;
-
-		void ShowImageEventHandler(object? elem, EventArgs e)
-		{
-			var top = htmlElement.InvokeScript(true, "eval", "targetElement.getBoundingClientRect().top - document.body.getBoundingClientRect().top");
-
-			Context.Containers.Image.Style   = $"position: absolute; top: {top}px; z-index: 2";
-			Context.Containers.Image.Content = imageData;
-		}
-
-		static void HideImageEventHandler(object? elem, EventArgs e) =>
-			Context.Containers.Image.ClearContent();
+		return GetHyperlink(GetItemHyperlinq(name), imageData);
 
 		static Hyperlinq GetItemHyperlinq(string itemName)
 		{
@@ -69,36 +48,139 @@ class ItemImage
 			}
 		}
 	}
+
+	public static Hyperlink GetHyperlink(Hyperlinq hyperlinq, LazyImage image)
+	{
+		var hyperlink = new Hyperlink(hyperlinq.Text, hyperlinq.Uri);
+		var htmlElement = hyperlink.HtmlElement;
+
+		htmlElement.AddEventListener("mouseenter", ShowImageEventHandler);
+		htmlElement.AddEventListener("mouseout",   HideImageEventHandler);
+		htmlElement.AddEventListener("focusin",    ShowImageEventHandler);
+		htmlElement.AddEventListener("focusout",   HideImageEventHandler);
+
+		return hyperlink;
+
+		void ShowImageEventHandler(object? elem, EventArgs e)
+		{
+			// Returns "top|isDarkTheme", e.g. "123.4|1". Theme is detected from the body background luminance.
+			const string script = """
+				(function(){
+					const top = targetElement.getBoundingClientRect().top;
+					const rgba = getComputedStyle(document.body).backgroundColor.match(/[\d.]+/g) || [];
+					const isDarkTheme = rgba.length > 2 && (rgba.length < 4 || +rgba[3] > 0) && +rgba[0]*.299 + +rgba[1]*.587 + +rgba[2]*.114 < 128;
+					return top + '|' + (isDarkTheme ? 1 : 0);
+				})()
+				""";
+
+			var topTheme = $"{htmlElement.InvokeScript(true, "eval", script)}".Split('|');
+			var top = topTheme[0];
+
+			var isDarkTheme = topTheme.Length > 1 && topTheme[1] == "1";
+			var filter = image.InvertOnLightTheme && !isDarkTheme ? "; filter: invert(1)" : "";
+
+			// Fixed position does not affect the document size, so no scroll bars appear.
+			// The image inherits max-height and is capped to the viewport space below the row.
+			var maxHeight = image.MaxHeight is { } maxImageHeight
+				? $"min({maxImageHeight}px, 100vh - {top}px - 4px)"
+				: $"calc(100vh - {top}px - 4px)";
+
+			Context.Containers.Image.Style   = $"position: fixed; top: {top}px; z-index: 2; max-height: {maxHeight}{filter}";
+			Context.Containers.Image.Content = image;
+		}
+
+		static void HideImageEventHandler(object? elem, EventArgs e) =>
+			Context.Containers.Image.ClearContent();
+	}
 }
 
 sealed class SkinImage : ItemImage
 {
-	public SkinImage(string name, string pathUri, string fileName)
-		: base(name, pathUri, fileName, DumpContext.ImageHeight.Skin)
+	public SkinImage(string name, string fileName)
+		: base(name, fileName, DumpContext.ImageHeight.Skin)
 	{
 	}
 }
 
+sealed class StageImage : ItemImage
+{
+	public StageImage(string name)
+		: base(name, $"{name} map", DumpContext.ImageHeight.Skin)
+	{
+	}
+
+	public static new Hyperlink GetHyperlink(string name) =>
+		GetHyperlink(name, name);
+
+	public static Hyperlink GetHyperlink(string uri, string name) =>
+		GetHyperlink(new WikiHyperlinq(uri, name), new StageImage(uri).Image);
+}
+
+sealed class OperatorImage : ItemImage
+{
+	public OperatorImage(string name)
+		: base(name, $"{name} icon")
+	{
+	}
+
+	public static new Hyperlink GetHyperlink(string name) =>
+		GetHyperlink(name, name);
+
+	public static Hyperlink GetHyperlink(string uri, string name) =>
+		GetHyperlink(new WikiHyperlinq(uri, name), new OperatorImage(name).Image);
+}
+
+sealed class ModuleImage : ItemImage
+{
+	public ModuleImage(string name)
+		: base(name, $"{name} module", invertOnLightTheme: true)
+	{
+	}
+
+	public static Hyperlink GetHyperlink(string uri, string name) =>
+		GetHyperlink(new WikiHyperlinq(uri, name), new ModuleImage(name).Image);
+}
+
+sealed class ClassImage : ItemImage
+{
+	public ClassImage(string name)
+		: base(name, invertOnLightTheme: true)
+	{
+	}
+
+	public static new Hyperlink GetHyperlink(string name) =>
+		GetHyperlink(new WikiHyperlinq(name), new ClassImage(name).Image);
+}
+
 sealed class LazyImage
 {
-	public static readonly LazyImage NotAvailable = new("https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg", DumpContext.ImageHeight.NotAvailable);
-
 	private readonly Lazy<ImageControl> _value;
 
 	private ImageControl Control => _value.Value;
 
-	public LazyImage(string imageUri, int? height = null)
+	public bool InvertOnLightTheme { get; }
+
+	public int? MaxHeight { get; }
+
+	public LazyImage(string imageUri, int? height = null, bool invertOnLightTheme = false)
 	{
+		InvertOnLightTheme = invertOnLightTheme;
+
+		var maxHeight = height ?? DumpContext.ImageHeight.Item;
+		MaxHeight = maxHeight > 0 ? maxHeight : null;
+
 		_value = new(CreateControl);
 
 		ImageControl CreateControl()
 		{
 			var control = new ImageControl(new Uri(imageUri));
 
-			if((height ??= DumpContext.ImageHeight.Item) > 0)
-			{
-				control.Height = height.Value;
-			}
+			// LINQPad theme styles the image background; keep the original transparency.
+			control.Styles["background"] = "transparent";
+
+			// Fit into the hover container to avoid the scroll bars; see ItemImage.GetHyperlink.
+			control.Styles["max-width"]  = "100%";
+			control.Styles["max-height"] = "inherit";
 
 			return control;
 		}
@@ -110,12 +192,11 @@ sealed class LazyImage
 
 sealed class MaterialImages : Parsable<ItemImage>
 {
-	private const string PathUri  = nameof(PathUri);
 	private const string Name     = nameof(Name);
 	private const string FileName = nameof(FileName);
 
-	protected override string Regex { get; } = $@"^(?<{Name}>[^\t]+)(\t+(?<{PathUri}>[^\t]+))?(\t+(?<{FileName}>[^\t]+))?$";
-	protected override string ErrorMessage { get; } = $"Expected: 'name pathUri [fileName]'";
+	protected override string Regex { get; } = $@"^(?<{Name}>[^\t]+)(\t+(?<{FileName}>[^\t]+))?$";
+	protected override string ErrorMessage { get; } = $"Expected: 'name [fileName]'";
 
 	public MaterialImages(string items) :
 		base(items)
@@ -125,12 +206,11 @@ sealed class MaterialImages : Parsable<ItemImage>
 	protected override ItemImage Create(Match match)
 	{
 		var name = GetString(match, Name);
-		var pathUri = GetString(match, PathUri);
 		var fileName = GetString(match, FileName);
 
 		return fileName.Contains("_Skin")
-			? new SkinImage(name, pathUri, fileName)
-			: new ItemImage(name, pathUri, string.IsNullOrWhiteSpace(fileName) ? null : fileName);
+			? new SkinImage(name, fileName)
+			: new ItemImage(name, string.IsNullOrWhiteSpace(fileName) ? null : fileName);
 	}
 }
 
@@ -170,7 +250,7 @@ ref struct DisposableAction
 static class ImageData
 {
 	public static readonly ReadOnlyDictionary<string, LazyImage> Value = new(
-		new MaterialImages("Images.tsv".Load()).ToDictionary(static v => v.Name, static v => v.Image)
+		new MaterialImages("Images.tsv".LoadOptional()).ToDictionary(static v => v.Name, static v => v.Image)
 	);
 }
 

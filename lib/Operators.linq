@@ -92,7 +92,9 @@ sealed class OperatorModules : Parsable<OperatorModule>
 static partial class OperatorData
 {
 	public const char MaterialSeparator = '｜';
-	public const char CountSeparator    = '❂';
+	public const char CountSeparator    = '×';
+
+	public const string NoMaterials = "❌";
 
 	// TODO: Run OperatorModulesParser.linq and paste from clipboard to the data/Operators.tsv file.
 	public static readonly Operators Value = new("Operators.tsv".Load());
