@@ -25,8 +25,9 @@ jobs:
 
       # Set up LPRun
 
+      # v3 does not add the tool to PATH on Windows: https://github.com/Alex079/setup-custom-tool/issues/16
       - name: Set up LPRun
-        uses: Alex079/setup-custom-tool@v3.0.0
+        uses: Alex079/setup-custom-tool@v2.0.0
         with:
           archiveUrl: ${{env.LPRUN_URL}}
 

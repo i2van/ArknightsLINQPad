@@ -4,3 +4,7 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    ignore:
+      # v3 does not add the tool to PATH on Windows: https://github.com/Alex079/setup-custom-tool/issues/16
+      - dependency-name: "Alex079/setup-custom-tool"
+        update-types: ["version-update:semver-major"]
