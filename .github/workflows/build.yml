@@ -65,8 +65,11 @@ jobs:
         if: ${{success() || failure()}}
         run: ${{env.LPRUN}} OriginitePrimePacks.linq
 
+      # Do not fail the build if the archive could not be created, skip the upload instead.
       - name: Archive latest commit
+        id: archive
         if: ${{success() || failure()}}
+        continue-on-error: true
         run: |
           $ErrorActionPreference = 'Stop'
           $Verbose = $VerbosePreference -ne 'SilentlyContinue'
@@ -78,6 +81,7 @@ jobs:
           7z a -tzip -mx=9 $message $message/* '-xr!.github'
 
       - name: Upload latest commit archive
+        if: ${{steps.archive.outcome == 'success'}}
         uses: actions/upload-artifact@v7.0.2
         with:
           path: |
