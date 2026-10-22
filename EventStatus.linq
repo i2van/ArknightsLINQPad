@@ -48,7 +48,7 @@ void Main()
 			200	2	Rephasic Enantiomer
 			70	3	Oriron Block
 			60	3	Incandescent Alloy Block
-			60	3	Liquified Ether Absorber
+			60	3	Liquefied Ether Adsorbent
 			45		Film Reel Pendant
 			55		'Playback' Stool
 			110		Media Room Snack Cabinet
@@ -543,7 +543,7 @@ static class EventData
 		200	2	Rephasic Enantiomer
 		70	3	Oriron Block
 		60	3	Incandescent Alloy Block
-		60	3	Liquified Ether Absorber
+		60	3	Liquefied Ether Adsorbent
 		45		Film Reel Pendant
 		55		'Playback' Stool
 		110		Media Room Snack Cabinet
