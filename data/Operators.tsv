@@ -2,7 +2,7 @@ Aak	Specialist	6	GEE-X	2-8	D32 Steel×4｜Polymerized Gel×7	Paradox
 Aak	Specialist	6	GEE-Y	4-8	D32 Steel×4｜Polymerized Gel×7	Paradox
 Absinthe	Caster	5	CCR-X	3-4	Orirock Concentration×10｜Incandescent Alloy×10	Paradox
 Aciddrop	Sniper	4	ARC-X	2-8	RMA70-12×10｜Integrated Device×8	Paradox
-Aegis	Sniper	5	BRK-X	7-3	Liquefied Ether Absorbent×9｜Aggregate Cyclicene×8
+Aegis	Sniper	5	BRK-X	7-3	Liquefied Ether Adsorbent×9｜Aggregate Cyclicene×8
 Akafuyu	Guard	5	SBL-X	3-8	Polymerized Gel×8｜Aketon×15	Paradox
 Akkord	Caster	4	BLA-X	2-1	Manganese Ore×14｜Semi-Synthetic Solvent×9
 Alanna	Supporter	5	CRA-X	7-14	Cutting Fluid Solution×9｜Aggregate Cyclicene×8	Paradox
@@ -29,6 +29,7 @@ Ash	Sniper	6	MAR-Y	1-12	D32 Steel×4｜Polymerized Gel×6
 Ashlock	Defender	5	FOR-X	7-9	Polymerized Gel×8｜Compound Cutting Fluid×13	Paradox
 Astesia	Guard	5	AFT-Y	DV-2	Polyester Lump×7｜Oriron Cluster×14	Paradox
 Astgenne	Caster	5	CHA-Y	4-3	RMA70-24×7｜Coagulating Gel×10	Paradox
+Astgenne the Lightchaser	Supporter	6	DEC-X	DV-EX-2	Polymerization Preparation×4｜Transmuted Salt Agglomerate×6
 Astgenne the Lightchaser	Supporter	6	DEC-Y	BI-6	Polymerization Preparation×4｜Transmuted Salt Agglomerate×6
 Aurora	Defender	5	HES-X	3-8	White Horse Kohl×9｜Orirock Cluster×19	Paradox
 Ayerscarpe	Guard	5	LOR-X	5-8	Oriron Block×6｜Coagulating Gel×12	Paradox
@@ -278,6 +279,7 @@ Mudrock	Defender	6	UNY-X	11-7	Crystalline Electronic Unit×4｜Incandescent Allo
 Mudrock	Defender	6	UNY-Y	10-16	Crystalline Electronic Unit×4｜Incandescent Alloy Block×5	Paradox
 Muelsyse	Vanguard	6	TAC-X	3-4	Bipolar Nanoflake×4｜Grindstone Pentahydrate×5	Paradox
 Muelsyse	Vanguard	6	TAC-Y	6-12	Bipolar Nanoflake×4｜Grindstone Pentahydrate×5	Paradox
+Muelsyse	Vanguard	6	TAC-Δ	12-12	Bipolar Nanoflake×4｜Grindstone Pentahydrate×5	Paradox
 Mulberry	Medic	5	WDM-X	SV-5 (Under Tides)	Orirock Concentration×9｜Semi-Synthetic Solvent×12	Paradox
 Myrrh	Medic	4	PHY-X	6-11	Aketon×14｜Polyester Pack×12	Paradox
 Myrtle	Vanguard	4	BEA-X	6-3	Grindstone×12｜Integrated Device×8	Paradox
@@ -374,6 +376,7 @@ Shining	Medic	6	PHY-X	NL-5	Bipolar Nanoflake×4｜Oriron Block×5	Paradox
 Shining	Medic	6	PHY-Y	5-8	Bipolar Nanoflake×4｜Oriron Block×5	Paradox
 Shirayuki	Sniper	4	ART-Y	S2-11	Aketon×15｜Oriron Cluster×9	Paradox
 Shu	Defender	6	GUA-X	11-11	Crystalline Electronic Unit×3｜Cutting Fluid Solution×6	Paradox
+Shu	Defender	6	GUA-Y	HS-8	Crystalline Electronic Unit×3｜Cutting Fluid Solution×6	Paradox
 Sideroca	Guard	5	AFT-Y	DH-3	Polymerized Gel×9｜Oriron Cluster×13	Paradox
 Siege	Vanguard	6	SOL-X	1-7	Bipolar Nanoflake×4｜Orirock Concentration×6	Paradox
 Siege	Vanguard	6	SOL-Y	11-2	Bipolar Nanoflake×4｜Orirock Concentration×6	Paradox
@@ -429,6 +432,7 @@ Typhon	Sniper	6	SIE-Y	4-8	Polymerization Preparation×4｜Refined Solvent×7
 Uika Misumi	Supporter	5	BAR-X	ZT-6	Oriron Block×6｜Transmuted Salt×11
 Ukusik	Medic	5	XAH-X	16-5	Incandescent Alloy Block×8｜Oriron Cluster×12
 Ulpianus	Guard	6	CRU-X	SV-6 (Under Tides)	Crystalline Electronic Unit×4｜Cutting Fluid Solution×2
+Ulpianus	Guard	6	CRU-Y	BP-6	Crystalline Electronic Unit×4｜Cutting Fluid Solution×2
 Umiri Yahata	Specialist	5	AMB-Y	BB-7	Cutting Fluid Solution×8｜Semi-Synthetic Solvent×12
 Underflow	Defender	5	SPT-X	SN-5	Incandescent Alloy Block×8｜Fuscous Fiber×9
 Utage	Guard	4	SBL-X	1-12	Aketon×14｜Orirock Cluster×14	Paradox
@@ -443,6 +447,7 @@ Vigil	Vanguard	6	TAC-Y	IS-6	Crystalline Electronic Unit×3｜Optimized Device×4
 Vigna	Vanguard	4	CHG-Y	3-3	Oriron Cluster×16｜Orirock Cluster×11	Paradox
 Vina Victoria	Guard	6	AFT-X	9-5	Crystalline Electronic Unit×4｜Orirock Concentration×2
 Vina Victoria	Guard	6	AFT-Y	7-18	Crystalline Electronic Unit×4｜Orirock Concentration×2
+Violet Mizutsune Orchid	Sniper	6	ARC-X	6-1	Crystalline Electronic Unit×4｜Cyclicene Prefab×5
 Virtuosa	Supporter	6	RIT-X	GA-7	Polymerization Preparation×4｜RMA70-24×5	Paradox
 Virtuosa	Supporter	6	RIT-Y	ZT-8	Polymerization Preparation×4｜RMA70-24×5	Paradox
 Viviana	Guard	6	AFT-Δ	MN-3	D32 Steel×4｜Polymerized Gel×8	Paradox
